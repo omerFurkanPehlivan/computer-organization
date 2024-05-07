@@ -1,0 +1,31 @@
+/*
+ * Module Name: Clock Generator
+ * File: clock.v
+ * Author: [Your Name]
+ * Date: [Creation Date]
+ * 
+ * Description:
+ * This module generates a clock signal with a specified period. It includes a multiplexer for reset functionality
+ * and a delay element to create the clock signal. The clock signal is high for half of the period and low for the other half.
+ * 
+ * Inputs:
+ * - rst: Reset signal. When high, the clock signal is held at a logic high level.
+ * 
+ * Outputs:
+ * - clk_out: The generated clock signal.
+ * 
+ * Parameters:
+ * - CLOCK_PERIOD: The period of the clock signal in nanoseconds.
+ * 
+ * Dependencies:
+ * - mux: A multiplexer module used to implement the reset functionality.
+ * - DelayNot: A delay element used to create the clock signal.
+ * 
+ * Revision History:
+ * - [Creation Date]: File created by [Your Name]. Initial implementation of the clock generator.
+ * - [Date]: [Your Name]. Added a multiplexer for reset functionality.
+ * - [Date]: [Your Name]. Added a delay element to create the clock signal.
+ * - [Date]: [Your Name]. Adjusted the delay from the multiplexer to be half of the clock period minus 20ns.
+ * - [Date]: [Your Name]. Fixed a bug where the clock signal would not be held high when reset was active.
+ * - [Date]: [Your Name]. Updated the module to use parameterized constants for the select bits and data width of the multiplexer.
+ */
