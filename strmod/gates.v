@@ -42,25 +42,17 @@ module gates #(
 );
 
 	generate
-		if (TYPE == "AND")
-			and #DELAY and_gate (out, a, b);
-		else if (TYPE == "OR")
-			or #DELAY or_gate (out, a, b);
-		else if (TYPE == "NAND")
-			nand #DELAY nand_gate (out, a, b);
-		else if (TYPE == "NOR")
-			nor #DELAY nor_gate (out, a, b);
-		else if (TYPE == "XOR")
-			xor #DELAY xor_gate (out, a, b);
-		else if (TYPE == "XNOR")
-			xnor #DELAY xnor_gate (out, a, b);
-		else if (TYPE == "NOT")
-			not #DELAY not_gate (out, a);
-		else if (TYPE == "BUF")
-			buf #DELAY buf_gate (out, a);
-		else if (TYPE == "BUFIF1")
-			bufif1 #DELAY bufif1_gate (out, a, b);
-		else
-			invalid_parameter_value type();
+		case (TYPE)
+			"AND": and #DELAY and_gate (out, a, b);
+			"OR": or #DELAY or_gate (out, a, b);
+			"NAND": nand #DELAY nand_gate (out, a, b);
+			"NOR": nor #DELAY nor_gate (out, a, b);
+			"XOR": xor #DELAY xor_gate (out, a, b);
+			"XNOR": xnor #DELAY xnor_gate (out, a, b);
+			"NOT": not #DELAY not_gate (out, a);
+			"BUF": buf #DELAY buf_gate (out, a);
+			"BUFIF1": bufif1 #DELAY bufif1_gate (out, a, b);
+			default: invalid_parameter_value_gates_type type();
+		endcase
 	endgenerate
 endmodule

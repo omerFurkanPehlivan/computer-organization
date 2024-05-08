@@ -1,3 +1,5 @@
+`timescale 1ns / 1ns
+
 module gates_tb;
 	reg a, b;
 	wire [8:0] out;

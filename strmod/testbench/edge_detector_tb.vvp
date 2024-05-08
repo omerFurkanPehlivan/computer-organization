@@ -7,459 +7,459 @@
 :vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
 :vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
 :vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
-S_000001e21c4161e0 .scope module, "edge_detector_tb" "edge_detector_tb" 2 3;
+S_000001fc9a5bdd30 .scope module, "edge_detector_tb" "edge_detector_tb" 2 3;
  .timescale -9 -9;
-v000001e21c477f70_0 .var "clk", 0 0;
-v000001e21c4771b0_0 .net "pulse", 5 0, L_000001e21c476990;  1 drivers
-LS_000001e21c476990_0_0 .concat8 [ 1 1 1 1], L_000001e21c413ca0, L_000001e21c4144f0, L_000001e21c414640, L_000001e21c413a00;
-LS_000001e21c476990_0_4 .concat8 [ 1 1 0 0], L_000001e21c414100, L_000001e21c413840;
-L_000001e21c476990 .concat8 [ 4 2 0 0], LS_000001e21c476990_0_0, LS_000001e21c476990_0_4;
-S_000001e21c416370 .scope module, "both_high" "edge_detector" 2 11, 3 20 0, S_000001e21c4161e0;
- .timescale -9 -9;
-    .port_info 0 /INPUT 1 "clk";
-    .port_info 1 /OUTPUT 1 "pulse";
-P_000001e21c3e1040 .param/str "ACTIVE" 0 3 22, "HIGH";
-P_000001e21c3e1078 .param/str "TYPE" 0 3 21, "BOTH";
-v000001e21c415320_0 .net "clk", 0 0, v000001e21c477f70_0;  1 drivers
-v000001e21c415820_0 .net "net1", 0 0, L_000001e21c4142c0;  1 drivers
-v000001e21c4153c0_0 .net "net2", 0 0, L_000001e21c414410;  1 drivers
-v000001e21c415460_0 .net "net3", 0 0, L_000001e21c414480;  1 drivers
-v000001e21c46eaa0_0 .net "pulse", 0 0, L_000001e21c414100;  1 drivers
-S_000001e21c3ef4e0 .scope generate, "genblk1" "genblk1" 3 49, 3 49 0, S_000001e21c416370;
- .timescale -9 -9;
-S_000001e21c3ef670 .scope module, "xnor1" "gates" 3 50, 4 36 0, S_000001e21c3ef4e0;
- .timescale -9 -9;
-    .port_info 0 /INPUT 1 "a";
-    .port_info 1 /INPUT 1 "b";
-    .port_info 2 /OUTPUT 1 "out";
-P_000001e21c3df1c0 .param/l "DELAY" 0 4 38, +C4<00000000000000000000000000001010>;
-P_000001e21c3df1f8 .param/str "TYPE" 0 4 37, "XNOR";
-v000001e21c414ba0_0 .net "a", 0 0, v000001e21c477f70_0;  alias, 1 drivers
-v000001e21c4151e0_0 .net "b", 0 0, L_000001e21c414480;  alias, 1 drivers
-v000001e21c4156e0_0 .net "out", 0 0, L_000001e21c414100;  alias, 1 drivers
-S_000001e21c3b2ca0 .scope generate, "genblk1" "genblk1" 4 55, 4 55 0, S_000001e21c3ef670;
- .timescale -9 -9;
-L_000001e21c414100/d .functor XNOR 1, v000001e21c477f70_0, L_000001e21c414480, C4<0>, C4<0>;
-L_000001e21c414100 .delay 1 (10,10,10) L_000001e21c414100/d;
-S_000001e21c3b2e30 .scope module, "not1" "gates" 3 31, 4 36 0, S_000001e21c416370;
- .timescale -9 -9;
-    .port_info 0 /INPUT 1 "a";
-    .port_info 1 /INPUT 1 "b";
-    .port_info 2 /OUTPUT 1 "out";
-P_000001e21c3dfa40 .param/l "DELAY" 0 4 38, +C4<00000000000000000000000000001010>;
-P_000001e21c3dfa78 .param/str "TYPE" 0 4 37, "NOT";
-v000001e21c415140_0 .net "a", 0 0, v000001e21c477f70_0;  alias, 1 drivers
-o000001e21c418ab8 .functor BUFZ 1, C4<z>; HiZ drive
-v000001e21c414b00_0 .net "b", 0 0, o000001e21c418ab8;  0 drivers
-v000001e21c4149c0_0 .net "out", 0 0, L_000001e21c4142c0;  alias, 1 drivers
-S_000001e21c26e460 .scope generate, "genblk1" "genblk1" 4 57, 4 57 0, S_000001e21c3b2e30;
- .timescale -9 -9;
-L_000001e21c4142c0/d .functor NOT 1, v000001e21c477f70_0, C4<0>, C4<0>, C4<0>;
-L_000001e21c4142c0 .delay 1 (10,10,10) L_000001e21c4142c0/d;
-S_000001e21c26e5f0 .scope module, "not2" "gates" 3 32, 4 36 0, S_000001e21c416370;
- .timescale -9 -9;
-    .port_info 0 /INPUT 1 "a";
-    .port_info 1 /INPUT 1 "b";
-    .port_info 2 /OUTPUT 1 "out";
-P_000001e21c3df240 .param/l "DELAY" 0 4 38, +C4<00000000000000000000000000001010>;
-P_000001e21c3df278 .param/str "TYPE" 0 4 37, "NOT";
-v000001e21c414ce0_0 .net "a", 0 0, L_000001e21c4142c0;  alias, 1 drivers
-o000001e21c418ba8 .functor BUFZ 1, C4<z>; HiZ drive
-v000001e21c414ec0_0 .net "b", 0 0, o000001e21c418ba8;  0 drivers
-v000001e21c414d80_0 .net "out", 0 0, L_000001e21c414410;  alias, 1 drivers
-S_000001e21c46e280 .scope generate, "genblk1" "genblk1" 4 57, 4 57 0, S_000001e21c26e5f0;
- .timescale -9 -9;
-L_000001e21c414410/d .functor NOT 1, L_000001e21c4142c0, C4<0>, C4<0>, C4<0>;
-L_000001e21c414410 .delay 1 (10,10,10) L_000001e21c414410/d;
-S_000001e21c46e410 .scope module, "not3" "gates" 3 33, 4 36 0, S_000001e21c416370;
- .timescale -9 -9;
-    .port_info 0 /INPUT 1 "a";
-    .port_info 1 /INPUT 1 "b";
-    .port_info 2 /OUTPUT 1 "out";
-P_000001e21c3e0740 .param/l "DELAY" 0 4 38, +C4<00000000000000000000000000001010>;
-P_000001e21c3e0778 .param/str "TYPE" 0 4 37, "NOT";
-v000001e21c414f60_0 .net "a", 0 0, L_000001e21c414410;  alias, 1 drivers
-o000001e21c418c98 .functor BUFZ 1, C4<z>; HiZ drive
-v000001e21c415000_0 .net "b", 0 0, o000001e21c418c98;  0 drivers
-v000001e21c415280_0 .net "out", 0 0, L_000001e21c414480;  alias, 1 drivers
-S_000001e21c46e5a0 .scope generate, "genblk1" "genblk1" 4 57, 4 57 0, S_000001e21c46e410;
- .timescale -9 -9;
-L_000001e21c414480/d .functor NOT 1, L_000001e21c414410, C4<0>, C4<0>, C4<0>;
-L_000001e21c414480 .delay 1 (10,10,10) L_000001e21c414480/d;
-S_000001e21c470b40 .scope module, "both_low" "edge_detector" 2 12, 3 20 0, S_000001e21c4161e0;
+v000001fc9a61a470_0 .var "clk", 0 0;
+v000001fc9a61af10_0 .net "pulse", 5 0, L_000001fc9a61a650;  1 drivers
+LS_000001fc9a61a650_0_0 .concat8 [ 1 1 1 1], L_000001fc9a58c8d0, L_000001fc9a58c9b0, L_000001fc9a58c4e0, L_000001fc9a58c5c0;
+LS_000001fc9a61a650_0_4 .concat8 [ 1 1 0 0], L_000001fc9a58cb70, L_000001fc9a58bd70;
+L_000001fc9a61a650 .concat8 [ 4 2 0 0], LS_000001fc9a61a650_0_0, LS_000001fc9a61a650_0_4;
+S_000001fc9a5bdec0 .scope module, "both_high" "edge_detector" 2 11, 3 20 0, S_000001fc9a5bdd30;
  .timescale -9 -9;
     .port_info 0 /INPUT 1 "clk";
     .port_info 1 /OUTPUT 1 "pulse";
-P_000001e21c3dfe40 .param/str "ACTIVE" 0 3 22, "LOW";
-P_000001e21c3dfe78 .param/str "TYPE" 0 3 21, "BOTH";
-v000001e21c46ea00_0 .net "clk", 0 0, v000001e21c477f70_0;  alias, 1 drivers
-v000001e21c4703a0_0 .net "net1", 0 0, L_000001e21c413990;  1 drivers
-v000001e21c46ee60_0 .net "net2", 0 0, L_000001e21c413f40;  1 drivers
-v000001e21c46fc20_0 .net "net3", 0 0, L_000001e21c413d10;  1 drivers
-v000001e21c46f400_0 .net "pulse", 0 0, L_000001e21c413840;  1 drivers
-S_000001e21c471ce0 .scope generate, "genblk1" "genblk1" 3 52, 3 52 0, S_000001e21c470b40;
+P_000001fc9a592400 .param/str "ACTIVE" 0 3 22, "HIGH";
+P_000001fc9a592438 .param/str "TYPE" 0 3 21, "BOTH";
+v000001fc9a5bcb70_0 .net "clk", 0 0, v000001fc9a61a470_0;  1 drivers
+v000001fc9a5bbc70_0 .net "net1", 0 0, L_000001fc9a58bc90;  1 drivers
+v000001fc9a5bbdb0_0 .net "net2", 0 0, L_000001fc9a58bec0;  1 drivers
+v000001fc9a611df0_0 .net "net3", 0 0, L_000001fc9a58bd00;  1 drivers
+v000001fc9a6133d0_0 .net "pulse", 0 0, L_000001fc9a58cb70;  1 drivers
+S_000001fc9a59eb00 .scope generate, "genblk1" "genblk1" 3 37, 3 37 0, S_000001fc9a5bdec0;
  .timescale -9 -9;
-S_000001e21c471e70 .scope module, "xor1" "gates" 3 53, 4 36 0, S_000001e21c471ce0;
- .timescale -9 -9;
-    .port_info 0 /INPUT 1 "a";
-    .port_info 1 /INPUT 1 "b";
-    .port_info 2 /OUTPUT 1 "out";
-P_000001e21c3df540 .param/l "DELAY" 0 4 38, +C4<00000000000000000000000000001010>;
-P_000001e21c3df578 .param/str "TYPE" 0 4 37, "XOR";
-v000001e21c46fd60_0 .net "a", 0 0, v000001e21c477f70_0;  alias, 1 drivers
-v000001e21c470260_0 .net "b", 0 0, L_000001e21c413d10;  alias, 1 drivers
-v000001e21c46edc0_0 .net "out", 0 0, L_000001e21c413840;  alias, 1 drivers
-S_000001e21c472000 .scope generate, "genblk1" "genblk1" 4 53, 4 53 0, S_000001e21c471e70;
- .timescale -9 -9;
-L_000001e21c413840/d .functor XOR 1, v000001e21c477f70_0, L_000001e21c413d10, C4<0>, C4<0>;
-L_000001e21c413840 .delay 1 (10,10,10) L_000001e21c413840/d;
-S_000001e21c472190 .scope module, "not1" "gates" 3 31, 4 36 0, S_000001e21c470b40;
+S_000001fc9a59ec90 .scope module, "xnor1" "gates" 3 51, 4 36 0, S_000001fc9a59eb00;
  .timescale -9 -9;
     .port_info 0 /INPUT 1 "a";
     .port_info 1 /INPUT 1 "b";
     .port_info 2 /OUTPUT 1 "out";
-P_000001e21c3df7c0 .param/l "DELAY" 0 4 38, +C4<00000000000000000000000000001010>;
-P_000001e21c3df7f8 .param/str "TYPE" 0 4 37, "NOT";
-v000001e21c46f860_0 .net "a", 0 0, v000001e21c477f70_0;  alias, 1 drivers
-o000001e21c418ea8 .functor BUFZ 1, C4<z>; HiZ drive
-v000001e21c46fae0_0 .net "b", 0 0, o000001e21c418ea8;  0 drivers
-v000001e21c470300_0 .net "out", 0 0, L_000001e21c413990;  alias, 1 drivers
-S_000001e21c472320 .scope generate, "genblk1" "genblk1" 4 57, 4 57 0, S_000001e21c472190;
+P_000001fc9a591e80 .param/l "DELAY" 0 4 38, +C4<00000000000000000000000000001010>;
+P_000001fc9a591eb8 .param/str "TYPE" 0 4 37, "XNOR";
+v000001fc9a5bc210_0 .net "a", 0 0, v000001fc9a61a470_0;  alias, 1 drivers
+v000001fc9a5bc850_0 .net "b", 0 0, L_000001fc9a58bd00;  alias, 1 drivers
+v000001fc9a5bc030_0 .net "out", 0 0, L_000001fc9a58cb70;  alias, 1 drivers
+S_000001fc9a596fd0 .scope generate, "genblk1" "genblk1" 4 45, 4 45 0, S_000001fc9a59ec90;
  .timescale -9 -9;
-L_000001e21c413990/d .functor NOT 1, v000001e21c477f70_0, C4<0>, C4<0>, C4<0>;
-L_000001e21c413990 .delay 1 (10,10,10) L_000001e21c413990/d;
-S_000001e21c472cd0 .scope module, "not2" "gates" 3 32, 4 36 0, S_000001e21c470b40;
- .timescale -9 -9;
-    .port_info 0 /INPUT 1 "a";
-    .port_info 1 /INPUT 1 "b";
-    .port_info 2 /OUTPUT 1 "out";
-P_000001e21c3e03c0 .param/l "DELAY" 0 4 38, +C4<00000000000000000000000000001010>;
-P_000001e21c3e03f8 .param/str "TYPE" 0 4 37, "NOT";
-v000001e21c46f900_0 .net "a", 0 0, L_000001e21c413990;  alias, 1 drivers
-o000001e21c418f98 .functor BUFZ 1, C4<z>; HiZ drive
-v000001e21c4701c0_0 .net "b", 0 0, o000001e21c418f98;  0 drivers
-v000001e21c46e960_0 .net "out", 0 0, L_000001e21c413f40;  alias, 1 drivers
-S_000001e21c473310 .scope generate, "genblk1" "genblk1" 4 57, 4 57 0, S_000001e21c472cd0;
- .timescale -9 -9;
-L_000001e21c413f40/d .functor NOT 1, L_000001e21c413990, C4<0>, C4<0>, C4<0>;
-L_000001e21c413f40 .delay 1 (10,10,10) L_000001e21c413f40/d;
-S_000001e21c472690 .scope module, "not3" "gates" 3 33, 4 36 0, S_000001e21c470b40;
+L_000001fc9a58cb70/d .functor XNOR 1, v000001fc9a61a470_0, L_000001fc9a58bd00, C4<0>, C4<0>;
+L_000001fc9a58cb70 .delay 1 (10,10,10) L_000001fc9a58cb70/d;
+S_000001fc9a597160 .scope module, "not1" "gates" 3 31, 4 36 0, S_000001fc9a5bdec0;
  .timescale -9 -9;
     .port_info 0 /INPUT 1 "a";
     .port_info 1 /INPUT 1 "b";
     .port_info 2 /OUTPUT 1 "out";
-P_000001e21c3e0d40 .param/l "DELAY" 0 4 38, +C4<00000000000000000000000000001010>;
-P_000001e21c3e0d78 .param/str "TYPE" 0 4 37, "NOT";
-v000001e21c46e820_0 .net "a", 0 0, L_000001e21c413f40;  alias, 1 drivers
-o000001e21c419088 .functor BUFZ 1, C4<z>; HiZ drive
-v000001e21c46ec80_0 .net "b", 0 0, o000001e21c419088;  0 drivers
-v000001e21c46ed20_0 .net "out", 0 0, L_000001e21c413d10;  alias, 1 drivers
-S_000001e21c473180 .scope generate, "genblk1" "genblk1" 4 57, 4 57 0, S_000001e21c472690;
+P_000001fc9a592280 .param/l "DELAY" 0 4 38, +C4<00000000000000000000000000001010>;
+P_000001fc9a5922b8 .param/str "TYPE" 0 4 37, "NOT";
+v000001fc9a5bc5d0_0 .net "a", 0 0, v000001fc9a61a470_0;  alias, 1 drivers
+o000001fc9a5bf608 .functor BUFZ 1, C4<z>; HiZ drive
+v000001fc9a5bc0d0_0 .net "b", 0 0, o000001fc9a5bf608;  0 drivers
+v000001fc9a5bc3f0_0 .net "out", 0 0, L_000001fc9a58bc90;  alias, 1 drivers
+S_000001fc9a6115d0 .scope generate, "genblk1" "genblk1" 4 45, 4 45 0, S_000001fc9a597160;
  .timescale -9 -9;
-L_000001e21c413d10/d .functor NOT 1, L_000001e21c413f40, C4<0>, C4<0>, C4<0>;
-L_000001e21c413d10 .delay 1 (10,10,10) L_000001e21c413d10/d;
-S_000001e21c4729b0 .scope module, "falling_high" "edge_detector" 2 9, 3 20 0, S_000001e21c4161e0;
+L_000001fc9a58bc90/d .functor NOT 1, v000001fc9a61a470_0, C4<0>, C4<0>, C4<0>;
+L_000001fc9a58bc90 .delay 1 (10,10,10) L_000001fc9a58bc90/d;
+S_000001fc9a611760 .scope module, "not2" "gates" 3 32, 4 36 0, S_000001fc9a5bdec0;
+ .timescale -9 -9;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /OUTPUT 1 "out";
+P_000001fc9a591a80 .param/l "DELAY" 0 4 38, +C4<00000000000000000000000000001010>;
+P_000001fc9a591ab8 .param/str "TYPE" 0 4 37, "NOT";
+v000001fc9a5bc8f0_0 .net "a", 0 0, L_000001fc9a58bc90;  alias, 1 drivers
+o000001fc9a5bf6f8 .functor BUFZ 1, C4<z>; HiZ drive
+v000001fc9a5bc170_0 .net "b", 0 0, o000001fc9a5bf6f8;  0 drivers
+v000001fc9a5bca30_0 .net "out", 0 0, L_000001fc9a58bec0;  alias, 1 drivers
+S_000001fc9a6118f0 .scope generate, "genblk1" "genblk1" 4 45, 4 45 0, S_000001fc9a611760;
+ .timescale -9 -9;
+L_000001fc9a58bec0/d .functor NOT 1, L_000001fc9a58bc90, C4<0>, C4<0>, C4<0>;
+L_000001fc9a58bec0 .delay 1 (10,10,10) L_000001fc9a58bec0/d;
+S_000001fc9a611a80 .scope module, "not3" "gates" 3 33, 4 36 0, S_000001fc9a5bdec0;
+ .timescale -9 -9;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /OUTPUT 1 "out";
+P_000001fc9a592780 .param/l "DELAY" 0 4 38, +C4<00000000000000000000000000001010>;
+P_000001fc9a5927b8 .param/str "TYPE" 0 4 37, "NOT";
+v000001fc9a5bc530_0 .net "a", 0 0, L_000001fc9a58bec0;  alias, 1 drivers
+o000001fc9a5bf7e8 .functor BUFZ 1, C4<z>; HiZ drive
+v000001fc9a5bc990_0 .net "b", 0 0, o000001fc9a5bf7e8;  0 drivers
+v000001fc9a5bcad0_0 .net "out", 0 0, L_000001fc9a58bd00;  alias, 1 drivers
+S_000001fc9a611c10 .scope generate, "genblk1" "genblk1" 4 45, 4 45 0, S_000001fc9a611a80;
+ .timescale -9 -9;
+L_000001fc9a58bd00/d .functor NOT 1, L_000001fc9a58bec0, C4<0>, C4<0>, C4<0>;
+L_000001fc9a58bd00 .delay 1 (10,10,10) L_000001fc9a58bd00/d;
+S_000001fc9a613db0 .scope module, "both_low" "edge_detector" 2 12, 3 20 0, S_000001fc9a5bdd30;
  .timescale -9 -9;
     .port_info 0 /INPUT 1 "clk";
     .port_info 1 /OUTPUT 1 "pulse";
-P_000001e21c3e0bc0 .param/str "ACTIVE" 0 3 22, "HIGH";
-P_000001e21c3e0bf8 .param/str "TYPE" 0 3 21, "FALLING";
-v000001e21c46f180_0 .net "clk", 0 0, v000001e21c477f70_0;  alias, 1 drivers
-v000001e21c46fcc0_0 .net "net1", 0 0, L_000001e21c413bc0;  1 drivers
-v000001e21c46fe00_0 .net "net2", 0 0, L_000001e21c4138b0;  1 drivers
-v000001e21c46fea0_0 .net "net3", 0 0, L_000001e21c413d80;  1 drivers
-v000001e21c470120_0 .net "pulse", 0 0, L_000001e21c414640;  1 drivers
-S_000001e21c472ff0 .scope generate, "genblk1" "genblk1" 3 43, 3 43 0, S_000001e21c4729b0;
+P_000001fc9a591480 .param/str "ACTIVE" 0 3 22, "LOW";
+P_000001fc9a5914b8 .param/str "TYPE" 0 3 21, "BOTH";
+v000001fc9a613b50_0 .net "clk", 0 0, v000001fc9a61a470_0;  alias, 1 drivers
+v000001fc9a613bf0_0 .net "net1", 0 0, L_000001fc9a58c0f0;  1 drivers
+v000001fc9a6136f0_0 .net "net2", 0 0, L_000001fc9a588550;  1 drivers
+v000001fc9a611e90_0 .net "net3", 0 0, L_000001fc9a622ad0;  1 drivers
+v000001fc9a612ed0_0 .net "pulse", 0 0, L_000001fc9a58bd70;  1 drivers
+S_000001fc9a613f40 .scope generate, "genblk1" "genblk1" 3 37, 3 37 0, S_000001fc9a613db0;
  .timescale -9 -9;
-S_000001e21c472500 .scope module, "nor1" "gates" 3 44, 4 36 0, S_000001e21c472ff0;
- .timescale -9 -9;
-    .port_info 0 /INPUT 1 "a";
-    .port_info 1 /INPUT 1 "b";
-    .port_info 2 /OUTPUT 1 "out";
-P_000001e21c3e01c0 .param/l "DELAY" 0 4 38, +C4<00000000000000000000000000001010>;
-P_000001e21c3e01f8 .param/str "TYPE" 0 4 37, "NOR";
-v000001e21c46f9a0_0 .net "a", 0 0, v000001e21c477f70_0;  alias, 1 drivers
-v000001e21c46fa40_0 .net "b", 0 0, L_000001e21c413d80;  alias, 1 drivers
-v000001e21c470580_0 .net "out", 0 0, L_000001e21c414640;  alias, 1 drivers
-S_000001e21c472820 .scope generate, "genblk1" "genblk1" 4 51, 4 51 0, S_000001e21c472500;
- .timescale -9 -9;
-L_000001e21c414640/d .functor NOR 1, v000001e21c477f70_0, L_000001e21c413d80, C4<0>, C4<0>;
-L_000001e21c414640 .delay 1 (10,10,10) L_000001e21c414640/d;
-S_000001e21c472e60 .scope module, "not1" "gates" 3 31, 4 36 0, S_000001e21c4729b0;
+S_000001fc9a6140d0 .scope module, "xor1" "gates" 3 54, 4 36 0, S_000001fc9a613f40;
  .timescale -9 -9;
     .port_info 0 /INPUT 1 "a";
     .port_info 1 /INPUT 1 "b";
     .port_info 2 /OUTPUT 1 "out";
-P_000001e21c3e0fc0 .param/l "DELAY" 0 4 38, +C4<00000000000000000000000000001010>;
-P_000001e21c3e0ff8 .param/str "TYPE" 0 4 37, "NOT";
-v000001e21c46f2c0_0 .net "a", 0 0, v000001e21c477f70_0;  alias, 1 drivers
-o000001e21c419298 .functor BUFZ 1, C4<z>; HiZ drive
-v000001e21c46f540_0 .net "b", 0 0, o000001e21c419298;  0 drivers
-v000001e21c46ef00_0 .net "out", 0 0, L_000001e21c413bc0;  alias, 1 drivers
-S_000001e21c472b40 .scope generate, "genblk1" "genblk1" 4 57, 4 57 0, S_000001e21c472e60;
+P_000001fc9a591280 .param/l "DELAY" 0 4 38, +C4<00000000000000000000000000001010>;
+P_000001fc9a5912b8 .param/str "TYPE" 0 4 37, "XOR";
+v000001fc9a612250_0 .net "a", 0 0, v000001fc9a61a470_0;  alias, 1 drivers
+v000001fc9a612390_0 .net "b", 0 0, L_000001fc9a622ad0;  alias, 1 drivers
+v000001fc9a612430_0 .net "out", 0 0, L_000001fc9a58bd70;  alias, 1 drivers
+S_000001fc9a614260 .scope generate, "genblk1" "genblk1" 4 45, 4 45 0, S_000001fc9a6140d0;
  .timescale -9 -9;
-L_000001e21c413bc0/d .functor NOT 1, v000001e21c477f70_0, C4<0>, C4<0>, C4<0>;
-L_000001e21c413bc0 .delay 1 (10,10,10) L_000001e21c413bc0/d;
-S_000001e21c473b50 .scope module, "not2" "gates" 3 32, 4 36 0, S_000001e21c4729b0;
- .timescale -9 -9;
-    .port_info 0 /INPUT 1 "a";
-    .port_info 1 /INPUT 1 "b";
-    .port_info 2 /OUTPUT 1 "out";
-P_000001e21c3df640 .param/l "DELAY" 0 4 38, +C4<00000000000000000000000000001010>;
-P_000001e21c3df678 .param/str "TYPE" 0 4 37, "NOT";
-v000001e21c46fb80_0 .net "a", 0 0, L_000001e21c413bc0;  alias, 1 drivers
-o000001e21c419388 .functor BUFZ 1, C4<z>; HiZ drive
-v000001e21c470440_0 .net "b", 0 0, o000001e21c419388;  0 drivers
-v000001e21c46efa0_0 .net "out", 0 0, L_000001e21c4138b0;  alias, 1 drivers
-S_000001e21c4744b0 .scope generate, "genblk1" "genblk1" 4 57, 4 57 0, S_000001e21c473b50;
- .timescale -9 -9;
-L_000001e21c4138b0/d .functor NOT 1, L_000001e21c413bc0, C4<0>, C4<0>, C4<0>;
-L_000001e21c4138b0 .delay 1 (10,10,10) L_000001e21c4138b0/d;
-S_000001e21c474320 .scope module, "not3" "gates" 3 33, 4 36 0, S_000001e21c4729b0;
+L_000001fc9a58bd70/d .functor XOR 1, v000001fc9a61a470_0, L_000001fc9a622ad0, C4<0>, C4<0>;
+L_000001fc9a58bd70 .delay 1 (10,10,10) L_000001fc9a58bd70/d;
+S_000001fc9a6143f0 .scope module, "not1" "gates" 3 31, 4 36 0, S_000001fc9a613db0;
  .timescale -9 -9;
     .port_info 0 /INPUT 1 "a";
     .port_info 1 /INPUT 1 "b";
     .port_info 2 /OUTPUT 1 "out";
-P_000001e21c3e0140 .param/l "DELAY" 0 4 38, +C4<00000000000000000000000000001010>;
-P_000001e21c3e0178 .param/str "TYPE" 0 4 37, "NOT";
-v000001e21c46f360_0 .net "a", 0 0, L_000001e21c4138b0;  alias, 1 drivers
-o000001e21c419478 .functor BUFZ 1, C4<z>; HiZ drive
-v000001e21c470620_0 .net "b", 0 0, o000001e21c419478;  0 drivers
-v000001e21c4704e0_0 .net "out", 0 0, L_000001e21c413d80;  alias, 1 drivers
-S_000001e21c473830 .scope generate, "genblk1" "genblk1" 4 57, 4 57 0, S_000001e21c474320;
+P_000001fc9a592800 .param/l "DELAY" 0 4 38, +C4<00000000000000000000000000001010>;
+P_000001fc9a592838 .param/str "TYPE" 0 4 37, "NOT";
+v000001fc9a612610_0 .net "a", 0 0, v000001fc9a61a470_0;  alias, 1 drivers
+o000001fc9a5bf9f8 .functor BUFZ 1, C4<z>; HiZ drive
+v000001fc9a611f30_0 .net "b", 0 0, o000001fc9a5bf9f8;  0 drivers
+v000001fc9a6135b0_0 .net "out", 0 0, L_000001fc9a58c0f0;  alias, 1 drivers
+S_000001fc9a614580 .scope generate, "genblk1" "genblk1" 4 45, 4 45 0, S_000001fc9a6143f0;
  .timescale -9 -9;
-L_000001e21c413d80/d .functor NOT 1, L_000001e21c4138b0, C4<0>, C4<0>, C4<0>;
-L_000001e21c413d80 .delay 1 (10,10,10) L_000001e21c413d80/d;
-S_000001e21c473ce0 .scope module, "falling_low" "edge_detector" 2 10, 3 20 0, S_000001e21c4161e0;
+L_000001fc9a58c0f0/d .functor NOT 1, v000001fc9a61a470_0, C4<0>, C4<0>, C4<0>;
+L_000001fc9a58c0f0 .delay 1 (10,10,10) L_000001fc9a58c0f0/d;
+S_000001fc9a614f30 .scope module, "not2" "gates" 3 32, 4 36 0, S_000001fc9a613db0;
+ .timescale -9 -9;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /OUTPUT 1 "out";
+P_000001fc9a591a00 .param/l "DELAY" 0 4 38, +C4<00000000000000000000000000001010>;
+P_000001fc9a591a38 .param/str "TYPE" 0 4 37, "NOT";
+v000001fc9a612f70_0 .net "a", 0 0, L_000001fc9a58c0f0;  alias, 1 drivers
+o000001fc9a5bfae8 .functor BUFZ 1, C4<z>; HiZ drive
+v000001fc9a612890_0 .net "b", 0 0, o000001fc9a5bfae8;  0 drivers
+v000001fc9a612e30_0 .net "out", 0 0, L_000001fc9a588550;  alias, 1 drivers
+S_000001fc9a614760 .scope generate, "genblk1" "genblk1" 4 45, 4 45 0, S_000001fc9a614f30;
+ .timescale -9 -9;
+L_000001fc9a588550/d .functor NOT 1, L_000001fc9a58c0f0, C4<0>, C4<0>, C4<0>;
+L_000001fc9a588550 .delay 1 (10,10,10) L_000001fc9a588550/d;
+S_000001fc9a614da0 .scope module, "not3" "gates" 3 33, 4 36 0, S_000001fc9a613db0;
+ .timescale -9 -9;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /OUTPUT 1 "out";
+P_000001fc9a591e00 .param/l "DELAY" 0 4 38, +C4<00000000000000000000000000001010>;
+P_000001fc9a591e38 .param/str "TYPE" 0 4 37, "NOT";
+v000001fc9a6127f0_0 .net "a", 0 0, L_000001fc9a588550;  alias, 1 drivers
+o000001fc9a5bfbd8 .functor BUFZ 1, C4<z>; HiZ drive
+v000001fc9a613010_0 .net "b", 0 0, o000001fc9a5bfbd8;  0 drivers
+v000001fc9a613150_0 .net "out", 0 0, L_000001fc9a622ad0;  alias, 1 drivers
+S_000001fc9a6153e0 .scope generate, "genblk1" "genblk1" 4 45, 4 45 0, S_000001fc9a614da0;
+ .timescale -9 -9;
+L_000001fc9a622ad0/d .functor NOT 1, L_000001fc9a588550, C4<0>, C4<0>, C4<0>;
+L_000001fc9a622ad0 .delay 1 (10,10,10) L_000001fc9a622ad0/d;
+S_000001fc9a614c10 .scope module, "falling_high" "edge_detector" 2 9, 3 20 0, S_000001fc9a5bdd30;
  .timescale -9 -9;
     .port_info 0 /INPUT 1 "clk";
     .port_info 1 /OUTPUT 1 "pulse";
-P_000001e21c3e0340 .param/str "ACTIVE" 0 3 22, "LOW";
-P_000001e21c3e0378 .param/str "TYPE" 0 3 21, "FALLING";
-v000001e21c46f5e0_0 .net "clk", 0 0, v000001e21c477f70_0;  alias, 1 drivers
-v000001e21c46f680_0 .net "net1", 0 0, L_000001e21c414250;  1 drivers
-v000001e21c46f7c0_0 .net "net2", 0 0, L_000001e21c414330;  1 drivers
-v000001e21c476cb0_0 .net "net3", 0 0, L_000001e21c4141e0;  1 drivers
-v000001e21c476a30_0 .net "pulse", 0 0, L_000001e21c413a00;  1 drivers
-S_000001e21c474e10 .scope generate, "genblk1" "genblk1" 3 46, 3 46 0, S_000001e21c473ce0;
+P_000001fc9a592680 .param/str "ACTIVE" 0 3 22, "HIGH";
+P_000001fc9a5926b8 .param/str "TYPE" 0 3 21, "FALLING";
+v000001fc9a6129d0_0 .net "clk", 0 0, v000001fc9a61a470_0;  alias, 1 drivers
+v000001fc9a613290_0 .net "net1", 0 0, L_000001fc9a58ca20;  1 drivers
+v000001fc9a6124d0_0 .net "net2", 0 0, L_000001fc9a58c550;  1 drivers
+v000001fc9a613ab0_0 .net "net3", 0 0, L_000001fc9a58c710;  1 drivers
+v000001fc9a612570_0 .net "pulse", 0 0, L_000001fc9a58c4e0;  1 drivers
+S_000001fc9a614a80 .scope generate, "genblk1" "genblk1" 3 37, 3 37 0, S_000001fc9a614c10;
  .timescale -9 -9;
-S_000001e21c4739c0 .scope module, "or2" "gates" 3 47, 4 36 0, S_000001e21c474e10;
- .timescale -9 -9;
-    .port_info 0 /INPUT 1 "a";
-    .port_info 1 /INPUT 1 "b";
-    .port_info 2 /OUTPUT 1 "out";
-P_000001e21c3df9c0 .param/l "DELAY" 0 4 38, +C4<00000000000000000000000000001010>;
-P_000001e21c3df9f8 .param/str "TYPE" 0 4 37, "OR";
-v000001e21c46e780_0 .net "a", 0 0, v000001e21c477f70_0;  alias, 1 drivers
-v000001e21c46f720_0 .net "b", 0 0, L_000001e21c4141e0;  alias, 1 drivers
-v000001e21c46e8c0_0 .net "out", 0 0, L_000001e21c413a00;  alias, 1 drivers
-S_000001e21c473e70 .scope generate, "genblk1" "genblk1" 4 47, 4 47 0, S_000001e21c4739c0;
- .timescale -9 -9;
-L_000001e21c413a00/d .functor OR 1, v000001e21c477f70_0, L_000001e21c4141e0, C4<0>, C4<0>;
-L_000001e21c413a00 .delay 1 (10,10,10) L_000001e21c413a00/d;
-S_000001e21c474640 .scope module, "not1" "gates" 3 31, 4 36 0, S_000001e21c473ce0;
+S_000001fc9a6148f0 .scope module, "nor1" "gates" 3 45, 4 36 0, S_000001fc9a614a80;
  .timescale -9 -9;
     .port_info 0 /INPUT 1 "a";
     .port_info 1 /INPUT 1 "b";
     .port_info 2 /OUTPUT 1 "out";
-P_000001e21c3e0940 .param/l "DELAY" 0 4 38, +C4<00000000000000000000000000001010>;
-P_000001e21c3e0978 .param/str "TYPE" 0 4 37, "NOT";
-v000001e21c470080_0 .net "a", 0 0, v000001e21c477f70_0;  alias, 1 drivers
-o000001e21c419688 .functor BUFZ 1, C4<z>; HiZ drive
-v000001e21c46eb40_0 .net "b", 0 0, o000001e21c419688;  0 drivers
-v000001e21c46f4a0_0 .net "out", 0 0, L_000001e21c414250;  alias, 1 drivers
-S_000001e21c4747d0 .scope generate, "genblk1" "genblk1" 4 57, 4 57 0, S_000001e21c474640;
+P_000001fc9a590d80 .param/l "DELAY" 0 4 38, +C4<00000000000000000000000000001010>;
+P_000001fc9a590db8 .param/str "TYPE" 0 4 37, "NOR";
+v000001fc9a613470_0 .net "a", 0 0, v000001fc9a61a470_0;  alias, 1 drivers
+v000001fc9a6122f0_0 .net "b", 0 0, L_000001fc9a58c710;  alias, 1 drivers
+v000001fc9a6121b0_0 .net "out", 0 0, L_000001fc9a58c4e0;  alias, 1 drivers
+S_000001fc9a615570 .scope generate, "genblk1" "genblk1" 4 45, 4 45 0, S_000001fc9a6148f0;
  .timescale -9 -9;
-L_000001e21c414250/d .functor NOT 1, v000001e21c477f70_0, C4<0>, C4<0>, C4<0>;
-L_000001e21c414250 .delay 1 (10,10,10) L_000001e21c414250/d;
-S_000001e21c474960 .scope module, "not2" "gates" 3 32, 4 36 0, S_000001e21c473ce0;
- .timescale -9 -9;
-    .port_info 0 /INPUT 1 "a";
-    .port_info 1 /INPUT 1 "b";
-    .port_info 2 /OUTPUT 1 "out";
-P_000001e21c3e02c0 .param/l "DELAY" 0 4 38, +C4<00000000000000000000000000001010>;
-P_000001e21c3e02f8 .param/str "TYPE" 0 4 37, "NOT";
-v000001e21c46ff40_0 .net "a", 0 0, L_000001e21c414250;  alias, 1 drivers
-o000001e21c419778 .functor BUFZ 1, C4<z>; HiZ drive
-v000001e21c46ffe0_0 .net "b", 0 0, o000001e21c419778;  0 drivers
-v000001e21c46f040_0 .net "out", 0 0, L_000001e21c414330;  alias, 1 drivers
-S_000001e21c474af0 .scope generate, "genblk1" "genblk1" 4 57, 4 57 0, S_000001e21c474960;
- .timescale -9 -9;
-L_000001e21c414330/d .functor NOT 1, L_000001e21c414250, C4<0>, C4<0>, C4<0>;
-L_000001e21c414330 .delay 1 (10,10,10) L_000001e21c414330/d;
-S_000001e21c474c80 .scope module, "not3" "gates" 3 33, 4 36 0, S_000001e21c473ce0;
+L_000001fc9a58c4e0/d .functor NOR 1, v000001fc9a61a470_0, L_000001fc9a58c710, C4<0>, C4<0>;
+L_000001fc9a58c4e0 .delay 1 (10,10,10) L_000001fc9a58c4e0/d;
+S_000001fc9a615250 .scope module, "not1" "gates" 3 31, 4 36 0, S_000001fc9a614c10;
  .timescale -9 -9;
     .port_info 0 /INPUT 1 "a";
     .port_info 1 /INPUT 1 "b";
     .port_info 2 /OUTPUT 1 "out";
-P_000001e21c3df4c0 .param/l "DELAY" 0 4 38, +C4<00000000000000000000000000001010>;
-P_000001e21c3df4f8 .param/str "TYPE" 0 4 37, "NOT";
-v000001e21c46ebe0_0 .net "a", 0 0, L_000001e21c414330;  alias, 1 drivers
-o000001e21c419868 .functor BUFZ 1, C4<z>; HiZ drive
-v000001e21c46f0e0_0 .net "b", 0 0, o000001e21c419868;  0 drivers
-v000001e21c46f220_0 .net "out", 0 0, L_000001e21c4141e0;  alias, 1 drivers
-S_000001e21c4752c0 .scope generate, "genblk1" "genblk1" 4 57, 4 57 0, S_000001e21c474c80;
+P_000001fc9a591380 .param/l "DELAY" 0 4 38, +C4<00000000000000000000000000001010>;
+P_000001fc9a5913b8 .param/str "TYPE" 0 4 37, "NOT";
+v000001fc9a611fd0_0 .net "a", 0 0, v000001fc9a61a470_0;  alias, 1 drivers
+o000001fc9a5bfde8 .functor BUFZ 1, C4<z>; HiZ drive
+v000001fc9a612d90_0 .net "b", 0 0, o000001fc9a5bfde8;  0 drivers
+v000001fc9a612070_0 .net "out", 0 0, L_000001fc9a58ca20;  alias, 1 drivers
+S_000001fc9a6150c0 .scope generate, "genblk1" "genblk1" 4 45, 4 45 0, S_000001fc9a615250;
  .timescale -9 -9;
-L_000001e21c4141e0/d .functor NOT 1, L_000001e21c414330, C4<0>, C4<0>, C4<0>;
-L_000001e21c4141e0 .delay 1 (10,10,10) L_000001e21c4141e0/d;
-S_000001e21c475130 .scope module, "rising_high" "edge_detector" 2 7, 3 20 0, S_000001e21c4161e0;
+L_000001fc9a58ca20/d .functor NOT 1, v000001fc9a61a470_0, C4<0>, C4<0>, C4<0>;
+L_000001fc9a58ca20 .delay 1 (10,10,10) L_000001fc9a58ca20/d;
+S_000001fc9a618530 .scope module, "not2" "gates" 3 32, 4 36 0, S_000001fc9a614c10;
+ .timescale -9 -9;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /OUTPUT 1 "out";
+P_000001fc9a591400 .param/l "DELAY" 0 4 38, +C4<00000000000000000000000000001010>;
+P_000001fc9a591438 .param/str "TYPE" 0 4 37, "NOT";
+v000001fc9a613510_0 .net "a", 0 0, L_000001fc9a58ca20;  alias, 1 drivers
+o000001fc9a5bfed8 .functor BUFZ 1, C4<z>; HiZ drive
+v000001fc9a6130b0_0 .net "b", 0 0, o000001fc9a5bfed8;  0 drivers
+v000001fc9a612110_0 .net "out", 0 0, L_000001fc9a58c550;  alias, 1 drivers
+S_000001fc9a617270 .scope generate, "genblk1" "genblk1" 4 45, 4 45 0, S_000001fc9a618530;
+ .timescale -9 -9;
+L_000001fc9a58c550/d .functor NOT 1, L_000001fc9a58ca20, C4<0>, C4<0>, C4<0>;
+L_000001fc9a58c550 .delay 1 (10,10,10) L_000001fc9a58c550/d;
+S_000001fc9a618080 .scope module, "not3" "gates" 3 33, 4 36 0, S_000001fc9a614c10;
+ .timescale -9 -9;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /OUTPUT 1 "out";
+P_000001fc9a591680 .param/l "DELAY" 0 4 38, +C4<00000000000000000000000000001010>;
+P_000001fc9a5916b8 .param/str "TYPE" 0 4 37, "NOT";
+v000001fc9a6131f0_0 .net "a", 0 0, L_000001fc9a58c550;  alias, 1 drivers
+o000001fc9a5bffc8 .functor BUFZ 1, C4<z>; HiZ drive
+v000001fc9a613c90_0 .net "b", 0 0, o000001fc9a5bffc8;  0 drivers
+v000001fc9a613a10_0 .net "out", 0 0, L_000001fc9a58c710;  alias, 1 drivers
+S_000001fc9a617ef0 .scope generate, "genblk1" "genblk1" 4 45, 4 45 0, S_000001fc9a618080;
+ .timescale -9 -9;
+L_000001fc9a58c710/d .functor NOT 1, L_000001fc9a58c550, C4<0>, C4<0>, C4<0>;
+L_000001fc9a58c710 .delay 1 (10,10,10) L_000001fc9a58c710/d;
+S_000001fc9a617a40 .scope module, "falling_low" "edge_detector" 2 10, 3 20 0, S_000001fc9a5bdd30;
  .timescale -9 -9;
     .port_info 0 /INPUT 1 "clk";
     .port_info 1 /OUTPUT 1 "pulse";
-P_000001e21c3df2c0 .param/str "ACTIVE" 0 3 22, "HIGH";
-P_000001e21c3df2f8 .param/str "TYPE" 0 3 21, "RISING";
-v000001e21c477e30_0 .net "clk", 0 0, v000001e21c477f70_0;  alias, 1 drivers
-v000001e21c4774d0_0 .net "net1", 0 0, L_000001e21c413c30;  1 drivers
-v000001e21c476850_0 .net "net2", 0 0, L_000001e21c413df0;  1 drivers
-v000001e21c4765d0_0 .net "net3", 0 0, L_000001e21c413ae0;  1 drivers
-v000001e21c4768f0_0 .net "pulse", 0 0, L_000001e21c413ca0;  1 drivers
-S_000001e21c474000 .scope generate, "genblk1" "genblk1" 3 37, 3 37 0, S_000001e21c475130;
+P_000001fc9a592300 .param/str "ACTIVE" 0 3 22, "LOW";
+P_000001fc9a592338 .param/str "TYPE" 0 3 21, "FALLING";
+v000001fc9a612cf0_0 .net "clk", 0 0, v000001fc9a61a470_0;  alias, 1 drivers
+v000001fc9a613970_0 .net "net1", 0 0, L_000001fc9a58ca90;  1 drivers
+v000001fc9a61a290_0 .net "net2", 0 0, L_000001fc9a58c6a0;  1 drivers
+v000001fc9a61a510_0 .net "net3", 0 0, L_000001fc9a58be50;  1 drivers
+v000001fc9a61a8d0_0 .net "pulse", 0 0, L_000001fc9a58c5c0;  1 drivers
+S_000001fc9a616910 .scope generate, "genblk1" "genblk1" 3 37, 3 37 0, S_000001fc9a617a40;
  .timescale -9 -9;
-S_000001e21c474fa0 .scope module, "and1" "gates" 3 38, 4 36 0, S_000001e21c474000;
- .timescale -9 -9;
-    .port_info 0 /INPUT 1 "a";
-    .port_info 1 /INPUT 1 "b";
-    .port_info 2 /OUTPUT 1 "out";
-P_000001e21c3e0a40 .param/l "DELAY" 0 4 38, +C4<00000000000000000000000000001010>;
-P_000001e21c3e0a78 .param/str "TYPE" 0 4 37, "AND";
-v000001e21c478150_0 .net "a", 0 0, v000001e21c477f70_0;  alias, 1 drivers
-v000001e21c4780b0_0 .net "b", 0 0, L_000001e21c413ae0;  alias, 1 drivers
-v000001e21c476ad0_0 .net "out", 0 0, L_000001e21c413ca0;  alias, 1 drivers
-S_000001e21c474190 .scope generate, "genblk1" "genblk1" 4 45, 4 45 0, S_000001e21c474fa0;
- .timescale -9 -9;
-L_000001e21c413ca0/d .functor AND 1, v000001e21c477f70_0, L_000001e21c413ae0, C4<1>, C4<1>;
-L_000001e21c413ca0 .delay 1 (10,10,10) L_000001e21c413ca0/d;
-S_000001e21c473510 .scope module, "not1" "gates" 3 31, 4 36 0, S_000001e21c475130;
+S_000001fc9a616780 .scope module, "or2" "gates" 3 48, 4 36 0, S_000001fc9a616910;
  .timescale -9 -9;
     .port_info 0 /INPUT 1 "a";
     .port_info 1 /INPUT 1 "b";
     .port_info 2 /OUTPUT 1 "out";
-P_000001e21c3e06c0 .param/l "DELAY" 0 4 38, +C4<00000000000000000000000000001010>;
-P_000001e21c3e06f8 .param/str "TYPE" 0 4 37, "NOT";
-v000001e21c476df0_0 .net "a", 0 0, v000001e21c477f70_0;  alias, 1 drivers
-o000001e21c419a78 .functor BUFZ 1, C4<z>; HiZ drive
-v000001e21c477570_0 .net "b", 0 0, o000001e21c419a78;  0 drivers
-v000001e21c476530_0 .net "out", 0 0, L_000001e21c413c30;  alias, 1 drivers
-S_000001e21c4736a0 .scope generate, "genblk1" "genblk1" 4 57, 4 57 0, S_000001e21c473510;
+P_000001fc9a590e00 .param/l "DELAY" 0 4 38, +C4<00000000000000000000000000001010>;
+P_000001fc9a590e38 .param/str "TYPE" 0 4 37, "OR";
+v000001fc9a6126b0_0 .net "a", 0 0, v000001fc9a61a470_0;  alias, 1 drivers
+v000001fc9a613330_0 .net "b", 0 0, L_000001fc9a58be50;  alias, 1 drivers
+v000001fc9a613650_0 .net "out", 0 0, L_000001fc9a58c5c0;  alias, 1 drivers
+S_000001fc9a616c30 .scope generate, "genblk1" "genblk1" 4 45, 4 45 0, S_000001fc9a616780;
  .timescale -9 -9;
-L_000001e21c413c30/d .functor NOT 1, v000001e21c477f70_0, C4<0>, C4<0>, C4<0>;
-L_000001e21c413c30 .delay 1 (10,10,10) L_000001e21c413c30/d;
-S_000001e21c47a810 .scope module, "not2" "gates" 3 32, 4 36 0, S_000001e21c475130;
- .timescale -9 -9;
-    .port_info 0 /INPUT 1 "a";
-    .port_info 1 /INPUT 1 "b";
-    .port_info 2 /OUTPUT 1 "out";
-P_000001e21c3df5c0 .param/l "DELAY" 0 4 38, +C4<00000000000000000000000000001010>;
-P_000001e21c3df5f8 .param/str "TYPE" 0 4 37, "NOT";
-v000001e21c4781f0_0 .net "a", 0 0, L_000001e21c413c30;  alias, 1 drivers
-o000001e21c419b68 .functor BUFZ 1, C4<z>; HiZ drive
-v000001e21c477bb0_0 .net "b", 0 0, o000001e21c419b68;  0 drivers
-v000001e21c4783d0_0 .net "out", 0 0, L_000001e21c413df0;  alias, 1 drivers
-S_000001e21c479d20 .scope generate, "genblk1" "genblk1" 4 57, 4 57 0, S_000001e21c47a810;
- .timescale -9 -9;
-L_000001e21c413df0/d .functor NOT 1, L_000001e21c413c30, C4<0>, C4<0>, C4<0>;
-L_000001e21c413df0 .delay 1 (10,10,10) L_000001e21c413df0/d;
-S_000001e21c47a680 .scope module, "not3" "gates" 3 33, 4 36 0, S_000001e21c475130;
+L_000001fc9a58c5c0/d .functor OR 1, v000001fc9a61a470_0, L_000001fc9a58be50, C4<0>, C4<0>;
+L_000001fc9a58c5c0 .delay 1 (10,10,10) L_000001fc9a58c5c0/d;
+S_000001fc9a618210 .scope module, "not1" "gates" 3 31, 4 36 0, S_000001fc9a617a40;
  .timescale -9 -9;
     .port_info 0 /INPUT 1 "a";
     .port_info 1 /INPUT 1 "b";
     .port_info 2 /OUTPUT 1 "out";
-P_000001e21c3e09c0 .param/l "DELAY" 0 4 38, +C4<00000000000000000000000000001010>;
-P_000001e21c3e09f8 .param/str "TYPE" 0 4 37, "NOT";
-v000001e21c477b10_0 .net "a", 0 0, L_000001e21c413df0;  alias, 1 drivers
-o000001e21c419c58 .functor BUFZ 1, C4<z>; HiZ drive
-v000001e21c477a70_0 .net "b", 0 0, o000001e21c419c58;  0 drivers
-v000001e21c477d90_0 .net "out", 0 0, L_000001e21c413ae0;  alias, 1 drivers
-S_000001e21c47a360 .scope generate, "genblk1" "genblk1" 4 57, 4 57 0, S_000001e21c47a680;
+P_000001fc9a592700 .param/l "DELAY" 0 4 38, +C4<00000000000000000000000000001010>;
+P_000001fc9a592738 .param/str "TYPE" 0 4 37, "NOT";
+v000001fc9a612750_0 .net "a", 0 0, v000001fc9a61a470_0;  alias, 1 drivers
+o000001fc9a5c01d8 .functor BUFZ 1, C4<z>; HiZ drive
+v000001fc9a613790_0 .net "b", 0 0, o000001fc9a5c01d8;  0 drivers
+v000001fc9a612930_0 .net "out", 0 0, L_000001fc9a58ca90;  alias, 1 drivers
+S_000001fc9a6183a0 .scope generate, "genblk1" "genblk1" 4 45, 4 45 0, S_000001fc9a618210;
  .timescale -9 -9;
-L_000001e21c413ae0/d .functor NOT 1, L_000001e21c413df0, C4<0>, C4<0>, C4<0>;
-L_000001e21c413ae0 .delay 1 (10,10,10) L_000001e21c413ae0/d;
-S_000001e21c47afe0 .scope module, "rising_low" "edge_detector" 2 8, 3 20 0, S_000001e21c4161e0;
+L_000001fc9a58ca90/d .functor NOT 1, v000001fc9a61a470_0, C4<0>, C4<0>, C4<0>;
+L_000001fc9a58ca90 .delay 1 (10,10,10) L_000001fc9a58ca90/d;
+S_000001fc9a616aa0 .scope module, "not2" "gates" 3 32, 4 36 0, S_000001fc9a617a40;
+ .timescale -9 -9;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /OUTPUT 1 "out";
+P_000001fc9a591780 .param/l "DELAY" 0 4 38, +C4<00000000000000000000000000001010>;
+P_000001fc9a5917b8 .param/str "TYPE" 0 4 37, "NOT";
+v000001fc9a612a70_0 .net "a", 0 0, L_000001fc9a58ca90;  alias, 1 drivers
+o000001fc9a5c02c8 .functor BUFZ 1, C4<z>; HiZ drive
+v000001fc9a612b10_0 .net "b", 0 0, o000001fc9a5c02c8;  0 drivers
+v000001fc9a612bb0_0 .net "out", 0 0, L_000001fc9a58c6a0;  alias, 1 drivers
+S_000001fc9a617d60 .scope generate, "genblk1" "genblk1" 4 45, 4 45 0, S_000001fc9a616aa0;
+ .timescale -9 -9;
+L_000001fc9a58c6a0/d .functor NOT 1, L_000001fc9a58ca90, C4<0>, C4<0>, C4<0>;
+L_000001fc9a58c6a0 .delay 1 (10,10,10) L_000001fc9a58c6a0/d;
+S_000001fc9a617bd0 .scope module, "not3" "gates" 3 33, 4 36 0, S_000001fc9a617a40;
+ .timescale -9 -9;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /OUTPUT 1 "out";
+P_000001fc9a591800 .param/l "DELAY" 0 4 38, +C4<00000000000000000000000000001010>;
+P_000001fc9a591838 .param/str "TYPE" 0 4 37, "NOT";
+v000001fc9a612c50_0 .net "a", 0 0, L_000001fc9a58c6a0;  alias, 1 drivers
+o000001fc9a5c03b8 .functor BUFZ 1, C4<z>; HiZ drive
+v000001fc9a613830_0 .net "b", 0 0, o000001fc9a5c03b8;  0 drivers
+v000001fc9a6138d0_0 .net "out", 0 0, L_000001fc9a58be50;  alias, 1 drivers
+S_000001fc9a617400 .scope generate, "genblk1" "genblk1" 4 45, 4 45 0, S_000001fc9a617bd0;
+ .timescale -9 -9;
+L_000001fc9a58be50/d .functor NOT 1, L_000001fc9a58c6a0, C4<0>, C4<0>, C4<0>;
+L_000001fc9a58be50 .delay 1 (10,10,10) L_000001fc9a58be50/d;
+S_000001fc9a616dc0 .scope module, "rising_high" "edge_detector" 2 7, 3 20 0, S_000001fc9a5bdd30;
  .timescale -9 -9;
     .port_info 0 /INPUT 1 "clk";
     .port_info 1 /OUTPUT 1 "pulse";
-P_000001e21c3df840 .param/str "ACTIVE" 0 3 22, "LOW";
-P_000001e21c3df878 .param/str "TYPE" 0 3 21, "RISING";
-v000001e21c477610_0 .net "clk", 0 0, v000001e21c477f70_0;  alias, 1 drivers
-v000001e21c478330_0 .net "net1", 0 0, L_000001e21c414090;  1 drivers
-v000001e21c477250_0 .net "net2", 0 0, L_000001e21c413920;  1 drivers
-v000001e21c476710_0 .net "net3", 0 0, L_000001e21c413a70;  1 drivers
-v000001e21c477110_0 .net "pulse", 0 0, L_000001e21c4144f0;  1 drivers
-S_000001e21c479a00 .scope generate, "genblk1" "genblk1" 3 40, 3 40 0, S_000001e21c47afe0;
+P_000001fc9a591880 .param/str "ACTIVE" 0 3 22, "HIGH";
+P_000001fc9a5918b8 .param/str "TYPE" 0 3 21, "RISING";
+v000001fc9a61b410_0 .net "clk", 0 0, v000001fc9a61a470_0;  alias, 1 drivers
+v000001fc9a61a150_0 .net "net1", 0 0, L_000001fc9a58c940;  1 drivers
+v000001fc9a61a6f0_0 .net "net2", 0 0, L_000001fc9a58c080;  1 drivers
+v000001fc9a61b550_0 .net "net3", 0 0, L_000001fc9a58c400;  1 drivers
+v000001fc9a61ab50_0 .net "pulse", 0 0, L_000001fc9a58c8d0;  1 drivers
+S_000001fc9a6170e0 .scope generate, "genblk1" "genblk1" 3 37, 3 37 0, S_000001fc9a616dc0;
  .timescale -9 -9;
-S_000001e21c47a4f0 .scope module, "nand1" "gates" 3 41, 4 36 0, S_000001e21c479a00;
- .timescale -9 -9;
-    .port_info 0 /INPUT 1 "a";
-    .port_info 1 /INPUT 1 "b";
-    .port_info 2 /OUTPUT 1 "out";
-P_000001e21c3e0ec0 .param/l "DELAY" 0 4 38, +C4<00000000000000000000000000001010>;
-P_000001e21c3e0ef8 .param/str "TYPE" 0 4 37, "NAND";
-v000001e21c4772f0_0 .net "a", 0 0, v000001e21c477f70_0;  alias, 1 drivers
-v000001e21c477ed0_0 .net "b", 0 0, L_000001e21c413a70;  alias, 1 drivers
-v000001e21c476b70_0 .net "out", 0 0, L_000001e21c4144f0;  alias, 1 drivers
-S_000001e21c47acc0 .scope generate, "genblk1" "genblk1" 4 49, 4 49 0, S_000001e21c47a4f0;
- .timescale -9 -9;
-L_000001e21c4144f0/d .functor NAND 1, v000001e21c477f70_0, L_000001e21c413a70, C4<1>, C4<1>;
-L_000001e21c4144f0 .delay 1 (10,10,10) L_000001e21c4144f0/d;
-S_000001e21c47a9a0 .scope module, "not1" "gates" 3 31, 4 36 0, S_000001e21c47afe0;
+S_000001fc9a616f50 .scope module, "and1" "gates" 3 39, 4 36 0, S_000001fc9a6170e0;
  .timescale -9 -9;
     .port_info 0 /INPUT 1 "a";
     .port_info 1 /INPUT 1 "b";
     .port_info 2 /OUTPUT 1 "out";
-P_000001e21c3e0f40 .param/l "DELAY" 0 4 38, +C4<00000000000000000000000000001010>;
-P_000001e21c3e0f78 .param/str "TYPE" 0 4 37, "NOT";
-v000001e21c477070_0 .net "a", 0 0, v000001e21c477f70_0;  alias, 1 drivers
-o000001e21c419e68 .functor BUFZ 1, C4<z>; HiZ drive
-v000001e21c477390_0 .net "b", 0 0, o000001e21c419e68;  0 drivers
-v000001e21c476d50_0 .net "out", 0 0, L_000001e21c414090;  alias, 1 drivers
-S_000001e21c47a1d0 .scope generate, "genblk1" "genblk1" 4 57, 4 57 0, S_000001e21c47a9a0;
+P_000001fc9a591b00 .param/l "DELAY" 0 4 38, +C4<00000000000000000000000000001010>;
+P_000001fc9a591b38 .param/str "TYPE" 0 4 37, "AND";
+v000001fc9a61a790_0 .net "a", 0 0, v000001fc9a61a470_0;  alias, 1 drivers
+v000001fc9a61b0f0_0 .net "b", 0 0, L_000001fc9a58c400;  alias, 1 drivers
+v000001fc9a61b870_0 .net "out", 0 0, L_000001fc9a58c8d0;  alias, 1 drivers
+S_000001fc9a617590 .scope generate, "genblk1" "genblk1" 4 45, 4 45 0, S_000001fc9a616f50;
  .timescale -9 -9;
-L_000001e21c414090/d .functor NOT 1, v000001e21c477f70_0, C4<0>, C4<0>, C4<0>;
-L_000001e21c414090 .delay 1 (10,10,10) L_000001e21c414090/d;
-S_000001e21c47a040 .scope module, "not2" "gates" 3 32, 4 36 0, S_000001e21c47afe0;
- .timescale -9 -9;
-    .port_info 0 /INPUT 1 "a";
-    .port_info 1 /INPUT 1 "b";
-    .port_info 2 /OUTPUT 1 "out";
-P_000001e21c3df8c0 .param/l "DELAY" 0 4 38, +C4<00000000000000000000000000001010>;
-P_000001e21c3df8f8 .param/str "TYPE" 0 4 37, "NOT";
-v000001e21c477c50_0 .net "a", 0 0, L_000001e21c414090;  alias, 1 drivers
-o000001e21c419f58 .functor BUFZ 1, C4<z>; HiZ drive
-v000001e21c476670_0 .net "b", 0 0, o000001e21c419f58;  0 drivers
-v000001e21c478290_0 .net "out", 0 0, L_000001e21c413920;  alias, 1 drivers
-S_000001e21c47b170 .scope generate, "genblk1" "genblk1" 4 57, 4 57 0, S_000001e21c47a040;
- .timescale -9 -9;
-L_000001e21c413920/d .functor NOT 1, L_000001e21c414090, C4<0>, C4<0>, C4<0>;
-L_000001e21c413920 .delay 1 (10,10,10) L_000001e21c413920/d;
-S_000001e21c479b90 .scope module, "not3" "gates" 3 33, 4 36 0, S_000001e21c47afe0;
+L_000001fc9a58c8d0/d .functor AND 1, v000001fc9a61a470_0, L_000001fc9a58c400, C4<1>, C4<1>;
+L_000001fc9a58c8d0 .delay 1 (10,10,10) L_000001fc9a58c8d0/d;
+S_000001fc9a617720 .scope module, "not1" "gates" 3 31, 4 36 0, S_000001fc9a616dc0;
  .timescale -9 -9;
     .port_info 0 /INPUT 1 "a";
     .port_info 1 /INPUT 1 "b";
     .port_info 2 /OUTPUT 1 "out";
-P_000001e21c3df6c0 .param/l "DELAY" 0 4 38, +C4<00000000000000000000000000001010>;
-P_000001e21c3df6f8 .param/str "TYPE" 0 4 37, "NOT";
-v000001e21c476c10_0 .net "a", 0 0, L_000001e21c413920;  alias, 1 drivers
-o000001e21c41a048 .functor BUFZ 1, C4<z>; HiZ drive
-v000001e21c477430_0 .net "b", 0 0, o000001e21c41a048;  0 drivers
-v000001e21c4767b0_0 .net "out", 0 0, L_000001e21c413a70;  alias, 1 drivers
-S_000001e21c47ab30 .scope generate, "genblk1" "genblk1" 4 57, 4 57 0, S_000001e21c479b90;
+P_000001fc9a592c00 .param/l "DELAY" 0 4 38, +C4<00000000000000000000000000001010>;
+P_000001fc9a592c38 .param/str "TYPE" 0 4 37, "NOT";
+v000001fc9a61ae70_0 .net "a", 0 0, v000001fc9a61a470_0;  alias, 1 drivers
+o000001fc9a5c05c8 .functor BUFZ 1, C4<z>; HiZ drive
+v000001fc9a61b050_0 .net "b", 0 0, o000001fc9a5c05c8;  0 drivers
+v000001fc9a61b4b0_0 .net "out", 0 0, L_000001fc9a58c940;  alias, 1 drivers
+S_000001fc9a6178b0 .scope generate, "genblk1" "genblk1" 4 45, 4 45 0, S_000001fc9a617720;
  .timescale -9 -9;
-L_000001e21c413a70/d .functor NOT 1, L_000001e21c413920, C4<0>, C4<0>, C4<0>;
-L_000001e21c413a70 .delay 1 (10,10,10) L_000001e21c413a70/d;
-    .scope S_000001e21c4161e0;
+L_000001fc9a58c940/d .functor NOT 1, v000001fc9a61a470_0, C4<0>, C4<0>, C4<0>;
+L_000001fc9a58c940 .delay 1 (10,10,10) L_000001fc9a58c940/d;
+S_000001fc9a61df70 .scope module, "not2" "gates" 3 32, 4 36 0, S_000001fc9a616dc0;
+ .timescale -9 -9;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /OUTPUT 1 "out";
+P_000001fc9a592380 .param/l "DELAY" 0 4 38, +C4<00000000000000000000000000001010>;
+P_000001fc9a5923b8 .param/str "TYPE" 0 4 37, "NOT";
+v000001fc9a61b910_0 .net "a", 0 0, L_000001fc9a58c940;  alias, 1 drivers
+o000001fc9a5c06b8 .functor BUFZ 1, C4<z>; HiZ drive
+v000001fc9a61a1f0_0 .net "b", 0 0, o000001fc9a5c06b8;  0 drivers
+v000001fc9a61a330_0 .net "out", 0 0, L_000001fc9a58c080;  alias, 1 drivers
+S_000001fc9a61d160 .scope generate, "genblk1" "genblk1" 4 45, 4 45 0, S_000001fc9a61df70;
+ .timescale -9 -9;
+L_000001fc9a58c080/d .functor NOT 1, L_000001fc9a58c940, C4<0>, C4<0>, C4<0>;
+L_000001fc9a58c080 .delay 1 (10,10,10) L_000001fc9a58c080/d;
+S_000001fc9a61e100 .scope module, "not3" "gates" 3 33, 4 36 0, S_000001fc9a616dc0;
+ .timescale -9 -9;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /OUTPUT 1 "out";
+P_000001fc9a592880 .param/l "DELAY" 0 4 38, +C4<00000000000000000000000000001010>;
+P_000001fc9a5928b8 .param/str "TYPE" 0 4 37, "NOT";
+v000001fc9a61b690_0 .net "a", 0 0, L_000001fc9a58c080;  alias, 1 drivers
+o000001fc9a5c07a8 .functor BUFZ 1, C4<z>; HiZ drive
+v000001fc9a61a830_0 .net "b", 0 0, o000001fc9a5c07a8;  0 drivers
+v000001fc9a619ed0_0 .net "out", 0 0, L_000001fc9a58c400;  alias, 1 drivers
+S_000001fc9a61e5b0 .scope generate, "genblk1" "genblk1" 4 45, 4 45 0, S_000001fc9a61e100;
+ .timescale -9 -9;
+L_000001fc9a58c400/d .functor NOT 1, L_000001fc9a58c080, C4<0>, C4<0>, C4<0>;
+L_000001fc9a58c400 .delay 1 (10,10,10) L_000001fc9a58c400/d;
+S_000001fc9a61e290 .scope module, "rising_low" "edge_detector" 2 8, 3 20 0, S_000001fc9a5bdd30;
+ .timescale -9 -9;
+    .port_info 0 /INPUT 1 "clk";
+    .port_info 1 /OUTPUT 1 "pulse";
+P_000001fc9a591900 .param/str "ACTIVE" 0 3 22, "LOW";
+P_000001fc9a591938 .param/str "TYPE" 0 3 21, "RISING";
+v000001fc9a61aa10_0 .net "clk", 0 0, v000001fc9a61a470_0;  alias, 1 drivers
+v000001fc9a61b230_0 .net "net1", 0 0, L_000001fc9a58c160;  1 drivers
+v000001fc9a619f70_0 .net "net2", 0 0, L_000001fc9a58c470;  1 drivers
+v000001fc9a61ad30_0 .net "net3", 0 0, L_000001fc9a58bde0;  1 drivers
+v000001fc9a61add0_0 .net "pulse", 0 0, L_000001fc9a58c9b0;  1 drivers
+S_000001fc9a61cfd0 .scope generate, "genblk1" "genblk1" 3 37, 3 37 0, S_000001fc9a61e290;
+ .timescale -9 -9;
+S_000001fc9a61ebf0 .scope module, "nand1" "gates" 3 42, 4 36 0, S_000001fc9a61cfd0;
+ .timescale -9 -9;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /OUTPUT 1 "out";
+P_000001fc9a591980 .param/l "DELAY" 0 4 38, +C4<00000000000000000000000000001010>;
+P_000001fc9a5919b8 .param/str "TYPE" 0 4 37, "NAND";
+v000001fc9a61abf0_0 .net "a", 0 0, v000001fc9a61a470_0;  alias, 1 drivers
+v000001fc9a61a970_0 .net "b", 0 0, L_000001fc9a58bde0;  alias, 1 drivers
+v000001fc9a619bb0_0 .net "out", 0 0, L_000001fc9a58c9b0;  alias, 1 drivers
+S_000001fc9a61d2f0 .scope generate, "genblk1" "genblk1" 4 45, 4 45 0, S_000001fc9a61ebf0;
+ .timescale -9 -9;
+L_000001fc9a58c9b0/d .functor NAND 1, v000001fc9a61a470_0, L_000001fc9a58bde0, C4<1>, C4<1>;
+L_000001fc9a58c9b0 .delay 1 (10,10,10) L_000001fc9a58c9b0/d;
+S_000001fc9a61d480 .scope module, "not1" "gates" 3 31, 4 36 0, S_000001fc9a61e290;
+ .timescale -9 -9;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /OUTPUT 1 "out";
+P_000001fc9a591b80 .param/l "DELAY" 0 4 38, +C4<00000000000000000000000000001010>;
+P_000001fc9a591bb8 .param/str "TYPE" 0 4 37, "NOT";
+v000001fc9a61a3d0_0 .net "a", 0 0, v000001fc9a61a470_0;  alias, 1 drivers
+o000001fc9a5c09b8 .functor BUFZ 1, C4<z>; HiZ drive
+v000001fc9a61b5f0_0 .net "b", 0 0, o000001fc9a5c09b8;  0 drivers
+v000001fc9a61a5b0_0 .net "out", 0 0, L_000001fc9a58c160;  alias, 1 drivers
+S_000001fc9a61e740 .scope generate, "genblk1" "genblk1" 4 45, 4 45 0, S_000001fc9a61d480;
+ .timescale -9 -9;
+L_000001fc9a58c160/d .functor NOT 1, v000001fc9a61a470_0, C4<0>, C4<0>, C4<0>;
+L_000001fc9a58c160 .delay 1 (10,10,10) L_000001fc9a58c160/d;
+S_000001fc9a61dac0 .scope module, "not2" "gates" 3 32, 4 36 0, S_000001fc9a61e290;
+ .timescale -9 -9;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /OUTPUT 1 "out";
+P_000001fc9a591c00 .param/l "DELAY" 0 4 38, +C4<00000000000000000000000000001010>;
+P_000001fc9a591c38 .param/str "TYPE" 0 4 37, "NOT";
+v000001fc9a61b190_0 .net "a", 0 0, L_000001fc9a58c160;  alias, 1 drivers
+o000001fc9a5c0aa8 .functor BUFZ 1, C4<z>; HiZ drive
+v000001fc9a61b730_0 .net "b", 0 0, o000001fc9a5c0aa8;  0 drivers
+v000001fc9a61ac90_0 .net "out", 0 0, L_000001fc9a58c470;  alias, 1 drivers
+S_000001fc9a61e420 .scope generate, "genblk1" "genblk1" 4 45, 4 45 0, S_000001fc9a61dac0;
+ .timescale -9 -9;
+L_000001fc9a58c470/d .functor NOT 1, L_000001fc9a58c160, C4<0>, C4<0>, C4<0>;
+L_000001fc9a58c470 .delay 1 (10,10,10) L_000001fc9a58c470/d;
+S_000001fc9a61d610 .scope module, "not3" "gates" 3 33, 4 36 0, S_000001fc9a61e290;
+ .timescale -9 -9;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /OUTPUT 1 "out";
+P_000001fc9a591c80 .param/l "DELAY" 0 4 38, +C4<00000000000000000000000000001010>;
+P_000001fc9a591cb8 .param/str "TYPE" 0 4 37, "NOT";
+v000001fc9a619c50_0 .net "a", 0 0, L_000001fc9a58c470;  alias, 1 drivers
+o000001fc9a5c0b98 .functor BUFZ 1, C4<z>; HiZ drive
+v000001fc9a61a010_0 .net "b", 0 0, o000001fc9a5c0b98;  0 drivers
+v000001fc9a61aab0_0 .net "out", 0 0, L_000001fc9a58bde0;  alias, 1 drivers
+S_000001fc9a61d7a0 .scope generate, "genblk1" "genblk1" 4 45, 4 45 0, S_000001fc9a61d610;
+ .timescale -9 -9;
+L_000001fc9a58bde0/d .functor NOT 1, L_000001fc9a58c470, C4<0>, C4<0>, C4<0>;
+L_000001fc9a58bde0 .delay 1 (10,10,10) L_000001fc9a58bde0/d;
+    .scope S_000001fc9a5bdd30;
 T_0 ;
     %delay 200, 0;
-    %load/vec4 v000001e21c477f70_0;
+    %load/vec4 v000001fc9a61a470_0;
     %inv;
-    %store/vec4 v000001e21c477f70_0, 0, 1;
+    %store/vec4 v000001fc9a61a470_0, 0, 1;
     %jmp T_0;
     .thread T_0;
-    .scope S_000001e21c4161e0;
+    .scope S_000001fc9a5bdd30;
 T_1 ;
     %vpi_call 2 18 "$dumpfile", "testbench/edge_detector_tb.vcd" {0 0 0};
-    %vpi_call 2 19 "$dumpvars", 32'sb00000000000000000000000000000000, S_000001e21c4161e0 {0 0 0};
+    %vpi_call 2 19 "$dumpvars", 32'sb00000000000000000000000000000000, S_000001fc9a5bdd30 {0 0 0};
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v000001e21c477f70_0, 0, 1;
+    %store/vec4 v000001fc9a61a470_0, 0, 1;
     %delay 1000, 0;
     %vpi_call 2 23 "$finish" {0 0 0};
     %end;
@@ -469,5 +469,5 @@ T_1 ;
     "N/A";
     "<interactive>";
     "testbench/edge_detector_tb.v";
-    "../strmod/edge_detector.v";
-    "../strmod/gates.v";
+    "./edge_detector.v";
+    "./gates.v";

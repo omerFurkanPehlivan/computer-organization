@@ -1,11 +1,11 @@
 $date
-	Tue May 07 23:45:15 2024
+	Wed May 08 12:34:00 2024
 $end
 $version
 	Icarus Verilog
 $end
 $timescale
-	1s
+	1ns
 $end
 $scope module gates_tb $end
 $var wire 9 ! out [8:0] $end

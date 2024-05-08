@@ -34,26 +34,29 @@ module edge_detector #(
 
 	// Generate the edge detection logic based on the specified TYPE
 	generate
-		if (TYPE == "RISING" && ACTIVE == "HIGH")
-			gates #(.TYPE("AND")) and1 (.a(clk), .b(net3), .out(pulse));
-
-		else if (TYPE == "RISING" && ACTIVE == "LOW")
-			gates #(.TYPE("NAND")) nand1 (.a(clk), .b(net3), .out(pulse));
-
-		else if (TYPE == "FALLING" && ACTIVE == "HIGH")
-			gates #(.TYPE("NOR")) nor1 (.a(clk), .b(net3), .out(pulse));
-
-		else if (TYPE == "FALLING" && ACTIVE == "LOW")
-			gates #(.TYPE("OR")) or2 (.a(clk), .b(net3), .out(pulse));
-
-		else if (TYPE == "BOTH" && ACTIVE == "HIGH")
-			gates #(.TYPE("XNOR")) xnor1 (.a(clk), .b(net3), .out(pulse));
-
-		else if (TYPE == "BOTH" && ACTIVE == "LOW")
-			gates #(.TYPE("XOR")) xor1 (.a(clk), .b(net3), .out(pulse));
-		
-		else
-			// Throw an error for invalid configuration
-			invalid_parameter_value error();
+		case ({TYPE, ACTIVE})
+			{"RISING", "HIGH"}: begin
+				gates #(.TYPE("AND")) and1 (.a(clk), .b(net3), .out(pulse));
+			end
+			{"RISING", "LOW"}: begin
+				gates #(.TYPE("NAND")) nand1 (.a(clk), .b(net3), .out(pulse));
+			end
+			{"FALLING", "HIGH"}: begin
+				gates #(.TYPE("NOR")) nor1 (.a(clk), .b(net3), .out(pulse));
+			end
+			{"FALLING", "LOW"}: begin
+				gates #(.TYPE("OR")) or2 (.a(clk), .b(net3), .out(pulse));
+			end
+			{"BOTH", "HIGH"}: begin
+				gates #(.TYPE("XNOR")) xnor1 (.a(clk), .b(net3), .out(pulse));
+			end
+			{"BOTH", "LOW"}: begin
+				gates #(.TYPE("XOR")) xor1 (.a(clk), .b(net3), .out(pulse));
+			end
+			default: begin
+				// Throw an error for invalid configuration
+				invalid_parameter_value error();
+			end
+		endcase
 	endgenerate
 endmodule
