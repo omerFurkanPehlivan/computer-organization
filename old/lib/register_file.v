@@ -21,9 +21,9 @@ module register_file #(
 		end
 	endgenerate
 
-	rising_edge_detector rising_edge_detector1 (.clk(clk), .out(clk_pos_edge));
+	edge_detector #(.TYPE("RISING"), .ACTIVE("HIGH")) rising_edge_detector1 (.clk(clk), .pulse(clk_pos_edge));
 
-	DelayAnd and1 (.a(write_enable), .b(clk_pos_edge), .out(write_enable_clk));
+	gates #(.TYPE("AND")) and1 (.a(write_enable), .b(clk_pos_edge), .out(write_enable_clk));
 
 	decoder #(
 		.WIDTH(ADDR_WIDTH)
@@ -35,7 +35,7 @@ module register_file #(
 	
 	generate
 		for (i = 0; i < (1<<ADDR_WIDTH); i = i + 1) begin: genregister
-			register #(
+			register #(.TRIGGER("LEVEL"),
 				.WORD_SIZE(WORD_SIZE)
 			) register1 (
 				.data_in(data_in),

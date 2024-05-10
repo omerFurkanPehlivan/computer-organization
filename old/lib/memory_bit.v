@@ -7,6 +7,6 @@ module memory_bit (
 	output data_out
 );	
 	wire q;
-	d_flip_flop dff(.d(data_in), .clk(clk), .q(q), .qbar());
-	DelayAnd and1 (.a(q), .b(read_enable), .out(data_out));
+	flip_flop #(.TYPE("D"), .TRIGGER("RISING")) dff(.d(data_in), .clk(clk), .q(q), .qbar());
+	gates #(.TYPE("AND")) and1 (.a(q), .b(read_enable), .out(data_out));
 endmodule
