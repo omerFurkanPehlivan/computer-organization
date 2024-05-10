@@ -51,12 +51,6 @@ module alu #(
 	gates #(.TYPE("XOR")) xor3 (.a(sum[WIDTH-1]), .b(overflow), .out(set_if_less_than));
 	// Extend Set If Less Than
 	
-
-	/*
-	gates #(.TYPE("XOR")) xor1 (.a(carry), .b(cn_1), .out(overflow));
-	gates #(.TYPE("XOR")) xor2 (.a(overflow), .b(sum[WIDTH-1]), .out(set_if_less_than));
-	*/
-
 	extender #(.TYPE("ZERO"), .INPUT_WIDTH(1), .OUTPUT_WIDTH(WIDTH)) zero_extender1 (
 		.data_in(set_if_less_than),
 		.data_out(zero_extended_set_if_less_than)
