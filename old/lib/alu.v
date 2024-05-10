@@ -57,7 +57,7 @@ module alu #(
 	gates #(.TYPE("XOR")) xor2 (.a(overflow), .b(sum[WIDTH-1]), .out(set_if_less_than));
 	*/
 
-	zero_extender #(.INPUT_WIDTH(1), .OUTPUT_WIDTH(WIDTH)) zero_extender1(
+	extender #(.TYPE("ZERO"), .INPUT_WIDTH(1), .OUTPUT_WIDTH(WIDTH)) zero_extender1 (
 		.data_in(set_if_less_than),
 		.data_out(zero_extended_set_if_less_than)
 	);
@@ -79,6 +79,6 @@ module alu #(
 
 	// Zero
 	wire zero_bar;
-	n_input_or #(WIDTH) or2 (.a(result), .out(zero_bar));
-	DelayNot not3 (.a(zero_bar), .out(zero));
+	n_input_gates #(.TYPE("OR"), .WIDTH(WIDTH)) or2 (.a(result), .out(zero_bar));
+	gates #(.TYPE("NOT")) not3 (.a(zero_bar), .out(zero));
 endmodule
