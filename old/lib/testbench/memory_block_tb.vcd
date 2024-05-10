@@ -1,0 +1,9425 @@
+$date
+	Mon Apr 29 17:25:25 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module memory_block_tb $end
+$var wire 8 ! data_out [7:0] $end
+$var parameter 32 " BLOCK_SIZE $end
+$var parameter 32 # DELAY $end
+$var parameter 32 $ WORD_SIZE $end
+$var reg 1 % clk $end
+$var reg 8 & data_in [7:0] $end
+$var reg 8 ' select [7:0] $end
+$scope module dut $end
+$var wire 1 % clk $end
+$var wire 8 ( data_in [7:0] $end
+$var wire 8 ) select [7:0] $end
+$var wire 8 * data_out [7:0] $end
+$var parameter 32 + BLOCK_SIZE $end
+$var parameter 32 , WORD_SIZE $end
+$scope begin memory_word_instance[0] $end
+$var parameter 2 - i $end
+$scope begin or_inputs_assignment[0] $end
+$var parameter 2 . j $end
+$upscope $end
+$scope begin or_inputs_assignment[1] $end
+$var parameter 2 / j $end
+$upscope $end
+$scope begin or_inputs_assignment[2] $end
+$var parameter 3 0 j $end
+$upscope $end
+$scope begin or_inputs_assignment[3] $end
+$var parameter 3 1 j $end
+$upscope $end
+$scope begin or_inputs_assignment[4] $end
+$var parameter 4 2 j $end
+$upscope $end
+$scope begin or_inputs_assignment[5] $end
+$var parameter 4 3 j $end
+$upscope $end
+$scope begin or_inputs_assignment[6] $end
+$var parameter 4 4 j $end
+$upscope $end
+$scope begin or_inputs_assignment[7] $end
+$var parameter 4 5 j $end
+$upscope $end
+$scope module memory_word_instance $end
+$var wire 1 % clk $end
+$var wire 8 6 data_in [7:0] $end
+$var wire 1 7 enable $end
+$var wire 1 8 write_enable_clk $end
+$var wire 8 9 data_out [7:0] $end
+$var parameter 32 : WORD_SIZE $end
+$scope module and1 $end
+$var wire 1 7 a $end
+$var wire 1 % b $end
+$var wire 1 8 out $end
+$var parameter 32 ; delay $end
+$upscope $end
+$scope module memory_bit1[0] $end
+$var wire 1 8 clk $end
+$var wire 1 < data_in $end
+$var wire 1 7 read_enable $end
+$var wire 1 = q $end
+$var wire 1 > data_out $end
+$scope module and1 $end
+$var wire 1 7 b $end
+$var wire 1 > out $end
+$var wire 1 = a $end
+$var parameter 32 ? delay $end
+$upscope $end
+$scope module dff $end
+$var wire 1 8 clk $end
+$var wire 1 < d $end
+$var wire 1 @ qbar $end
+$var wire 1 = q $end
+$var wire 1 A dbar $end
+$scope module not1 $end
+$var wire 1 < a $end
+$var wire 1 A out $end
+$var parameter 32 B delay $end
+$upscope $end
+$scope module sr_flip_flop1 $end
+$var wire 1 8 clk $end
+$var wire 1 A r $end
+$var wire 1 < s $end
+$var wire 1 @ qbar $end
+$var wire 1 = q $end
+$var wire 1 C net2 $end
+$var wire 1 D net1 $end
+$var wire 1 E en $end
+$scope module and1 $end
+$var wire 1 < a $end
+$var wire 1 D out $end
+$var wire 1 E b $end
+$var parameter 32 F delay $end
+$upscope $end
+$scope module and2 $end
+$var wire 1 A a $end
+$var wire 1 C out $end
+$var wire 1 E b $end
+$var parameter 32 G delay $end
+$upscope $end
+$scope module rising_edge_detector1 $end
+$var wire 1 8 clk $end
+$var wire 1 E out $end
+$var wire 1 H net3 $end
+$var wire 1 I net2 $end
+$var wire 1 J net1 $end
+$scope module and1 $end
+$var wire 1 8 a $end
+$var wire 1 E out $end
+$var wire 1 H b $end
+$var parameter 32 K delay $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 8 a $end
+$var wire 1 J out $end
+$var parameter 32 L delay $end
+$upscope $end
+$scope module not2 $end
+$var wire 1 J a $end
+$var wire 1 I out $end
+$var parameter 32 M delay $end
+$upscope $end
+$scope module not3 $end
+$var wire 1 I a $end
+$var wire 1 H out $end
+$var parameter 32 N delay $end
+$upscope $end
+$upscope $end
+$scope module sr_latch1 $end
+$var wire 1 C r $end
+$var wire 1 D s $end
+$var wire 1 @ qbar $end
+$var wire 1 = q $end
+$scope module nor1 $end
+$var wire 1 C a $end
+$var wire 1 = out $end
+$var wire 1 @ b $end
+$var parameter 32 O delay $end
+$upscope $end
+$scope module nor2 $end
+$var wire 1 D a $end
+$var wire 1 = b $end
+$var wire 1 @ out $end
+$var parameter 32 P delay $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module memory_bit1[1] $end
+$var wire 1 8 clk $end
+$var wire 1 Q data_in $end
+$var wire 1 7 read_enable $end
+$var wire 1 R q $end
+$var wire 1 S data_out $end
+$scope module and1 $end
+$var wire 1 7 b $end
+$var wire 1 S out $end
+$var wire 1 R a $end
+$var parameter 32 T delay $end
+$upscope $end
+$scope module dff $end
+$var wire 1 8 clk $end
+$var wire 1 Q d $end
+$var wire 1 U qbar $end
+$var wire 1 R q $end
+$var wire 1 V dbar $end
+$scope module not1 $end
+$var wire 1 Q a $end
+$var wire 1 V out $end
+$var parameter 32 W delay $end
+$upscope $end
+$scope module sr_flip_flop1 $end
+$var wire 1 8 clk $end
+$var wire 1 V r $end
+$var wire 1 Q s $end
+$var wire 1 U qbar $end
+$var wire 1 R q $end
+$var wire 1 X net2 $end
+$var wire 1 Y net1 $end
+$var wire 1 Z en $end
+$scope module and1 $end
+$var wire 1 Q a $end
+$var wire 1 Y out $end
+$var wire 1 Z b $end
+$var parameter 32 [ delay $end
+$upscope $end
+$scope module and2 $end
+$var wire 1 V a $end
+$var wire 1 X out $end
+$var wire 1 Z b $end
+$var parameter 32 \ delay $end
+$upscope $end
+$scope module rising_edge_detector1 $end
+$var wire 1 8 clk $end
+$var wire 1 Z out $end
+$var wire 1 ] net3 $end
+$var wire 1 ^ net2 $end
+$var wire 1 _ net1 $end
+$scope module and1 $end
+$var wire 1 8 a $end
+$var wire 1 Z out $end
+$var wire 1 ] b $end
+$var parameter 32 ` delay $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 8 a $end
+$var wire 1 _ out $end
+$var parameter 32 a delay $end
+$upscope $end
+$scope module not2 $end
+$var wire 1 _ a $end
+$var wire 1 ^ out $end
+$var parameter 32 b delay $end
+$upscope $end
+$scope module not3 $end
+$var wire 1 ^ a $end
+$var wire 1 ] out $end
+$var parameter 32 c delay $end
+$upscope $end
+$upscope $end
+$scope module sr_latch1 $end
+$var wire 1 X r $end
+$var wire 1 Y s $end
+$var wire 1 U qbar $end
+$var wire 1 R q $end
+$scope module nor1 $end
+$var wire 1 X a $end
+$var wire 1 R out $end
+$var wire 1 U b $end
+$var parameter 32 d delay $end
+$upscope $end
+$scope module nor2 $end
+$var wire 1 Y a $end
+$var wire 1 R b $end
+$var wire 1 U out $end
+$var parameter 32 e delay $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module memory_bit1[2] $end
+$var wire 1 8 clk $end
+$var wire 1 f data_in $end
+$var wire 1 7 read_enable $end
+$var wire 1 g q $end
+$var wire 1 h data_out $end
+$scope module and1 $end
+$var wire 1 7 b $end
+$var wire 1 h out $end
+$var wire 1 g a $end
+$var parameter 32 i delay $end
+$upscope $end
+$scope module dff $end
+$var wire 1 8 clk $end
+$var wire 1 f d $end
+$var wire 1 j qbar $end
+$var wire 1 g q $end
+$var wire 1 k dbar $end
+$scope module not1 $end
+$var wire 1 f a $end
+$var wire 1 k out $end
+$var parameter 32 l delay $end
+$upscope $end
+$scope module sr_flip_flop1 $end
+$var wire 1 8 clk $end
+$var wire 1 k r $end
+$var wire 1 f s $end
+$var wire 1 j qbar $end
+$var wire 1 g q $end
+$var wire 1 m net2 $end
+$var wire 1 n net1 $end
+$var wire 1 o en $end
+$scope module and1 $end
+$var wire 1 f a $end
+$var wire 1 n out $end
+$var wire 1 o b $end
+$var parameter 32 p delay $end
+$upscope $end
+$scope module and2 $end
+$var wire 1 k a $end
+$var wire 1 m out $end
+$var wire 1 o b $end
+$var parameter 32 q delay $end
+$upscope $end
+$scope module rising_edge_detector1 $end
+$var wire 1 8 clk $end
+$var wire 1 o out $end
+$var wire 1 r net3 $end
+$var wire 1 s net2 $end
+$var wire 1 t net1 $end
+$scope module and1 $end
+$var wire 1 8 a $end
+$var wire 1 o out $end
+$var wire 1 r b $end
+$var parameter 32 u delay $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 8 a $end
+$var wire 1 t out $end
+$var parameter 32 v delay $end
+$upscope $end
+$scope module not2 $end
+$var wire 1 t a $end
+$var wire 1 s out $end
+$var parameter 32 w delay $end
+$upscope $end
+$scope module not3 $end
+$var wire 1 s a $end
+$var wire 1 r out $end
+$var parameter 32 x delay $end
+$upscope $end
+$upscope $end
+$scope module sr_latch1 $end
+$var wire 1 m r $end
+$var wire 1 n s $end
+$var wire 1 j qbar $end
+$var wire 1 g q $end
+$scope module nor1 $end
+$var wire 1 m a $end
+$var wire 1 g out $end
+$var wire 1 j b $end
+$var parameter 32 y delay $end
+$upscope $end
+$scope module nor2 $end
+$var wire 1 n a $end
+$var wire 1 g b $end
+$var wire 1 j out $end
+$var parameter 32 z delay $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module memory_bit1[3] $end
+$var wire 1 8 clk $end
+$var wire 1 { data_in $end
+$var wire 1 7 read_enable $end
+$var wire 1 | q $end
+$var wire 1 } data_out $end
+$scope module and1 $end
+$var wire 1 7 b $end
+$var wire 1 } out $end
+$var wire 1 | a $end
+$var parameter 32 ~ delay $end
+$upscope $end
+$scope module dff $end
+$var wire 1 8 clk $end
+$var wire 1 { d $end
+$var wire 1 !" qbar $end
+$var wire 1 | q $end
+$var wire 1 "" dbar $end
+$scope module not1 $end
+$var wire 1 { a $end
+$var wire 1 "" out $end
+$var parameter 32 #" delay $end
+$upscope $end
+$scope module sr_flip_flop1 $end
+$var wire 1 8 clk $end
+$var wire 1 "" r $end
+$var wire 1 { s $end
+$var wire 1 !" qbar $end
+$var wire 1 | q $end
+$var wire 1 $" net2 $end
+$var wire 1 %" net1 $end
+$var wire 1 &" en $end
+$scope module and1 $end
+$var wire 1 { a $end
+$var wire 1 %" out $end
+$var wire 1 &" b $end
+$var parameter 32 '" delay $end
+$upscope $end
+$scope module and2 $end
+$var wire 1 "" a $end
+$var wire 1 $" out $end
+$var wire 1 &" b $end
+$var parameter 32 (" delay $end
+$upscope $end
+$scope module rising_edge_detector1 $end
+$var wire 1 8 clk $end
+$var wire 1 &" out $end
+$var wire 1 )" net3 $end
+$var wire 1 *" net2 $end
+$var wire 1 +" net1 $end
+$scope module and1 $end
+$var wire 1 8 a $end
+$var wire 1 &" out $end
+$var wire 1 )" b $end
+$var parameter 32 ," delay $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 8 a $end
+$var wire 1 +" out $end
+$var parameter 32 -" delay $end
+$upscope $end
+$scope module not2 $end
+$var wire 1 +" a $end
+$var wire 1 *" out $end
+$var parameter 32 ." delay $end
+$upscope $end
+$scope module not3 $end
+$var wire 1 *" a $end
+$var wire 1 )" out $end
+$var parameter 32 /" delay $end
+$upscope $end
+$upscope $end
+$scope module sr_latch1 $end
+$var wire 1 $" r $end
+$var wire 1 %" s $end
+$var wire 1 !" qbar $end
+$var wire 1 | q $end
+$scope module nor1 $end
+$var wire 1 $" a $end
+$var wire 1 | out $end
+$var wire 1 !" b $end
+$var parameter 32 0" delay $end
+$upscope $end
+$scope module nor2 $end
+$var wire 1 %" a $end
+$var wire 1 | b $end
+$var wire 1 !" out $end
+$var parameter 32 1" delay $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module memory_bit1[4] $end
+$var wire 1 8 clk $end
+$var wire 1 2" data_in $end
+$var wire 1 7 read_enable $end
+$var wire 1 3" q $end
+$var wire 1 4" data_out $end
+$scope module and1 $end
+$var wire 1 7 b $end
+$var wire 1 4" out $end
+$var wire 1 3" a $end
+$var parameter 32 5" delay $end
+$upscope $end
+$scope module dff $end
+$var wire 1 8 clk $end
+$var wire 1 2" d $end
+$var wire 1 6" qbar $end
+$var wire 1 3" q $end
+$var wire 1 7" dbar $end
+$scope module not1 $end
+$var wire 1 2" a $end
+$var wire 1 7" out $end
+$var parameter 32 8" delay $end
+$upscope $end
+$scope module sr_flip_flop1 $end
+$var wire 1 8 clk $end
+$var wire 1 7" r $end
+$var wire 1 2" s $end
+$var wire 1 6" qbar $end
+$var wire 1 3" q $end
+$var wire 1 9" net2 $end
+$var wire 1 :" net1 $end
+$var wire 1 ;" en $end
+$scope module and1 $end
+$var wire 1 2" a $end
+$var wire 1 :" out $end
+$var wire 1 ;" b $end
+$var parameter 32 <" delay $end
+$upscope $end
+$scope module and2 $end
+$var wire 1 7" a $end
+$var wire 1 9" out $end
+$var wire 1 ;" b $end
+$var parameter 32 =" delay $end
+$upscope $end
+$scope module rising_edge_detector1 $end
+$var wire 1 8 clk $end
+$var wire 1 ;" out $end
+$var wire 1 >" net3 $end
+$var wire 1 ?" net2 $end
+$var wire 1 @" net1 $end
+$scope module and1 $end
+$var wire 1 8 a $end
+$var wire 1 ;" out $end
+$var wire 1 >" b $end
+$var parameter 32 A" delay $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 8 a $end
+$var wire 1 @" out $end
+$var parameter 32 B" delay $end
+$upscope $end
+$scope module not2 $end
+$var wire 1 @" a $end
+$var wire 1 ?" out $end
+$var parameter 32 C" delay $end
+$upscope $end
+$scope module not3 $end
+$var wire 1 ?" a $end
+$var wire 1 >" out $end
+$var parameter 32 D" delay $end
+$upscope $end
+$upscope $end
+$scope module sr_latch1 $end
+$var wire 1 9" r $end
+$var wire 1 :" s $end
+$var wire 1 6" qbar $end
+$var wire 1 3" q $end
+$scope module nor1 $end
+$var wire 1 9" a $end
+$var wire 1 3" out $end
+$var wire 1 6" b $end
+$var parameter 32 E" delay $end
+$upscope $end
+$scope module nor2 $end
+$var wire 1 :" a $end
+$var wire 1 3" b $end
+$var wire 1 6" out $end
+$var parameter 32 F" delay $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module memory_bit1[5] $end
+$var wire 1 8 clk $end
+$var wire 1 G" data_in $end
+$var wire 1 7 read_enable $end
+$var wire 1 H" q $end
+$var wire 1 I" data_out $end
+$scope module and1 $end
+$var wire 1 7 b $end
+$var wire 1 I" out $end
+$var wire 1 H" a $end
+$var parameter 32 J" delay $end
+$upscope $end
+$scope module dff $end
+$var wire 1 8 clk $end
+$var wire 1 G" d $end
+$var wire 1 K" qbar $end
+$var wire 1 H" q $end
+$var wire 1 L" dbar $end
+$scope module not1 $end
+$var wire 1 G" a $end
+$var wire 1 L" out $end
+$var parameter 32 M" delay $end
+$upscope $end
+$scope module sr_flip_flop1 $end
+$var wire 1 8 clk $end
+$var wire 1 L" r $end
+$var wire 1 G" s $end
+$var wire 1 K" qbar $end
+$var wire 1 H" q $end
+$var wire 1 N" net2 $end
+$var wire 1 O" net1 $end
+$var wire 1 P" en $end
+$scope module and1 $end
+$var wire 1 G" a $end
+$var wire 1 O" out $end
+$var wire 1 P" b $end
+$var parameter 32 Q" delay $end
+$upscope $end
+$scope module and2 $end
+$var wire 1 L" a $end
+$var wire 1 N" out $end
+$var wire 1 P" b $end
+$var parameter 32 R" delay $end
+$upscope $end
+$scope module rising_edge_detector1 $end
+$var wire 1 8 clk $end
+$var wire 1 P" out $end
+$var wire 1 S" net3 $end
+$var wire 1 T" net2 $end
+$var wire 1 U" net1 $end
+$scope module and1 $end
+$var wire 1 8 a $end
+$var wire 1 P" out $end
+$var wire 1 S" b $end
+$var parameter 32 V" delay $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 8 a $end
+$var wire 1 U" out $end
+$var parameter 32 W" delay $end
+$upscope $end
+$scope module not2 $end
+$var wire 1 U" a $end
+$var wire 1 T" out $end
+$var parameter 32 X" delay $end
+$upscope $end
+$scope module not3 $end
+$var wire 1 T" a $end
+$var wire 1 S" out $end
+$var parameter 32 Y" delay $end
+$upscope $end
+$upscope $end
+$scope module sr_latch1 $end
+$var wire 1 N" r $end
+$var wire 1 O" s $end
+$var wire 1 K" qbar $end
+$var wire 1 H" q $end
+$scope module nor1 $end
+$var wire 1 N" a $end
+$var wire 1 H" out $end
+$var wire 1 K" b $end
+$var parameter 32 Z" delay $end
+$upscope $end
+$scope module nor2 $end
+$var wire 1 O" a $end
+$var wire 1 H" b $end
+$var wire 1 K" out $end
+$var parameter 32 [" delay $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module memory_bit1[6] $end
+$var wire 1 8 clk $end
+$var wire 1 \" data_in $end
+$var wire 1 7 read_enable $end
+$var wire 1 ]" q $end
+$var wire 1 ^" data_out $end
+$scope module and1 $end
+$var wire 1 7 b $end
+$var wire 1 ^" out $end
+$var wire 1 ]" a $end
+$var parameter 32 _" delay $end
+$upscope $end
+$scope module dff $end
+$var wire 1 8 clk $end
+$var wire 1 \" d $end
+$var wire 1 `" qbar $end
+$var wire 1 ]" q $end
+$var wire 1 a" dbar $end
+$scope module not1 $end
+$var wire 1 \" a $end
+$var wire 1 a" out $end
+$var parameter 32 b" delay $end
+$upscope $end
+$scope module sr_flip_flop1 $end
+$var wire 1 8 clk $end
+$var wire 1 a" r $end
+$var wire 1 \" s $end
+$var wire 1 `" qbar $end
+$var wire 1 ]" q $end
+$var wire 1 c" net2 $end
+$var wire 1 d" net1 $end
+$var wire 1 e" en $end
+$scope module and1 $end
+$var wire 1 \" a $end
+$var wire 1 d" out $end
+$var wire 1 e" b $end
+$var parameter 32 f" delay $end
+$upscope $end
+$scope module and2 $end
+$var wire 1 a" a $end
+$var wire 1 c" out $end
+$var wire 1 e" b $end
+$var parameter 32 g" delay $end
+$upscope $end
+$scope module rising_edge_detector1 $end
+$var wire 1 8 clk $end
+$var wire 1 e" out $end
+$var wire 1 h" net3 $end
+$var wire 1 i" net2 $end
+$var wire 1 j" net1 $end
+$scope module and1 $end
+$var wire 1 8 a $end
+$var wire 1 e" out $end
+$var wire 1 h" b $end
+$var parameter 32 k" delay $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 8 a $end
+$var wire 1 j" out $end
+$var parameter 32 l" delay $end
+$upscope $end
+$scope module not2 $end
+$var wire 1 j" a $end
+$var wire 1 i" out $end
+$var parameter 32 m" delay $end
+$upscope $end
+$scope module not3 $end
+$var wire 1 i" a $end
+$var wire 1 h" out $end
+$var parameter 32 n" delay $end
+$upscope $end
+$upscope $end
+$scope module sr_latch1 $end
+$var wire 1 c" r $end
+$var wire 1 d" s $end
+$var wire 1 `" qbar $end
+$var wire 1 ]" q $end
+$scope module nor1 $end
+$var wire 1 c" a $end
+$var wire 1 ]" out $end
+$var wire 1 `" b $end
+$var parameter 32 o" delay $end
+$upscope $end
+$scope module nor2 $end
+$var wire 1 d" a $end
+$var wire 1 ]" b $end
+$var wire 1 `" out $end
+$var parameter 32 p" delay $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module memory_bit1[7] $end
+$var wire 1 8 clk $end
+$var wire 1 q" data_in $end
+$var wire 1 7 read_enable $end
+$var wire 1 r" q $end
+$var wire 1 s" data_out $end
+$scope module and1 $end
+$var wire 1 7 b $end
+$var wire 1 s" out $end
+$var wire 1 r" a $end
+$var parameter 32 t" delay $end
+$upscope $end
+$scope module dff $end
+$var wire 1 8 clk $end
+$var wire 1 q" d $end
+$var wire 1 u" qbar $end
+$var wire 1 r" q $end
+$var wire 1 v" dbar $end
+$scope module not1 $end
+$var wire 1 q" a $end
+$var wire 1 v" out $end
+$var parameter 32 w" delay $end
+$upscope $end
+$scope module sr_flip_flop1 $end
+$var wire 1 8 clk $end
+$var wire 1 v" r $end
+$var wire 1 q" s $end
+$var wire 1 u" qbar $end
+$var wire 1 r" q $end
+$var wire 1 x" net2 $end
+$var wire 1 y" net1 $end
+$var wire 1 z" en $end
+$scope module and1 $end
+$var wire 1 q" a $end
+$var wire 1 y" out $end
+$var wire 1 z" b $end
+$var parameter 32 {" delay $end
+$upscope $end
+$scope module and2 $end
+$var wire 1 v" a $end
+$var wire 1 x" out $end
+$var wire 1 z" b $end
+$var parameter 32 |" delay $end
+$upscope $end
+$scope module rising_edge_detector1 $end
+$var wire 1 8 clk $end
+$var wire 1 z" out $end
+$var wire 1 }" net3 $end
+$var wire 1 ~" net2 $end
+$var wire 1 !# net1 $end
+$scope module and1 $end
+$var wire 1 8 a $end
+$var wire 1 z" out $end
+$var wire 1 }" b $end
+$var parameter 32 "# delay $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 8 a $end
+$var wire 1 !# out $end
+$var parameter 32 ## delay $end
+$upscope $end
+$scope module not2 $end
+$var wire 1 !# a $end
+$var wire 1 ~" out $end
+$var parameter 32 $# delay $end
+$upscope $end
+$scope module not3 $end
+$var wire 1 ~" a $end
+$var wire 1 }" out $end
+$var parameter 32 %# delay $end
+$upscope $end
+$upscope $end
+$scope module sr_latch1 $end
+$var wire 1 x" r $end
+$var wire 1 y" s $end
+$var wire 1 u" qbar $end
+$var wire 1 r" q $end
+$scope module nor1 $end
+$var wire 1 x" a $end
+$var wire 1 r" out $end
+$var wire 1 u" b $end
+$var parameter 32 &# delay $end
+$upscope $end
+$scope module nor2 $end
+$var wire 1 y" a $end
+$var wire 1 r" b $end
+$var wire 1 u" out $end
+$var parameter 32 '# delay $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin memory_word_instance[1] $end
+$var parameter 2 (# i $end
+$scope begin or_inputs_assignment[0] $end
+$var parameter 2 )# j $end
+$upscope $end
+$scope begin or_inputs_assignment[1] $end
+$var parameter 2 *# j $end
+$upscope $end
+$scope begin or_inputs_assignment[2] $end
+$var parameter 3 +# j $end
+$upscope $end
+$scope begin or_inputs_assignment[3] $end
+$var parameter 3 ,# j $end
+$upscope $end
+$scope begin or_inputs_assignment[4] $end
+$var parameter 4 -# j $end
+$upscope $end
+$scope begin or_inputs_assignment[5] $end
+$var parameter 4 .# j $end
+$upscope $end
+$scope begin or_inputs_assignment[6] $end
+$var parameter 4 /# j $end
+$upscope $end
+$scope begin or_inputs_assignment[7] $end
+$var parameter 4 0# j $end
+$upscope $end
+$scope module memory_word_instance $end
+$var wire 1 % clk $end
+$var wire 8 1# data_in [7:0] $end
+$var wire 1 2# enable $end
+$var wire 1 3# write_enable_clk $end
+$var wire 8 4# data_out [7:0] $end
+$var parameter 32 5# WORD_SIZE $end
+$scope module and1 $end
+$var wire 1 2# a $end
+$var wire 1 % b $end
+$var wire 1 3# out $end
+$var parameter 32 6# delay $end
+$upscope $end
+$scope module memory_bit1[0] $end
+$var wire 1 3# clk $end
+$var wire 1 7# data_in $end
+$var wire 1 2# read_enable $end
+$var wire 1 8# q $end
+$var wire 1 9# data_out $end
+$scope module and1 $end
+$var wire 1 2# b $end
+$var wire 1 9# out $end
+$var wire 1 8# a $end
+$var parameter 32 :# delay $end
+$upscope $end
+$scope module dff $end
+$var wire 1 3# clk $end
+$var wire 1 7# d $end
+$var wire 1 ;# qbar $end
+$var wire 1 8# q $end
+$var wire 1 <# dbar $end
+$scope module not1 $end
+$var wire 1 7# a $end
+$var wire 1 <# out $end
+$var parameter 32 =# delay $end
+$upscope $end
+$scope module sr_flip_flop1 $end
+$var wire 1 3# clk $end
+$var wire 1 <# r $end
+$var wire 1 7# s $end
+$var wire 1 ;# qbar $end
+$var wire 1 8# q $end
+$var wire 1 ># net2 $end
+$var wire 1 ?# net1 $end
+$var wire 1 @# en $end
+$scope module and1 $end
+$var wire 1 7# a $end
+$var wire 1 ?# out $end
+$var wire 1 @# b $end
+$var parameter 32 A# delay $end
+$upscope $end
+$scope module and2 $end
+$var wire 1 <# a $end
+$var wire 1 ># out $end
+$var wire 1 @# b $end
+$var parameter 32 B# delay $end
+$upscope $end
+$scope module rising_edge_detector1 $end
+$var wire 1 3# clk $end
+$var wire 1 @# out $end
+$var wire 1 C# net3 $end
+$var wire 1 D# net2 $end
+$var wire 1 E# net1 $end
+$scope module and1 $end
+$var wire 1 3# a $end
+$var wire 1 @# out $end
+$var wire 1 C# b $end
+$var parameter 32 F# delay $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 3# a $end
+$var wire 1 E# out $end
+$var parameter 32 G# delay $end
+$upscope $end
+$scope module not2 $end
+$var wire 1 E# a $end
+$var wire 1 D# out $end
+$var parameter 32 H# delay $end
+$upscope $end
+$scope module not3 $end
+$var wire 1 D# a $end
+$var wire 1 C# out $end
+$var parameter 32 I# delay $end
+$upscope $end
+$upscope $end
+$scope module sr_latch1 $end
+$var wire 1 ># r $end
+$var wire 1 ?# s $end
+$var wire 1 ;# qbar $end
+$var wire 1 8# q $end
+$scope module nor1 $end
+$var wire 1 ># a $end
+$var wire 1 8# out $end
+$var wire 1 ;# b $end
+$var parameter 32 J# delay $end
+$upscope $end
+$scope module nor2 $end
+$var wire 1 ?# a $end
+$var wire 1 8# b $end
+$var wire 1 ;# out $end
+$var parameter 32 K# delay $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module memory_bit1[1] $end
+$var wire 1 3# clk $end
+$var wire 1 L# data_in $end
+$var wire 1 2# read_enable $end
+$var wire 1 M# q $end
+$var wire 1 N# data_out $end
+$scope module and1 $end
+$var wire 1 2# b $end
+$var wire 1 N# out $end
+$var wire 1 M# a $end
+$var parameter 32 O# delay $end
+$upscope $end
+$scope module dff $end
+$var wire 1 3# clk $end
+$var wire 1 L# d $end
+$var wire 1 P# qbar $end
+$var wire 1 M# q $end
+$var wire 1 Q# dbar $end
+$scope module not1 $end
+$var wire 1 L# a $end
+$var wire 1 Q# out $end
+$var parameter 32 R# delay $end
+$upscope $end
+$scope module sr_flip_flop1 $end
+$var wire 1 3# clk $end
+$var wire 1 Q# r $end
+$var wire 1 L# s $end
+$var wire 1 P# qbar $end
+$var wire 1 M# q $end
+$var wire 1 S# net2 $end
+$var wire 1 T# net1 $end
+$var wire 1 U# en $end
+$scope module and1 $end
+$var wire 1 L# a $end
+$var wire 1 T# out $end
+$var wire 1 U# b $end
+$var parameter 32 V# delay $end
+$upscope $end
+$scope module and2 $end
+$var wire 1 Q# a $end
+$var wire 1 S# out $end
+$var wire 1 U# b $end
+$var parameter 32 W# delay $end
+$upscope $end
+$scope module rising_edge_detector1 $end
+$var wire 1 3# clk $end
+$var wire 1 U# out $end
+$var wire 1 X# net3 $end
+$var wire 1 Y# net2 $end
+$var wire 1 Z# net1 $end
+$scope module and1 $end
+$var wire 1 3# a $end
+$var wire 1 U# out $end
+$var wire 1 X# b $end
+$var parameter 32 [# delay $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 3# a $end
+$var wire 1 Z# out $end
+$var parameter 32 \# delay $end
+$upscope $end
+$scope module not2 $end
+$var wire 1 Z# a $end
+$var wire 1 Y# out $end
+$var parameter 32 ]# delay $end
+$upscope $end
+$scope module not3 $end
+$var wire 1 Y# a $end
+$var wire 1 X# out $end
+$var parameter 32 ^# delay $end
+$upscope $end
+$upscope $end
+$scope module sr_latch1 $end
+$var wire 1 S# r $end
+$var wire 1 T# s $end
+$var wire 1 P# qbar $end
+$var wire 1 M# q $end
+$scope module nor1 $end
+$var wire 1 S# a $end
+$var wire 1 M# out $end
+$var wire 1 P# b $end
+$var parameter 32 _# delay $end
+$upscope $end
+$scope module nor2 $end
+$var wire 1 T# a $end
+$var wire 1 M# b $end
+$var wire 1 P# out $end
+$var parameter 32 `# delay $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module memory_bit1[2] $end
+$var wire 1 3# clk $end
+$var wire 1 a# data_in $end
+$var wire 1 2# read_enable $end
+$var wire 1 b# q $end
+$var wire 1 c# data_out $end
+$scope module and1 $end
+$var wire 1 2# b $end
+$var wire 1 c# out $end
+$var wire 1 b# a $end
+$var parameter 32 d# delay $end
+$upscope $end
+$scope module dff $end
+$var wire 1 3# clk $end
+$var wire 1 a# d $end
+$var wire 1 e# qbar $end
+$var wire 1 b# q $end
+$var wire 1 f# dbar $end
+$scope module not1 $end
+$var wire 1 a# a $end
+$var wire 1 f# out $end
+$var parameter 32 g# delay $end
+$upscope $end
+$scope module sr_flip_flop1 $end
+$var wire 1 3# clk $end
+$var wire 1 f# r $end
+$var wire 1 a# s $end
+$var wire 1 e# qbar $end
+$var wire 1 b# q $end
+$var wire 1 h# net2 $end
+$var wire 1 i# net1 $end
+$var wire 1 j# en $end
+$scope module and1 $end
+$var wire 1 a# a $end
+$var wire 1 i# out $end
+$var wire 1 j# b $end
+$var parameter 32 k# delay $end
+$upscope $end
+$scope module and2 $end
+$var wire 1 f# a $end
+$var wire 1 h# out $end
+$var wire 1 j# b $end
+$var parameter 32 l# delay $end
+$upscope $end
+$scope module rising_edge_detector1 $end
+$var wire 1 3# clk $end
+$var wire 1 j# out $end
+$var wire 1 m# net3 $end
+$var wire 1 n# net2 $end
+$var wire 1 o# net1 $end
+$scope module and1 $end
+$var wire 1 3# a $end
+$var wire 1 j# out $end
+$var wire 1 m# b $end
+$var parameter 32 p# delay $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 3# a $end
+$var wire 1 o# out $end
+$var parameter 32 q# delay $end
+$upscope $end
+$scope module not2 $end
+$var wire 1 o# a $end
+$var wire 1 n# out $end
+$var parameter 32 r# delay $end
+$upscope $end
+$scope module not3 $end
+$var wire 1 n# a $end
+$var wire 1 m# out $end
+$var parameter 32 s# delay $end
+$upscope $end
+$upscope $end
+$scope module sr_latch1 $end
+$var wire 1 h# r $end
+$var wire 1 i# s $end
+$var wire 1 e# qbar $end
+$var wire 1 b# q $end
+$scope module nor1 $end
+$var wire 1 h# a $end
+$var wire 1 b# out $end
+$var wire 1 e# b $end
+$var parameter 32 t# delay $end
+$upscope $end
+$scope module nor2 $end
+$var wire 1 i# a $end
+$var wire 1 b# b $end
+$var wire 1 e# out $end
+$var parameter 32 u# delay $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module memory_bit1[3] $end
+$var wire 1 3# clk $end
+$var wire 1 v# data_in $end
+$var wire 1 2# read_enable $end
+$var wire 1 w# q $end
+$var wire 1 x# data_out $end
+$scope module and1 $end
+$var wire 1 2# b $end
+$var wire 1 x# out $end
+$var wire 1 w# a $end
+$var parameter 32 y# delay $end
+$upscope $end
+$scope module dff $end
+$var wire 1 3# clk $end
+$var wire 1 v# d $end
+$var wire 1 z# qbar $end
+$var wire 1 w# q $end
+$var wire 1 {# dbar $end
+$scope module not1 $end
+$var wire 1 v# a $end
+$var wire 1 {# out $end
+$var parameter 32 |# delay $end
+$upscope $end
+$scope module sr_flip_flop1 $end
+$var wire 1 3# clk $end
+$var wire 1 {# r $end
+$var wire 1 v# s $end
+$var wire 1 z# qbar $end
+$var wire 1 w# q $end
+$var wire 1 }# net2 $end
+$var wire 1 ~# net1 $end
+$var wire 1 !$ en $end
+$scope module and1 $end
+$var wire 1 v# a $end
+$var wire 1 ~# out $end
+$var wire 1 !$ b $end
+$var parameter 32 "$ delay $end
+$upscope $end
+$scope module and2 $end
+$var wire 1 {# a $end
+$var wire 1 }# out $end
+$var wire 1 !$ b $end
+$var parameter 32 #$ delay $end
+$upscope $end
+$scope module rising_edge_detector1 $end
+$var wire 1 3# clk $end
+$var wire 1 !$ out $end
+$var wire 1 $$ net3 $end
+$var wire 1 %$ net2 $end
+$var wire 1 &$ net1 $end
+$scope module and1 $end
+$var wire 1 3# a $end
+$var wire 1 !$ out $end
+$var wire 1 $$ b $end
+$var parameter 32 '$ delay $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 3# a $end
+$var wire 1 &$ out $end
+$var parameter 32 ($ delay $end
+$upscope $end
+$scope module not2 $end
+$var wire 1 &$ a $end
+$var wire 1 %$ out $end
+$var parameter 32 )$ delay $end
+$upscope $end
+$scope module not3 $end
+$var wire 1 %$ a $end
+$var wire 1 $$ out $end
+$var parameter 32 *$ delay $end
+$upscope $end
+$upscope $end
+$scope module sr_latch1 $end
+$var wire 1 }# r $end
+$var wire 1 ~# s $end
+$var wire 1 z# qbar $end
+$var wire 1 w# q $end
+$scope module nor1 $end
+$var wire 1 }# a $end
+$var wire 1 w# out $end
+$var wire 1 z# b $end
+$var parameter 32 +$ delay $end
+$upscope $end
+$scope module nor2 $end
+$var wire 1 ~# a $end
+$var wire 1 w# b $end
+$var wire 1 z# out $end
+$var parameter 32 ,$ delay $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module memory_bit1[4] $end
+$var wire 1 3# clk $end
+$var wire 1 -$ data_in $end
+$var wire 1 2# read_enable $end
+$var wire 1 .$ q $end
+$var wire 1 /$ data_out $end
+$scope module and1 $end
+$var wire 1 2# b $end
+$var wire 1 /$ out $end
+$var wire 1 .$ a $end
+$var parameter 32 0$ delay $end
+$upscope $end
+$scope module dff $end
+$var wire 1 3# clk $end
+$var wire 1 -$ d $end
+$var wire 1 1$ qbar $end
+$var wire 1 .$ q $end
+$var wire 1 2$ dbar $end
+$scope module not1 $end
+$var wire 1 -$ a $end
+$var wire 1 2$ out $end
+$var parameter 32 3$ delay $end
+$upscope $end
+$scope module sr_flip_flop1 $end
+$var wire 1 3# clk $end
+$var wire 1 2$ r $end
+$var wire 1 -$ s $end
+$var wire 1 1$ qbar $end
+$var wire 1 .$ q $end
+$var wire 1 4$ net2 $end
+$var wire 1 5$ net1 $end
+$var wire 1 6$ en $end
+$scope module and1 $end
+$var wire 1 -$ a $end
+$var wire 1 5$ out $end
+$var wire 1 6$ b $end
+$var parameter 32 7$ delay $end
+$upscope $end
+$scope module and2 $end
+$var wire 1 2$ a $end
+$var wire 1 4$ out $end
+$var wire 1 6$ b $end
+$var parameter 32 8$ delay $end
+$upscope $end
+$scope module rising_edge_detector1 $end
+$var wire 1 3# clk $end
+$var wire 1 6$ out $end
+$var wire 1 9$ net3 $end
+$var wire 1 :$ net2 $end
+$var wire 1 ;$ net1 $end
+$scope module and1 $end
+$var wire 1 3# a $end
+$var wire 1 6$ out $end
+$var wire 1 9$ b $end
+$var parameter 32 <$ delay $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 3# a $end
+$var wire 1 ;$ out $end
+$var parameter 32 =$ delay $end
+$upscope $end
+$scope module not2 $end
+$var wire 1 ;$ a $end
+$var wire 1 :$ out $end
+$var parameter 32 >$ delay $end
+$upscope $end
+$scope module not3 $end
+$var wire 1 :$ a $end
+$var wire 1 9$ out $end
+$var parameter 32 ?$ delay $end
+$upscope $end
+$upscope $end
+$scope module sr_latch1 $end
+$var wire 1 4$ r $end
+$var wire 1 5$ s $end
+$var wire 1 1$ qbar $end
+$var wire 1 .$ q $end
+$scope module nor1 $end
+$var wire 1 4$ a $end
+$var wire 1 .$ out $end
+$var wire 1 1$ b $end
+$var parameter 32 @$ delay $end
+$upscope $end
+$scope module nor2 $end
+$var wire 1 5$ a $end
+$var wire 1 .$ b $end
+$var wire 1 1$ out $end
+$var parameter 32 A$ delay $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module memory_bit1[5] $end
+$var wire 1 3# clk $end
+$var wire 1 B$ data_in $end
+$var wire 1 2# read_enable $end
+$var wire 1 C$ q $end
+$var wire 1 D$ data_out $end
+$scope module and1 $end
+$var wire 1 2# b $end
+$var wire 1 D$ out $end
+$var wire 1 C$ a $end
+$var parameter 32 E$ delay $end
+$upscope $end
+$scope module dff $end
+$var wire 1 3# clk $end
+$var wire 1 B$ d $end
+$var wire 1 F$ qbar $end
+$var wire 1 C$ q $end
+$var wire 1 G$ dbar $end
+$scope module not1 $end
+$var wire 1 B$ a $end
+$var wire 1 G$ out $end
+$var parameter 32 H$ delay $end
+$upscope $end
+$scope module sr_flip_flop1 $end
+$var wire 1 3# clk $end
+$var wire 1 G$ r $end
+$var wire 1 B$ s $end
+$var wire 1 F$ qbar $end
+$var wire 1 C$ q $end
+$var wire 1 I$ net2 $end
+$var wire 1 J$ net1 $end
+$var wire 1 K$ en $end
+$scope module and1 $end
+$var wire 1 B$ a $end
+$var wire 1 J$ out $end
+$var wire 1 K$ b $end
+$var parameter 32 L$ delay $end
+$upscope $end
+$scope module and2 $end
+$var wire 1 G$ a $end
+$var wire 1 I$ out $end
+$var wire 1 K$ b $end
+$var parameter 32 M$ delay $end
+$upscope $end
+$scope module rising_edge_detector1 $end
+$var wire 1 3# clk $end
+$var wire 1 K$ out $end
+$var wire 1 N$ net3 $end
+$var wire 1 O$ net2 $end
+$var wire 1 P$ net1 $end
+$scope module and1 $end
+$var wire 1 3# a $end
+$var wire 1 K$ out $end
+$var wire 1 N$ b $end
+$var parameter 32 Q$ delay $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 3# a $end
+$var wire 1 P$ out $end
+$var parameter 32 R$ delay $end
+$upscope $end
+$scope module not2 $end
+$var wire 1 P$ a $end
+$var wire 1 O$ out $end
+$var parameter 32 S$ delay $end
+$upscope $end
+$scope module not3 $end
+$var wire 1 O$ a $end
+$var wire 1 N$ out $end
+$var parameter 32 T$ delay $end
+$upscope $end
+$upscope $end
+$scope module sr_latch1 $end
+$var wire 1 I$ r $end
+$var wire 1 J$ s $end
+$var wire 1 F$ qbar $end
+$var wire 1 C$ q $end
+$scope module nor1 $end
+$var wire 1 I$ a $end
+$var wire 1 C$ out $end
+$var wire 1 F$ b $end
+$var parameter 32 U$ delay $end
+$upscope $end
+$scope module nor2 $end
+$var wire 1 J$ a $end
+$var wire 1 C$ b $end
+$var wire 1 F$ out $end
+$var parameter 32 V$ delay $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module memory_bit1[6] $end
+$var wire 1 3# clk $end
+$var wire 1 W$ data_in $end
+$var wire 1 2# read_enable $end
+$var wire 1 X$ q $end
+$var wire 1 Y$ data_out $end
+$scope module and1 $end
+$var wire 1 2# b $end
+$var wire 1 Y$ out $end
+$var wire 1 X$ a $end
+$var parameter 32 Z$ delay $end
+$upscope $end
+$scope module dff $end
+$var wire 1 3# clk $end
+$var wire 1 W$ d $end
+$var wire 1 [$ qbar $end
+$var wire 1 X$ q $end
+$var wire 1 \$ dbar $end
+$scope module not1 $end
+$var wire 1 W$ a $end
+$var wire 1 \$ out $end
+$var parameter 32 ]$ delay $end
+$upscope $end
+$scope module sr_flip_flop1 $end
+$var wire 1 3# clk $end
+$var wire 1 \$ r $end
+$var wire 1 W$ s $end
+$var wire 1 [$ qbar $end
+$var wire 1 X$ q $end
+$var wire 1 ^$ net2 $end
+$var wire 1 _$ net1 $end
+$var wire 1 `$ en $end
+$scope module and1 $end
+$var wire 1 W$ a $end
+$var wire 1 _$ out $end
+$var wire 1 `$ b $end
+$var parameter 32 a$ delay $end
+$upscope $end
+$scope module and2 $end
+$var wire 1 \$ a $end
+$var wire 1 ^$ out $end
+$var wire 1 `$ b $end
+$var parameter 32 b$ delay $end
+$upscope $end
+$scope module rising_edge_detector1 $end
+$var wire 1 3# clk $end
+$var wire 1 `$ out $end
+$var wire 1 c$ net3 $end
+$var wire 1 d$ net2 $end
+$var wire 1 e$ net1 $end
+$scope module and1 $end
+$var wire 1 3# a $end
+$var wire 1 `$ out $end
+$var wire 1 c$ b $end
+$var parameter 32 f$ delay $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 3# a $end
+$var wire 1 e$ out $end
+$var parameter 32 g$ delay $end
+$upscope $end
+$scope module not2 $end
+$var wire 1 e$ a $end
+$var wire 1 d$ out $end
+$var parameter 32 h$ delay $end
+$upscope $end
+$scope module not3 $end
+$var wire 1 d$ a $end
+$var wire 1 c$ out $end
+$var parameter 32 i$ delay $end
+$upscope $end
+$upscope $end
+$scope module sr_latch1 $end
+$var wire 1 ^$ r $end
+$var wire 1 _$ s $end
+$var wire 1 [$ qbar $end
+$var wire 1 X$ q $end
+$scope module nor1 $end
+$var wire 1 ^$ a $end
+$var wire 1 X$ out $end
+$var wire 1 [$ b $end
+$var parameter 32 j$ delay $end
+$upscope $end
+$scope module nor2 $end
+$var wire 1 _$ a $end
+$var wire 1 X$ b $end
+$var wire 1 [$ out $end
+$var parameter 32 k$ delay $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module memory_bit1[7] $end
+$var wire 1 3# clk $end
+$var wire 1 l$ data_in $end
+$var wire 1 2# read_enable $end
+$var wire 1 m$ q $end
+$var wire 1 n$ data_out $end
+$scope module and1 $end
+$var wire 1 2# b $end
+$var wire 1 n$ out $end
+$var wire 1 m$ a $end
+$var parameter 32 o$ delay $end
+$upscope $end
+$scope module dff $end
+$var wire 1 3# clk $end
+$var wire 1 l$ d $end
+$var wire 1 p$ qbar $end
+$var wire 1 m$ q $end
+$var wire 1 q$ dbar $end
+$scope module not1 $end
+$var wire 1 l$ a $end
+$var wire 1 q$ out $end
+$var parameter 32 r$ delay $end
+$upscope $end
+$scope module sr_flip_flop1 $end
+$var wire 1 3# clk $end
+$var wire 1 q$ r $end
+$var wire 1 l$ s $end
+$var wire 1 p$ qbar $end
+$var wire 1 m$ q $end
+$var wire 1 s$ net2 $end
+$var wire 1 t$ net1 $end
+$var wire 1 u$ en $end
+$scope module and1 $end
+$var wire 1 l$ a $end
+$var wire 1 t$ out $end
+$var wire 1 u$ b $end
+$var parameter 32 v$ delay $end
+$upscope $end
+$scope module and2 $end
+$var wire 1 q$ a $end
+$var wire 1 s$ out $end
+$var wire 1 u$ b $end
+$var parameter 32 w$ delay $end
+$upscope $end
+$scope module rising_edge_detector1 $end
+$var wire 1 3# clk $end
+$var wire 1 u$ out $end
+$var wire 1 x$ net3 $end
+$var wire 1 y$ net2 $end
+$var wire 1 z$ net1 $end
+$scope module and1 $end
+$var wire 1 3# a $end
+$var wire 1 u$ out $end
+$var wire 1 x$ b $end
+$var parameter 32 {$ delay $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 3# a $end
+$var wire 1 z$ out $end
+$var parameter 32 |$ delay $end
+$upscope $end
+$scope module not2 $end
+$var wire 1 z$ a $end
+$var wire 1 y$ out $end
+$var parameter 32 }$ delay $end
+$upscope $end
+$scope module not3 $end
+$var wire 1 y$ a $end
+$var wire 1 x$ out $end
+$var parameter 32 ~$ delay $end
+$upscope $end
+$upscope $end
+$scope module sr_latch1 $end
+$var wire 1 s$ r $end
+$var wire 1 t$ s $end
+$var wire 1 p$ qbar $end
+$var wire 1 m$ q $end
+$scope module nor1 $end
+$var wire 1 s$ a $end
+$var wire 1 m$ out $end
+$var wire 1 p$ b $end
+$var parameter 32 !% delay $end
+$upscope $end
+$scope module nor2 $end
+$var wire 1 t$ a $end
+$var wire 1 m$ b $end
+$var wire 1 p$ out $end
+$var parameter 32 "% delay $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin memory_word_instance[2] $end
+$var parameter 3 #% i $end
+$scope begin or_inputs_assignment[0] $end
+$var parameter 2 $% j $end
+$upscope $end
+$scope begin or_inputs_assignment[1] $end
+$var parameter 2 %% j $end
+$upscope $end
+$scope begin or_inputs_assignment[2] $end
+$var parameter 3 &% j $end
+$upscope $end
+$scope begin or_inputs_assignment[3] $end
+$var parameter 3 '% j $end
+$upscope $end
+$scope begin or_inputs_assignment[4] $end
+$var parameter 4 (% j $end
+$upscope $end
+$scope begin or_inputs_assignment[5] $end
+$var parameter 4 )% j $end
+$upscope $end
+$scope begin or_inputs_assignment[6] $end
+$var parameter 4 *% j $end
+$upscope $end
+$scope begin or_inputs_assignment[7] $end
+$var parameter 4 +% j $end
+$upscope $end
+$scope module memory_word_instance $end
+$var wire 1 % clk $end
+$var wire 8 ,% data_in [7:0] $end
+$var wire 1 -% enable $end
+$var wire 1 .% write_enable_clk $end
+$var wire 8 /% data_out [7:0] $end
+$var parameter 32 0% WORD_SIZE $end
+$scope module and1 $end
+$var wire 1 -% a $end
+$var wire 1 % b $end
+$var wire 1 .% out $end
+$var parameter 32 1% delay $end
+$upscope $end
+$scope module memory_bit1[0] $end
+$var wire 1 .% clk $end
+$var wire 1 2% data_in $end
+$var wire 1 -% read_enable $end
+$var wire 1 3% q $end
+$var wire 1 4% data_out $end
+$scope module and1 $end
+$var wire 1 -% b $end
+$var wire 1 4% out $end
+$var wire 1 3% a $end
+$var parameter 32 5% delay $end
+$upscope $end
+$scope module dff $end
+$var wire 1 .% clk $end
+$var wire 1 2% d $end
+$var wire 1 6% qbar $end
+$var wire 1 3% q $end
+$var wire 1 7% dbar $end
+$scope module not1 $end
+$var wire 1 2% a $end
+$var wire 1 7% out $end
+$var parameter 32 8% delay $end
+$upscope $end
+$scope module sr_flip_flop1 $end
+$var wire 1 .% clk $end
+$var wire 1 7% r $end
+$var wire 1 2% s $end
+$var wire 1 6% qbar $end
+$var wire 1 3% q $end
+$var wire 1 9% net2 $end
+$var wire 1 :% net1 $end
+$var wire 1 ;% en $end
+$scope module and1 $end
+$var wire 1 2% a $end
+$var wire 1 :% out $end
+$var wire 1 ;% b $end
+$var parameter 32 <% delay $end
+$upscope $end
+$scope module and2 $end
+$var wire 1 7% a $end
+$var wire 1 9% out $end
+$var wire 1 ;% b $end
+$var parameter 32 =% delay $end
+$upscope $end
+$scope module rising_edge_detector1 $end
+$var wire 1 .% clk $end
+$var wire 1 ;% out $end
+$var wire 1 >% net3 $end
+$var wire 1 ?% net2 $end
+$var wire 1 @% net1 $end
+$scope module and1 $end
+$var wire 1 .% a $end
+$var wire 1 ;% out $end
+$var wire 1 >% b $end
+$var parameter 32 A% delay $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 .% a $end
+$var wire 1 @% out $end
+$var parameter 32 B% delay $end
+$upscope $end
+$scope module not2 $end
+$var wire 1 @% a $end
+$var wire 1 ?% out $end
+$var parameter 32 C% delay $end
+$upscope $end
+$scope module not3 $end
+$var wire 1 ?% a $end
+$var wire 1 >% out $end
+$var parameter 32 D% delay $end
+$upscope $end
+$upscope $end
+$scope module sr_latch1 $end
+$var wire 1 9% r $end
+$var wire 1 :% s $end
+$var wire 1 6% qbar $end
+$var wire 1 3% q $end
+$scope module nor1 $end
+$var wire 1 9% a $end
+$var wire 1 3% out $end
+$var wire 1 6% b $end
+$var parameter 32 E% delay $end
+$upscope $end
+$scope module nor2 $end
+$var wire 1 :% a $end
+$var wire 1 3% b $end
+$var wire 1 6% out $end
+$var parameter 32 F% delay $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module memory_bit1[1] $end
+$var wire 1 .% clk $end
+$var wire 1 G% data_in $end
+$var wire 1 -% read_enable $end
+$var wire 1 H% q $end
+$var wire 1 I% data_out $end
+$scope module and1 $end
+$var wire 1 -% b $end
+$var wire 1 I% out $end
+$var wire 1 H% a $end
+$var parameter 32 J% delay $end
+$upscope $end
+$scope module dff $end
+$var wire 1 .% clk $end
+$var wire 1 G% d $end
+$var wire 1 K% qbar $end
+$var wire 1 H% q $end
+$var wire 1 L% dbar $end
+$scope module not1 $end
+$var wire 1 G% a $end
+$var wire 1 L% out $end
+$var parameter 32 M% delay $end
+$upscope $end
+$scope module sr_flip_flop1 $end
+$var wire 1 .% clk $end
+$var wire 1 L% r $end
+$var wire 1 G% s $end
+$var wire 1 K% qbar $end
+$var wire 1 H% q $end
+$var wire 1 N% net2 $end
+$var wire 1 O% net1 $end
+$var wire 1 P% en $end
+$scope module and1 $end
+$var wire 1 G% a $end
+$var wire 1 O% out $end
+$var wire 1 P% b $end
+$var parameter 32 Q% delay $end
+$upscope $end
+$scope module and2 $end
+$var wire 1 L% a $end
+$var wire 1 N% out $end
+$var wire 1 P% b $end
+$var parameter 32 R% delay $end
+$upscope $end
+$scope module rising_edge_detector1 $end
+$var wire 1 .% clk $end
+$var wire 1 P% out $end
+$var wire 1 S% net3 $end
+$var wire 1 T% net2 $end
+$var wire 1 U% net1 $end
+$scope module and1 $end
+$var wire 1 .% a $end
+$var wire 1 P% out $end
+$var wire 1 S% b $end
+$var parameter 32 V% delay $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 .% a $end
+$var wire 1 U% out $end
+$var parameter 32 W% delay $end
+$upscope $end
+$scope module not2 $end
+$var wire 1 U% a $end
+$var wire 1 T% out $end
+$var parameter 32 X% delay $end
+$upscope $end
+$scope module not3 $end
+$var wire 1 T% a $end
+$var wire 1 S% out $end
+$var parameter 32 Y% delay $end
+$upscope $end
+$upscope $end
+$scope module sr_latch1 $end
+$var wire 1 N% r $end
+$var wire 1 O% s $end
+$var wire 1 K% qbar $end
+$var wire 1 H% q $end
+$scope module nor1 $end
+$var wire 1 N% a $end
+$var wire 1 H% out $end
+$var wire 1 K% b $end
+$var parameter 32 Z% delay $end
+$upscope $end
+$scope module nor2 $end
+$var wire 1 O% a $end
+$var wire 1 H% b $end
+$var wire 1 K% out $end
+$var parameter 32 [% delay $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module memory_bit1[2] $end
+$var wire 1 .% clk $end
+$var wire 1 \% data_in $end
+$var wire 1 -% read_enable $end
+$var wire 1 ]% q $end
+$var wire 1 ^% data_out $end
+$scope module and1 $end
+$var wire 1 -% b $end
+$var wire 1 ^% out $end
+$var wire 1 ]% a $end
+$var parameter 32 _% delay $end
+$upscope $end
+$scope module dff $end
+$var wire 1 .% clk $end
+$var wire 1 \% d $end
+$var wire 1 `% qbar $end
+$var wire 1 ]% q $end
+$var wire 1 a% dbar $end
+$scope module not1 $end
+$var wire 1 \% a $end
+$var wire 1 a% out $end
+$var parameter 32 b% delay $end
+$upscope $end
+$scope module sr_flip_flop1 $end
+$var wire 1 .% clk $end
+$var wire 1 a% r $end
+$var wire 1 \% s $end
+$var wire 1 `% qbar $end
+$var wire 1 ]% q $end
+$var wire 1 c% net2 $end
+$var wire 1 d% net1 $end
+$var wire 1 e% en $end
+$scope module and1 $end
+$var wire 1 \% a $end
+$var wire 1 d% out $end
+$var wire 1 e% b $end
+$var parameter 32 f% delay $end
+$upscope $end
+$scope module and2 $end
+$var wire 1 a% a $end
+$var wire 1 c% out $end
+$var wire 1 e% b $end
+$var parameter 32 g% delay $end
+$upscope $end
+$scope module rising_edge_detector1 $end
+$var wire 1 .% clk $end
+$var wire 1 e% out $end
+$var wire 1 h% net3 $end
+$var wire 1 i% net2 $end
+$var wire 1 j% net1 $end
+$scope module and1 $end
+$var wire 1 .% a $end
+$var wire 1 e% out $end
+$var wire 1 h% b $end
+$var parameter 32 k% delay $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 .% a $end
+$var wire 1 j% out $end
+$var parameter 32 l% delay $end
+$upscope $end
+$scope module not2 $end
+$var wire 1 j% a $end
+$var wire 1 i% out $end
+$var parameter 32 m% delay $end
+$upscope $end
+$scope module not3 $end
+$var wire 1 i% a $end
+$var wire 1 h% out $end
+$var parameter 32 n% delay $end
+$upscope $end
+$upscope $end
+$scope module sr_latch1 $end
+$var wire 1 c% r $end
+$var wire 1 d% s $end
+$var wire 1 `% qbar $end
+$var wire 1 ]% q $end
+$scope module nor1 $end
+$var wire 1 c% a $end
+$var wire 1 ]% out $end
+$var wire 1 `% b $end
+$var parameter 32 o% delay $end
+$upscope $end
+$scope module nor2 $end
+$var wire 1 d% a $end
+$var wire 1 ]% b $end
+$var wire 1 `% out $end
+$var parameter 32 p% delay $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module memory_bit1[3] $end
+$var wire 1 .% clk $end
+$var wire 1 q% data_in $end
+$var wire 1 -% read_enable $end
+$var wire 1 r% q $end
+$var wire 1 s% data_out $end
+$scope module and1 $end
+$var wire 1 -% b $end
+$var wire 1 s% out $end
+$var wire 1 r% a $end
+$var parameter 32 t% delay $end
+$upscope $end
+$scope module dff $end
+$var wire 1 .% clk $end
+$var wire 1 q% d $end
+$var wire 1 u% qbar $end
+$var wire 1 r% q $end
+$var wire 1 v% dbar $end
+$scope module not1 $end
+$var wire 1 q% a $end
+$var wire 1 v% out $end
+$var parameter 32 w% delay $end
+$upscope $end
+$scope module sr_flip_flop1 $end
+$var wire 1 .% clk $end
+$var wire 1 v% r $end
+$var wire 1 q% s $end
+$var wire 1 u% qbar $end
+$var wire 1 r% q $end
+$var wire 1 x% net2 $end
+$var wire 1 y% net1 $end
+$var wire 1 z% en $end
+$scope module and1 $end
+$var wire 1 q% a $end
+$var wire 1 y% out $end
+$var wire 1 z% b $end
+$var parameter 32 {% delay $end
+$upscope $end
+$scope module and2 $end
+$var wire 1 v% a $end
+$var wire 1 x% out $end
+$var wire 1 z% b $end
+$var parameter 32 |% delay $end
+$upscope $end
+$scope module rising_edge_detector1 $end
+$var wire 1 .% clk $end
+$var wire 1 z% out $end
+$var wire 1 }% net3 $end
+$var wire 1 ~% net2 $end
+$var wire 1 !& net1 $end
+$scope module and1 $end
+$var wire 1 .% a $end
+$var wire 1 z% out $end
+$var wire 1 }% b $end
+$var parameter 32 "& delay $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 .% a $end
+$var wire 1 !& out $end
+$var parameter 32 #& delay $end
+$upscope $end
+$scope module not2 $end
+$var wire 1 !& a $end
+$var wire 1 ~% out $end
+$var parameter 32 $& delay $end
+$upscope $end
+$scope module not3 $end
+$var wire 1 ~% a $end
+$var wire 1 }% out $end
+$var parameter 32 %& delay $end
+$upscope $end
+$upscope $end
+$scope module sr_latch1 $end
+$var wire 1 x% r $end
+$var wire 1 y% s $end
+$var wire 1 u% qbar $end
+$var wire 1 r% q $end
+$scope module nor1 $end
+$var wire 1 x% a $end
+$var wire 1 r% out $end
+$var wire 1 u% b $end
+$var parameter 32 && delay $end
+$upscope $end
+$scope module nor2 $end
+$var wire 1 y% a $end
+$var wire 1 r% b $end
+$var wire 1 u% out $end
+$var parameter 32 '& delay $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module memory_bit1[4] $end
+$var wire 1 .% clk $end
+$var wire 1 (& data_in $end
+$var wire 1 -% read_enable $end
+$var wire 1 )& q $end
+$var wire 1 *& data_out $end
+$scope module and1 $end
+$var wire 1 -% b $end
+$var wire 1 *& out $end
+$var wire 1 )& a $end
+$var parameter 32 +& delay $end
+$upscope $end
+$scope module dff $end
+$var wire 1 .% clk $end
+$var wire 1 (& d $end
+$var wire 1 ,& qbar $end
+$var wire 1 )& q $end
+$var wire 1 -& dbar $end
+$scope module not1 $end
+$var wire 1 (& a $end
+$var wire 1 -& out $end
+$var parameter 32 .& delay $end
+$upscope $end
+$scope module sr_flip_flop1 $end
+$var wire 1 .% clk $end
+$var wire 1 -& r $end
+$var wire 1 (& s $end
+$var wire 1 ,& qbar $end
+$var wire 1 )& q $end
+$var wire 1 /& net2 $end
+$var wire 1 0& net1 $end
+$var wire 1 1& en $end
+$scope module and1 $end
+$var wire 1 (& a $end
+$var wire 1 0& out $end
+$var wire 1 1& b $end
+$var parameter 32 2& delay $end
+$upscope $end
+$scope module and2 $end
+$var wire 1 -& a $end
+$var wire 1 /& out $end
+$var wire 1 1& b $end
+$var parameter 32 3& delay $end
+$upscope $end
+$scope module rising_edge_detector1 $end
+$var wire 1 .% clk $end
+$var wire 1 1& out $end
+$var wire 1 4& net3 $end
+$var wire 1 5& net2 $end
+$var wire 1 6& net1 $end
+$scope module and1 $end
+$var wire 1 .% a $end
+$var wire 1 1& out $end
+$var wire 1 4& b $end
+$var parameter 32 7& delay $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 .% a $end
+$var wire 1 6& out $end
+$var parameter 32 8& delay $end
+$upscope $end
+$scope module not2 $end
+$var wire 1 6& a $end
+$var wire 1 5& out $end
+$var parameter 32 9& delay $end
+$upscope $end
+$scope module not3 $end
+$var wire 1 5& a $end
+$var wire 1 4& out $end
+$var parameter 32 :& delay $end
+$upscope $end
+$upscope $end
+$scope module sr_latch1 $end
+$var wire 1 /& r $end
+$var wire 1 0& s $end
+$var wire 1 ,& qbar $end
+$var wire 1 )& q $end
+$scope module nor1 $end
+$var wire 1 /& a $end
+$var wire 1 )& out $end
+$var wire 1 ,& b $end
+$var parameter 32 ;& delay $end
+$upscope $end
+$scope module nor2 $end
+$var wire 1 0& a $end
+$var wire 1 )& b $end
+$var wire 1 ,& out $end
+$var parameter 32 <& delay $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module memory_bit1[5] $end
+$var wire 1 .% clk $end
+$var wire 1 =& data_in $end
+$var wire 1 -% read_enable $end
+$var wire 1 >& q $end
+$var wire 1 ?& data_out $end
+$scope module and1 $end
+$var wire 1 -% b $end
+$var wire 1 ?& out $end
+$var wire 1 >& a $end
+$var parameter 32 @& delay $end
+$upscope $end
+$scope module dff $end
+$var wire 1 .% clk $end
+$var wire 1 =& d $end
+$var wire 1 A& qbar $end
+$var wire 1 >& q $end
+$var wire 1 B& dbar $end
+$scope module not1 $end
+$var wire 1 =& a $end
+$var wire 1 B& out $end
+$var parameter 32 C& delay $end
+$upscope $end
+$scope module sr_flip_flop1 $end
+$var wire 1 .% clk $end
+$var wire 1 B& r $end
+$var wire 1 =& s $end
+$var wire 1 A& qbar $end
+$var wire 1 >& q $end
+$var wire 1 D& net2 $end
+$var wire 1 E& net1 $end
+$var wire 1 F& en $end
+$scope module and1 $end
+$var wire 1 =& a $end
+$var wire 1 E& out $end
+$var wire 1 F& b $end
+$var parameter 32 G& delay $end
+$upscope $end
+$scope module and2 $end
+$var wire 1 B& a $end
+$var wire 1 D& out $end
+$var wire 1 F& b $end
+$var parameter 32 H& delay $end
+$upscope $end
+$scope module rising_edge_detector1 $end
+$var wire 1 .% clk $end
+$var wire 1 F& out $end
+$var wire 1 I& net3 $end
+$var wire 1 J& net2 $end
+$var wire 1 K& net1 $end
+$scope module and1 $end
+$var wire 1 .% a $end
+$var wire 1 F& out $end
+$var wire 1 I& b $end
+$var parameter 32 L& delay $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 .% a $end
+$var wire 1 K& out $end
+$var parameter 32 M& delay $end
+$upscope $end
+$scope module not2 $end
+$var wire 1 K& a $end
+$var wire 1 J& out $end
+$var parameter 32 N& delay $end
+$upscope $end
+$scope module not3 $end
+$var wire 1 J& a $end
+$var wire 1 I& out $end
+$var parameter 32 O& delay $end
+$upscope $end
+$upscope $end
+$scope module sr_latch1 $end
+$var wire 1 D& r $end
+$var wire 1 E& s $end
+$var wire 1 A& qbar $end
+$var wire 1 >& q $end
+$scope module nor1 $end
+$var wire 1 D& a $end
+$var wire 1 >& out $end
+$var wire 1 A& b $end
+$var parameter 32 P& delay $end
+$upscope $end
+$scope module nor2 $end
+$var wire 1 E& a $end
+$var wire 1 >& b $end
+$var wire 1 A& out $end
+$var parameter 32 Q& delay $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module memory_bit1[6] $end
+$var wire 1 .% clk $end
+$var wire 1 R& data_in $end
+$var wire 1 -% read_enable $end
+$var wire 1 S& q $end
+$var wire 1 T& data_out $end
+$scope module and1 $end
+$var wire 1 -% b $end
+$var wire 1 T& out $end
+$var wire 1 S& a $end
+$var parameter 32 U& delay $end
+$upscope $end
+$scope module dff $end
+$var wire 1 .% clk $end
+$var wire 1 R& d $end
+$var wire 1 V& qbar $end
+$var wire 1 S& q $end
+$var wire 1 W& dbar $end
+$scope module not1 $end
+$var wire 1 R& a $end
+$var wire 1 W& out $end
+$var parameter 32 X& delay $end
+$upscope $end
+$scope module sr_flip_flop1 $end
+$var wire 1 .% clk $end
+$var wire 1 W& r $end
+$var wire 1 R& s $end
+$var wire 1 V& qbar $end
+$var wire 1 S& q $end
+$var wire 1 Y& net2 $end
+$var wire 1 Z& net1 $end
+$var wire 1 [& en $end
+$scope module and1 $end
+$var wire 1 R& a $end
+$var wire 1 Z& out $end
+$var wire 1 [& b $end
+$var parameter 32 \& delay $end
+$upscope $end
+$scope module and2 $end
+$var wire 1 W& a $end
+$var wire 1 Y& out $end
+$var wire 1 [& b $end
+$var parameter 32 ]& delay $end
+$upscope $end
+$scope module rising_edge_detector1 $end
+$var wire 1 .% clk $end
+$var wire 1 [& out $end
+$var wire 1 ^& net3 $end
+$var wire 1 _& net2 $end
+$var wire 1 `& net1 $end
+$scope module and1 $end
+$var wire 1 .% a $end
+$var wire 1 [& out $end
+$var wire 1 ^& b $end
+$var parameter 32 a& delay $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 .% a $end
+$var wire 1 `& out $end
+$var parameter 32 b& delay $end
+$upscope $end
+$scope module not2 $end
+$var wire 1 `& a $end
+$var wire 1 _& out $end
+$var parameter 32 c& delay $end
+$upscope $end
+$scope module not3 $end
+$var wire 1 _& a $end
+$var wire 1 ^& out $end
+$var parameter 32 d& delay $end
+$upscope $end
+$upscope $end
+$scope module sr_latch1 $end
+$var wire 1 Y& r $end
+$var wire 1 Z& s $end
+$var wire 1 V& qbar $end
+$var wire 1 S& q $end
+$scope module nor1 $end
+$var wire 1 Y& a $end
+$var wire 1 S& out $end
+$var wire 1 V& b $end
+$var parameter 32 e& delay $end
+$upscope $end
+$scope module nor2 $end
+$var wire 1 Z& a $end
+$var wire 1 S& b $end
+$var wire 1 V& out $end
+$var parameter 32 f& delay $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module memory_bit1[7] $end
+$var wire 1 .% clk $end
+$var wire 1 g& data_in $end
+$var wire 1 -% read_enable $end
+$var wire 1 h& q $end
+$var wire 1 i& data_out $end
+$scope module and1 $end
+$var wire 1 -% b $end
+$var wire 1 i& out $end
+$var wire 1 h& a $end
+$var parameter 32 j& delay $end
+$upscope $end
+$scope module dff $end
+$var wire 1 .% clk $end
+$var wire 1 g& d $end
+$var wire 1 k& qbar $end
+$var wire 1 h& q $end
+$var wire 1 l& dbar $end
+$scope module not1 $end
+$var wire 1 g& a $end
+$var wire 1 l& out $end
+$var parameter 32 m& delay $end
+$upscope $end
+$scope module sr_flip_flop1 $end
+$var wire 1 .% clk $end
+$var wire 1 l& r $end
+$var wire 1 g& s $end
+$var wire 1 k& qbar $end
+$var wire 1 h& q $end
+$var wire 1 n& net2 $end
+$var wire 1 o& net1 $end
+$var wire 1 p& en $end
+$scope module and1 $end
+$var wire 1 g& a $end
+$var wire 1 o& out $end
+$var wire 1 p& b $end
+$var parameter 32 q& delay $end
+$upscope $end
+$scope module and2 $end
+$var wire 1 l& a $end
+$var wire 1 n& out $end
+$var wire 1 p& b $end
+$var parameter 32 r& delay $end
+$upscope $end
+$scope module rising_edge_detector1 $end
+$var wire 1 .% clk $end
+$var wire 1 p& out $end
+$var wire 1 s& net3 $end
+$var wire 1 t& net2 $end
+$var wire 1 u& net1 $end
+$scope module and1 $end
+$var wire 1 .% a $end
+$var wire 1 p& out $end
+$var wire 1 s& b $end
+$var parameter 32 v& delay $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 .% a $end
+$var wire 1 u& out $end
+$var parameter 32 w& delay $end
+$upscope $end
+$scope module not2 $end
+$var wire 1 u& a $end
+$var wire 1 t& out $end
+$var parameter 32 x& delay $end
+$upscope $end
+$scope module not3 $end
+$var wire 1 t& a $end
+$var wire 1 s& out $end
+$var parameter 32 y& delay $end
+$upscope $end
+$upscope $end
+$scope module sr_latch1 $end
+$var wire 1 n& r $end
+$var wire 1 o& s $end
+$var wire 1 k& qbar $end
+$var wire 1 h& q $end
+$scope module nor1 $end
+$var wire 1 n& a $end
+$var wire 1 h& out $end
+$var wire 1 k& b $end
+$var parameter 32 z& delay $end
+$upscope $end
+$scope module nor2 $end
+$var wire 1 o& a $end
+$var wire 1 h& b $end
+$var wire 1 k& out $end
+$var parameter 32 {& delay $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin memory_word_instance[3] $end
+$var parameter 3 |& i $end
+$scope begin or_inputs_assignment[0] $end
+$var parameter 2 }& j $end
+$upscope $end
+$scope begin or_inputs_assignment[1] $end
+$var parameter 2 ~& j $end
+$upscope $end
+$scope begin or_inputs_assignment[2] $end
+$var parameter 3 !' j $end
+$upscope $end
+$scope begin or_inputs_assignment[3] $end
+$var parameter 3 "' j $end
+$upscope $end
+$scope begin or_inputs_assignment[4] $end
+$var parameter 4 #' j $end
+$upscope $end
+$scope begin or_inputs_assignment[5] $end
+$var parameter 4 $' j $end
+$upscope $end
+$scope begin or_inputs_assignment[6] $end
+$var parameter 4 %' j $end
+$upscope $end
+$scope begin or_inputs_assignment[7] $end
+$var parameter 4 &' j $end
+$upscope $end
+$scope module memory_word_instance $end
+$var wire 1 % clk $end
+$var wire 8 '' data_in [7:0] $end
+$var wire 1 (' enable $end
+$var wire 1 )' write_enable_clk $end
+$var wire 8 *' data_out [7:0] $end
+$var parameter 32 +' WORD_SIZE $end
+$scope module and1 $end
+$var wire 1 (' a $end
+$var wire 1 % b $end
+$var wire 1 )' out $end
+$var parameter 32 ,' delay $end
+$upscope $end
+$scope module memory_bit1[0] $end
+$var wire 1 )' clk $end
+$var wire 1 -' data_in $end
+$var wire 1 (' read_enable $end
+$var wire 1 .' q $end
+$var wire 1 /' data_out $end
+$scope module and1 $end
+$var wire 1 (' b $end
+$var wire 1 /' out $end
+$var wire 1 .' a $end
+$var parameter 32 0' delay $end
+$upscope $end
+$scope module dff $end
+$var wire 1 )' clk $end
+$var wire 1 -' d $end
+$var wire 1 1' qbar $end
+$var wire 1 .' q $end
+$var wire 1 2' dbar $end
+$scope module not1 $end
+$var wire 1 -' a $end
+$var wire 1 2' out $end
+$var parameter 32 3' delay $end
+$upscope $end
+$scope module sr_flip_flop1 $end
+$var wire 1 )' clk $end
+$var wire 1 2' r $end
+$var wire 1 -' s $end
+$var wire 1 1' qbar $end
+$var wire 1 .' q $end
+$var wire 1 4' net2 $end
+$var wire 1 5' net1 $end
+$var wire 1 6' en $end
+$scope module and1 $end
+$var wire 1 -' a $end
+$var wire 1 5' out $end
+$var wire 1 6' b $end
+$var parameter 32 7' delay $end
+$upscope $end
+$scope module and2 $end
+$var wire 1 2' a $end
+$var wire 1 4' out $end
+$var wire 1 6' b $end
+$var parameter 32 8' delay $end
+$upscope $end
+$scope module rising_edge_detector1 $end
+$var wire 1 )' clk $end
+$var wire 1 6' out $end
+$var wire 1 9' net3 $end
+$var wire 1 :' net2 $end
+$var wire 1 ;' net1 $end
+$scope module and1 $end
+$var wire 1 )' a $end
+$var wire 1 6' out $end
+$var wire 1 9' b $end
+$var parameter 32 <' delay $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 )' a $end
+$var wire 1 ;' out $end
+$var parameter 32 =' delay $end
+$upscope $end
+$scope module not2 $end
+$var wire 1 ;' a $end
+$var wire 1 :' out $end
+$var parameter 32 >' delay $end
+$upscope $end
+$scope module not3 $end
+$var wire 1 :' a $end
+$var wire 1 9' out $end
+$var parameter 32 ?' delay $end
+$upscope $end
+$upscope $end
+$scope module sr_latch1 $end
+$var wire 1 4' r $end
+$var wire 1 5' s $end
+$var wire 1 1' qbar $end
+$var wire 1 .' q $end
+$scope module nor1 $end
+$var wire 1 4' a $end
+$var wire 1 .' out $end
+$var wire 1 1' b $end
+$var parameter 32 @' delay $end
+$upscope $end
+$scope module nor2 $end
+$var wire 1 5' a $end
+$var wire 1 .' b $end
+$var wire 1 1' out $end
+$var parameter 32 A' delay $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module memory_bit1[1] $end
+$var wire 1 )' clk $end
+$var wire 1 B' data_in $end
+$var wire 1 (' read_enable $end
+$var wire 1 C' q $end
+$var wire 1 D' data_out $end
+$scope module and1 $end
+$var wire 1 (' b $end
+$var wire 1 D' out $end
+$var wire 1 C' a $end
+$var parameter 32 E' delay $end
+$upscope $end
+$scope module dff $end
+$var wire 1 )' clk $end
+$var wire 1 B' d $end
+$var wire 1 F' qbar $end
+$var wire 1 C' q $end
+$var wire 1 G' dbar $end
+$scope module not1 $end
+$var wire 1 B' a $end
+$var wire 1 G' out $end
+$var parameter 32 H' delay $end
+$upscope $end
+$scope module sr_flip_flop1 $end
+$var wire 1 )' clk $end
+$var wire 1 G' r $end
+$var wire 1 B' s $end
+$var wire 1 F' qbar $end
+$var wire 1 C' q $end
+$var wire 1 I' net2 $end
+$var wire 1 J' net1 $end
+$var wire 1 K' en $end
+$scope module and1 $end
+$var wire 1 B' a $end
+$var wire 1 J' out $end
+$var wire 1 K' b $end
+$var parameter 32 L' delay $end
+$upscope $end
+$scope module and2 $end
+$var wire 1 G' a $end
+$var wire 1 I' out $end
+$var wire 1 K' b $end
+$var parameter 32 M' delay $end
+$upscope $end
+$scope module rising_edge_detector1 $end
+$var wire 1 )' clk $end
+$var wire 1 K' out $end
+$var wire 1 N' net3 $end
+$var wire 1 O' net2 $end
+$var wire 1 P' net1 $end
+$scope module and1 $end
+$var wire 1 )' a $end
+$var wire 1 K' out $end
+$var wire 1 N' b $end
+$var parameter 32 Q' delay $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 )' a $end
+$var wire 1 P' out $end
+$var parameter 32 R' delay $end
+$upscope $end
+$scope module not2 $end
+$var wire 1 P' a $end
+$var wire 1 O' out $end
+$var parameter 32 S' delay $end
+$upscope $end
+$scope module not3 $end
+$var wire 1 O' a $end
+$var wire 1 N' out $end
+$var parameter 32 T' delay $end
+$upscope $end
+$upscope $end
+$scope module sr_latch1 $end
+$var wire 1 I' r $end
+$var wire 1 J' s $end
+$var wire 1 F' qbar $end
+$var wire 1 C' q $end
+$scope module nor1 $end
+$var wire 1 I' a $end
+$var wire 1 C' out $end
+$var wire 1 F' b $end
+$var parameter 32 U' delay $end
+$upscope $end
+$scope module nor2 $end
+$var wire 1 J' a $end
+$var wire 1 C' b $end
+$var wire 1 F' out $end
+$var parameter 32 V' delay $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module memory_bit1[2] $end
+$var wire 1 )' clk $end
+$var wire 1 W' data_in $end
+$var wire 1 (' read_enable $end
+$var wire 1 X' q $end
+$var wire 1 Y' data_out $end
+$scope module and1 $end
+$var wire 1 (' b $end
+$var wire 1 Y' out $end
+$var wire 1 X' a $end
+$var parameter 32 Z' delay $end
+$upscope $end
+$scope module dff $end
+$var wire 1 )' clk $end
+$var wire 1 W' d $end
+$var wire 1 [' qbar $end
+$var wire 1 X' q $end
+$var wire 1 \' dbar $end
+$scope module not1 $end
+$var wire 1 W' a $end
+$var wire 1 \' out $end
+$var parameter 32 ]' delay $end
+$upscope $end
+$scope module sr_flip_flop1 $end
+$var wire 1 )' clk $end
+$var wire 1 \' r $end
+$var wire 1 W' s $end
+$var wire 1 [' qbar $end
+$var wire 1 X' q $end
+$var wire 1 ^' net2 $end
+$var wire 1 _' net1 $end
+$var wire 1 `' en $end
+$scope module and1 $end
+$var wire 1 W' a $end
+$var wire 1 _' out $end
+$var wire 1 `' b $end
+$var parameter 32 a' delay $end
+$upscope $end
+$scope module and2 $end
+$var wire 1 \' a $end
+$var wire 1 ^' out $end
+$var wire 1 `' b $end
+$var parameter 32 b' delay $end
+$upscope $end
+$scope module rising_edge_detector1 $end
+$var wire 1 )' clk $end
+$var wire 1 `' out $end
+$var wire 1 c' net3 $end
+$var wire 1 d' net2 $end
+$var wire 1 e' net1 $end
+$scope module and1 $end
+$var wire 1 )' a $end
+$var wire 1 `' out $end
+$var wire 1 c' b $end
+$var parameter 32 f' delay $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 )' a $end
+$var wire 1 e' out $end
+$var parameter 32 g' delay $end
+$upscope $end
+$scope module not2 $end
+$var wire 1 e' a $end
+$var wire 1 d' out $end
+$var parameter 32 h' delay $end
+$upscope $end
+$scope module not3 $end
+$var wire 1 d' a $end
+$var wire 1 c' out $end
+$var parameter 32 i' delay $end
+$upscope $end
+$upscope $end
+$scope module sr_latch1 $end
+$var wire 1 ^' r $end
+$var wire 1 _' s $end
+$var wire 1 [' qbar $end
+$var wire 1 X' q $end
+$scope module nor1 $end
+$var wire 1 ^' a $end
+$var wire 1 X' out $end
+$var wire 1 [' b $end
+$var parameter 32 j' delay $end
+$upscope $end
+$scope module nor2 $end
+$var wire 1 _' a $end
+$var wire 1 X' b $end
+$var wire 1 [' out $end
+$var parameter 32 k' delay $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module memory_bit1[3] $end
+$var wire 1 )' clk $end
+$var wire 1 l' data_in $end
+$var wire 1 (' read_enable $end
+$var wire 1 m' q $end
+$var wire 1 n' data_out $end
+$scope module and1 $end
+$var wire 1 (' b $end
+$var wire 1 n' out $end
+$var wire 1 m' a $end
+$var parameter 32 o' delay $end
+$upscope $end
+$scope module dff $end
+$var wire 1 )' clk $end
+$var wire 1 l' d $end
+$var wire 1 p' qbar $end
+$var wire 1 m' q $end
+$var wire 1 q' dbar $end
+$scope module not1 $end
+$var wire 1 l' a $end
+$var wire 1 q' out $end
+$var parameter 32 r' delay $end
+$upscope $end
+$scope module sr_flip_flop1 $end
+$var wire 1 )' clk $end
+$var wire 1 q' r $end
+$var wire 1 l' s $end
+$var wire 1 p' qbar $end
+$var wire 1 m' q $end
+$var wire 1 s' net2 $end
+$var wire 1 t' net1 $end
+$var wire 1 u' en $end
+$scope module and1 $end
+$var wire 1 l' a $end
+$var wire 1 t' out $end
+$var wire 1 u' b $end
+$var parameter 32 v' delay $end
+$upscope $end
+$scope module and2 $end
+$var wire 1 q' a $end
+$var wire 1 s' out $end
+$var wire 1 u' b $end
+$var parameter 32 w' delay $end
+$upscope $end
+$scope module rising_edge_detector1 $end
+$var wire 1 )' clk $end
+$var wire 1 u' out $end
+$var wire 1 x' net3 $end
+$var wire 1 y' net2 $end
+$var wire 1 z' net1 $end
+$scope module and1 $end
+$var wire 1 )' a $end
+$var wire 1 u' out $end
+$var wire 1 x' b $end
+$var parameter 32 {' delay $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 )' a $end
+$var wire 1 z' out $end
+$var parameter 32 |' delay $end
+$upscope $end
+$scope module not2 $end
+$var wire 1 z' a $end
+$var wire 1 y' out $end
+$var parameter 32 }' delay $end
+$upscope $end
+$scope module not3 $end
+$var wire 1 y' a $end
+$var wire 1 x' out $end
+$var parameter 32 ~' delay $end
+$upscope $end
+$upscope $end
+$scope module sr_latch1 $end
+$var wire 1 s' r $end
+$var wire 1 t' s $end
+$var wire 1 p' qbar $end
+$var wire 1 m' q $end
+$scope module nor1 $end
+$var wire 1 s' a $end
+$var wire 1 m' out $end
+$var wire 1 p' b $end
+$var parameter 32 !( delay $end
+$upscope $end
+$scope module nor2 $end
+$var wire 1 t' a $end
+$var wire 1 m' b $end
+$var wire 1 p' out $end
+$var parameter 32 "( delay $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module memory_bit1[4] $end
+$var wire 1 )' clk $end
+$var wire 1 #( data_in $end
+$var wire 1 (' read_enable $end
+$var wire 1 $( q $end
+$var wire 1 %( data_out $end
+$scope module and1 $end
+$var wire 1 (' b $end
+$var wire 1 %( out $end
+$var wire 1 $( a $end
+$var parameter 32 &( delay $end
+$upscope $end
+$scope module dff $end
+$var wire 1 )' clk $end
+$var wire 1 #( d $end
+$var wire 1 '( qbar $end
+$var wire 1 $( q $end
+$var wire 1 (( dbar $end
+$scope module not1 $end
+$var wire 1 #( a $end
+$var wire 1 (( out $end
+$var parameter 32 )( delay $end
+$upscope $end
+$scope module sr_flip_flop1 $end
+$var wire 1 )' clk $end
+$var wire 1 (( r $end
+$var wire 1 #( s $end
+$var wire 1 '( qbar $end
+$var wire 1 $( q $end
+$var wire 1 *( net2 $end
+$var wire 1 +( net1 $end
+$var wire 1 ,( en $end
+$scope module and1 $end
+$var wire 1 #( a $end
+$var wire 1 +( out $end
+$var wire 1 ,( b $end
+$var parameter 32 -( delay $end
+$upscope $end
+$scope module and2 $end
+$var wire 1 (( a $end
+$var wire 1 *( out $end
+$var wire 1 ,( b $end
+$var parameter 32 .( delay $end
+$upscope $end
+$scope module rising_edge_detector1 $end
+$var wire 1 )' clk $end
+$var wire 1 ,( out $end
+$var wire 1 /( net3 $end
+$var wire 1 0( net2 $end
+$var wire 1 1( net1 $end
+$scope module and1 $end
+$var wire 1 )' a $end
+$var wire 1 ,( out $end
+$var wire 1 /( b $end
+$var parameter 32 2( delay $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 )' a $end
+$var wire 1 1( out $end
+$var parameter 32 3( delay $end
+$upscope $end
+$scope module not2 $end
+$var wire 1 1( a $end
+$var wire 1 0( out $end
+$var parameter 32 4( delay $end
+$upscope $end
+$scope module not3 $end
+$var wire 1 0( a $end
+$var wire 1 /( out $end
+$var parameter 32 5( delay $end
+$upscope $end
+$upscope $end
+$scope module sr_latch1 $end
+$var wire 1 *( r $end
+$var wire 1 +( s $end
+$var wire 1 '( qbar $end
+$var wire 1 $( q $end
+$scope module nor1 $end
+$var wire 1 *( a $end
+$var wire 1 $( out $end
+$var wire 1 '( b $end
+$var parameter 32 6( delay $end
+$upscope $end
+$scope module nor2 $end
+$var wire 1 +( a $end
+$var wire 1 $( b $end
+$var wire 1 '( out $end
+$var parameter 32 7( delay $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module memory_bit1[5] $end
+$var wire 1 )' clk $end
+$var wire 1 8( data_in $end
+$var wire 1 (' read_enable $end
+$var wire 1 9( q $end
+$var wire 1 :( data_out $end
+$scope module and1 $end
+$var wire 1 (' b $end
+$var wire 1 :( out $end
+$var wire 1 9( a $end
+$var parameter 32 ;( delay $end
+$upscope $end
+$scope module dff $end
+$var wire 1 )' clk $end
+$var wire 1 8( d $end
+$var wire 1 <( qbar $end
+$var wire 1 9( q $end
+$var wire 1 =( dbar $end
+$scope module not1 $end
+$var wire 1 8( a $end
+$var wire 1 =( out $end
+$var parameter 32 >( delay $end
+$upscope $end
+$scope module sr_flip_flop1 $end
+$var wire 1 )' clk $end
+$var wire 1 =( r $end
+$var wire 1 8( s $end
+$var wire 1 <( qbar $end
+$var wire 1 9( q $end
+$var wire 1 ?( net2 $end
+$var wire 1 @( net1 $end
+$var wire 1 A( en $end
+$scope module and1 $end
+$var wire 1 8( a $end
+$var wire 1 @( out $end
+$var wire 1 A( b $end
+$var parameter 32 B( delay $end
+$upscope $end
+$scope module and2 $end
+$var wire 1 =( a $end
+$var wire 1 ?( out $end
+$var wire 1 A( b $end
+$var parameter 32 C( delay $end
+$upscope $end
+$scope module rising_edge_detector1 $end
+$var wire 1 )' clk $end
+$var wire 1 A( out $end
+$var wire 1 D( net3 $end
+$var wire 1 E( net2 $end
+$var wire 1 F( net1 $end
+$scope module and1 $end
+$var wire 1 )' a $end
+$var wire 1 A( out $end
+$var wire 1 D( b $end
+$var parameter 32 G( delay $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 )' a $end
+$var wire 1 F( out $end
+$var parameter 32 H( delay $end
+$upscope $end
+$scope module not2 $end
+$var wire 1 F( a $end
+$var wire 1 E( out $end
+$var parameter 32 I( delay $end
+$upscope $end
+$scope module not3 $end
+$var wire 1 E( a $end
+$var wire 1 D( out $end
+$var parameter 32 J( delay $end
+$upscope $end
+$upscope $end
+$scope module sr_latch1 $end
+$var wire 1 ?( r $end
+$var wire 1 @( s $end
+$var wire 1 <( qbar $end
+$var wire 1 9( q $end
+$scope module nor1 $end
+$var wire 1 ?( a $end
+$var wire 1 9( out $end
+$var wire 1 <( b $end
+$var parameter 32 K( delay $end
+$upscope $end
+$scope module nor2 $end
+$var wire 1 @( a $end
+$var wire 1 9( b $end
+$var wire 1 <( out $end
+$var parameter 32 L( delay $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module memory_bit1[6] $end
+$var wire 1 )' clk $end
+$var wire 1 M( data_in $end
+$var wire 1 (' read_enable $end
+$var wire 1 N( q $end
+$var wire 1 O( data_out $end
+$scope module and1 $end
+$var wire 1 (' b $end
+$var wire 1 O( out $end
+$var wire 1 N( a $end
+$var parameter 32 P( delay $end
+$upscope $end
+$scope module dff $end
+$var wire 1 )' clk $end
+$var wire 1 M( d $end
+$var wire 1 Q( qbar $end
+$var wire 1 N( q $end
+$var wire 1 R( dbar $end
+$scope module not1 $end
+$var wire 1 M( a $end
+$var wire 1 R( out $end
+$var parameter 32 S( delay $end
+$upscope $end
+$scope module sr_flip_flop1 $end
+$var wire 1 )' clk $end
+$var wire 1 R( r $end
+$var wire 1 M( s $end
+$var wire 1 Q( qbar $end
+$var wire 1 N( q $end
+$var wire 1 T( net2 $end
+$var wire 1 U( net1 $end
+$var wire 1 V( en $end
+$scope module and1 $end
+$var wire 1 M( a $end
+$var wire 1 U( out $end
+$var wire 1 V( b $end
+$var parameter 32 W( delay $end
+$upscope $end
+$scope module and2 $end
+$var wire 1 R( a $end
+$var wire 1 T( out $end
+$var wire 1 V( b $end
+$var parameter 32 X( delay $end
+$upscope $end
+$scope module rising_edge_detector1 $end
+$var wire 1 )' clk $end
+$var wire 1 V( out $end
+$var wire 1 Y( net3 $end
+$var wire 1 Z( net2 $end
+$var wire 1 [( net1 $end
+$scope module and1 $end
+$var wire 1 )' a $end
+$var wire 1 V( out $end
+$var wire 1 Y( b $end
+$var parameter 32 \( delay $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 )' a $end
+$var wire 1 [( out $end
+$var parameter 32 ]( delay $end
+$upscope $end
+$scope module not2 $end
+$var wire 1 [( a $end
+$var wire 1 Z( out $end
+$var parameter 32 ^( delay $end
+$upscope $end
+$scope module not3 $end
+$var wire 1 Z( a $end
+$var wire 1 Y( out $end
+$var parameter 32 _( delay $end
+$upscope $end
+$upscope $end
+$scope module sr_latch1 $end
+$var wire 1 T( r $end
+$var wire 1 U( s $end
+$var wire 1 Q( qbar $end
+$var wire 1 N( q $end
+$scope module nor1 $end
+$var wire 1 T( a $end
+$var wire 1 N( out $end
+$var wire 1 Q( b $end
+$var parameter 32 `( delay $end
+$upscope $end
+$scope module nor2 $end
+$var wire 1 U( a $end
+$var wire 1 N( b $end
+$var wire 1 Q( out $end
+$var parameter 32 a( delay $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module memory_bit1[7] $end
+$var wire 1 )' clk $end
+$var wire 1 b( data_in $end
+$var wire 1 (' read_enable $end
+$var wire 1 c( q $end
+$var wire 1 d( data_out $end
+$scope module and1 $end
+$var wire 1 (' b $end
+$var wire 1 d( out $end
+$var wire 1 c( a $end
+$var parameter 32 e( delay $end
+$upscope $end
+$scope module dff $end
+$var wire 1 )' clk $end
+$var wire 1 b( d $end
+$var wire 1 f( qbar $end
+$var wire 1 c( q $end
+$var wire 1 g( dbar $end
+$scope module not1 $end
+$var wire 1 b( a $end
+$var wire 1 g( out $end
+$var parameter 32 h( delay $end
+$upscope $end
+$scope module sr_flip_flop1 $end
+$var wire 1 )' clk $end
+$var wire 1 g( r $end
+$var wire 1 b( s $end
+$var wire 1 f( qbar $end
+$var wire 1 c( q $end
+$var wire 1 i( net2 $end
+$var wire 1 j( net1 $end
+$var wire 1 k( en $end
+$scope module and1 $end
+$var wire 1 b( a $end
+$var wire 1 j( out $end
+$var wire 1 k( b $end
+$var parameter 32 l( delay $end
+$upscope $end
+$scope module and2 $end
+$var wire 1 g( a $end
+$var wire 1 i( out $end
+$var wire 1 k( b $end
+$var parameter 32 m( delay $end
+$upscope $end
+$scope module rising_edge_detector1 $end
+$var wire 1 )' clk $end
+$var wire 1 k( out $end
+$var wire 1 n( net3 $end
+$var wire 1 o( net2 $end
+$var wire 1 p( net1 $end
+$scope module and1 $end
+$var wire 1 )' a $end
+$var wire 1 k( out $end
+$var wire 1 n( b $end
+$var parameter 32 q( delay $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 )' a $end
+$var wire 1 p( out $end
+$var parameter 32 r( delay $end
+$upscope $end
+$scope module not2 $end
+$var wire 1 p( a $end
+$var wire 1 o( out $end
+$var parameter 32 s( delay $end
+$upscope $end
+$scope module not3 $end
+$var wire 1 o( a $end
+$var wire 1 n( out $end
+$var parameter 32 t( delay $end
+$upscope $end
+$upscope $end
+$scope module sr_latch1 $end
+$var wire 1 i( r $end
+$var wire 1 j( s $end
+$var wire 1 f( qbar $end
+$var wire 1 c( q $end
+$scope module nor1 $end
+$var wire 1 i( a $end
+$var wire 1 c( out $end
+$var wire 1 f( b $end
+$var parameter 32 u( delay $end
+$upscope $end
+$scope module nor2 $end
+$var wire 1 j( a $end
+$var wire 1 c( b $end
+$var wire 1 f( out $end
+$var parameter 32 v( delay $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin memory_word_instance[4] $end
+$var parameter 4 w( i $end
+$scope begin or_inputs_assignment[0] $end
+$var parameter 2 x( j $end
+$upscope $end
+$scope begin or_inputs_assignment[1] $end
+$var parameter 2 y( j $end
+$upscope $end
+$scope begin or_inputs_assignment[2] $end
+$var parameter 3 z( j $end
+$upscope $end
+$scope begin or_inputs_assignment[3] $end
+$var parameter 3 {( j $end
+$upscope $end
+$scope begin or_inputs_assignment[4] $end
+$var parameter 4 |( j $end
+$upscope $end
+$scope begin or_inputs_assignment[5] $end
+$var parameter 4 }( j $end
+$upscope $end
+$scope begin or_inputs_assignment[6] $end
+$var parameter 4 ~( j $end
+$upscope $end
+$scope begin or_inputs_assignment[7] $end
+$var parameter 4 !) j $end
+$upscope $end
+$scope module memory_word_instance $end
+$var wire 1 % clk $end
+$var wire 8 ") data_in [7:0] $end
+$var wire 1 #) enable $end
+$var wire 1 $) write_enable_clk $end
+$var wire 8 %) data_out [7:0] $end
+$var parameter 32 &) WORD_SIZE $end
+$scope module and1 $end
+$var wire 1 #) a $end
+$var wire 1 % b $end
+$var wire 1 $) out $end
+$var parameter 32 ') delay $end
+$upscope $end
+$scope module memory_bit1[0] $end
+$var wire 1 $) clk $end
+$var wire 1 () data_in $end
+$var wire 1 #) read_enable $end
+$var wire 1 )) q $end
+$var wire 1 *) data_out $end
+$scope module and1 $end
+$var wire 1 #) b $end
+$var wire 1 *) out $end
+$var wire 1 )) a $end
+$var parameter 32 +) delay $end
+$upscope $end
+$scope module dff $end
+$var wire 1 $) clk $end
+$var wire 1 () d $end
+$var wire 1 ,) qbar $end
+$var wire 1 )) q $end
+$var wire 1 -) dbar $end
+$scope module not1 $end
+$var wire 1 () a $end
+$var wire 1 -) out $end
+$var parameter 32 .) delay $end
+$upscope $end
+$scope module sr_flip_flop1 $end
+$var wire 1 $) clk $end
+$var wire 1 -) r $end
+$var wire 1 () s $end
+$var wire 1 ,) qbar $end
+$var wire 1 )) q $end
+$var wire 1 /) net2 $end
+$var wire 1 0) net1 $end
+$var wire 1 1) en $end
+$scope module and1 $end
+$var wire 1 () a $end
+$var wire 1 0) out $end
+$var wire 1 1) b $end
+$var parameter 32 2) delay $end
+$upscope $end
+$scope module and2 $end
+$var wire 1 -) a $end
+$var wire 1 /) out $end
+$var wire 1 1) b $end
+$var parameter 32 3) delay $end
+$upscope $end
+$scope module rising_edge_detector1 $end
+$var wire 1 $) clk $end
+$var wire 1 1) out $end
+$var wire 1 4) net3 $end
+$var wire 1 5) net2 $end
+$var wire 1 6) net1 $end
+$scope module and1 $end
+$var wire 1 $) a $end
+$var wire 1 1) out $end
+$var wire 1 4) b $end
+$var parameter 32 7) delay $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 $) a $end
+$var wire 1 6) out $end
+$var parameter 32 8) delay $end
+$upscope $end
+$scope module not2 $end
+$var wire 1 6) a $end
+$var wire 1 5) out $end
+$var parameter 32 9) delay $end
+$upscope $end
+$scope module not3 $end
+$var wire 1 5) a $end
+$var wire 1 4) out $end
+$var parameter 32 :) delay $end
+$upscope $end
+$upscope $end
+$scope module sr_latch1 $end
+$var wire 1 /) r $end
+$var wire 1 0) s $end
+$var wire 1 ,) qbar $end
+$var wire 1 )) q $end
+$scope module nor1 $end
+$var wire 1 /) a $end
+$var wire 1 )) out $end
+$var wire 1 ,) b $end
+$var parameter 32 ;) delay $end
+$upscope $end
+$scope module nor2 $end
+$var wire 1 0) a $end
+$var wire 1 )) b $end
+$var wire 1 ,) out $end
+$var parameter 32 <) delay $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module memory_bit1[1] $end
+$var wire 1 $) clk $end
+$var wire 1 =) data_in $end
+$var wire 1 #) read_enable $end
+$var wire 1 >) q $end
+$var wire 1 ?) data_out $end
+$scope module and1 $end
+$var wire 1 #) b $end
+$var wire 1 ?) out $end
+$var wire 1 >) a $end
+$var parameter 32 @) delay $end
+$upscope $end
+$scope module dff $end
+$var wire 1 $) clk $end
+$var wire 1 =) d $end
+$var wire 1 A) qbar $end
+$var wire 1 >) q $end
+$var wire 1 B) dbar $end
+$scope module not1 $end
+$var wire 1 =) a $end
+$var wire 1 B) out $end
+$var parameter 32 C) delay $end
+$upscope $end
+$scope module sr_flip_flop1 $end
+$var wire 1 $) clk $end
+$var wire 1 B) r $end
+$var wire 1 =) s $end
+$var wire 1 A) qbar $end
+$var wire 1 >) q $end
+$var wire 1 D) net2 $end
+$var wire 1 E) net1 $end
+$var wire 1 F) en $end
+$scope module and1 $end
+$var wire 1 =) a $end
+$var wire 1 E) out $end
+$var wire 1 F) b $end
+$var parameter 32 G) delay $end
+$upscope $end
+$scope module and2 $end
+$var wire 1 B) a $end
+$var wire 1 D) out $end
+$var wire 1 F) b $end
+$var parameter 32 H) delay $end
+$upscope $end
+$scope module rising_edge_detector1 $end
+$var wire 1 $) clk $end
+$var wire 1 F) out $end
+$var wire 1 I) net3 $end
+$var wire 1 J) net2 $end
+$var wire 1 K) net1 $end
+$scope module and1 $end
+$var wire 1 $) a $end
+$var wire 1 F) out $end
+$var wire 1 I) b $end
+$var parameter 32 L) delay $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 $) a $end
+$var wire 1 K) out $end
+$var parameter 32 M) delay $end
+$upscope $end
+$scope module not2 $end
+$var wire 1 K) a $end
+$var wire 1 J) out $end
+$var parameter 32 N) delay $end
+$upscope $end
+$scope module not3 $end
+$var wire 1 J) a $end
+$var wire 1 I) out $end
+$var parameter 32 O) delay $end
+$upscope $end
+$upscope $end
+$scope module sr_latch1 $end
+$var wire 1 D) r $end
+$var wire 1 E) s $end
+$var wire 1 A) qbar $end
+$var wire 1 >) q $end
+$scope module nor1 $end
+$var wire 1 D) a $end
+$var wire 1 >) out $end
+$var wire 1 A) b $end
+$var parameter 32 P) delay $end
+$upscope $end
+$scope module nor2 $end
+$var wire 1 E) a $end
+$var wire 1 >) b $end
+$var wire 1 A) out $end
+$var parameter 32 Q) delay $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module memory_bit1[2] $end
+$var wire 1 $) clk $end
+$var wire 1 R) data_in $end
+$var wire 1 #) read_enable $end
+$var wire 1 S) q $end
+$var wire 1 T) data_out $end
+$scope module and1 $end
+$var wire 1 #) b $end
+$var wire 1 T) out $end
+$var wire 1 S) a $end
+$var parameter 32 U) delay $end
+$upscope $end
+$scope module dff $end
+$var wire 1 $) clk $end
+$var wire 1 R) d $end
+$var wire 1 V) qbar $end
+$var wire 1 S) q $end
+$var wire 1 W) dbar $end
+$scope module not1 $end
+$var wire 1 R) a $end
+$var wire 1 W) out $end
+$var parameter 32 X) delay $end
+$upscope $end
+$scope module sr_flip_flop1 $end
+$var wire 1 $) clk $end
+$var wire 1 W) r $end
+$var wire 1 R) s $end
+$var wire 1 V) qbar $end
+$var wire 1 S) q $end
+$var wire 1 Y) net2 $end
+$var wire 1 Z) net1 $end
+$var wire 1 [) en $end
+$scope module and1 $end
+$var wire 1 R) a $end
+$var wire 1 Z) out $end
+$var wire 1 [) b $end
+$var parameter 32 \) delay $end
+$upscope $end
+$scope module and2 $end
+$var wire 1 W) a $end
+$var wire 1 Y) out $end
+$var wire 1 [) b $end
+$var parameter 32 ]) delay $end
+$upscope $end
+$scope module rising_edge_detector1 $end
+$var wire 1 $) clk $end
+$var wire 1 [) out $end
+$var wire 1 ^) net3 $end
+$var wire 1 _) net2 $end
+$var wire 1 `) net1 $end
+$scope module and1 $end
+$var wire 1 $) a $end
+$var wire 1 [) out $end
+$var wire 1 ^) b $end
+$var parameter 32 a) delay $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 $) a $end
+$var wire 1 `) out $end
+$var parameter 32 b) delay $end
+$upscope $end
+$scope module not2 $end
+$var wire 1 `) a $end
+$var wire 1 _) out $end
+$var parameter 32 c) delay $end
+$upscope $end
+$scope module not3 $end
+$var wire 1 _) a $end
+$var wire 1 ^) out $end
+$var parameter 32 d) delay $end
+$upscope $end
+$upscope $end
+$scope module sr_latch1 $end
+$var wire 1 Y) r $end
+$var wire 1 Z) s $end
+$var wire 1 V) qbar $end
+$var wire 1 S) q $end
+$scope module nor1 $end
+$var wire 1 Y) a $end
+$var wire 1 S) out $end
+$var wire 1 V) b $end
+$var parameter 32 e) delay $end
+$upscope $end
+$scope module nor2 $end
+$var wire 1 Z) a $end
+$var wire 1 S) b $end
+$var wire 1 V) out $end
+$var parameter 32 f) delay $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module memory_bit1[3] $end
+$var wire 1 $) clk $end
+$var wire 1 g) data_in $end
+$var wire 1 #) read_enable $end
+$var wire 1 h) q $end
+$var wire 1 i) data_out $end
+$scope module and1 $end
+$var wire 1 #) b $end
+$var wire 1 i) out $end
+$var wire 1 h) a $end
+$var parameter 32 j) delay $end
+$upscope $end
+$scope module dff $end
+$var wire 1 $) clk $end
+$var wire 1 g) d $end
+$var wire 1 k) qbar $end
+$var wire 1 h) q $end
+$var wire 1 l) dbar $end
+$scope module not1 $end
+$var wire 1 g) a $end
+$var wire 1 l) out $end
+$var parameter 32 m) delay $end
+$upscope $end
+$scope module sr_flip_flop1 $end
+$var wire 1 $) clk $end
+$var wire 1 l) r $end
+$var wire 1 g) s $end
+$var wire 1 k) qbar $end
+$var wire 1 h) q $end
+$var wire 1 n) net2 $end
+$var wire 1 o) net1 $end
+$var wire 1 p) en $end
+$scope module and1 $end
+$var wire 1 g) a $end
+$var wire 1 o) out $end
+$var wire 1 p) b $end
+$var parameter 32 q) delay $end
+$upscope $end
+$scope module and2 $end
+$var wire 1 l) a $end
+$var wire 1 n) out $end
+$var wire 1 p) b $end
+$var parameter 32 r) delay $end
+$upscope $end
+$scope module rising_edge_detector1 $end
+$var wire 1 $) clk $end
+$var wire 1 p) out $end
+$var wire 1 s) net3 $end
+$var wire 1 t) net2 $end
+$var wire 1 u) net1 $end
+$scope module and1 $end
+$var wire 1 $) a $end
+$var wire 1 p) out $end
+$var wire 1 s) b $end
+$var parameter 32 v) delay $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 $) a $end
+$var wire 1 u) out $end
+$var parameter 32 w) delay $end
+$upscope $end
+$scope module not2 $end
+$var wire 1 u) a $end
+$var wire 1 t) out $end
+$var parameter 32 x) delay $end
+$upscope $end
+$scope module not3 $end
+$var wire 1 t) a $end
+$var wire 1 s) out $end
+$var parameter 32 y) delay $end
+$upscope $end
+$upscope $end
+$scope module sr_latch1 $end
+$var wire 1 n) r $end
+$var wire 1 o) s $end
+$var wire 1 k) qbar $end
+$var wire 1 h) q $end
+$scope module nor1 $end
+$var wire 1 n) a $end
+$var wire 1 h) out $end
+$var wire 1 k) b $end
+$var parameter 32 z) delay $end
+$upscope $end
+$scope module nor2 $end
+$var wire 1 o) a $end
+$var wire 1 h) b $end
+$var wire 1 k) out $end
+$var parameter 32 {) delay $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module memory_bit1[4] $end
+$var wire 1 $) clk $end
+$var wire 1 |) data_in $end
+$var wire 1 #) read_enable $end
+$var wire 1 }) q $end
+$var wire 1 ~) data_out $end
+$scope module and1 $end
+$var wire 1 #) b $end
+$var wire 1 ~) out $end
+$var wire 1 }) a $end
+$var parameter 32 !* delay $end
+$upscope $end
+$scope module dff $end
+$var wire 1 $) clk $end
+$var wire 1 |) d $end
+$var wire 1 "* qbar $end
+$var wire 1 }) q $end
+$var wire 1 #* dbar $end
+$scope module not1 $end
+$var wire 1 |) a $end
+$var wire 1 #* out $end
+$var parameter 32 $* delay $end
+$upscope $end
+$scope module sr_flip_flop1 $end
+$var wire 1 $) clk $end
+$var wire 1 #* r $end
+$var wire 1 |) s $end
+$var wire 1 "* qbar $end
+$var wire 1 }) q $end
+$var wire 1 %* net2 $end
+$var wire 1 &* net1 $end
+$var wire 1 '* en $end
+$scope module and1 $end
+$var wire 1 |) a $end
+$var wire 1 &* out $end
+$var wire 1 '* b $end
+$var parameter 32 (* delay $end
+$upscope $end
+$scope module and2 $end
+$var wire 1 #* a $end
+$var wire 1 %* out $end
+$var wire 1 '* b $end
+$var parameter 32 )* delay $end
+$upscope $end
+$scope module rising_edge_detector1 $end
+$var wire 1 $) clk $end
+$var wire 1 '* out $end
+$var wire 1 ** net3 $end
+$var wire 1 +* net2 $end
+$var wire 1 ,* net1 $end
+$scope module and1 $end
+$var wire 1 $) a $end
+$var wire 1 '* out $end
+$var wire 1 ** b $end
+$var parameter 32 -* delay $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 $) a $end
+$var wire 1 ,* out $end
+$var parameter 32 .* delay $end
+$upscope $end
+$scope module not2 $end
+$var wire 1 ,* a $end
+$var wire 1 +* out $end
+$var parameter 32 /* delay $end
+$upscope $end
+$scope module not3 $end
+$var wire 1 +* a $end
+$var wire 1 ** out $end
+$var parameter 32 0* delay $end
+$upscope $end
+$upscope $end
+$scope module sr_latch1 $end
+$var wire 1 %* r $end
+$var wire 1 &* s $end
+$var wire 1 "* qbar $end
+$var wire 1 }) q $end
+$scope module nor1 $end
+$var wire 1 %* a $end
+$var wire 1 }) out $end
+$var wire 1 "* b $end
+$var parameter 32 1* delay $end
+$upscope $end
+$scope module nor2 $end
+$var wire 1 &* a $end
+$var wire 1 }) b $end
+$var wire 1 "* out $end
+$var parameter 32 2* delay $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module memory_bit1[5] $end
+$var wire 1 $) clk $end
+$var wire 1 3* data_in $end
+$var wire 1 #) read_enable $end
+$var wire 1 4* q $end
+$var wire 1 5* data_out $end
+$scope module and1 $end
+$var wire 1 #) b $end
+$var wire 1 5* out $end
+$var wire 1 4* a $end
+$var parameter 32 6* delay $end
+$upscope $end
+$scope module dff $end
+$var wire 1 $) clk $end
+$var wire 1 3* d $end
+$var wire 1 7* qbar $end
+$var wire 1 4* q $end
+$var wire 1 8* dbar $end
+$scope module not1 $end
+$var wire 1 3* a $end
+$var wire 1 8* out $end
+$var parameter 32 9* delay $end
+$upscope $end
+$scope module sr_flip_flop1 $end
+$var wire 1 $) clk $end
+$var wire 1 8* r $end
+$var wire 1 3* s $end
+$var wire 1 7* qbar $end
+$var wire 1 4* q $end
+$var wire 1 :* net2 $end
+$var wire 1 ;* net1 $end
+$var wire 1 <* en $end
+$scope module and1 $end
+$var wire 1 3* a $end
+$var wire 1 ;* out $end
+$var wire 1 <* b $end
+$var parameter 32 =* delay $end
+$upscope $end
+$scope module and2 $end
+$var wire 1 8* a $end
+$var wire 1 :* out $end
+$var wire 1 <* b $end
+$var parameter 32 >* delay $end
+$upscope $end
+$scope module rising_edge_detector1 $end
+$var wire 1 $) clk $end
+$var wire 1 <* out $end
+$var wire 1 ?* net3 $end
+$var wire 1 @* net2 $end
+$var wire 1 A* net1 $end
+$scope module and1 $end
+$var wire 1 $) a $end
+$var wire 1 <* out $end
+$var wire 1 ?* b $end
+$var parameter 32 B* delay $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 $) a $end
+$var wire 1 A* out $end
+$var parameter 32 C* delay $end
+$upscope $end
+$scope module not2 $end
+$var wire 1 A* a $end
+$var wire 1 @* out $end
+$var parameter 32 D* delay $end
+$upscope $end
+$scope module not3 $end
+$var wire 1 @* a $end
+$var wire 1 ?* out $end
+$var parameter 32 E* delay $end
+$upscope $end
+$upscope $end
+$scope module sr_latch1 $end
+$var wire 1 :* r $end
+$var wire 1 ;* s $end
+$var wire 1 7* qbar $end
+$var wire 1 4* q $end
+$scope module nor1 $end
+$var wire 1 :* a $end
+$var wire 1 4* out $end
+$var wire 1 7* b $end
+$var parameter 32 F* delay $end
+$upscope $end
+$scope module nor2 $end
+$var wire 1 ;* a $end
+$var wire 1 4* b $end
+$var wire 1 7* out $end
+$var parameter 32 G* delay $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module memory_bit1[6] $end
+$var wire 1 $) clk $end
+$var wire 1 H* data_in $end
+$var wire 1 #) read_enable $end
+$var wire 1 I* q $end
+$var wire 1 J* data_out $end
+$scope module and1 $end
+$var wire 1 #) b $end
+$var wire 1 J* out $end
+$var wire 1 I* a $end
+$var parameter 32 K* delay $end
+$upscope $end
+$scope module dff $end
+$var wire 1 $) clk $end
+$var wire 1 H* d $end
+$var wire 1 L* qbar $end
+$var wire 1 I* q $end
+$var wire 1 M* dbar $end
+$scope module not1 $end
+$var wire 1 H* a $end
+$var wire 1 M* out $end
+$var parameter 32 N* delay $end
+$upscope $end
+$scope module sr_flip_flop1 $end
+$var wire 1 $) clk $end
+$var wire 1 M* r $end
+$var wire 1 H* s $end
+$var wire 1 L* qbar $end
+$var wire 1 I* q $end
+$var wire 1 O* net2 $end
+$var wire 1 P* net1 $end
+$var wire 1 Q* en $end
+$scope module and1 $end
+$var wire 1 H* a $end
+$var wire 1 P* out $end
+$var wire 1 Q* b $end
+$var parameter 32 R* delay $end
+$upscope $end
+$scope module and2 $end
+$var wire 1 M* a $end
+$var wire 1 O* out $end
+$var wire 1 Q* b $end
+$var parameter 32 S* delay $end
+$upscope $end
+$scope module rising_edge_detector1 $end
+$var wire 1 $) clk $end
+$var wire 1 Q* out $end
+$var wire 1 T* net3 $end
+$var wire 1 U* net2 $end
+$var wire 1 V* net1 $end
+$scope module and1 $end
+$var wire 1 $) a $end
+$var wire 1 Q* out $end
+$var wire 1 T* b $end
+$var parameter 32 W* delay $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 $) a $end
+$var wire 1 V* out $end
+$var parameter 32 X* delay $end
+$upscope $end
+$scope module not2 $end
+$var wire 1 V* a $end
+$var wire 1 U* out $end
+$var parameter 32 Y* delay $end
+$upscope $end
+$scope module not3 $end
+$var wire 1 U* a $end
+$var wire 1 T* out $end
+$var parameter 32 Z* delay $end
+$upscope $end
+$upscope $end
+$scope module sr_latch1 $end
+$var wire 1 O* r $end
+$var wire 1 P* s $end
+$var wire 1 L* qbar $end
+$var wire 1 I* q $end
+$scope module nor1 $end
+$var wire 1 O* a $end
+$var wire 1 I* out $end
+$var wire 1 L* b $end
+$var parameter 32 [* delay $end
+$upscope $end
+$scope module nor2 $end
+$var wire 1 P* a $end
+$var wire 1 I* b $end
+$var wire 1 L* out $end
+$var parameter 32 \* delay $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module memory_bit1[7] $end
+$var wire 1 $) clk $end
+$var wire 1 ]* data_in $end
+$var wire 1 #) read_enable $end
+$var wire 1 ^* q $end
+$var wire 1 _* data_out $end
+$scope module and1 $end
+$var wire 1 #) b $end
+$var wire 1 _* out $end
+$var wire 1 ^* a $end
+$var parameter 32 `* delay $end
+$upscope $end
+$scope module dff $end
+$var wire 1 $) clk $end
+$var wire 1 ]* d $end
+$var wire 1 a* qbar $end
+$var wire 1 ^* q $end
+$var wire 1 b* dbar $end
+$scope module not1 $end
+$var wire 1 ]* a $end
+$var wire 1 b* out $end
+$var parameter 32 c* delay $end
+$upscope $end
+$scope module sr_flip_flop1 $end
+$var wire 1 $) clk $end
+$var wire 1 b* r $end
+$var wire 1 ]* s $end
+$var wire 1 a* qbar $end
+$var wire 1 ^* q $end
+$var wire 1 d* net2 $end
+$var wire 1 e* net1 $end
+$var wire 1 f* en $end
+$scope module and1 $end
+$var wire 1 ]* a $end
+$var wire 1 e* out $end
+$var wire 1 f* b $end
+$var parameter 32 g* delay $end
+$upscope $end
+$scope module and2 $end
+$var wire 1 b* a $end
+$var wire 1 d* out $end
+$var wire 1 f* b $end
+$var parameter 32 h* delay $end
+$upscope $end
+$scope module rising_edge_detector1 $end
+$var wire 1 $) clk $end
+$var wire 1 f* out $end
+$var wire 1 i* net3 $end
+$var wire 1 j* net2 $end
+$var wire 1 k* net1 $end
+$scope module and1 $end
+$var wire 1 $) a $end
+$var wire 1 f* out $end
+$var wire 1 i* b $end
+$var parameter 32 l* delay $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 $) a $end
+$var wire 1 k* out $end
+$var parameter 32 m* delay $end
+$upscope $end
+$scope module not2 $end
+$var wire 1 k* a $end
+$var wire 1 j* out $end
+$var parameter 32 n* delay $end
+$upscope $end
+$scope module not3 $end
+$var wire 1 j* a $end
+$var wire 1 i* out $end
+$var parameter 32 o* delay $end
+$upscope $end
+$upscope $end
+$scope module sr_latch1 $end
+$var wire 1 d* r $end
+$var wire 1 e* s $end
+$var wire 1 a* qbar $end
+$var wire 1 ^* q $end
+$scope module nor1 $end
+$var wire 1 d* a $end
+$var wire 1 ^* out $end
+$var wire 1 a* b $end
+$var parameter 32 p* delay $end
+$upscope $end
+$scope module nor2 $end
+$var wire 1 e* a $end
+$var wire 1 ^* b $end
+$var wire 1 a* out $end
+$var parameter 32 q* delay $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin memory_word_instance[5] $end
+$var parameter 4 r* i $end
+$scope begin or_inputs_assignment[0] $end
+$var parameter 2 s* j $end
+$upscope $end
+$scope begin or_inputs_assignment[1] $end
+$var parameter 2 t* j $end
+$upscope $end
+$scope begin or_inputs_assignment[2] $end
+$var parameter 3 u* j $end
+$upscope $end
+$scope begin or_inputs_assignment[3] $end
+$var parameter 3 v* j $end
+$upscope $end
+$scope begin or_inputs_assignment[4] $end
+$var parameter 4 w* j $end
+$upscope $end
+$scope begin or_inputs_assignment[5] $end
+$var parameter 4 x* j $end
+$upscope $end
+$scope begin or_inputs_assignment[6] $end
+$var parameter 4 y* j $end
+$upscope $end
+$scope begin or_inputs_assignment[7] $end
+$var parameter 4 z* j $end
+$upscope $end
+$scope module memory_word_instance $end
+$var wire 1 % clk $end
+$var wire 8 {* data_in [7:0] $end
+$var wire 1 |* enable $end
+$var wire 1 }* write_enable_clk $end
+$var wire 8 ~* data_out [7:0] $end
+$var parameter 32 !+ WORD_SIZE $end
+$scope module and1 $end
+$var wire 1 |* a $end
+$var wire 1 % b $end
+$var wire 1 }* out $end
+$var parameter 32 "+ delay $end
+$upscope $end
+$scope module memory_bit1[0] $end
+$var wire 1 }* clk $end
+$var wire 1 #+ data_in $end
+$var wire 1 |* read_enable $end
+$var wire 1 $+ q $end
+$var wire 1 %+ data_out $end
+$scope module and1 $end
+$var wire 1 |* b $end
+$var wire 1 %+ out $end
+$var wire 1 $+ a $end
+$var parameter 32 &+ delay $end
+$upscope $end
+$scope module dff $end
+$var wire 1 }* clk $end
+$var wire 1 #+ d $end
+$var wire 1 '+ qbar $end
+$var wire 1 $+ q $end
+$var wire 1 (+ dbar $end
+$scope module not1 $end
+$var wire 1 #+ a $end
+$var wire 1 (+ out $end
+$var parameter 32 )+ delay $end
+$upscope $end
+$scope module sr_flip_flop1 $end
+$var wire 1 }* clk $end
+$var wire 1 (+ r $end
+$var wire 1 #+ s $end
+$var wire 1 '+ qbar $end
+$var wire 1 $+ q $end
+$var wire 1 *+ net2 $end
+$var wire 1 ++ net1 $end
+$var wire 1 ,+ en $end
+$scope module and1 $end
+$var wire 1 #+ a $end
+$var wire 1 ++ out $end
+$var wire 1 ,+ b $end
+$var parameter 32 -+ delay $end
+$upscope $end
+$scope module and2 $end
+$var wire 1 (+ a $end
+$var wire 1 *+ out $end
+$var wire 1 ,+ b $end
+$var parameter 32 .+ delay $end
+$upscope $end
+$scope module rising_edge_detector1 $end
+$var wire 1 }* clk $end
+$var wire 1 ,+ out $end
+$var wire 1 /+ net3 $end
+$var wire 1 0+ net2 $end
+$var wire 1 1+ net1 $end
+$scope module and1 $end
+$var wire 1 }* a $end
+$var wire 1 ,+ out $end
+$var wire 1 /+ b $end
+$var parameter 32 2+ delay $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 }* a $end
+$var wire 1 1+ out $end
+$var parameter 32 3+ delay $end
+$upscope $end
+$scope module not2 $end
+$var wire 1 1+ a $end
+$var wire 1 0+ out $end
+$var parameter 32 4+ delay $end
+$upscope $end
+$scope module not3 $end
+$var wire 1 0+ a $end
+$var wire 1 /+ out $end
+$var parameter 32 5+ delay $end
+$upscope $end
+$upscope $end
+$scope module sr_latch1 $end
+$var wire 1 *+ r $end
+$var wire 1 ++ s $end
+$var wire 1 '+ qbar $end
+$var wire 1 $+ q $end
+$scope module nor1 $end
+$var wire 1 *+ a $end
+$var wire 1 $+ out $end
+$var wire 1 '+ b $end
+$var parameter 32 6+ delay $end
+$upscope $end
+$scope module nor2 $end
+$var wire 1 ++ a $end
+$var wire 1 $+ b $end
+$var wire 1 '+ out $end
+$var parameter 32 7+ delay $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module memory_bit1[1] $end
+$var wire 1 }* clk $end
+$var wire 1 8+ data_in $end
+$var wire 1 |* read_enable $end
+$var wire 1 9+ q $end
+$var wire 1 :+ data_out $end
+$scope module and1 $end
+$var wire 1 |* b $end
+$var wire 1 :+ out $end
+$var wire 1 9+ a $end
+$var parameter 32 ;+ delay $end
+$upscope $end
+$scope module dff $end
+$var wire 1 }* clk $end
+$var wire 1 8+ d $end
+$var wire 1 <+ qbar $end
+$var wire 1 9+ q $end
+$var wire 1 =+ dbar $end
+$scope module not1 $end
+$var wire 1 8+ a $end
+$var wire 1 =+ out $end
+$var parameter 32 >+ delay $end
+$upscope $end
+$scope module sr_flip_flop1 $end
+$var wire 1 }* clk $end
+$var wire 1 =+ r $end
+$var wire 1 8+ s $end
+$var wire 1 <+ qbar $end
+$var wire 1 9+ q $end
+$var wire 1 ?+ net2 $end
+$var wire 1 @+ net1 $end
+$var wire 1 A+ en $end
+$scope module and1 $end
+$var wire 1 8+ a $end
+$var wire 1 @+ out $end
+$var wire 1 A+ b $end
+$var parameter 32 B+ delay $end
+$upscope $end
+$scope module and2 $end
+$var wire 1 =+ a $end
+$var wire 1 ?+ out $end
+$var wire 1 A+ b $end
+$var parameter 32 C+ delay $end
+$upscope $end
+$scope module rising_edge_detector1 $end
+$var wire 1 }* clk $end
+$var wire 1 A+ out $end
+$var wire 1 D+ net3 $end
+$var wire 1 E+ net2 $end
+$var wire 1 F+ net1 $end
+$scope module and1 $end
+$var wire 1 }* a $end
+$var wire 1 A+ out $end
+$var wire 1 D+ b $end
+$var parameter 32 G+ delay $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 }* a $end
+$var wire 1 F+ out $end
+$var parameter 32 H+ delay $end
+$upscope $end
+$scope module not2 $end
+$var wire 1 F+ a $end
+$var wire 1 E+ out $end
+$var parameter 32 I+ delay $end
+$upscope $end
+$scope module not3 $end
+$var wire 1 E+ a $end
+$var wire 1 D+ out $end
+$var parameter 32 J+ delay $end
+$upscope $end
+$upscope $end
+$scope module sr_latch1 $end
+$var wire 1 ?+ r $end
+$var wire 1 @+ s $end
+$var wire 1 <+ qbar $end
+$var wire 1 9+ q $end
+$scope module nor1 $end
+$var wire 1 ?+ a $end
+$var wire 1 9+ out $end
+$var wire 1 <+ b $end
+$var parameter 32 K+ delay $end
+$upscope $end
+$scope module nor2 $end
+$var wire 1 @+ a $end
+$var wire 1 9+ b $end
+$var wire 1 <+ out $end
+$var parameter 32 L+ delay $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module memory_bit1[2] $end
+$var wire 1 }* clk $end
+$var wire 1 M+ data_in $end
+$var wire 1 |* read_enable $end
+$var wire 1 N+ q $end
+$var wire 1 O+ data_out $end
+$scope module and1 $end
+$var wire 1 |* b $end
+$var wire 1 O+ out $end
+$var wire 1 N+ a $end
+$var parameter 32 P+ delay $end
+$upscope $end
+$scope module dff $end
+$var wire 1 }* clk $end
+$var wire 1 M+ d $end
+$var wire 1 Q+ qbar $end
+$var wire 1 N+ q $end
+$var wire 1 R+ dbar $end
+$scope module not1 $end
+$var wire 1 M+ a $end
+$var wire 1 R+ out $end
+$var parameter 32 S+ delay $end
+$upscope $end
+$scope module sr_flip_flop1 $end
+$var wire 1 }* clk $end
+$var wire 1 R+ r $end
+$var wire 1 M+ s $end
+$var wire 1 Q+ qbar $end
+$var wire 1 N+ q $end
+$var wire 1 T+ net2 $end
+$var wire 1 U+ net1 $end
+$var wire 1 V+ en $end
+$scope module and1 $end
+$var wire 1 M+ a $end
+$var wire 1 U+ out $end
+$var wire 1 V+ b $end
+$var parameter 32 W+ delay $end
+$upscope $end
+$scope module and2 $end
+$var wire 1 R+ a $end
+$var wire 1 T+ out $end
+$var wire 1 V+ b $end
+$var parameter 32 X+ delay $end
+$upscope $end
+$scope module rising_edge_detector1 $end
+$var wire 1 }* clk $end
+$var wire 1 V+ out $end
+$var wire 1 Y+ net3 $end
+$var wire 1 Z+ net2 $end
+$var wire 1 [+ net1 $end
+$scope module and1 $end
+$var wire 1 }* a $end
+$var wire 1 V+ out $end
+$var wire 1 Y+ b $end
+$var parameter 32 \+ delay $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 }* a $end
+$var wire 1 [+ out $end
+$var parameter 32 ]+ delay $end
+$upscope $end
+$scope module not2 $end
+$var wire 1 [+ a $end
+$var wire 1 Z+ out $end
+$var parameter 32 ^+ delay $end
+$upscope $end
+$scope module not3 $end
+$var wire 1 Z+ a $end
+$var wire 1 Y+ out $end
+$var parameter 32 _+ delay $end
+$upscope $end
+$upscope $end
+$scope module sr_latch1 $end
+$var wire 1 T+ r $end
+$var wire 1 U+ s $end
+$var wire 1 Q+ qbar $end
+$var wire 1 N+ q $end
+$scope module nor1 $end
+$var wire 1 T+ a $end
+$var wire 1 N+ out $end
+$var wire 1 Q+ b $end
+$var parameter 32 `+ delay $end
+$upscope $end
+$scope module nor2 $end
+$var wire 1 U+ a $end
+$var wire 1 N+ b $end
+$var wire 1 Q+ out $end
+$var parameter 32 a+ delay $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module memory_bit1[3] $end
+$var wire 1 }* clk $end
+$var wire 1 b+ data_in $end
+$var wire 1 |* read_enable $end
+$var wire 1 c+ q $end
+$var wire 1 d+ data_out $end
+$scope module and1 $end
+$var wire 1 |* b $end
+$var wire 1 d+ out $end
+$var wire 1 c+ a $end
+$var parameter 32 e+ delay $end
+$upscope $end
+$scope module dff $end
+$var wire 1 }* clk $end
+$var wire 1 b+ d $end
+$var wire 1 f+ qbar $end
+$var wire 1 c+ q $end
+$var wire 1 g+ dbar $end
+$scope module not1 $end
+$var wire 1 b+ a $end
+$var wire 1 g+ out $end
+$var parameter 32 h+ delay $end
+$upscope $end
+$scope module sr_flip_flop1 $end
+$var wire 1 }* clk $end
+$var wire 1 g+ r $end
+$var wire 1 b+ s $end
+$var wire 1 f+ qbar $end
+$var wire 1 c+ q $end
+$var wire 1 i+ net2 $end
+$var wire 1 j+ net1 $end
+$var wire 1 k+ en $end
+$scope module and1 $end
+$var wire 1 b+ a $end
+$var wire 1 j+ out $end
+$var wire 1 k+ b $end
+$var parameter 32 l+ delay $end
+$upscope $end
+$scope module and2 $end
+$var wire 1 g+ a $end
+$var wire 1 i+ out $end
+$var wire 1 k+ b $end
+$var parameter 32 m+ delay $end
+$upscope $end
+$scope module rising_edge_detector1 $end
+$var wire 1 }* clk $end
+$var wire 1 k+ out $end
+$var wire 1 n+ net3 $end
+$var wire 1 o+ net2 $end
+$var wire 1 p+ net1 $end
+$scope module and1 $end
+$var wire 1 }* a $end
+$var wire 1 k+ out $end
+$var wire 1 n+ b $end
+$var parameter 32 q+ delay $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 }* a $end
+$var wire 1 p+ out $end
+$var parameter 32 r+ delay $end
+$upscope $end
+$scope module not2 $end
+$var wire 1 p+ a $end
+$var wire 1 o+ out $end
+$var parameter 32 s+ delay $end
+$upscope $end
+$scope module not3 $end
+$var wire 1 o+ a $end
+$var wire 1 n+ out $end
+$var parameter 32 t+ delay $end
+$upscope $end
+$upscope $end
+$scope module sr_latch1 $end
+$var wire 1 i+ r $end
+$var wire 1 j+ s $end
+$var wire 1 f+ qbar $end
+$var wire 1 c+ q $end
+$scope module nor1 $end
+$var wire 1 i+ a $end
+$var wire 1 c+ out $end
+$var wire 1 f+ b $end
+$var parameter 32 u+ delay $end
+$upscope $end
+$scope module nor2 $end
+$var wire 1 j+ a $end
+$var wire 1 c+ b $end
+$var wire 1 f+ out $end
+$var parameter 32 v+ delay $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module memory_bit1[4] $end
+$var wire 1 }* clk $end
+$var wire 1 w+ data_in $end
+$var wire 1 |* read_enable $end
+$var wire 1 x+ q $end
+$var wire 1 y+ data_out $end
+$scope module and1 $end
+$var wire 1 |* b $end
+$var wire 1 y+ out $end
+$var wire 1 x+ a $end
+$var parameter 32 z+ delay $end
+$upscope $end
+$scope module dff $end
+$var wire 1 }* clk $end
+$var wire 1 w+ d $end
+$var wire 1 {+ qbar $end
+$var wire 1 x+ q $end
+$var wire 1 |+ dbar $end
+$scope module not1 $end
+$var wire 1 w+ a $end
+$var wire 1 |+ out $end
+$var parameter 32 }+ delay $end
+$upscope $end
+$scope module sr_flip_flop1 $end
+$var wire 1 }* clk $end
+$var wire 1 |+ r $end
+$var wire 1 w+ s $end
+$var wire 1 {+ qbar $end
+$var wire 1 x+ q $end
+$var wire 1 ~+ net2 $end
+$var wire 1 !, net1 $end
+$var wire 1 ", en $end
+$scope module and1 $end
+$var wire 1 w+ a $end
+$var wire 1 !, out $end
+$var wire 1 ", b $end
+$var parameter 32 #, delay $end
+$upscope $end
+$scope module and2 $end
+$var wire 1 |+ a $end
+$var wire 1 ~+ out $end
+$var wire 1 ", b $end
+$var parameter 32 $, delay $end
+$upscope $end
+$scope module rising_edge_detector1 $end
+$var wire 1 }* clk $end
+$var wire 1 ", out $end
+$var wire 1 %, net3 $end
+$var wire 1 &, net2 $end
+$var wire 1 ', net1 $end
+$scope module and1 $end
+$var wire 1 }* a $end
+$var wire 1 ", out $end
+$var wire 1 %, b $end
+$var parameter 32 (, delay $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 }* a $end
+$var wire 1 ', out $end
+$var parameter 32 ), delay $end
+$upscope $end
+$scope module not2 $end
+$var wire 1 ', a $end
+$var wire 1 &, out $end
+$var parameter 32 *, delay $end
+$upscope $end
+$scope module not3 $end
+$var wire 1 &, a $end
+$var wire 1 %, out $end
+$var parameter 32 +, delay $end
+$upscope $end
+$upscope $end
+$scope module sr_latch1 $end
+$var wire 1 ~+ r $end
+$var wire 1 !, s $end
+$var wire 1 {+ qbar $end
+$var wire 1 x+ q $end
+$scope module nor1 $end
+$var wire 1 ~+ a $end
+$var wire 1 x+ out $end
+$var wire 1 {+ b $end
+$var parameter 32 ,, delay $end
+$upscope $end
+$scope module nor2 $end
+$var wire 1 !, a $end
+$var wire 1 x+ b $end
+$var wire 1 {+ out $end
+$var parameter 32 -, delay $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module memory_bit1[5] $end
+$var wire 1 }* clk $end
+$var wire 1 ., data_in $end
+$var wire 1 |* read_enable $end
+$var wire 1 /, q $end
+$var wire 1 0, data_out $end
+$scope module and1 $end
+$var wire 1 |* b $end
+$var wire 1 0, out $end
+$var wire 1 /, a $end
+$var parameter 32 1, delay $end
+$upscope $end
+$scope module dff $end
+$var wire 1 }* clk $end
+$var wire 1 ., d $end
+$var wire 1 2, qbar $end
+$var wire 1 /, q $end
+$var wire 1 3, dbar $end
+$scope module not1 $end
+$var wire 1 ., a $end
+$var wire 1 3, out $end
+$var parameter 32 4, delay $end
+$upscope $end
+$scope module sr_flip_flop1 $end
+$var wire 1 }* clk $end
+$var wire 1 3, r $end
+$var wire 1 ., s $end
+$var wire 1 2, qbar $end
+$var wire 1 /, q $end
+$var wire 1 5, net2 $end
+$var wire 1 6, net1 $end
+$var wire 1 7, en $end
+$scope module and1 $end
+$var wire 1 ., a $end
+$var wire 1 6, out $end
+$var wire 1 7, b $end
+$var parameter 32 8, delay $end
+$upscope $end
+$scope module and2 $end
+$var wire 1 3, a $end
+$var wire 1 5, out $end
+$var wire 1 7, b $end
+$var parameter 32 9, delay $end
+$upscope $end
+$scope module rising_edge_detector1 $end
+$var wire 1 }* clk $end
+$var wire 1 7, out $end
+$var wire 1 :, net3 $end
+$var wire 1 ;, net2 $end
+$var wire 1 <, net1 $end
+$scope module and1 $end
+$var wire 1 }* a $end
+$var wire 1 7, out $end
+$var wire 1 :, b $end
+$var parameter 32 =, delay $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 }* a $end
+$var wire 1 <, out $end
+$var parameter 32 >, delay $end
+$upscope $end
+$scope module not2 $end
+$var wire 1 <, a $end
+$var wire 1 ;, out $end
+$var parameter 32 ?, delay $end
+$upscope $end
+$scope module not3 $end
+$var wire 1 ;, a $end
+$var wire 1 :, out $end
+$var parameter 32 @, delay $end
+$upscope $end
+$upscope $end
+$scope module sr_latch1 $end
+$var wire 1 5, r $end
+$var wire 1 6, s $end
+$var wire 1 2, qbar $end
+$var wire 1 /, q $end
+$scope module nor1 $end
+$var wire 1 5, a $end
+$var wire 1 /, out $end
+$var wire 1 2, b $end
+$var parameter 32 A, delay $end
+$upscope $end
+$scope module nor2 $end
+$var wire 1 6, a $end
+$var wire 1 /, b $end
+$var wire 1 2, out $end
+$var parameter 32 B, delay $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module memory_bit1[6] $end
+$var wire 1 }* clk $end
+$var wire 1 C, data_in $end
+$var wire 1 |* read_enable $end
+$var wire 1 D, q $end
+$var wire 1 E, data_out $end
+$scope module and1 $end
+$var wire 1 |* b $end
+$var wire 1 E, out $end
+$var wire 1 D, a $end
+$var parameter 32 F, delay $end
+$upscope $end
+$scope module dff $end
+$var wire 1 }* clk $end
+$var wire 1 C, d $end
+$var wire 1 G, qbar $end
+$var wire 1 D, q $end
+$var wire 1 H, dbar $end
+$scope module not1 $end
+$var wire 1 C, a $end
+$var wire 1 H, out $end
+$var parameter 32 I, delay $end
+$upscope $end
+$scope module sr_flip_flop1 $end
+$var wire 1 }* clk $end
+$var wire 1 H, r $end
+$var wire 1 C, s $end
+$var wire 1 G, qbar $end
+$var wire 1 D, q $end
+$var wire 1 J, net2 $end
+$var wire 1 K, net1 $end
+$var wire 1 L, en $end
+$scope module and1 $end
+$var wire 1 C, a $end
+$var wire 1 K, out $end
+$var wire 1 L, b $end
+$var parameter 32 M, delay $end
+$upscope $end
+$scope module and2 $end
+$var wire 1 H, a $end
+$var wire 1 J, out $end
+$var wire 1 L, b $end
+$var parameter 32 N, delay $end
+$upscope $end
+$scope module rising_edge_detector1 $end
+$var wire 1 }* clk $end
+$var wire 1 L, out $end
+$var wire 1 O, net3 $end
+$var wire 1 P, net2 $end
+$var wire 1 Q, net1 $end
+$scope module and1 $end
+$var wire 1 }* a $end
+$var wire 1 L, out $end
+$var wire 1 O, b $end
+$var parameter 32 R, delay $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 }* a $end
+$var wire 1 Q, out $end
+$var parameter 32 S, delay $end
+$upscope $end
+$scope module not2 $end
+$var wire 1 Q, a $end
+$var wire 1 P, out $end
+$var parameter 32 T, delay $end
+$upscope $end
+$scope module not3 $end
+$var wire 1 P, a $end
+$var wire 1 O, out $end
+$var parameter 32 U, delay $end
+$upscope $end
+$upscope $end
+$scope module sr_latch1 $end
+$var wire 1 J, r $end
+$var wire 1 K, s $end
+$var wire 1 G, qbar $end
+$var wire 1 D, q $end
+$scope module nor1 $end
+$var wire 1 J, a $end
+$var wire 1 D, out $end
+$var wire 1 G, b $end
+$var parameter 32 V, delay $end
+$upscope $end
+$scope module nor2 $end
+$var wire 1 K, a $end
+$var wire 1 D, b $end
+$var wire 1 G, out $end
+$var parameter 32 W, delay $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module memory_bit1[7] $end
+$var wire 1 }* clk $end
+$var wire 1 X, data_in $end
+$var wire 1 |* read_enable $end
+$var wire 1 Y, q $end
+$var wire 1 Z, data_out $end
+$scope module and1 $end
+$var wire 1 |* b $end
+$var wire 1 Z, out $end
+$var wire 1 Y, a $end
+$var parameter 32 [, delay $end
+$upscope $end
+$scope module dff $end
+$var wire 1 }* clk $end
+$var wire 1 X, d $end
+$var wire 1 \, qbar $end
+$var wire 1 Y, q $end
+$var wire 1 ], dbar $end
+$scope module not1 $end
+$var wire 1 X, a $end
+$var wire 1 ], out $end
+$var parameter 32 ^, delay $end
+$upscope $end
+$scope module sr_flip_flop1 $end
+$var wire 1 }* clk $end
+$var wire 1 ], r $end
+$var wire 1 X, s $end
+$var wire 1 \, qbar $end
+$var wire 1 Y, q $end
+$var wire 1 _, net2 $end
+$var wire 1 `, net1 $end
+$var wire 1 a, en $end
+$scope module and1 $end
+$var wire 1 X, a $end
+$var wire 1 `, out $end
+$var wire 1 a, b $end
+$var parameter 32 b, delay $end
+$upscope $end
+$scope module and2 $end
+$var wire 1 ], a $end
+$var wire 1 _, out $end
+$var wire 1 a, b $end
+$var parameter 32 c, delay $end
+$upscope $end
+$scope module rising_edge_detector1 $end
+$var wire 1 }* clk $end
+$var wire 1 a, out $end
+$var wire 1 d, net3 $end
+$var wire 1 e, net2 $end
+$var wire 1 f, net1 $end
+$scope module and1 $end
+$var wire 1 }* a $end
+$var wire 1 a, out $end
+$var wire 1 d, b $end
+$var parameter 32 g, delay $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 }* a $end
+$var wire 1 f, out $end
+$var parameter 32 h, delay $end
+$upscope $end
+$scope module not2 $end
+$var wire 1 f, a $end
+$var wire 1 e, out $end
+$var parameter 32 i, delay $end
+$upscope $end
+$scope module not3 $end
+$var wire 1 e, a $end
+$var wire 1 d, out $end
+$var parameter 32 j, delay $end
+$upscope $end
+$upscope $end
+$scope module sr_latch1 $end
+$var wire 1 _, r $end
+$var wire 1 `, s $end
+$var wire 1 \, qbar $end
+$var wire 1 Y, q $end
+$scope module nor1 $end
+$var wire 1 _, a $end
+$var wire 1 Y, out $end
+$var wire 1 \, b $end
+$var parameter 32 k, delay $end
+$upscope $end
+$scope module nor2 $end
+$var wire 1 `, a $end
+$var wire 1 Y, b $end
+$var wire 1 \, out $end
+$var parameter 32 l, delay $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin memory_word_instance[6] $end
+$var parameter 4 m, i $end
+$scope begin or_inputs_assignment[0] $end
+$var parameter 2 n, j $end
+$upscope $end
+$scope begin or_inputs_assignment[1] $end
+$var parameter 2 o, j $end
+$upscope $end
+$scope begin or_inputs_assignment[2] $end
+$var parameter 3 p, j $end
+$upscope $end
+$scope begin or_inputs_assignment[3] $end
+$var parameter 3 q, j $end
+$upscope $end
+$scope begin or_inputs_assignment[4] $end
+$var parameter 4 r, j $end
+$upscope $end
+$scope begin or_inputs_assignment[5] $end
+$var parameter 4 s, j $end
+$upscope $end
+$scope begin or_inputs_assignment[6] $end
+$var parameter 4 t, j $end
+$upscope $end
+$scope begin or_inputs_assignment[7] $end
+$var parameter 4 u, j $end
+$upscope $end
+$scope module memory_word_instance $end
+$var wire 1 % clk $end
+$var wire 8 v, data_in [7:0] $end
+$var wire 1 w, enable $end
+$var wire 1 x, write_enable_clk $end
+$var wire 8 y, data_out [7:0] $end
+$var parameter 32 z, WORD_SIZE $end
+$scope module and1 $end
+$var wire 1 w, a $end
+$var wire 1 % b $end
+$var wire 1 x, out $end
+$var parameter 32 {, delay $end
+$upscope $end
+$scope module memory_bit1[0] $end
+$var wire 1 x, clk $end
+$var wire 1 |, data_in $end
+$var wire 1 w, read_enable $end
+$var wire 1 }, q $end
+$var wire 1 ~, data_out $end
+$scope module and1 $end
+$var wire 1 w, b $end
+$var wire 1 ~, out $end
+$var wire 1 }, a $end
+$var parameter 32 !- delay $end
+$upscope $end
+$scope module dff $end
+$var wire 1 x, clk $end
+$var wire 1 |, d $end
+$var wire 1 "- qbar $end
+$var wire 1 }, q $end
+$var wire 1 #- dbar $end
+$scope module not1 $end
+$var wire 1 |, a $end
+$var wire 1 #- out $end
+$var parameter 32 $- delay $end
+$upscope $end
+$scope module sr_flip_flop1 $end
+$var wire 1 x, clk $end
+$var wire 1 #- r $end
+$var wire 1 |, s $end
+$var wire 1 "- qbar $end
+$var wire 1 }, q $end
+$var wire 1 %- net2 $end
+$var wire 1 &- net1 $end
+$var wire 1 '- en $end
+$scope module and1 $end
+$var wire 1 |, a $end
+$var wire 1 &- out $end
+$var wire 1 '- b $end
+$var parameter 32 (- delay $end
+$upscope $end
+$scope module and2 $end
+$var wire 1 #- a $end
+$var wire 1 %- out $end
+$var wire 1 '- b $end
+$var parameter 32 )- delay $end
+$upscope $end
+$scope module rising_edge_detector1 $end
+$var wire 1 x, clk $end
+$var wire 1 '- out $end
+$var wire 1 *- net3 $end
+$var wire 1 +- net2 $end
+$var wire 1 ,- net1 $end
+$scope module and1 $end
+$var wire 1 x, a $end
+$var wire 1 '- out $end
+$var wire 1 *- b $end
+$var parameter 32 -- delay $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 x, a $end
+$var wire 1 ,- out $end
+$var parameter 32 .- delay $end
+$upscope $end
+$scope module not2 $end
+$var wire 1 ,- a $end
+$var wire 1 +- out $end
+$var parameter 32 /- delay $end
+$upscope $end
+$scope module not3 $end
+$var wire 1 +- a $end
+$var wire 1 *- out $end
+$var parameter 32 0- delay $end
+$upscope $end
+$upscope $end
+$scope module sr_latch1 $end
+$var wire 1 %- r $end
+$var wire 1 &- s $end
+$var wire 1 "- qbar $end
+$var wire 1 }, q $end
+$scope module nor1 $end
+$var wire 1 %- a $end
+$var wire 1 }, out $end
+$var wire 1 "- b $end
+$var parameter 32 1- delay $end
+$upscope $end
+$scope module nor2 $end
+$var wire 1 &- a $end
+$var wire 1 }, b $end
+$var wire 1 "- out $end
+$var parameter 32 2- delay $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module memory_bit1[1] $end
+$var wire 1 x, clk $end
+$var wire 1 3- data_in $end
+$var wire 1 w, read_enable $end
+$var wire 1 4- q $end
+$var wire 1 5- data_out $end
+$scope module and1 $end
+$var wire 1 w, b $end
+$var wire 1 5- out $end
+$var wire 1 4- a $end
+$var parameter 32 6- delay $end
+$upscope $end
+$scope module dff $end
+$var wire 1 x, clk $end
+$var wire 1 3- d $end
+$var wire 1 7- qbar $end
+$var wire 1 4- q $end
+$var wire 1 8- dbar $end
+$scope module not1 $end
+$var wire 1 3- a $end
+$var wire 1 8- out $end
+$var parameter 32 9- delay $end
+$upscope $end
+$scope module sr_flip_flop1 $end
+$var wire 1 x, clk $end
+$var wire 1 8- r $end
+$var wire 1 3- s $end
+$var wire 1 7- qbar $end
+$var wire 1 4- q $end
+$var wire 1 :- net2 $end
+$var wire 1 ;- net1 $end
+$var wire 1 <- en $end
+$scope module and1 $end
+$var wire 1 3- a $end
+$var wire 1 ;- out $end
+$var wire 1 <- b $end
+$var parameter 32 =- delay $end
+$upscope $end
+$scope module and2 $end
+$var wire 1 8- a $end
+$var wire 1 :- out $end
+$var wire 1 <- b $end
+$var parameter 32 >- delay $end
+$upscope $end
+$scope module rising_edge_detector1 $end
+$var wire 1 x, clk $end
+$var wire 1 <- out $end
+$var wire 1 ?- net3 $end
+$var wire 1 @- net2 $end
+$var wire 1 A- net1 $end
+$scope module and1 $end
+$var wire 1 x, a $end
+$var wire 1 <- out $end
+$var wire 1 ?- b $end
+$var parameter 32 B- delay $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 x, a $end
+$var wire 1 A- out $end
+$var parameter 32 C- delay $end
+$upscope $end
+$scope module not2 $end
+$var wire 1 A- a $end
+$var wire 1 @- out $end
+$var parameter 32 D- delay $end
+$upscope $end
+$scope module not3 $end
+$var wire 1 @- a $end
+$var wire 1 ?- out $end
+$var parameter 32 E- delay $end
+$upscope $end
+$upscope $end
+$scope module sr_latch1 $end
+$var wire 1 :- r $end
+$var wire 1 ;- s $end
+$var wire 1 7- qbar $end
+$var wire 1 4- q $end
+$scope module nor1 $end
+$var wire 1 :- a $end
+$var wire 1 4- out $end
+$var wire 1 7- b $end
+$var parameter 32 F- delay $end
+$upscope $end
+$scope module nor2 $end
+$var wire 1 ;- a $end
+$var wire 1 4- b $end
+$var wire 1 7- out $end
+$var parameter 32 G- delay $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module memory_bit1[2] $end
+$var wire 1 x, clk $end
+$var wire 1 H- data_in $end
+$var wire 1 w, read_enable $end
+$var wire 1 I- q $end
+$var wire 1 J- data_out $end
+$scope module and1 $end
+$var wire 1 w, b $end
+$var wire 1 J- out $end
+$var wire 1 I- a $end
+$var parameter 32 K- delay $end
+$upscope $end
+$scope module dff $end
+$var wire 1 x, clk $end
+$var wire 1 H- d $end
+$var wire 1 L- qbar $end
+$var wire 1 I- q $end
+$var wire 1 M- dbar $end
+$scope module not1 $end
+$var wire 1 H- a $end
+$var wire 1 M- out $end
+$var parameter 32 N- delay $end
+$upscope $end
+$scope module sr_flip_flop1 $end
+$var wire 1 x, clk $end
+$var wire 1 M- r $end
+$var wire 1 H- s $end
+$var wire 1 L- qbar $end
+$var wire 1 I- q $end
+$var wire 1 O- net2 $end
+$var wire 1 P- net1 $end
+$var wire 1 Q- en $end
+$scope module and1 $end
+$var wire 1 H- a $end
+$var wire 1 P- out $end
+$var wire 1 Q- b $end
+$var parameter 32 R- delay $end
+$upscope $end
+$scope module and2 $end
+$var wire 1 M- a $end
+$var wire 1 O- out $end
+$var wire 1 Q- b $end
+$var parameter 32 S- delay $end
+$upscope $end
+$scope module rising_edge_detector1 $end
+$var wire 1 x, clk $end
+$var wire 1 Q- out $end
+$var wire 1 T- net3 $end
+$var wire 1 U- net2 $end
+$var wire 1 V- net1 $end
+$scope module and1 $end
+$var wire 1 x, a $end
+$var wire 1 Q- out $end
+$var wire 1 T- b $end
+$var parameter 32 W- delay $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 x, a $end
+$var wire 1 V- out $end
+$var parameter 32 X- delay $end
+$upscope $end
+$scope module not2 $end
+$var wire 1 V- a $end
+$var wire 1 U- out $end
+$var parameter 32 Y- delay $end
+$upscope $end
+$scope module not3 $end
+$var wire 1 U- a $end
+$var wire 1 T- out $end
+$var parameter 32 Z- delay $end
+$upscope $end
+$upscope $end
+$scope module sr_latch1 $end
+$var wire 1 O- r $end
+$var wire 1 P- s $end
+$var wire 1 L- qbar $end
+$var wire 1 I- q $end
+$scope module nor1 $end
+$var wire 1 O- a $end
+$var wire 1 I- out $end
+$var wire 1 L- b $end
+$var parameter 32 [- delay $end
+$upscope $end
+$scope module nor2 $end
+$var wire 1 P- a $end
+$var wire 1 I- b $end
+$var wire 1 L- out $end
+$var parameter 32 \- delay $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module memory_bit1[3] $end
+$var wire 1 x, clk $end
+$var wire 1 ]- data_in $end
+$var wire 1 w, read_enable $end
+$var wire 1 ^- q $end
+$var wire 1 _- data_out $end
+$scope module and1 $end
+$var wire 1 w, b $end
+$var wire 1 _- out $end
+$var wire 1 ^- a $end
+$var parameter 32 `- delay $end
+$upscope $end
+$scope module dff $end
+$var wire 1 x, clk $end
+$var wire 1 ]- d $end
+$var wire 1 a- qbar $end
+$var wire 1 ^- q $end
+$var wire 1 b- dbar $end
+$scope module not1 $end
+$var wire 1 ]- a $end
+$var wire 1 b- out $end
+$var parameter 32 c- delay $end
+$upscope $end
+$scope module sr_flip_flop1 $end
+$var wire 1 x, clk $end
+$var wire 1 b- r $end
+$var wire 1 ]- s $end
+$var wire 1 a- qbar $end
+$var wire 1 ^- q $end
+$var wire 1 d- net2 $end
+$var wire 1 e- net1 $end
+$var wire 1 f- en $end
+$scope module and1 $end
+$var wire 1 ]- a $end
+$var wire 1 e- out $end
+$var wire 1 f- b $end
+$var parameter 32 g- delay $end
+$upscope $end
+$scope module and2 $end
+$var wire 1 b- a $end
+$var wire 1 d- out $end
+$var wire 1 f- b $end
+$var parameter 32 h- delay $end
+$upscope $end
+$scope module rising_edge_detector1 $end
+$var wire 1 x, clk $end
+$var wire 1 f- out $end
+$var wire 1 i- net3 $end
+$var wire 1 j- net2 $end
+$var wire 1 k- net1 $end
+$scope module and1 $end
+$var wire 1 x, a $end
+$var wire 1 f- out $end
+$var wire 1 i- b $end
+$var parameter 32 l- delay $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 x, a $end
+$var wire 1 k- out $end
+$var parameter 32 m- delay $end
+$upscope $end
+$scope module not2 $end
+$var wire 1 k- a $end
+$var wire 1 j- out $end
+$var parameter 32 n- delay $end
+$upscope $end
+$scope module not3 $end
+$var wire 1 j- a $end
+$var wire 1 i- out $end
+$var parameter 32 o- delay $end
+$upscope $end
+$upscope $end
+$scope module sr_latch1 $end
+$var wire 1 d- r $end
+$var wire 1 e- s $end
+$var wire 1 a- qbar $end
+$var wire 1 ^- q $end
+$scope module nor1 $end
+$var wire 1 d- a $end
+$var wire 1 ^- out $end
+$var wire 1 a- b $end
+$var parameter 32 p- delay $end
+$upscope $end
+$scope module nor2 $end
+$var wire 1 e- a $end
+$var wire 1 ^- b $end
+$var wire 1 a- out $end
+$var parameter 32 q- delay $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module memory_bit1[4] $end
+$var wire 1 x, clk $end
+$var wire 1 r- data_in $end
+$var wire 1 w, read_enable $end
+$var wire 1 s- q $end
+$var wire 1 t- data_out $end
+$scope module and1 $end
+$var wire 1 w, b $end
+$var wire 1 t- out $end
+$var wire 1 s- a $end
+$var parameter 32 u- delay $end
+$upscope $end
+$scope module dff $end
+$var wire 1 x, clk $end
+$var wire 1 r- d $end
+$var wire 1 v- qbar $end
+$var wire 1 s- q $end
+$var wire 1 w- dbar $end
+$scope module not1 $end
+$var wire 1 r- a $end
+$var wire 1 w- out $end
+$var parameter 32 x- delay $end
+$upscope $end
+$scope module sr_flip_flop1 $end
+$var wire 1 x, clk $end
+$var wire 1 w- r $end
+$var wire 1 r- s $end
+$var wire 1 v- qbar $end
+$var wire 1 s- q $end
+$var wire 1 y- net2 $end
+$var wire 1 z- net1 $end
+$var wire 1 {- en $end
+$scope module and1 $end
+$var wire 1 r- a $end
+$var wire 1 z- out $end
+$var wire 1 {- b $end
+$var parameter 32 |- delay $end
+$upscope $end
+$scope module and2 $end
+$var wire 1 w- a $end
+$var wire 1 y- out $end
+$var wire 1 {- b $end
+$var parameter 32 }- delay $end
+$upscope $end
+$scope module rising_edge_detector1 $end
+$var wire 1 x, clk $end
+$var wire 1 {- out $end
+$var wire 1 ~- net3 $end
+$var wire 1 !. net2 $end
+$var wire 1 ". net1 $end
+$scope module and1 $end
+$var wire 1 x, a $end
+$var wire 1 {- out $end
+$var wire 1 ~- b $end
+$var parameter 32 #. delay $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 x, a $end
+$var wire 1 ". out $end
+$var parameter 32 $. delay $end
+$upscope $end
+$scope module not2 $end
+$var wire 1 ". a $end
+$var wire 1 !. out $end
+$var parameter 32 %. delay $end
+$upscope $end
+$scope module not3 $end
+$var wire 1 !. a $end
+$var wire 1 ~- out $end
+$var parameter 32 &. delay $end
+$upscope $end
+$upscope $end
+$scope module sr_latch1 $end
+$var wire 1 y- r $end
+$var wire 1 z- s $end
+$var wire 1 v- qbar $end
+$var wire 1 s- q $end
+$scope module nor1 $end
+$var wire 1 y- a $end
+$var wire 1 s- out $end
+$var wire 1 v- b $end
+$var parameter 32 '. delay $end
+$upscope $end
+$scope module nor2 $end
+$var wire 1 z- a $end
+$var wire 1 s- b $end
+$var wire 1 v- out $end
+$var parameter 32 (. delay $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module memory_bit1[5] $end
+$var wire 1 x, clk $end
+$var wire 1 ). data_in $end
+$var wire 1 w, read_enable $end
+$var wire 1 *. q $end
+$var wire 1 +. data_out $end
+$scope module and1 $end
+$var wire 1 w, b $end
+$var wire 1 +. out $end
+$var wire 1 *. a $end
+$var parameter 32 ,. delay $end
+$upscope $end
+$scope module dff $end
+$var wire 1 x, clk $end
+$var wire 1 ). d $end
+$var wire 1 -. qbar $end
+$var wire 1 *. q $end
+$var wire 1 .. dbar $end
+$scope module not1 $end
+$var wire 1 ). a $end
+$var wire 1 .. out $end
+$var parameter 32 /. delay $end
+$upscope $end
+$scope module sr_flip_flop1 $end
+$var wire 1 x, clk $end
+$var wire 1 .. r $end
+$var wire 1 ). s $end
+$var wire 1 -. qbar $end
+$var wire 1 *. q $end
+$var wire 1 0. net2 $end
+$var wire 1 1. net1 $end
+$var wire 1 2. en $end
+$scope module and1 $end
+$var wire 1 ). a $end
+$var wire 1 1. out $end
+$var wire 1 2. b $end
+$var parameter 32 3. delay $end
+$upscope $end
+$scope module and2 $end
+$var wire 1 .. a $end
+$var wire 1 0. out $end
+$var wire 1 2. b $end
+$var parameter 32 4. delay $end
+$upscope $end
+$scope module rising_edge_detector1 $end
+$var wire 1 x, clk $end
+$var wire 1 2. out $end
+$var wire 1 5. net3 $end
+$var wire 1 6. net2 $end
+$var wire 1 7. net1 $end
+$scope module and1 $end
+$var wire 1 x, a $end
+$var wire 1 2. out $end
+$var wire 1 5. b $end
+$var parameter 32 8. delay $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 x, a $end
+$var wire 1 7. out $end
+$var parameter 32 9. delay $end
+$upscope $end
+$scope module not2 $end
+$var wire 1 7. a $end
+$var wire 1 6. out $end
+$var parameter 32 :. delay $end
+$upscope $end
+$scope module not3 $end
+$var wire 1 6. a $end
+$var wire 1 5. out $end
+$var parameter 32 ;. delay $end
+$upscope $end
+$upscope $end
+$scope module sr_latch1 $end
+$var wire 1 0. r $end
+$var wire 1 1. s $end
+$var wire 1 -. qbar $end
+$var wire 1 *. q $end
+$scope module nor1 $end
+$var wire 1 0. a $end
+$var wire 1 *. out $end
+$var wire 1 -. b $end
+$var parameter 32 <. delay $end
+$upscope $end
+$scope module nor2 $end
+$var wire 1 1. a $end
+$var wire 1 *. b $end
+$var wire 1 -. out $end
+$var parameter 32 =. delay $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module memory_bit1[6] $end
+$var wire 1 x, clk $end
+$var wire 1 >. data_in $end
+$var wire 1 w, read_enable $end
+$var wire 1 ?. q $end
+$var wire 1 @. data_out $end
+$scope module and1 $end
+$var wire 1 w, b $end
+$var wire 1 @. out $end
+$var wire 1 ?. a $end
+$var parameter 32 A. delay $end
+$upscope $end
+$scope module dff $end
+$var wire 1 x, clk $end
+$var wire 1 >. d $end
+$var wire 1 B. qbar $end
+$var wire 1 ?. q $end
+$var wire 1 C. dbar $end
+$scope module not1 $end
+$var wire 1 >. a $end
+$var wire 1 C. out $end
+$var parameter 32 D. delay $end
+$upscope $end
+$scope module sr_flip_flop1 $end
+$var wire 1 x, clk $end
+$var wire 1 C. r $end
+$var wire 1 >. s $end
+$var wire 1 B. qbar $end
+$var wire 1 ?. q $end
+$var wire 1 E. net2 $end
+$var wire 1 F. net1 $end
+$var wire 1 G. en $end
+$scope module and1 $end
+$var wire 1 >. a $end
+$var wire 1 F. out $end
+$var wire 1 G. b $end
+$var parameter 32 H. delay $end
+$upscope $end
+$scope module and2 $end
+$var wire 1 C. a $end
+$var wire 1 E. out $end
+$var wire 1 G. b $end
+$var parameter 32 I. delay $end
+$upscope $end
+$scope module rising_edge_detector1 $end
+$var wire 1 x, clk $end
+$var wire 1 G. out $end
+$var wire 1 J. net3 $end
+$var wire 1 K. net2 $end
+$var wire 1 L. net1 $end
+$scope module and1 $end
+$var wire 1 x, a $end
+$var wire 1 G. out $end
+$var wire 1 J. b $end
+$var parameter 32 M. delay $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 x, a $end
+$var wire 1 L. out $end
+$var parameter 32 N. delay $end
+$upscope $end
+$scope module not2 $end
+$var wire 1 L. a $end
+$var wire 1 K. out $end
+$var parameter 32 O. delay $end
+$upscope $end
+$scope module not3 $end
+$var wire 1 K. a $end
+$var wire 1 J. out $end
+$var parameter 32 P. delay $end
+$upscope $end
+$upscope $end
+$scope module sr_latch1 $end
+$var wire 1 E. r $end
+$var wire 1 F. s $end
+$var wire 1 B. qbar $end
+$var wire 1 ?. q $end
+$scope module nor1 $end
+$var wire 1 E. a $end
+$var wire 1 ?. out $end
+$var wire 1 B. b $end
+$var parameter 32 Q. delay $end
+$upscope $end
+$scope module nor2 $end
+$var wire 1 F. a $end
+$var wire 1 ?. b $end
+$var wire 1 B. out $end
+$var parameter 32 R. delay $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module memory_bit1[7] $end
+$var wire 1 x, clk $end
+$var wire 1 S. data_in $end
+$var wire 1 w, read_enable $end
+$var wire 1 T. q $end
+$var wire 1 U. data_out $end
+$scope module and1 $end
+$var wire 1 w, b $end
+$var wire 1 U. out $end
+$var wire 1 T. a $end
+$var parameter 32 V. delay $end
+$upscope $end
+$scope module dff $end
+$var wire 1 x, clk $end
+$var wire 1 S. d $end
+$var wire 1 W. qbar $end
+$var wire 1 T. q $end
+$var wire 1 X. dbar $end
+$scope module not1 $end
+$var wire 1 S. a $end
+$var wire 1 X. out $end
+$var parameter 32 Y. delay $end
+$upscope $end
+$scope module sr_flip_flop1 $end
+$var wire 1 x, clk $end
+$var wire 1 X. r $end
+$var wire 1 S. s $end
+$var wire 1 W. qbar $end
+$var wire 1 T. q $end
+$var wire 1 Z. net2 $end
+$var wire 1 [. net1 $end
+$var wire 1 \. en $end
+$scope module and1 $end
+$var wire 1 S. a $end
+$var wire 1 [. out $end
+$var wire 1 \. b $end
+$var parameter 32 ]. delay $end
+$upscope $end
+$scope module and2 $end
+$var wire 1 X. a $end
+$var wire 1 Z. out $end
+$var wire 1 \. b $end
+$var parameter 32 ^. delay $end
+$upscope $end
+$scope module rising_edge_detector1 $end
+$var wire 1 x, clk $end
+$var wire 1 \. out $end
+$var wire 1 _. net3 $end
+$var wire 1 `. net2 $end
+$var wire 1 a. net1 $end
+$scope module and1 $end
+$var wire 1 x, a $end
+$var wire 1 \. out $end
+$var wire 1 _. b $end
+$var parameter 32 b. delay $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 x, a $end
+$var wire 1 a. out $end
+$var parameter 32 c. delay $end
+$upscope $end
+$scope module not2 $end
+$var wire 1 a. a $end
+$var wire 1 `. out $end
+$var parameter 32 d. delay $end
+$upscope $end
+$scope module not3 $end
+$var wire 1 `. a $end
+$var wire 1 _. out $end
+$var parameter 32 e. delay $end
+$upscope $end
+$upscope $end
+$scope module sr_latch1 $end
+$var wire 1 Z. r $end
+$var wire 1 [. s $end
+$var wire 1 W. qbar $end
+$var wire 1 T. q $end
+$scope module nor1 $end
+$var wire 1 Z. a $end
+$var wire 1 T. out $end
+$var wire 1 W. b $end
+$var parameter 32 f. delay $end
+$upscope $end
+$scope module nor2 $end
+$var wire 1 [. a $end
+$var wire 1 T. b $end
+$var wire 1 W. out $end
+$var parameter 32 g. delay $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin memory_word_instance[7] $end
+$var parameter 4 h. i $end
+$scope begin or_inputs_assignment[0] $end
+$var parameter 2 i. j $end
+$upscope $end
+$scope begin or_inputs_assignment[1] $end
+$var parameter 2 j. j $end
+$upscope $end
+$scope begin or_inputs_assignment[2] $end
+$var parameter 3 k. j $end
+$upscope $end
+$scope begin or_inputs_assignment[3] $end
+$var parameter 3 l. j $end
+$upscope $end
+$scope begin or_inputs_assignment[4] $end
+$var parameter 4 m. j $end
+$upscope $end
+$scope begin or_inputs_assignment[5] $end
+$var parameter 4 n. j $end
+$upscope $end
+$scope begin or_inputs_assignment[6] $end
+$var parameter 4 o. j $end
+$upscope $end
+$scope begin or_inputs_assignment[7] $end
+$var parameter 4 p. j $end
+$upscope $end
+$scope module memory_word_instance $end
+$var wire 1 % clk $end
+$var wire 8 q. data_in [7:0] $end
+$var wire 1 r. enable $end
+$var wire 1 s. write_enable_clk $end
+$var wire 8 t. data_out [7:0] $end
+$var parameter 32 u. WORD_SIZE $end
+$scope module and1 $end
+$var wire 1 r. a $end
+$var wire 1 % b $end
+$var wire 1 s. out $end
+$var parameter 32 v. delay $end
+$upscope $end
+$scope module memory_bit1[0] $end
+$var wire 1 s. clk $end
+$var wire 1 w. data_in $end
+$var wire 1 r. read_enable $end
+$var wire 1 x. q $end
+$var wire 1 y. data_out $end
+$scope module and1 $end
+$var wire 1 r. b $end
+$var wire 1 y. out $end
+$var wire 1 x. a $end
+$var parameter 32 z. delay $end
+$upscope $end
+$scope module dff $end
+$var wire 1 s. clk $end
+$var wire 1 w. d $end
+$var wire 1 {. qbar $end
+$var wire 1 x. q $end
+$var wire 1 |. dbar $end
+$scope module not1 $end
+$var wire 1 w. a $end
+$var wire 1 |. out $end
+$var parameter 32 }. delay $end
+$upscope $end
+$scope module sr_flip_flop1 $end
+$var wire 1 s. clk $end
+$var wire 1 |. r $end
+$var wire 1 w. s $end
+$var wire 1 {. qbar $end
+$var wire 1 x. q $end
+$var wire 1 ~. net2 $end
+$var wire 1 !/ net1 $end
+$var wire 1 "/ en $end
+$scope module and1 $end
+$var wire 1 w. a $end
+$var wire 1 !/ out $end
+$var wire 1 "/ b $end
+$var parameter 32 #/ delay $end
+$upscope $end
+$scope module and2 $end
+$var wire 1 |. a $end
+$var wire 1 ~. out $end
+$var wire 1 "/ b $end
+$var parameter 32 $/ delay $end
+$upscope $end
+$scope module rising_edge_detector1 $end
+$var wire 1 s. clk $end
+$var wire 1 "/ out $end
+$var wire 1 %/ net3 $end
+$var wire 1 &/ net2 $end
+$var wire 1 '/ net1 $end
+$scope module and1 $end
+$var wire 1 s. a $end
+$var wire 1 "/ out $end
+$var wire 1 %/ b $end
+$var parameter 32 (/ delay $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 s. a $end
+$var wire 1 '/ out $end
+$var parameter 32 )/ delay $end
+$upscope $end
+$scope module not2 $end
+$var wire 1 '/ a $end
+$var wire 1 &/ out $end
+$var parameter 32 */ delay $end
+$upscope $end
+$scope module not3 $end
+$var wire 1 &/ a $end
+$var wire 1 %/ out $end
+$var parameter 32 +/ delay $end
+$upscope $end
+$upscope $end
+$scope module sr_latch1 $end
+$var wire 1 ~. r $end
+$var wire 1 !/ s $end
+$var wire 1 {. qbar $end
+$var wire 1 x. q $end
+$scope module nor1 $end
+$var wire 1 ~. a $end
+$var wire 1 x. out $end
+$var wire 1 {. b $end
+$var parameter 32 ,/ delay $end
+$upscope $end
+$scope module nor2 $end
+$var wire 1 !/ a $end
+$var wire 1 x. b $end
+$var wire 1 {. out $end
+$var parameter 32 -/ delay $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module memory_bit1[1] $end
+$var wire 1 s. clk $end
+$var wire 1 ./ data_in $end
+$var wire 1 r. read_enable $end
+$var wire 1 // q $end
+$var wire 1 0/ data_out $end
+$scope module and1 $end
+$var wire 1 r. b $end
+$var wire 1 0/ out $end
+$var wire 1 // a $end
+$var parameter 32 1/ delay $end
+$upscope $end
+$scope module dff $end
+$var wire 1 s. clk $end
+$var wire 1 ./ d $end
+$var wire 1 2/ qbar $end
+$var wire 1 // q $end
+$var wire 1 3/ dbar $end
+$scope module not1 $end
+$var wire 1 ./ a $end
+$var wire 1 3/ out $end
+$var parameter 32 4/ delay $end
+$upscope $end
+$scope module sr_flip_flop1 $end
+$var wire 1 s. clk $end
+$var wire 1 3/ r $end
+$var wire 1 ./ s $end
+$var wire 1 2/ qbar $end
+$var wire 1 // q $end
+$var wire 1 5/ net2 $end
+$var wire 1 6/ net1 $end
+$var wire 1 7/ en $end
+$scope module and1 $end
+$var wire 1 ./ a $end
+$var wire 1 6/ out $end
+$var wire 1 7/ b $end
+$var parameter 32 8/ delay $end
+$upscope $end
+$scope module and2 $end
+$var wire 1 3/ a $end
+$var wire 1 5/ out $end
+$var wire 1 7/ b $end
+$var parameter 32 9/ delay $end
+$upscope $end
+$scope module rising_edge_detector1 $end
+$var wire 1 s. clk $end
+$var wire 1 7/ out $end
+$var wire 1 :/ net3 $end
+$var wire 1 ;/ net2 $end
+$var wire 1 </ net1 $end
+$scope module and1 $end
+$var wire 1 s. a $end
+$var wire 1 7/ out $end
+$var wire 1 :/ b $end
+$var parameter 32 =/ delay $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 s. a $end
+$var wire 1 </ out $end
+$var parameter 32 >/ delay $end
+$upscope $end
+$scope module not2 $end
+$var wire 1 </ a $end
+$var wire 1 ;/ out $end
+$var parameter 32 ?/ delay $end
+$upscope $end
+$scope module not3 $end
+$var wire 1 ;/ a $end
+$var wire 1 :/ out $end
+$var parameter 32 @/ delay $end
+$upscope $end
+$upscope $end
+$scope module sr_latch1 $end
+$var wire 1 5/ r $end
+$var wire 1 6/ s $end
+$var wire 1 2/ qbar $end
+$var wire 1 // q $end
+$scope module nor1 $end
+$var wire 1 5/ a $end
+$var wire 1 // out $end
+$var wire 1 2/ b $end
+$var parameter 32 A/ delay $end
+$upscope $end
+$scope module nor2 $end
+$var wire 1 6/ a $end
+$var wire 1 // b $end
+$var wire 1 2/ out $end
+$var parameter 32 B/ delay $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module memory_bit1[2] $end
+$var wire 1 s. clk $end
+$var wire 1 C/ data_in $end
+$var wire 1 r. read_enable $end
+$var wire 1 D/ q $end
+$var wire 1 E/ data_out $end
+$scope module and1 $end
+$var wire 1 r. b $end
+$var wire 1 E/ out $end
+$var wire 1 D/ a $end
+$var parameter 32 F/ delay $end
+$upscope $end
+$scope module dff $end
+$var wire 1 s. clk $end
+$var wire 1 C/ d $end
+$var wire 1 G/ qbar $end
+$var wire 1 D/ q $end
+$var wire 1 H/ dbar $end
+$scope module not1 $end
+$var wire 1 C/ a $end
+$var wire 1 H/ out $end
+$var parameter 32 I/ delay $end
+$upscope $end
+$scope module sr_flip_flop1 $end
+$var wire 1 s. clk $end
+$var wire 1 H/ r $end
+$var wire 1 C/ s $end
+$var wire 1 G/ qbar $end
+$var wire 1 D/ q $end
+$var wire 1 J/ net2 $end
+$var wire 1 K/ net1 $end
+$var wire 1 L/ en $end
+$scope module and1 $end
+$var wire 1 C/ a $end
+$var wire 1 K/ out $end
+$var wire 1 L/ b $end
+$var parameter 32 M/ delay $end
+$upscope $end
+$scope module and2 $end
+$var wire 1 H/ a $end
+$var wire 1 J/ out $end
+$var wire 1 L/ b $end
+$var parameter 32 N/ delay $end
+$upscope $end
+$scope module rising_edge_detector1 $end
+$var wire 1 s. clk $end
+$var wire 1 L/ out $end
+$var wire 1 O/ net3 $end
+$var wire 1 P/ net2 $end
+$var wire 1 Q/ net1 $end
+$scope module and1 $end
+$var wire 1 s. a $end
+$var wire 1 L/ out $end
+$var wire 1 O/ b $end
+$var parameter 32 R/ delay $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 s. a $end
+$var wire 1 Q/ out $end
+$var parameter 32 S/ delay $end
+$upscope $end
+$scope module not2 $end
+$var wire 1 Q/ a $end
+$var wire 1 P/ out $end
+$var parameter 32 T/ delay $end
+$upscope $end
+$scope module not3 $end
+$var wire 1 P/ a $end
+$var wire 1 O/ out $end
+$var parameter 32 U/ delay $end
+$upscope $end
+$upscope $end
+$scope module sr_latch1 $end
+$var wire 1 J/ r $end
+$var wire 1 K/ s $end
+$var wire 1 G/ qbar $end
+$var wire 1 D/ q $end
+$scope module nor1 $end
+$var wire 1 J/ a $end
+$var wire 1 D/ out $end
+$var wire 1 G/ b $end
+$var parameter 32 V/ delay $end
+$upscope $end
+$scope module nor2 $end
+$var wire 1 K/ a $end
+$var wire 1 D/ b $end
+$var wire 1 G/ out $end
+$var parameter 32 W/ delay $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module memory_bit1[3] $end
+$var wire 1 s. clk $end
+$var wire 1 X/ data_in $end
+$var wire 1 r. read_enable $end
+$var wire 1 Y/ q $end
+$var wire 1 Z/ data_out $end
+$scope module and1 $end
+$var wire 1 r. b $end
+$var wire 1 Z/ out $end
+$var wire 1 Y/ a $end
+$var parameter 32 [/ delay $end
+$upscope $end
+$scope module dff $end
+$var wire 1 s. clk $end
+$var wire 1 X/ d $end
+$var wire 1 \/ qbar $end
+$var wire 1 Y/ q $end
+$var wire 1 ]/ dbar $end
+$scope module not1 $end
+$var wire 1 X/ a $end
+$var wire 1 ]/ out $end
+$var parameter 32 ^/ delay $end
+$upscope $end
+$scope module sr_flip_flop1 $end
+$var wire 1 s. clk $end
+$var wire 1 ]/ r $end
+$var wire 1 X/ s $end
+$var wire 1 \/ qbar $end
+$var wire 1 Y/ q $end
+$var wire 1 _/ net2 $end
+$var wire 1 `/ net1 $end
+$var wire 1 a/ en $end
+$scope module and1 $end
+$var wire 1 X/ a $end
+$var wire 1 `/ out $end
+$var wire 1 a/ b $end
+$var parameter 32 b/ delay $end
+$upscope $end
+$scope module and2 $end
+$var wire 1 ]/ a $end
+$var wire 1 _/ out $end
+$var wire 1 a/ b $end
+$var parameter 32 c/ delay $end
+$upscope $end
+$scope module rising_edge_detector1 $end
+$var wire 1 s. clk $end
+$var wire 1 a/ out $end
+$var wire 1 d/ net3 $end
+$var wire 1 e/ net2 $end
+$var wire 1 f/ net1 $end
+$scope module and1 $end
+$var wire 1 s. a $end
+$var wire 1 a/ out $end
+$var wire 1 d/ b $end
+$var parameter 32 g/ delay $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 s. a $end
+$var wire 1 f/ out $end
+$var parameter 32 h/ delay $end
+$upscope $end
+$scope module not2 $end
+$var wire 1 f/ a $end
+$var wire 1 e/ out $end
+$var parameter 32 i/ delay $end
+$upscope $end
+$scope module not3 $end
+$var wire 1 e/ a $end
+$var wire 1 d/ out $end
+$var parameter 32 j/ delay $end
+$upscope $end
+$upscope $end
+$scope module sr_latch1 $end
+$var wire 1 _/ r $end
+$var wire 1 `/ s $end
+$var wire 1 \/ qbar $end
+$var wire 1 Y/ q $end
+$scope module nor1 $end
+$var wire 1 _/ a $end
+$var wire 1 Y/ out $end
+$var wire 1 \/ b $end
+$var parameter 32 k/ delay $end
+$upscope $end
+$scope module nor2 $end
+$var wire 1 `/ a $end
+$var wire 1 Y/ b $end
+$var wire 1 \/ out $end
+$var parameter 32 l/ delay $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module memory_bit1[4] $end
+$var wire 1 s. clk $end
+$var wire 1 m/ data_in $end
+$var wire 1 r. read_enable $end
+$var wire 1 n/ q $end
+$var wire 1 o/ data_out $end
+$scope module and1 $end
+$var wire 1 r. b $end
+$var wire 1 o/ out $end
+$var wire 1 n/ a $end
+$var parameter 32 p/ delay $end
+$upscope $end
+$scope module dff $end
+$var wire 1 s. clk $end
+$var wire 1 m/ d $end
+$var wire 1 q/ qbar $end
+$var wire 1 n/ q $end
+$var wire 1 r/ dbar $end
+$scope module not1 $end
+$var wire 1 m/ a $end
+$var wire 1 r/ out $end
+$var parameter 32 s/ delay $end
+$upscope $end
+$scope module sr_flip_flop1 $end
+$var wire 1 s. clk $end
+$var wire 1 r/ r $end
+$var wire 1 m/ s $end
+$var wire 1 q/ qbar $end
+$var wire 1 n/ q $end
+$var wire 1 t/ net2 $end
+$var wire 1 u/ net1 $end
+$var wire 1 v/ en $end
+$scope module and1 $end
+$var wire 1 m/ a $end
+$var wire 1 u/ out $end
+$var wire 1 v/ b $end
+$var parameter 32 w/ delay $end
+$upscope $end
+$scope module and2 $end
+$var wire 1 r/ a $end
+$var wire 1 t/ out $end
+$var wire 1 v/ b $end
+$var parameter 32 x/ delay $end
+$upscope $end
+$scope module rising_edge_detector1 $end
+$var wire 1 s. clk $end
+$var wire 1 v/ out $end
+$var wire 1 y/ net3 $end
+$var wire 1 z/ net2 $end
+$var wire 1 {/ net1 $end
+$scope module and1 $end
+$var wire 1 s. a $end
+$var wire 1 v/ out $end
+$var wire 1 y/ b $end
+$var parameter 32 |/ delay $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 s. a $end
+$var wire 1 {/ out $end
+$var parameter 32 }/ delay $end
+$upscope $end
+$scope module not2 $end
+$var wire 1 {/ a $end
+$var wire 1 z/ out $end
+$var parameter 32 ~/ delay $end
+$upscope $end
+$scope module not3 $end
+$var wire 1 z/ a $end
+$var wire 1 y/ out $end
+$var parameter 32 !0 delay $end
+$upscope $end
+$upscope $end
+$scope module sr_latch1 $end
+$var wire 1 t/ r $end
+$var wire 1 u/ s $end
+$var wire 1 q/ qbar $end
+$var wire 1 n/ q $end
+$scope module nor1 $end
+$var wire 1 t/ a $end
+$var wire 1 n/ out $end
+$var wire 1 q/ b $end
+$var parameter 32 "0 delay $end
+$upscope $end
+$scope module nor2 $end
+$var wire 1 u/ a $end
+$var wire 1 n/ b $end
+$var wire 1 q/ out $end
+$var parameter 32 #0 delay $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module memory_bit1[5] $end
+$var wire 1 s. clk $end
+$var wire 1 $0 data_in $end
+$var wire 1 r. read_enable $end
+$var wire 1 %0 q $end
+$var wire 1 &0 data_out $end
+$scope module and1 $end
+$var wire 1 r. b $end
+$var wire 1 &0 out $end
+$var wire 1 %0 a $end
+$var parameter 32 '0 delay $end
+$upscope $end
+$scope module dff $end
+$var wire 1 s. clk $end
+$var wire 1 $0 d $end
+$var wire 1 (0 qbar $end
+$var wire 1 %0 q $end
+$var wire 1 )0 dbar $end
+$scope module not1 $end
+$var wire 1 $0 a $end
+$var wire 1 )0 out $end
+$var parameter 32 *0 delay $end
+$upscope $end
+$scope module sr_flip_flop1 $end
+$var wire 1 s. clk $end
+$var wire 1 )0 r $end
+$var wire 1 $0 s $end
+$var wire 1 (0 qbar $end
+$var wire 1 %0 q $end
+$var wire 1 +0 net2 $end
+$var wire 1 ,0 net1 $end
+$var wire 1 -0 en $end
+$scope module and1 $end
+$var wire 1 $0 a $end
+$var wire 1 ,0 out $end
+$var wire 1 -0 b $end
+$var parameter 32 .0 delay $end
+$upscope $end
+$scope module and2 $end
+$var wire 1 )0 a $end
+$var wire 1 +0 out $end
+$var wire 1 -0 b $end
+$var parameter 32 /0 delay $end
+$upscope $end
+$scope module rising_edge_detector1 $end
+$var wire 1 s. clk $end
+$var wire 1 -0 out $end
+$var wire 1 00 net3 $end
+$var wire 1 10 net2 $end
+$var wire 1 20 net1 $end
+$scope module and1 $end
+$var wire 1 s. a $end
+$var wire 1 -0 out $end
+$var wire 1 00 b $end
+$var parameter 32 30 delay $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 s. a $end
+$var wire 1 20 out $end
+$var parameter 32 40 delay $end
+$upscope $end
+$scope module not2 $end
+$var wire 1 20 a $end
+$var wire 1 10 out $end
+$var parameter 32 50 delay $end
+$upscope $end
+$scope module not3 $end
+$var wire 1 10 a $end
+$var wire 1 00 out $end
+$var parameter 32 60 delay $end
+$upscope $end
+$upscope $end
+$scope module sr_latch1 $end
+$var wire 1 +0 r $end
+$var wire 1 ,0 s $end
+$var wire 1 (0 qbar $end
+$var wire 1 %0 q $end
+$scope module nor1 $end
+$var wire 1 +0 a $end
+$var wire 1 %0 out $end
+$var wire 1 (0 b $end
+$var parameter 32 70 delay $end
+$upscope $end
+$scope module nor2 $end
+$var wire 1 ,0 a $end
+$var wire 1 %0 b $end
+$var wire 1 (0 out $end
+$var parameter 32 80 delay $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module memory_bit1[6] $end
+$var wire 1 s. clk $end
+$var wire 1 90 data_in $end
+$var wire 1 r. read_enable $end
+$var wire 1 :0 q $end
+$var wire 1 ;0 data_out $end
+$scope module and1 $end
+$var wire 1 r. b $end
+$var wire 1 ;0 out $end
+$var wire 1 :0 a $end
+$var parameter 32 <0 delay $end
+$upscope $end
+$scope module dff $end
+$var wire 1 s. clk $end
+$var wire 1 90 d $end
+$var wire 1 =0 qbar $end
+$var wire 1 :0 q $end
+$var wire 1 >0 dbar $end
+$scope module not1 $end
+$var wire 1 90 a $end
+$var wire 1 >0 out $end
+$var parameter 32 ?0 delay $end
+$upscope $end
+$scope module sr_flip_flop1 $end
+$var wire 1 s. clk $end
+$var wire 1 >0 r $end
+$var wire 1 90 s $end
+$var wire 1 =0 qbar $end
+$var wire 1 :0 q $end
+$var wire 1 @0 net2 $end
+$var wire 1 A0 net1 $end
+$var wire 1 B0 en $end
+$scope module and1 $end
+$var wire 1 90 a $end
+$var wire 1 A0 out $end
+$var wire 1 B0 b $end
+$var parameter 32 C0 delay $end
+$upscope $end
+$scope module and2 $end
+$var wire 1 >0 a $end
+$var wire 1 @0 out $end
+$var wire 1 B0 b $end
+$var parameter 32 D0 delay $end
+$upscope $end
+$scope module rising_edge_detector1 $end
+$var wire 1 s. clk $end
+$var wire 1 B0 out $end
+$var wire 1 E0 net3 $end
+$var wire 1 F0 net2 $end
+$var wire 1 G0 net1 $end
+$scope module and1 $end
+$var wire 1 s. a $end
+$var wire 1 B0 out $end
+$var wire 1 E0 b $end
+$var parameter 32 H0 delay $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 s. a $end
+$var wire 1 G0 out $end
+$var parameter 32 I0 delay $end
+$upscope $end
+$scope module not2 $end
+$var wire 1 G0 a $end
+$var wire 1 F0 out $end
+$var parameter 32 J0 delay $end
+$upscope $end
+$scope module not3 $end
+$var wire 1 F0 a $end
+$var wire 1 E0 out $end
+$var parameter 32 K0 delay $end
+$upscope $end
+$upscope $end
+$scope module sr_latch1 $end
+$var wire 1 @0 r $end
+$var wire 1 A0 s $end
+$var wire 1 =0 qbar $end
+$var wire 1 :0 q $end
+$scope module nor1 $end
+$var wire 1 @0 a $end
+$var wire 1 :0 out $end
+$var wire 1 =0 b $end
+$var parameter 32 L0 delay $end
+$upscope $end
+$scope module nor2 $end
+$var wire 1 A0 a $end
+$var wire 1 :0 b $end
+$var wire 1 =0 out $end
+$var parameter 32 M0 delay $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module memory_bit1[7] $end
+$var wire 1 s. clk $end
+$var wire 1 N0 data_in $end
+$var wire 1 r. read_enable $end
+$var wire 1 O0 q $end
+$var wire 1 P0 data_out $end
+$scope module and1 $end
+$var wire 1 r. b $end
+$var wire 1 P0 out $end
+$var wire 1 O0 a $end
+$var parameter 32 Q0 delay $end
+$upscope $end
+$scope module dff $end
+$var wire 1 s. clk $end
+$var wire 1 N0 d $end
+$var wire 1 R0 qbar $end
+$var wire 1 O0 q $end
+$var wire 1 S0 dbar $end
+$scope module not1 $end
+$var wire 1 N0 a $end
+$var wire 1 S0 out $end
+$var parameter 32 T0 delay $end
+$upscope $end
+$scope module sr_flip_flop1 $end
+$var wire 1 s. clk $end
+$var wire 1 S0 r $end
+$var wire 1 N0 s $end
+$var wire 1 R0 qbar $end
+$var wire 1 O0 q $end
+$var wire 1 U0 net2 $end
+$var wire 1 V0 net1 $end
+$var wire 1 W0 en $end
+$scope module and1 $end
+$var wire 1 N0 a $end
+$var wire 1 V0 out $end
+$var wire 1 W0 b $end
+$var parameter 32 X0 delay $end
+$upscope $end
+$scope module and2 $end
+$var wire 1 S0 a $end
+$var wire 1 U0 out $end
+$var wire 1 W0 b $end
+$var parameter 32 Y0 delay $end
+$upscope $end
+$scope module rising_edge_detector1 $end
+$var wire 1 s. clk $end
+$var wire 1 W0 out $end
+$var wire 1 Z0 net3 $end
+$var wire 1 [0 net2 $end
+$var wire 1 \0 net1 $end
+$scope module and1 $end
+$var wire 1 s. a $end
+$var wire 1 W0 out $end
+$var wire 1 Z0 b $end
+$var parameter 32 ]0 delay $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 s. a $end
+$var wire 1 \0 out $end
+$var parameter 32 ^0 delay $end
+$upscope $end
+$scope module not2 $end
+$var wire 1 \0 a $end
+$var wire 1 [0 out $end
+$var parameter 32 _0 delay $end
+$upscope $end
+$scope module not3 $end
+$var wire 1 [0 a $end
+$var wire 1 Z0 out $end
+$var parameter 32 `0 delay $end
+$upscope $end
+$upscope $end
+$scope module sr_latch1 $end
+$var wire 1 U0 r $end
+$var wire 1 V0 s $end
+$var wire 1 R0 qbar $end
+$var wire 1 O0 q $end
+$scope module nor1 $end
+$var wire 1 U0 a $end
+$var wire 1 O0 out $end
+$var wire 1 R0 b $end
+$var parameter 32 a0 delay $end
+$upscope $end
+$scope module nor2 $end
+$var wire 1 V0 a $end
+$var wire 1 O0 b $end
+$var wire 1 R0 out $end
+$var parameter 32 b0 delay $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin or_gate_instance[0] $end
+$var parameter 2 c0 i $end
+$scope module or_gate_instance $end
+$var wire 8 d0 a [7:0] $end
+$var wire 1 e0 gnd $end
+$var wire 1 f0 out $end
+$var wire 8 g0 pmos_line [7:0] $end
+$var wire 1 h0 vdd $end
+$var parameter 32 i0 N $end
+$upscope $end
+$upscope $end
+$scope begin or_gate_instance[1] $end
+$var parameter 2 j0 i $end
+$scope module or_gate_instance $end
+$var wire 8 k0 a [7:0] $end
+$var wire 1 l0 gnd $end
+$var wire 1 m0 out $end
+$var wire 8 n0 pmos_line [7:0] $end
+$var wire 1 o0 vdd $end
+$var parameter 32 p0 N $end
+$upscope $end
+$upscope $end
+$scope begin or_gate_instance[2] $end
+$var parameter 3 q0 i $end
+$scope module or_gate_instance $end
+$var wire 8 r0 a [7:0] $end
+$var wire 1 s0 gnd $end
+$var wire 1 t0 out $end
+$var wire 8 u0 pmos_line [7:0] $end
+$var wire 1 v0 vdd $end
+$var parameter 32 w0 N $end
+$upscope $end
+$upscope $end
+$scope begin or_gate_instance[3] $end
+$var parameter 3 x0 i $end
+$scope module or_gate_instance $end
+$var wire 8 y0 a [7:0] $end
+$var wire 1 z0 gnd $end
+$var wire 1 {0 out $end
+$var wire 8 |0 pmos_line [7:0] $end
+$var wire 1 }0 vdd $end
+$var parameter 32 ~0 N $end
+$upscope $end
+$upscope $end
+$scope begin or_gate_instance[4] $end
+$var parameter 4 !1 i $end
+$scope module or_gate_instance $end
+$var wire 8 "1 a [7:0] $end
+$var wire 1 #1 gnd $end
+$var wire 1 $1 out $end
+$var wire 8 %1 pmos_line [7:0] $end
+$var wire 1 &1 vdd $end
+$var parameter 32 '1 N $end
+$upscope $end
+$upscope $end
+$scope begin or_gate_instance[5] $end
+$var parameter 4 (1 i $end
+$scope module or_gate_instance $end
+$var wire 8 )1 a [7:0] $end
+$var wire 1 *1 gnd $end
+$var wire 1 +1 out $end
+$var wire 8 ,1 pmos_line [7:0] $end
+$var wire 1 -1 vdd $end
+$var parameter 32 .1 N $end
+$upscope $end
+$upscope $end
+$scope begin or_gate_instance[6] $end
+$var parameter 4 /1 i $end
+$scope module or_gate_instance $end
+$var wire 8 01 a [7:0] $end
+$var wire 1 11 gnd $end
+$var wire 1 21 out $end
+$var wire 8 31 pmos_line [7:0] $end
+$var wire 1 41 vdd $end
+$var parameter 32 51 N $end
+$upscope $end
+$upscope $end
+$scope begin or_gate_instance[7] $end
+$var parameter 4 61 i $end
+$scope module or_gate_instance $end
+$var wire 8 71 a [7:0] $end
+$var wire 1 81 gnd $end
+$var wire 1 91 out $end
+$var wire 8 :1 pmos_line [7:0] $end
+$var wire 1 ;1 vdd $end
+$var parameter 32 <1 N $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b1000 <1
+b111 61
+b1000 51
+b110 /1
+b1000 .1
+b101 (1
+b1000 '1
+b100 !1
+b1000 ~0
+b11 x0
+b1000 w0
+b10 q0
+b1000 p0
+b1 j0
+b1000 i0
+b0 c0
+b1010 b0
+b1010 a0
+b1010 `0
+b1010 _0
+b1010 ^0
+b1010 ]0
+b1010 Y0
+b1010 X0
+b1010 T0
+b1010 Q0
+b1010 M0
+b1010 L0
+b1010 K0
+b1010 J0
+b1010 I0
+b1010 H0
+b1010 D0
+b1010 C0
+b1010 ?0
+b1010 <0
+b1010 80
+b1010 70
+b1010 60
+b1010 50
+b1010 40
+b1010 30
+b1010 /0
+b1010 .0
+b1010 *0
+b1010 '0
+b1010 #0
+b1010 "0
+b1010 !0
+b1010 ~/
+b1010 }/
+b1010 |/
+b1010 x/
+b1010 w/
+b1010 s/
+b1010 p/
+b1010 l/
+b1010 k/
+b1010 j/
+b1010 i/
+b1010 h/
+b1010 g/
+b1010 c/
+b1010 b/
+b1010 ^/
+b1010 [/
+b1010 W/
+b1010 V/
+b1010 U/
+b1010 T/
+b1010 S/
+b1010 R/
+b1010 N/
+b1010 M/
+b1010 I/
+b1010 F/
+b1010 B/
+b1010 A/
+b1010 @/
+b1010 ?/
+b1010 >/
+b1010 =/
+b1010 9/
+b1010 8/
+b1010 4/
+b1010 1/
+b1010 -/
+b1010 ,/
+b1010 +/
+b1010 */
+b1010 )/
+b1010 (/
+b1010 $/
+b1010 #/
+b1010 }.
+b1010 z.
+b1010 v.
+b1000 u.
+b111 p.
+b110 o.
+b101 n.
+b100 m.
+b11 l.
+b10 k.
+b1 j.
+b0 i.
+b111 h.
+b1010 g.
+b1010 f.
+b1010 e.
+b1010 d.
+b1010 c.
+b1010 b.
+b1010 ^.
+b1010 ].
+b1010 Y.
+b1010 V.
+b1010 R.
+b1010 Q.
+b1010 P.
+b1010 O.
+b1010 N.
+b1010 M.
+b1010 I.
+b1010 H.
+b1010 D.
+b1010 A.
+b1010 =.
+b1010 <.
+b1010 ;.
+b1010 :.
+b1010 9.
+b1010 8.
+b1010 4.
+b1010 3.
+b1010 /.
+b1010 ,.
+b1010 (.
+b1010 '.
+b1010 &.
+b1010 %.
+b1010 $.
+b1010 #.
+b1010 }-
+b1010 |-
+b1010 x-
+b1010 u-
+b1010 q-
+b1010 p-
+b1010 o-
+b1010 n-
+b1010 m-
+b1010 l-
+b1010 h-
+b1010 g-
+b1010 c-
+b1010 `-
+b1010 \-
+b1010 [-
+b1010 Z-
+b1010 Y-
+b1010 X-
+b1010 W-
+b1010 S-
+b1010 R-
+b1010 N-
+b1010 K-
+b1010 G-
+b1010 F-
+b1010 E-
+b1010 D-
+b1010 C-
+b1010 B-
+b1010 >-
+b1010 =-
+b1010 9-
+b1010 6-
+b1010 2-
+b1010 1-
+b1010 0-
+b1010 /-
+b1010 .-
+b1010 --
+b1010 )-
+b1010 (-
+b1010 $-
+b1010 !-
+b1010 {,
+b1000 z,
+b111 u,
+b110 t,
+b101 s,
+b100 r,
+b11 q,
+b10 p,
+b1 o,
+b0 n,
+b110 m,
+b1010 l,
+b1010 k,
+b1010 j,
+b1010 i,
+b1010 h,
+b1010 g,
+b1010 c,
+b1010 b,
+b1010 ^,
+b1010 [,
+b1010 W,
+b1010 V,
+b1010 U,
+b1010 T,
+b1010 S,
+b1010 R,
+b1010 N,
+b1010 M,
+b1010 I,
+b1010 F,
+b1010 B,
+b1010 A,
+b1010 @,
+b1010 ?,
+b1010 >,
+b1010 =,
+b1010 9,
+b1010 8,
+b1010 4,
+b1010 1,
+b1010 -,
+b1010 ,,
+b1010 +,
+b1010 *,
+b1010 ),
+b1010 (,
+b1010 $,
+b1010 #,
+b1010 }+
+b1010 z+
+b1010 v+
+b1010 u+
+b1010 t+
+b1010 s+
+b1010 r+
+b1010 q+
+b1010 m+
+b1010 l+
+b1010 h+
+b1010 e+
+b1010 a+
+b1010 `+
+b1010 _+
+b1010 ^+
+b1010 ]+
+b1010 \+
+b1010 X+
+b1010 W+
+b1010 S+
+b1010 P+
+b1010 L+
+b1010 K+
+b1010 J+
+b1010 I+
+b1010 H+
+b1010 G+
+b1010 C+
+b1010 B+
+b1010 >+
+b1010 ;+
+b1010 7+
+b1010 6+
+b1010 5+
+b1010 4+
+b1010 3+
+b1010 2+
+b1010 .+
+b1010 -+
+b1010 )+
+b1010 &+
+b1010 "+
+b1000 !+
+b111 z*
+b110 y*
+b101 x*
+b100 w*
+b11 v*
+b10 u*
+b1 t*
+b0 s*
+b101 r*
+b1010 q*
+b1010 p*
+b1010 o*
+b1010 n*
+b1010 m*
+b1010 l*
+b1010 h*
+b1010 g*
+b1010 c*
+b1010 `*
+b1010 \*
+b1010 [*
+b1010 Z*
+b1010 Y*
+b1010 X*
+b1010 W*
+b1010 S*
+b1010 R*
+b1010 N*
+b1010 K*
+b1010 G*
+b1010 F*
+b1010 E*
+b1010 D*
+b1010 C*
+b1010 B*
+b1010 >*
+b1010 =*
+b1010 9*
+b1010 6*
+b1010 2*
+b1010 1*
+b1010 0*
+b1010 /*
+b1010 .*
+b1010 -*
+b1010 )*
+b1010 (*
+b1010 $*
+b1010 !*
+b1010 {)
+b1010 z)
+b1010 y)
+b1010 x)
+b1010 w)
+b1010 v)
+b1010 r)
+b1010 q)
+b1010 m)
+b1010 j)
+b1010 f)
+b1010 e)
+b1010 d)
+b1010 c)
+b1010 b)
+b1010 a)
+b1010 ])
+b1010 \)
+b1010 X)
+b1010 U)
+b1010 Q)
+b1010 P)
+b1010 O)
+b1010 N)
+b1010 M)
+b1010 L)
+b1010 H)
+b1010 G)
+b1010 C)
+b1010 @)
+b1010 <)
+b1010 ;)
+b1010 :)
+b1010 9)
+b1010 8)
+b1010 7)
+b1010 3)
+b1010 2)
+b1010 .)
+b1010 +)
+b1010 ')
+b1000 &)
+b111 !)
+b110 ~(
+b101 }(
+b100 |(
+b11 {(
+b10 z(
+b1 y(
+b0 x(
+b100 w(
+b1010 v(
+b1010 u(
+b1010 t(
+b1010 s(
+b1010 r(
+b1010 q(
+b1010 m(
+b1010 l(
+b1010 h(
+b1010 e(
+b1010 a(
+b1010 `(
+b1010 _(
+b1010 ^(
+b1010 ](
+b1010 \(
+b1010 X(
+b1010 W(
+b1010 S(
+b1010 P(
+b1010 L(
+b1010 K(
+b1010 J(
+b1010 I(
+b1010 H(
+b1010 G(
+b1010 C(
+b1010 B(
+b1010 >(
+b1010 ;(
+b1010 7(
+b1010 6(
+b1010 5(
+b1010 4(
+b1010 3(
+b1010 2(
+b1010 .(
+b1010 -(
+b1010 )(
+b1010 &(
+b1010 "(
+b1010 !(
+b1010 ~'
+b1010 }'
+b1010 |'
+b1010 {'
+b1010 w'
+b1010 v'
+b1010 r'
+b1010 o'
+b1010 k'
+b1010 j'
+b1010 i'
+b1010 h'
+b1010 g'
+b1010 f'
+b1010 b'
+b1010 a'
+b1010 ]'
+b1010 Z'
+b1010 V'
+b1010 U'
+b1010 T'
+b1010 S'
+b1010 R'
+b1010 Q'
+b1010 M'
+b1010 L'
+b1010 H'
+b1010 E'
+b1010 A'
+b1010 @'
+b1010 ?'
+b1010 >'
+b1010 ='
+b1010 <'
+b1010 8'
+b1010 7'
+b1010 3'
+b1010 0'
+b1010 ,'
+b1000 +'
+b111 &'
+b110 %'
+b101 $'
+b100 #'
+b11 "'
+b10 !'
+b1 ~&
+b0 }&
+b11 |&
+b1010 {&
+b1010 z&
+b1010 y&
+b1010 x&
+b1010 w&
+b1010 v&
+b1010 r&
+b1010 q&
+b1010 m&
+b1010 j&
+b1010 f&
+b1010 e&
+b1010 d&
+b1010 c&
+b1010 b&
+b1010 a&
+b1010 ]&
+b1010 \&
+b1010 X&
+b1010 U&
+b1010 Q&
+b1010 P&
+b1010 O&
+b1010 N&
+b1010 M&
+b1010 L&
+b1010 H&
+b1010 G&
+b1010 C&
+b1010 @&
+b1010 <&
+b1010 ;&
+b1010 :&
+b1010 9&
+b1010 8&
+b1010 7&
+b1010 3&
+b1010 2&
+b1010 .&
+b1010 +&
+b1010 '&
+b1010 &&
+b1010 %&
+b1010 $&
+b1010 #&
+b1010 "&
+b1010 |%
+b1010 {%
+b1010 w%
+b1010 t%
+b1010 p%
+b1010 o%
+b1010 n%
+b1010 m%
+b1010 l%
+b1010 k%
+b1010 g%
+b1010 f%
+b1010 b%
+b1010 _%
+b1010 [%
+b1010 Z%
+b1010 Y%
+b1010 X%
+b1010 W%
+b1010 V%
+b1010 R%
+b1010 Q%
+b1010 M%
+b1010 J%
+b1010 F%
+b1010 E%
+b1010 D%
+b1010 C%
+b1010 B%
+b1010 A%
+b1010 =%
+b1010 <%
+b1010 8%
+b1010 5%
+b1010 1%
+b1000 0%
+b111 +%
+b110 *%
+b101 )%
+b100 (%
+b11 '%
+b10 &%
+b1 %%
+b0 $%
+b10 #%
+b1010 "%
+b1010 !%
+b1010 ~$
+b1010 }$
+b1010 |$
+b1010 {$
+b1010 w$
+b1010 v$
+b1010 r$
+b1010 o$
+b1010 k$
+b1010 j$
+b1010 i$
+b1010 h$
+b1010 g$
+b1010 f$
+b1010 b$
+b1010 a$
+b1010 ]$
+b1010 Z$
+b1010 V$
+b1010 U$
+b1010 T$
+b1010 S$
+b1010 R$
+b1010 Q$
+b1010 M$
+b1010 L$
+b1010 H$
+b1010 E$
+b1010 A$
+b1010 @$
+b1010 ?$
+b1010 >$
+b1010 =$
+b1010 <$
+b1010 8$
+b1010 7$
+b1010 3$
+b1010 0$
+b1010 ,$
+b1010 +$
+b1010 *$
+b1010 )$
+b1010 ($
+b1010 '$
+b1010 #$
+b1010 "$
+b1010 |#
+b1010 y#
+b1010 u#
+b1010 t#
+b1010 s#
+b1010 r#
+b1010 q#
+b1010 p#
+b1010 l#
+b1010 k#
+b1010 g#
+b1010 d#
+b1010 `#
+b1010 _#
+b1010 ^#
+b1010 ]#
+b1010 \#
+b1010 [#
+b1010 W#
+b1010 V#
+b1010 R#
+b1010 O#
+b1010 K#
+b1010 J#
+b1010 I#
+b1010 H#
+b1010 G#
+b1010 F#
+b1010 B#
+b1010 A#
+b1010 =#
+b1010 :#
+b1010 6#
+b1000 5#
+b111 0#
+b110 /#
+b101 .#
+b100 -#
+b11 ,#
+b10 +#
+b1 *#
+b0 )#
+b1 (#
+b1010 '#
+b1010 &#
+b1010 %#
+b1010 $#
+b1010 ##
+b1010 "#
+b1010 |"
+b1010 {"
+b1010 w"
+b1010 t"
+b1010 p"
+b1010 o"
+b1010 n"
+b1010 m"
+b1010 l"
+b1010 k"
+b1010 g"
+b1010 f"
+b1010 b"
+b1010 _"
+b1010 ["
+b1010 Z"
+b1010 Y"
+b1010 X"
+b1010 W"
+b1010 V"
+b1010 R"
+b1010 Q"
+b1010 M"
+b1010 J"
+b1010 F"
+b1010 E"
+b1010 D"
+b1010 C"
+b1010 B"
+b1010 A"
+b1010 ="
+b1010 <"
+b1010 8"
+b1010 5"
+b1010 1"
+b1010 0"
+b1010 /"
+b1010 ."
+b1010 -"
+b1010 ,"
+b1010 ("
+b1010 '"
+b1010 #"
+b1010 ~
+b1010 z
+b1010 y
+b1010 x
+b1010 w
+b1010 v
+b1010 u
+b1010 q
+b1010 p
+b1010 l
+b1010 i
+b1010 e
+b1010 d
+b1010 c
+b1010 b
+b1010 a
+b1010 `
+b1010 \
+b1010 [
+b1010 W
+b1010 T
+b1010 P
+b1010 O
+b1010 N
+b1010 M
+b1010 L
+b1010 K
+b1010 G
+b1010 F
+b1010 B
+b1010 ?
+b1010 ;
+b1000 :
+b111 5
+b110 4
+b101 3
+b100 2
+b11 1
+b10 0
+b1 /
+b0 .
+b0 -
+b1000 ,
+b1000 +
+b1000 $
+b11111010000 #
+b1000 "
+$end
+#0
+$dumpvars
+1;1
+bx :1
+x91
+081
+bx 71
+141
+bx 31
+x21
+011
+bx 01
+1-1
+bx ,1
+x+1
+0*1
+bx )1
+1&1
+bx %1
+x$1
+0#1
+bx "1
+1}0
+bx |0
+x{0
+0z0
+bx y0
+1v0
+bx u0
+xt0
+0s0
+bx r0
+1o0
+bx n0
+xm0
+0l0
+bx k0
+1h0
+bx g0
+xf0
+0e0
+bx d0
+x\0
+x[0
+xZ0
+xW0
+xV0
+xU0
+xS0
+xR0
+xP0
+xO0
+0N0
+xG0
+xF0
+xE0
+xB0
+xA0
+x@0
+x>0
+x=0
+x;0
+x:0
+090
+x20
+x10
+x00
+x-0
+x,0
+x+0
+x)0
+x(0
+x&0
+x%0
+0$0
+x{/
+xz/
+xy/
+xv/
+xu/
+xt/
+xr/
+xq/
+xo/
+xn/
+0m/
+xf/
+xe/
+xd/
+xa/
+x`/
+x_/
+x]/
+x\/
+xZ/
+xY/
+0X/
+xQ/
+xP/
+xO/
+xL/
+xK/
+xJ/
+xH/
+xG/
+xE/
+xD/
+0C/
+x</
+x;/
+x:/
+x7/
+x6/
+x5/
+x3/
+x2/
+x0/
+x//
+0./
+x'/
+x&/
+x%/
+x"/
+x!/
+x~.
+x|.
+x{.
+xy.
+xx.
+0w.
+bx t.
+xs.
+0r.
+b0 q.
+xa.
+x`.
+x_.
+x\.
+x[.
+xZ.
+xX.
+xW.
+xU.
+xT.
+0S.
+xL.
+xK.
+xJ.
+xG.
+xF.
+xE.
+xC.
+xB.
+x@.
+x?.
+0>.
+x7.
+x6.
+x5.
+x2.
+x1.
+x0.
+x..
+x-.
+x+.
+x*.
+0).
+x".
+x!.
+x~-
+x{-
+xz-
+xy-
+xw-
+xv-
+xt-
+xs-
+0r-
+xk-
+xj-
+xi-
+xf-
+xe-
+xd-
+xb-
+xa-
+x_-
+x^-
+0]-
+xV-
+xU-
+xT-
+xQ-
+xP-
+xO-
+xM-
+xL-
+xJ-
+xI-
+0H-
+xA-
+x@-
+x?-
+x<-
+x;-
+x:-
+x8-
+x7-
+x5-
+x4-
+03-
+x,-
+x+-
+x*-
+x'-
+x&-
+x%-
+x#-
+x"-
+x~,
+x},
+0|,
+bx y,
+xx,
+0w,
+b0 v,
+xf,
+xe,
+xd,
+xa,
+x`,
+x_,
+x],
+x\,
+xZ,
+xY,
+0X,
+xQ,
+xP,
+xO,
+xL,
+xK,
+xJ,
+xH,
+xG,
+xE,
+xD,
+0C,
+x<,
+x;,
+x:,
+x7,
+x6,
+x5,
+x3,
+x2,
+x0,
+x/,
+0.,
+x',
+x&,
+x%,
+x",
+x!,
+x~+
+x|+
+x{+
+xy+
+xx+
+0w+
+xp+
+xo+
+xn+
+xk+
+xj+
+xi+
+xg+
+xf+
+xd+
+xc+
+0b+
+x[+
+xZ+
+xY+
+xV+
+xU+
+xT+
+xR+
+xQ+
+xO+
+xN+
+0M+
+xF+
+xE+
+xD+
+xA+
+x@+
+x?+
+x=+
+x<+
+x:+
+x9+
+08+
+x1+
+x0+
+x/+
+x,+
+x++
+x*+
+x(+
+x'+
+x%+
+x$+
+0#+
+bx ~*
+x}*
+0|*
+b0 {*
+xk*
+xj*
+xi*
+xf*
+xe*
+xd*
+xb*
+xa*
+x_*
+x^*
+0]*
+xV*
+xU*
+xT*
+xQ*
+xP*
+xO*
+xM*
+xL*
+xJ*
+xI*
+0H*
+xA*
+x@*
+x?*
+x<*
+x;*
+x:*
+x8*
+x7*
+x5*
+x4*
+03*
+x,*
+x+*
+x**
+x'*
+x&*
+x%*
+x#*
+x"*
+x~)
+x})
+0|)
+xu)
+xt)
+xs)
+xp)
+xo)
+xn)
+xl)
+xk)
+xi)
+xh)
+0g)
+x`)
+x_)
+x^)
+x[)
+xZ)
+xY)
+xW)
+xV)
+xT)
+xS)
+0R)
+xK)
+xJ)
+xI)
+xF)
+xE)
+xD)
+xB)
+xA)
+x?)
+x>)
+0=)
+x6)
+x5)
+x4)
+x1)
+x0)
+x/)
+x-)
+x,)
+x*)
+x))
+0()
+bx %)
+x$)
+0#)
+b0 ")
+xp(
+xo(
+xn(
+xk(
+xj(
+xi(
+xg(
+xf(
+xd(
+xc(
+0b(
+x[(
+xZ(
+xY(
+xV(
+xU(
+xT(
+xR(
+xQ(
+xO(
+xN(
+0M(
+xF(
+xE(
+xD(
+xA(
+x@(
+x?(
+x=(
+x<(
+x:(
+x9(
+08(
+x1(
+x0(
+x/(
+x,(
+x+(
+x*(
+x((
+x'(
+x%(
+x$(
+0#(
+xz'
+xy'
+xx'
+xu'
+xt'
+xs'
+xq'
+xp'
+xn'
+xm'
+0l'
+xe'
+xd'
+xc'
+x`'
+x_'
+x^'
+x\'
+x['
+xY'
+xX'
+0W'
+xP'
+xO'
+xN'
+xK'
+xJ'
+xI'
+xG'
+xF'
+xD'
+xC'
+0B'
+x;'
+x:'
+x9'
+x6'
+x5'
+x4'
+x2'
+x1'
+x/'
+x.'
+0-'
+bx *'
+x)'
+0('
+b0 ''
+xu&
+xt&
+xs&
+xp&
+xo&
+xn&
+xl&
+xk&
+xi&
+xh&
+0g&
+x`&
+x_&
+x^&
+x[&
+xZ&
+xY&
+xW&
+xV&
+xT&
+xS&
+0R&
+xK&
+xJ&
+xI&
+xF&
+xE&
+xD&
+xB&
+xA&
+x?&
+x>&
+0=&
+x6&
+x5&
+x4&
+x1&
+x0&
+x/&
+x-&
+x,&
+x*&
+x)&
+0(&
+x!&
+x~%
+x}%
+xz%
+xy%
+xx%
+xv%
+xu%
+xs%
+xr%
+0q%
+xj%
+xi%
+xh%
+xe%
+xd%
+xc%
+xa%
+x`%
+x^%
+x]%
+0\%
+xU%
+xT%
+xS%
+xP%
+xO%
+xN%
+xL%
+xK%
+xI%
+xH%
+0G%
+x@%
+x?%
+x>%
+x;%
+x:%
+x9%
+x7%
+x6%
+x4%
+x3%
+02%
+bx /%
+x.%
+0-%
+b0 ,%
+xz$
+xy$
+xx$
+xu$
+xt$
+xs$
+xq$
+xp$
+xn$
+xm$
+0l$
+xe$
+xd$
+xc$
+x`$
+x_$
+x^$
+x\$
+x[$
+xY$
+xX$
+0W$
+xP$
+xO$
+xN$
+xK$
+xJ$
+xI$
+xG$
+xF$
+xD$
+xC$
+0B$
+x;$
+x:$
+x9$
+x6$
+x5$
+x4$
+x2$
+x1$
+x/$
+x.$
+0-$
+x&$
+x%$
+x$$
+x!$
+x~#
+x}#
+x{#
+xz#
+xx#
+xw#
+0v#
+xo#
+xn#
+xm#
+xj#
+xi#
+xh#
+xf#
+xe#
+xc#
+xb#
+0a#
+xZ#
+xY#
+xX#
+xU#
+xT#
+xS#
+xQ#
+xP#
+xN#
+xM#
+0L#
+xE#
+xD#
+xC#
+x@#
+x?#
+x>#
+x<#
+x;#
+x9#
+x8#
+07#
+bx 4#
+x3#
+02#
+b0 1#
+x!#
+x~"
+x}"
+xz"
+xy"
+xx"
+xv"
+xu"
+xs"
+xr"
+0q"
+xj"
+xi"
+xh"
+xe"
+xd"
+xc"
+xa"
+x`"
+x^"
+x]"
+0\"
+xU"
+xT"
+xS"
+xP"
+xO"
+xN"
+xL"
+xK"
+xI"
+xH"
+0G"
+x@"
+x?"
+x>"
+x;"
+x:"
+x9"
+x7"
+x6"
+x4"
+x3"
+02"
+x+"
+x*"
+x)"
+x&"
+x%"
+x$"
+x""
+x!"
+x}
+x|
+0{
+xt
+xs
+xr
+xo
+xn
+xm
+xk
+xj
+xh
+xg
+0f
+x_
+x^
+x]
+xZ
+xY
+xX
+xV
+xU
+xS
+xR
+0Q
+xJ
+xI
+xH
+xE
+xD
+xC
+xA
+x@
+x>
+x=
+0<
+bx 9
+x8
+07
+b0 6
+bx *
+b0 )
+b0 (
+b0 '
+b0 &
+0%
+bx !
+$end
+#10
+0f0
+0m0
+0t0
+0{0
+0$1
+0+1
+021
+b0 !
+b0 *
+091
+b11111111 g0
+b11111111 n0
+b11111111 u0
+b11111111 |0
+b11111111 %1
+b11111111 ,1
+b11111111 31
+b11111111 :1
+b0 d0
+b0 k0
+b0 r0
+b0 y0
+b0 "1
+b0 )1
+b0 01
+b0 71
+1A
+0D
+1V
+0Y
+1k
+0n
+1""
+0%"
+17"
+0:"
+1L"
+0O"
+1a"
+0d"
+1v"
+0y"
+1<#
+0?#
+1Q#
+0T#
+1f#
+0i#
+1{#
+0~#
+12$
+05$
+1G$
+0J$
+1\$
+0_$
+1q$
+0t$
+17%
+0:%
+1L%
+0O%
+1a%
+0d%
+1v%
+0y%
+1-&
+00&
+1B&
+0E&
+1W&
+0Z&
+1l&
+0o&
+12'
+05'
+1G'
+0J'
+1\'
+0_'
+1q'
+0t'
+1((
+0+(
+1=(
+0@(
+1R(
+0U(
+1g(
+0j(
+1-)
+00)
+1B)
+0E)
+1W)
+0Z)
+1l)
+0o)
+1#*
+0&*
+18*
+0;*
+1M*
+0P*
+1b*
+0e*
+1(+
+0++
+1=+
+0@+
+1R+
+0U+
+1g+
+0j+
+1|+
+0!,
+13,
+06,
+1H,
+0K,
+1],
+0`,
+1#-
+0&-
+18-
+0;-
+1M-
+0P-
+1b-
+0e-
+1w-
+0z-
+1..
+01.
+1C.
+0F.
+1X.
+0[.
+1|.
+0!/
+13/
+06/
+1H/
+0K/
+1]/
+0`/
+1r/
+0u/
+1)0
+0,0
+1>0
+0A0
+1S0
+0V0
+0>
+0S
+0h
+0}
+04"
+0I"
+0^"
+b0 9
+0s"
+09#
+0N#
+0c#
+0x#
+0/$
+0D$
+0Y$
+b0 4#
+0n$
+04%
+0I%
+0^%
+0s%
+0*&
+0?&
+0T&
+b0 /%
+0i&
+0/'
+0D'
+0Y'
+0n'
+0%(
+0:(
+0O(
+b0 *'
+0d(
+0*)
+0?)
+0T)
+0i)
+0~)
+05*
+0J*
+b0 %)
+0_*
+0%+
+0:+
+0O+
+0d+
+0y+
+00,
+0E,
+b0 ~*
+0Z,
+0~,
+05-
+0J-
+0_-
+0t-
+0+.
+0@.
+b0 y,
+0U.
+0y.
+00/
+0E/
+0Z/
+0o/
+0&0
+0;0
+b0 t.
+0P0
+0s.
+0x,
+0}*
+0$)
+0)'
+0.%
+03#
+08
+#20
+0"/
+1'/
+07/
+1</
+0L/
+1Q/
+0a/
+1f/
+0v/
+1{/
+0-0
+120
+0B0
+1G0
+0W0
+1\0
+0'-
+1,-
+0<-
+1A-
+0Q-
+1V-
+0f-
+1k-
+0{-
+1".
+02.
+17.
+0G.
+1L.
+0\.
+1a.
+0,+
+11+
+0A+
+1F+
+0V+
+1[+
+0k+
+1p+
+0",
+1',
+07,
+1<,
+0L,
+1Q,
+0a,
+1f,
+01)
+16)
+0F)
+1K)
+0[)
+1`)
+0p)
+1u)
+0'*
+1,*
+0<*
+1A*
+0Q*
+1V*
+0f*
+1k*
+06'
+1;'
+0K'
+1P'
+0`'
+1e'
+0u'
+1z'
+0,(
+11(
+0A(
+1F(
+0V(
+1[(
+0k(
+1p(
+0;%
+1@%
+0P%
+1U%
+0e%
+1j%
+0z%
+1!&
+01&
+16&
+0F&
+1K&
+0[&
+1`&
+0p&
+1u&
+0@#
+1E#
+0U#
+1Z#
+0j#
+1o#
+0!$
+1&$
+06$
+1;$
+0K$
+1P$
+0`$
+1e$
+0u$
+1z$
+0E
+1J
+0Z
+1_
+0o
+1t
+0&"
+1+"
+0;"
+1@"
+0P"
+1U"
+0e"
+1j"
+0z"
+1!#
+#30
+0~.
+0&/
+05/
+0;/
+0J/
+0P/
+0_/
+0e/
+0t/
+0z/
+0+0
+010
+0@0
+0F0
+0U0
+0[0
+0%-
+0+-
+0:-
+0@-
+0O-
+0U-
+0d-
+0j-
+0y-
+0!.
+00.
+06.
+0E.
+0K.
+0Z.
+0`.
+0*+
+00+
+0?+
+0E+
+0T+
+0Z+
+0i+
+0o+
+0~+
+0&,
+05,
+0;,
+0J,
+0P,
+0_,
+0e,
+0/)
+05)
+0D)
+0J)
+0Y)
+0_)
+0n)
+0t)
+0%*
+0+*
+0:*
+0@*
+0O*
+0U*
+0d*
+0j*
+04'
+0:'
+0I'
+0O'
+0^'
+0d'
+0s'
+0y'
+0*(
+00(
+0?(
+0E(
+0T(
+0Z(
+0i(
+0o(
+09%
+0?%
+0N%
+0T%
+0c%
+0i%
+0x%
+0~%
+0/&
+05&
+0D&
+0J&
+0Y&
+0_&
+0n&
+0t&
+0>#
+0D#
+0S#
+0Y#
+0h#
+0n#
+0}#
+0%$
+04$
+0:$
+0I$
+0O$
+0^$
+0d$
+0s$
+0y$
+0C
+0I
+0X
+0^
+0m
+0s
+0$"
+0*"
+09"
+0?"
+0N"
+0T"
+0c"
+0i"
+0x"
+0~"
+#40
+1%/
+1:/
+1O/
+1d/
+1y/
+100
+1E0
+1Z0
+1*-
+1?-
+1T-
+1i-
+1~-
+15.
+1J.
+1_.
+1/+
+1D+
+1Y+
+1n+
+1%,
+1:,
+1O,
+1d,
+14)
+1I)
+1^)
+1s)
+1**
+1?*
+1T*
+1i*
+19'
+1N'
+1c'
+1x'
+1/(
+1D(
+1Y(
+1n(
+1>%
+1S%
+1h%
+1}%
+14&
+1I&
+1^&
+1s&
+1C#
+1X#
+1m#
+1$$
+19$
+1N$
+1c$
+1x$
+1H
+1]
+1r
+1)"
+1>"
+1S"
+1h"
+1}"
+#1000
+1%
+#2000
+0%
+#2500
+1<
+1Q
+1{
+1G"
+1q"
+17#
+1L#
+1v#
+1B$
+1l$
+12%
+1G%
+1q%
+1=&
+1g&
+1-'
+1B'
+1l'
+18(
+1b(
+1()
+1=)
+1g)
+13*
+1]*
+1#+
+18+
+1b+
+1.,
+1X,
+1|,
+13-
+1]-
+1).
+1S.
+1w.
+1./
+1X/
+1$0
+1N0
+b10101011 &
+b10101011 (
+b10101011 6
+b10101011 1#
+b10101011 ,%
+b10101011 ''
+b10101011 ")
+b10101011 {*
+b10101011 v,
+b10101011 q.
+#2510
+0A
+0V
+0""
+0L"
+0v"
+0<#
+0Q#
+0{#
+0G$
+0q$
+07%
+0L%
+0v%
+0B&
+0l&
+02'
+0G'
+0q'
+0=(
+0g(
+0-)
+0B)
+0l)
+08*
+0b*
+0(+
+0=+
+0g+
+03,
+0],
+0#-
+08-
+0b-
+0..
+0X.
+0|.
+03/
+0]/
+0)0
+0S0
+#3000
+1%
+#4000
+0%
+#4500
+17
+b1 '
+b1 )
+#4510
+xf0
+xm0
+xt0
+x{0
+x$1
+x+1
+x21
+bx !
+bx *
+x91
+b1111111x g0
+b1111111x n0
+b1111111x u0
+b1111111x |0
+b1111111x %1
+b1111111x ,1
+b1111111x 31
+b1111111x :1
+b0x d0
+b0x k0
+b0x r0
+b0x y0
+b0x "1
+b0x )1
+b0x 01
+b0x 71
+x>
+xS
+xh
+x}
+x4"
+xI"
+x^"
+bx 9
+xs"
+#5000
+1%
+#5010
+18
+#5020
+1E
+0J
+1Z
+0_
+1o
+0t
+1&"
+0+"
+1;"
+0@"
+1P"
+0U"
+1e"
+0j"
+1z"
+0!#
+#5030
+1D
+1I
+1Y
+1^
+1m
+1s
+1%"
+1*"
+19"
+1?"
+1O"
+1T"
+1c"
+1i"
+1y"
+1~"
+#5040
+0@
+0H
+0U
+0]
+0g
+0r
+0!"
+0)"
+03"
+0>"
+0K"
+0S"
+0]"
+0h"
+0u"
+0}"
+#5050
+0t0
+0$1
+bx0x0x0xx !
+bx0x0x0xx *
+021
+b11111111 u0
+b11111111 %1
+b11111111 31
+b0 r0
+b0 "1
+b0 01
+1=
+0E
+1R
+0Z
+1j
+0h
+0o
+1|
+0&"
+16"
+04"
+0;"
+1H"
+0P"
+1`"
+bx0x0x0xx 9
+0^"
+0e"
+1r"
+0z"
+#5060
+1f0
+1m0
+1{0
+1+1
+b10101011 !
+b10101011 *
+191
+b11111110 g0
+b11111110 n0
+b11111110 |0
+b11111110 ,1
+b11111110 :1
+b1 d0
+b1 k0
+b1 y0
+b1 )1
+b1 71
+1>
+0D
+1S
+0Y
+0m
+1}
+0%"
+09"
+1I"
+0O"
+0c"
+b10101011 9
+1s"
+0y"
+#6000
+0%
+#6010
+08
+#6020
+1J
+1_
+1t
+1+"
+1@"
+1U"
+1j"
+1!#
+#6030
+0I
+0^
+0s
+0*"
+0?"
+0T"
+0i"
+0~"
+#6040
+1H
+1]
+1r
+1)"
+1>"
+1S"
+1h"
+1}"
+#6500
+07
+1('
+b1000 '
+b1000 )
+#6510
+xf0
+xm0
+xt0
+x{0
+x$1
+x+1
+x21
+bx !
+bx *
+x91
+b1111xxxx g0
+b1111xxxx n0
+b1111xxxx u0
+b1111xxxx |0
+b1111xxxx %1
+b1111xxxx ,1
+b1111xxxx 31
+b1111xxxx :1
+b0x000 d0
+b0x000 k0
+b0x000 r0
+b0x000 y0
+b0x000 "1
+b0x000 )1
+b0x000 01
+b0x000 71
+0>
+0S
+0}
+0I"
+b0 9
+0s"
+x/'
+xD'
+xY'
+xn'
+x%(
+x:(
+xO(
+bx *'
+xd(
+#7000
+1%
+#7010
+1)'
+#7020
+16'
+0;'
+1K'
+0P'
+1`'
+0e'
+1u'
+0z'
+1,(
+01(
+1A(
+0F(
+1V(
+0[(
+1k(
+0p(
+#7030
+15'
+1:'
+1J'
+1O'
+1^'
+1d'
+1t'
+1y'
+1*(
+10(
+1@(
+1E(
+1T(
+1Z(
+1j(
+1o(
+#7040
+01'
+09'
+0F'
+0N'
+0X'
+0c'
+0p'
+0x'
+0$(
+0/(
+0<(
+0D(
+0N(
+0Y(
+0f(
+0n(
+#7050
+0t0
+0$1
+bx0x0x0xx !
+bx0x0x0xx *
+021
+b11111111 u0
+b11111111 %1
+b11111111 31
+b0 r0
+b0 "1
+b0 01
+1.'
+06'
+1C'
+0K'
+1['
+0Y'
+0`'
+1m'
+0u'
+1'(
+0%(
+0,(
+19(
+0A(
+1Q(
+bx0x0x0xx *'
+0O(
+0V(
+1c(
+0k(
+#7060
+1f0
+1m0
+1{0
+1+1
+b10101011 !
+b10101011 *
+191
+b1111zzz0 g0
+b1111zzz0 n0
+b1111zzz0 |0
+b1111zzz0 ,1
+b1111zzz0 :1
+b1000 d0
+b1000 k0
+b1000 y0
+b1000 )1
+b1000 71
+1/'
+05'
+1D'
+0J'
+0^'
+1n'
+0t'
+0*(
+1:(
+0@(
+0T(
+b10101011 *'
+1d(
+0j(
+#8000
+0%
+#8010
+0)'
+#8020
+1;'
+1P'
+1e'
+1z'
+11(
+1F(
+1[(
+1p(
+#8030
+0:'
+0O'
+0d'
+0y'
+00(
+0E(
+0Z(
+0o(
+#8040
+19'
+1N'
+1c'
+1x'
+1/(
+1D(
+1Y(
+1n(
+#8500
+0Q
+0{
+0G"
+0q"
+0L#
+0v#
+0B$
+0l$
+0G%
+0q%
+0=&
+0g&
+0B'
+0l'
+08(
+0b(
+0=)
+0g)
+03*
+0]*
+08+
+0b+
+0.,
+0X,
+03-
+0]-
+0).
+0S.
+0./
+0X/
+0$0
+0N0
+b1 &
+b1 (
+b1 6
+b1 1#
+b1 ,%
+b1 ''
+b1 ")
+b1 {*
+b1 v,
+b1 q.
+#8510
+1V
+1""
+1L"
+1v"
+1Q#
+1{#
+1G$
+1q$
+1L%
+1v%
+1B&
+1l&
+1G'
+1q'
+1=(
+1g(
+1B)
+1l)
+18*
+1b*
+1=+
+1g+
+13,
+1],
+18-
+1b-
+1..
+1X.
+13/
+1]/
+1)0
+1S0
+#9000
+1%
+#9010
+1)'
+#9020
+16'
+0;'
+1K'
+0P'
+1`'
+0e'
+1u'
+0z'
+1,(
+01(
+1A(
+0F(
+1V(
+0[(
+1k(
+0p(
+#9030
+15'
+1:'
+1I'
+1O'
+1^'
+1d'
+1s'
+1y'
+1*(
+10(
+1?(
+1E(
+1T(
+1Z(
+1i(
+1o(
+#9040
+09'
+0C'
+0N'
+0c'
+0m'
+0x'
+0/(
+09(
+0D(
+0Y(
+0c(
+0n(
+#9050
+0m0
+0{0
+0+1
+b1 !
+b1 *
+091
+b11111111 n0
+b11111111 |0
+b11111111 ,1
+b11111111 :1
+b0 k0
+b0 y0
+b0 )1
+b0 71
+06'
+1F'
+0D'
+0K'
+0`'
+1p'
+0n'
+0u'
+0,(
+1<(
+0:(
+0A(
+0V(
+1f(
+b1 *'
+0d(
+0k(
+#9060
+05'
+0I'
+0^'
+0s'
+0*(
+0?(
+0T(
+0i(
+#10000
+0%
+#10010
+0)'
+#10020
+1;'
+1P'
+1e'
+1z'
+11(
+1F(
+1[(
+1p(
+#10030
+0:'
+0O'
+0d'
+0y'
+00(
+0E(
+0Z(
+0o(
+#10040
+19'
+1N'
+1c'
+1x'
+1/(
+1D(
+1Y(
+1n(
+#10500
+17
+0('
+1Q
+1f
+1{
+1G"
+1\"
+1q"
+1L#
+1a#
+1v#
+1B$
+1W$
+1l$
+1G%
+1\%
+1q%
+1=&
+1R&
+1g&
+1B'
+1W'
+1l'
+18(
+1M(
+1b(
+1=)
+1R)
+1g)
+13*
+1H*
+1]*
+18+
+1M+
+1b+
+1.,
+1C,
+1X,
+13-
+1H-
+1]-
+1).
+1>.
+1S.
+1./
+1C/
+1X/
+1$0
+190
+1N0
+b1 '
+b1 )
+b11101111 &
+b11101111 (
+b11101111 6
+b11101111 1#
+b11101111 ,%
+b11101111 ''
+b11101111 ")
+b11101111 {*
+b11101111 v,
+b11101111 q.
+#10510
+1m0
+1{0
+1+1
+b10101011 !
+b10101011 *
+191
+b11111110 n0
+b11111110 |0
+b11111110 ,1
+b11111110 :1
+b11111110 g0
+b1 k0
+b1 y0
+b1 )1
+b1 71
+b1 d0
+1>
+1S
+1}
+1I"
+b10101011 9
+1s"
+b0 *'
+0/'
+0V
+0k
+0""
+0L"
+0a"
+0v"
+0Q#
+0f#
+0{#
+0G$
+0\$
+0q$
+0L%
+0a%
+0v%
+0B&
+0W&
+0l&
+0G'
+0\'
+0q'
+0=(
+0R(
+0g(
+0B)
+0W)
+0l)
+08*
+0M*
+0b*
+0=+
+0R+
+0g+
+03,
+0H,
+0],
+08-
+0M-
+0b-
+0..
+0C.
+0X.
+03/
+0H/
+0]/
+0)0
+0>0
+0S0
+#11000
+1%
+#11010
+18
+#11020
+1E
+0J
+1Z
+0_
+1o
+0t
+1&"
+0+"
+1;"
+0@"
+1P"
+0U"
+1e"
+0j"
+1z"
+0!#
+#11030
+1D
+1I
+1Y
+1^
+1n
+1s
+1%"
+1*"
+19"
+1?"
+1O"
+1T"
+1d"
+1i"
+1y"
+1~"
+#11040
+0H
+0]
+0j
+0r
+0)"
+0>"
+0S"
+0`"
+0h"
+0}"
+#11050
+0E
+0Z
+1g
+0o
+0&"
+0;"
+0P"
+1]"
+0e"
+0z"
+#11060
+1t0
+b11101111 !
+b11101111 *
+121
+b11111110 u0
+b11111110 31
+b1 r0
+b1 01
+0D
+0Y
+1h
+0n
+0%"
+09"
+0O"
+b11101111 9
+1^"
+0d"
+0y"
+#12000
+0%
+#12010
+08
+#12020
+1J
+1_
+1t
+1+"
+1@"
+1U"
+1j"
+1!#
+#12030
+0I
+0^
+0s
+0*"
+0?"
+0T"
+0i"
+0~"
+#12040
+1H
+1]
+1r
+1)"
+1>"
+1S"
+1h"
+1}"
+#12500

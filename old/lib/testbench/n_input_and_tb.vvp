@@ -1,0 +1,85 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 9;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_0000014e65a36a70 .scope module, "n_input_and_tb" "n_input_and_tb" 2 3;
+ .timescale -9 -9;
+P_0000014e659f7960 .param/l "DELAY" 0 2 7, +C4<00000000000000000000000011001000>;
+P_0000014e659f7998 .param/l "N" 0 2 6, +C4<00000000000000000000000000000100>;
+v0000014e65a38f40_0 .var "a", 3 0;
+v0000014e65a38ea0_0 .var/i "i", 31 0;
+RS_0000014e65a49218 .resolv tri, L_0000014e65a35c30, L_0000014e65a357d0;
+v0000014e65a38720_0 .net8 "out", 0 0, RS_0000014e65a49218;  2 drivers, strength-aware
+S_0000014e659fdbe0 .scope module, "dut" "n_input_and" 2 16, 3 1 0, S_0000014e65a36a70;
+ .timescale -9 -9;
+    .port_info 0 /INPUT 4 "a";
+    .port_info 1 /OUTPUT 1 "out";
+P_0000014e659f8ba0 .param/l "N" 0 3 2, +C4<00000000000000000000000000000100>;
+L_0000014e65a35d10 .functor NMOS 4, L_0000014e65a38fe0, v0000014e65a38f40_0, C4<0000>, C4<0000>;
+L_0000014e65a358b0 .functor BUFT 1, C8<771>, C4<0>, C4<0>, C4<0>;
+L_0000014e65a35920 .functor PMOS 1, L_0000014e65a358b0, L_0000014e65a38860, C4<0>, C4<0>;
+L_0000014e65a35990 .functor PMOS 1, L_0000014e65a358b0, L_0000014e65a384a0, C4<0>, C4<0>;
+L_0000014e65a35bc0 .functor PMOS 1, L_0000014e65a358b0, L_0000014e65a38e00, C4<0>, C4<0>;
+L_0000014e65a35a00 .functor PMOS 1, L_0000014e65a358b0, L_0000014e65a38220, C4<0>, C4<0>;
+L_0000014e65a35c30 .functor PMOS 1, L_0000014e65a358b0, L_0000014e65a38900, C4<0>, C4<0>;
+L_0000014e65a35b50 .functor BUFT 1, C8<770>, C4<0>, C4<0>, C4<0>;
+L_0000014e65a357d0 .functor NMOS 1, L_0000014e65a35b50, L_0000014e65a8e1a0, C4<0>, C4<0>;
+v0000014e65a38d60_0 .net *"_ivl_11", 0 0, L_0000014e65a384a0;  1 drivers
+v0000014e65a38540_0 .net *"_ivl_13", 0 0, L_0000014e65a38e00;  1 drivers
+v0000014e65a38ae0_0 .net *"_ivl_15", 0 0, L_0000014e65a38220;  1 drivers
+v0000014e65a38c20_0 .net *"_ivl_17", 0 0, L_0000014e65a38900;  1 drivers
+v0000014e65a380e0_0 .net *"_ivl_19", 0 0, L_0000014e65a8e1a0;  1 drivers
+v0000014e65a38b80_0 .net *"_ivl_3", 2 0, L_0000014e65a38cc0;  1 drivers
+v0000014e65a389a0_0 .net *"_ivl_4", 3 0, L_0000014e65a38fe0;  1 drivers
+RS_0000014e65a49128 .resolv tri, L_0000014e65a35920, L_0000014e65a35990, L_0000014e65a35bc0, L_0000014e65a35a00;
+v0000014e65a385e0_0 .net8 *"_ivl_6", 0 0, RS_0000014e65a49128;  4 drivers, strength-aware
+v0000014e65a38680_0 .net *"_ivl_9", 0 0, L_0000014e65a38860;  1 drivers
+v0000014e65a38180_0 .net "a", 3 0, v0000014e65a38f40_0;  1 drivers
+v0000014e65a38400_0 .net8 "gnd", 0 0, L_0000014e65a35b50;  1 drivers, strength-aware
+RS_0000014e65a491e8 .resolv tri, L_0000014e65a35d10, L_0000014e65a38360;
+v0000014e65a387c0_0 .net8 "nmos_line", 3 0, RS_0000014e65a491e8;  2 drivers, strength-aware
+v0000014e65a38a40_0 .net8 "out", 0 0, RS_0000014e65a49218;  alias, 2 drivers, strength-aware
+v0000014e65a382c0_0 .net8 "vdd", 0 0, L_0000014e65a358b0;  1 drivers, strength-aware
+L_0000014e65a38cc0 .part RS_0000014e65a491e8, 1, 3;
+L_0000014e65a38fe0 .concat [ 3 1 0 0], L_0000014e65a38cc0, L_0000014e65a35b50;
+L_0000014e65a38360 .part/pv RS_0000014e65a49128, 0, 1, 4;
+L_0000014e65a38860 .part v0000014e65a38f40_0, 0, 1;
+L_0000014e65a384a0 .part v0000014e65a38f40_0, 1, 1;
+L_0000014e65a38e00 .part v0000014e65a38f40_0, 2, 1;
+L_0000014e65a38220 .part v0000014e65a38f40_0, 3, 1;
+L_0000014e65a38900 .part RS_0000014e65a491e8, 0, 1;
+L_0000014e65a8e1a0 .part RS_0000014e65a491e8, 0, 1;
+    .scope S_0000014e65a36a70;
+T_0 ;
+    %vpi_call 2 25 "$dumpfile", "testbench/n_input_and_tb.vcd" {0 0 0};
+    %vpi_call 2 26 "$dumpvars", 32'sb00000000000000000000000000000000, S_0000014e65a36a70 {0 0 0};
+    %delay 200, 0;
+    %pushi/vec4 0, 0, 32;
+    %store/vec4 v0000014e65a38ea0_0, 0, 32;
+T_0.0 ;
+    %load/vec4 v0000014e65a38ea0_0;
+    %cmpi/s 16, 0, 32;
+    %jmp/0xz T_0.1, 5;
+    %load/vec4 v0000014e65a38ea0_0;
+    %pad/s 4;
+    %store/vec4 v0000014e65a38f40_0, 0, 4;
+    %delay 200, 0;
+    %load/vec4 v0000014e65a38ea0_0;
+    %addi 1, 0, 32;
+    %store/vec4 v0000014e65a38ea0_0, 0, 32;
+    %jmp T_0.0;
+T_0.1 ;
+    %vpi_call 2 35 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "testbench/n_input_and_tb.v";
+    "../lib/n_input_and.v";

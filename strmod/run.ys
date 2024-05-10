@@ -1,0 +1,12 @@
+# Read the Verilog files
+read_verilog adder.v
+read_verilog gates.v
+
+# Perform hierarchy analysis
+hierarchy - libdir . -top adder
+
+# Perform synthesis
+synth
+
+# Write the output to a JSON file
+write_json adder.json

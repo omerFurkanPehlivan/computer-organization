@@ -1,0 +1,137 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 9;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_0000023bea06ffb0 .scope module, "testbench" "testbench" 2 3;
+ .timescale -9 -9;
+v0000023bea0d6aa0_0 .net "clk_out", 0 0, L_0000023bea06cbe0;  1 drivers
+v0000023bea0d7540_0 .var "rst", 0 0;
+S_0000023bea0775d0 .scope module, "clock1" "clock" 2 10, 3 5 0, S_0000023bea06ffb0;
+ .timescale -9 -9;
+    .port_info 0 /INPUT 1 "rst";
+    .port_info 1 /OUTPUT 1 "clk_out";
+P_0000023bea06b0a0 .param/l "CLOCK_PERIOD" 0 3 6, +C4<00000000000000000000011111010000>;
+L_0000023bea0d7848 .functor BUFT 1, C4<1>, C4<0>, C4<0>, C4<0>;
+v0000023bea071360_0 .net/2u *"_ivl_0", 0 0, L_0000023bea0d7848;  1 drivers
+v0000023bea070be0_0 .net "clk_out", 0 0, L_0000023bea06cbe0;  alias, 1 drivers
+v0000023bea070640_0 .net "not_in", 0 0, L_0000023bea06ca90;  1 drivers
+v0000023bea0d7180_0 .net "rst", 0 0, v0000023bea0d7540_0;  1 drivers
+L_0000023bea0d6a00 .concat [ 1 1 0 0], L_0000023bea06cbe0, L_0000023bea0d7848;
+S_0000023bea077760 .scope module, "mux1" "mux" 3 17, 4 2 0, S_0000023bea0775d0;
+ .timescale -9 -9;
+    .port_info 0 /INPUT 2 "data_list";
+    .port_info 1 /INPUT 1 "select";
+    .port_info 2 /OUTPUT 1 "data_out";
+P_0000023bea1e79b0 .param/l "DATA_WIDTH" 0 4 4, +C4<00000000000000000000000000000001>;
+P_0000023bea1e79e8 .param/l "SELECT_BITS" 0 4 3, +C4<00000000000000000000000000000001>;
+v0000023bea070fa0_0 .net "data_list", 1 0, L_0000023bea0d6a00;  1 drivers
+v0000023bea0710e0_0 .net "data_out", 0 0, L_0000023bea06ca90;  alias, 1 drivers
+v0000023bea071180_0 .net "select", 0 0, v0000023bea0d7540_0;  alias, 1 drivers
+v0000023bea071220 .array "splitted_data_list", 0 0;
+v0000023bea071220_0 .net v0000023bea071220 0, 1 0, L_0000023bea0d5e20; 1 drivers
+L_0000023bea0d6000 .part L_0000023bea0d6a00, 0, 1;
+L_0000023bea0d5e20 .concat8 [ 1 1 0 0], L_0000023bea0d6000, L_0000023bea0d75e0;
+L_0000023bea0d75e0 .part L_0000023bea0d6a00, 1, 1;
+S_0000023bea0755f0 .scope generate, "mux_2_to_1" "mux_2_to_1" 4 48, 4 48 0, S_0000023bea077760;
+ .timescale -9 -9;
+v0000023bea070780_0 .net "and1_out", 0 0, L_0000023bea06c550;  1 drivers
+v0000023bea071040_0 .net "and2_out", 0 0, L_0000023bea06cb70;  1 drivers
+v0000023bea070dc0_0 .net "select_not", 0 0, L_0000023bea06ca20;  1 drivers
+S_0000023bea075780 .scope generate, "mux_2_bit[0]" "mux_2_bit[0]" 4 51, 4 51 0, S_0000023bea0755f0;
+ .timescale -9 -9;
+P_0000023bea06b960 .param/l "i" 0 4 51, +C4<00>;
+L_0000023bea0d6dc0 .part L_0000023bea0d5e20, 0, 1;
+L_0000023bea0d6b40 .part L_0000023bea0d5e20, 1, 1;
+S_0000023bea1ec900 .scope module, "and1" "DelayAnd" 4 53, 5 1 0, S_0000023bea075780;
+ .timescale -9 -9;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /OUTPUT 1 "out";
+P_0000023bea06b220 .param/l "delay" 0 5 2, +C4<00000000000000000000000000001010>;
+L_0000023bea06c550/d .functor AND 1, L_0000023bea0d6dc0, L_0000023bea06ca20, C4<1>, C4<1>;
+L_0000023bea06c550 .delay 1 (10,10,10) L_0000023bea06c550/d;
+v0000023bea070960_0 .net "a", 0 0, L_0000023bea0d6dc0;  1 drivers
+v0000023bea070c80_0 .net "b", 0 0, L_0000023bea06ca20;  alias, 1 drivers
+v0000023bea071400_0 .net "out", 0 0, L_0000023bea06c550;  alias, 1 drivers
+S_0000023bea074db0 .scope module, "and2" "DelayAnd" 4 54, 5 1 0, S_0000023bea075780;
+ .timescale -9 -9;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /OUTPUT 1 "out";
+P_0000023bea06b060 .param/l "delay" 0 5 2, +C4<00000000000000000000000000001010>;
+L_0000023bea06cb70/d .functor AND 1, L_0000023bea0d6b40, v0000023bea0d7540_0, C4<1>, C4<1>;
+L_0000023bea06cb70 .delay 1 (10,10,10) L_0000023bea06cb70/d;
+v0000023bea0706e0_0 .net "a", 0 0, L_0000023bea0d6b40;  1 drivers
+v0000023bea070e60_0 .net "b", 0 0, v0000023bea0d7540_0;  alias, 1 drivers
+v0000023bea070820_0 .net "out", 0 0, L_0000023bea06cb70;  alias, 1 drivers
+S_0000023bea1eca90 .scope module, "not1" "DelayNot" 4 52, 6 1 0, S_0000023bea075780;
+ .timescale -9 -9;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /OUTPUT 1 "out";
+P_0000023bea06b9a0 .param/l "delay" 0 6 2, +C4<00000000000000000000000000001010>;
+L_0000023bea06ca20/d .functor NOT 1, v0000023bea0d7540_0, C4<0>, C4<0>, C4<0>;
+L_0000023bea06ca20 .delay 1 (10,10,10) L_0000023bea06ca20/d;
+v0000023bea0705a0_0 .net "a", 0 0, v0000023bea0d7540_0;  alias, 1 drivers
+v0000023bea070d20_0 .net "out", 0 0, L_0000023bea06ca20;  alias, 1 drivers
+S_0000023bea1ed760 .scope module, "or1" "DelayOr" 4 55, 7 1 0, S_0000023bea075780;
+ .timescale -9 -9;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /OUTPUT 1 "out";
+P_0000023bea06bc60 .param/l "delay" 0 7 2, +C4<00000000000000000000000000001010>;
+L_0000023bea06ca90/d .functor OR 1, L_0000023bea06c550, L_0000023bea06cb70, C4<0>, C4<0>;
+L_0000023bea06ca90 .delay 1 (10,10,10) L_0000023bea06ca90/d;
+v0000023bea0714a0_0 .net "a", 0 0, L_0000023bea06c550;  alias, 1 drivers
+v0000023bea0708c0_0 .net "b", 0 0, L_0000023bea06cb70;  alias, 1 drivers
+v0000023bea070a00_0 .net "out", 0 0, L_0000023bea06ca90;  alias, 1 drivers
+S_0000023bea1ed8f0 .scope generate, "split_data_list[0]" "split_data_list[0]" 4 15, 4 15 0, S_0000023bea077760;
+ .timescale -9 -9;
+P_0000023bea06b4e0 .param/l "i" 0 4 15, +C4<00>;
+S_0000023bea0937c0 .scope generate, "split_data_list_2[0]" "split_data_list_2[0]" 4 16, 4 16 0, S_0000023bea1ed8f0;
+ .timescale -9 -9;
+P_0000023bea06b2e0 .param/l "j" 0 4 16, +C4<00>;
+v0000023bea070aa0_0 .net *"_ivl_0", 0 0, L_0000023bea0d6000;  1 drivers
+S_0000023bea093950 .scope generate, "split_data_list_2[1]" "split_data_list_2[1]" 4 16, 4 16 0, S_0000023bea1ed8f0;
+ .timescale -9 -9;
+P_0000023bea06bee0 .param/l "j" 0 4 16, +C4<01>;
+v0000023bea070f00_0 .net *"_ivl_0", 0 0, L_0000023bea0d75e0;  1 drivers
+S_0000023bea093ae0 .scope module, "not1" "DelayNot" 3 25, 6 1 0, S_0000023bea0775d0;
+ .timescale -9 -9;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /OUTPUT 1 "out";
+P_0000023bea06b5e0 .param/l "delay" 0 6 2, +C4<000000000000000000000001111010100>;
+L_0000023bea06cbe0/d .functor NOT 1, L_0000023bea06ca90, C4<0>, C4<0>, C4<0>;
+L_0000023bea06cbe0 .delay 1 (980,980,980) L_0000023bea06cbe0/d;
+v0000023bea0712c0_0 .net "a", 0 0, L_0000023bea06ca90;  alias, 1 drivers
+v0000023bea070b40_0 .net "out", 0 0, L_0000023bea06cbe0;  alias, 1 drivers
+    .scope S_0000023bea06ffb0;
+T_0 ;
+    %vpi_call 2 18 "$dumpfile", "testbench/clock_tb.vcd" {0 0 0};
+    %vpi_call 2 19 "$dumpvars", 32'sb00000000000000000000000000000000, S_0000023bea06ffb0 {0 0 0};
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000023bea0d7540_0, 0, 1;
+    %delay 5000, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000023bea0d7540_0, 0, 1;
+    %delay 20000, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000023bea0d7540_0, 0, 1;
+    %delay 5000, 0;
+    %vpi_call 2 27 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 8;
+    "N/A";
+    "<interactive>";
+    "testbench/clock_tb.v";
+    "../lib/clock.v";
+    "../lib/mux.v";
+    "../lib/DelayAnd.v";
+    "../lib/DelayNot.v";
+    "../lib/DelayOr.v";

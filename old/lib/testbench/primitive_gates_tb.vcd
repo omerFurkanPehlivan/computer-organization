@@ -1,0 +1,132 @@
+$date
+	Sun Apr 28 02:07:18 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module primitive_gates_tb $end
+$var wire 9 ! out [8:0] $end
+$var reg 1 " a $end
+$var reg 1 # b $end
+$scope module and_gate $end
+$var wire 1 " a $end
+$var wire 1 # b $end
+$var wire 1 $ out $end
+$var parameter 32 % delay $end
+$upscope $end
+$scope module buf_gate $end
+$var wire 1 " a $end
+$var wire 1 & out $end
+$var parameter 32 ' delay $end
+$upscope $end
+$scope module bufif1_gate $end
+$var wire 1 " a $end
+$var wire 1 # en $end
+$var wire 1 ( out $end
+$var parameter 32 ) delay $end
+$upscope $end
+$scope module nand_gate $end
+$var wire 1 " a $end
+$var wire 1 # b $end
+$var wire 1 * out $end
+$var parameter 32 + delay $end
+$upscope $end
+$scope module nor_gate $end
+$var wire 1 " a $end
+$var wire 1 # b $end
+$var wire 1 , out $end
+$var parameter 32 - delay $end
+$upscope $end
+$scope module not_gate $end
+$var wire 1 " a $end
+$var wire 1 . out $end
+$var parameter 32 / delay $end
+$upscope $end
+$scope module or_gate $end
+$var wire 1 " a $end
+$var wire 1 # b $end
+$var wire 1 0 out $end
+$var parameter 32 1 delay $end
+$upscope $end
+$scope module xnor_gate $end
+$var wire 1 " a $end
+$var wire 1 # b $end
+$var wire 1 2 out $end
+$var parameter 32 3 delay $end
+$upscope $end
+$scope module xor_gate $end
+$var wire 1 " a $end
+$var wire 1 # b $end
+$var wire 1 4 out $end
+$var parameter 32 5 delay $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b1010 5
+b1010 3
+b1010 1
+b1010 /
+b1010 -
+b1010 +
+b1010 )
+b1010 '
+b1010 %
+$end
+#0
+$dumpvars
+x4
+x2
+x0
+x.
+x,
+x*
+x(
+x&
+x$
+0#
+0"
+bx !
+$end
+#10
+0&
+1.
+04
+12
+00
+1,
+1*
+0$
+bz01101100 !
+z(
+#20
+1#
+#30
+0,
+10
+02
+14
+b1010110 !
+0(
+#40
+0#
+1"
+#50
+1&
+0.
+bz10010110 !
+z(
+#60
+1#
+#70
+1$
+0*
+12
+04
+b110100011 !
+1(
+#80

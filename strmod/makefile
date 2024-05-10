@@ -6,3 +6,6 @@ endif
 
 all:
 	iverilog -o testbench/$(FILE)_tb.vvp -y . testbench/$(FILE)_tb.v && vvp testbench/$(FILE)_tb.vvp
+
+prep:
+	iverilog -E -o prep/$(FILE).v -y . $(FILE).v
