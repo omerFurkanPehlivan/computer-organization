@@ -16,13 +16,13 @@ module alu #(
 
 
 	// Adder - Subtractor / Carry
-	DelayNot not1 [WIDTH-1:0] (.a(b), .out(b_bar));
+	gates #(.TYPE("NOT")) not1 [WIDTH-1:0] (.a(b), .out(b_bar));
 	mux #(.DATA_WIDTH(WIDTH), .SELECT_BITS(1)) mux1 (
 		.data_list({b_bar, b}),
 		.select(alu_control[0]),
 		.data_out(b_mux)
 	);
-	adder #(.WIDTH(WIDTH)) adder1 (
+	adder #(.TYPE("ADDER"), .WIDTH(WIDTH)) adder1 (
 		.a(a),
 		.b(b_mux),
 		.cin(alu_control[0]),
@@ -31,31 +31,30 @@ module alu #(
 	);
 
 	// AND
-	DelayAnd and1 [WIDTH-1:0] (.a(a), .b(b), .out(and_result));
+	gates #(.TYPE("AND") and1 [WIDTH-1:0] (.a(a), .b(b), .out(and_result));
 
 	// OR
-	DelayOr or1 [WIDTH-1:0] (.a(a), .b(b), .out(or_result));
+	gates #(.TYPE("OR")) or1 [WIDTH-1:0] (.a(a), .b(b), .out(or_result));
 
-	// I'm not sure if this is the correct way to implement the following:
 	// Set If Less Than
 	// Overflow
-	DelayNot not2 (.a(alu_control[1]), .out(alu_control_1_bar));
-	DelayXor xor1 (.a(sum[WIDTH-1]), .b(a[WIDTH-1]), .out(overflow_xor));
+	gates #(.TYPE("NOT")) not2 (.a(alu_control[1]), .out(alu_control_1_bar));
+	gates #(.TYPE("XOR")) xor1 (.a(sum[WIDTH-1]), .b(a[WIDTH-1]), .out(overflow_xor));
 	// 3 input XOR
-	DelayXor xor2 (.a(a[WIDTH-1]), .b(b[WIDTH-1]), .out(overflow_xor_2));
-	DelayXnor xnor1 (.a(overflow_xor_2), .b(alu_control[0]), .out(overflow_3_xnor));
+	gates #(.TYPE("XOR")) xor2 (.a(a[WIDTH-1]), .b(b[WIDTH-1]), .out(overflow_xor_2));
+	gates #(.TYPE("XNOR")) xnor1 (.a(overflow_xor_2), .b(alu_control[0]), .out(overflow_3_xnor));
 	// Overflow
-	n_input_and #(3) and2 (
+	n_input_gates #(.TYPE("AND"), .N(3)) and2 (
 		.a({overflow_3_xnor, overflow_xor, alu_control_1_bar}), 
 		.out(overflow));
 	// Set If Less Than
-	DelayXor xor3 (.a(sum[WIDTH-1]), .b(overflow), .out(set_if_less_than));
+	gates #(.TYPE("XOR")) xor3 (.a(sum[WIDTH-1]), .b(overflow), .out(set_if_less_than));
 	// Extend Set If Less Than
 	
 
 	/*
-	DelayXor xor1 (.a(carry), .b(cn_1), .out(overflow));
-	DelayXor xor2 (.a(overflow), .b(sum[WIDTH-1]), .out(set_if_less_than));
+	gates #(.TYPE("XOR")) xor1 (.a(carry), .b(cn_1), .out(overflow));
+	gates #(.TYPE("XOR")) xor2 (.a(overflow), .b(sum[WIDTH-1]), .out(set_if_less_than));
 	*/
 
 	zero_extender #(.INPUT_WIDTH(1), .OUTPUT_WIDTH(WIDTH)) zero_extender1(
