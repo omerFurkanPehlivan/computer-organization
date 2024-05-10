@@ -31,7 +31,7 @@ module alu #(
 	);
 
 	// AND
-	gates #(.TYPE("AND") and1 [WIDTH-1:0] (.a(a), .b(b), .out(and_result));
+	gates #(.TYPE("AND")) and1 [WIDTH-1:0] (.a(a), .b(b), .out(and_result));
 
 	// OR
 	gates #(.TYPE("OR")) or1 [WIDTH-1:0] (.a(a), .b(b), .out(or_result));
