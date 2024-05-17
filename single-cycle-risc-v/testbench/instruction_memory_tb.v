@@ -2,7 +2,7 @@
 
 module instruction_memory_tb;
   
-  reg [4:0] addr;
+  reg [3:0] addr;
   wire [31:0] data;
 
   localparam DELAY = 2000;

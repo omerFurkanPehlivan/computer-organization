@@ -6,7 +6,7 @@ module priority_encoder_tb;
   parameter OUTPUT_WIDTH = 4;
   localparam INPUT_WIDTH = 1 << OUTPUT_WIDTH;
 
-  localparam DELAY = 2000;
+  localparam DELAY = 100;
 
   // Inputs
   reg [INPUT_WIDTH-1:0] a;

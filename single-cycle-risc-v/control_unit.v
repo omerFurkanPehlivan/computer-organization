@@ -12,8 +12,25 @@ module control_unit (
 	output reg_write
 );
 
-	wire branch, jump, branch_and_jump;
+	wire branch, jump, zero_and_branch;
 	wire [1:0] alu_op;
+
+	// PC Source
+	gates #(
+		.TYPE("AND")
+	) and1 (
+		.a(branch),
+		.b(zero),
+		.out(zero_and_branch)
+	);
+
+	gates #(
+		.TYPE("OR")
+	) or1 (
+		.a(zero_and_branch),
+		.b(jump),
+		.out(pc_src)
+	);
 
 	main_decoder main_decoder1 (
 		.op(op),
@@ -28,7 +45,8 @@ module control_unit (
 	);
 
 	alu_decoder alu_decoder1 (
-		.op5(op[5]),
+		.alu_op(alu_op),
+		.op_5(op[5]),
 		.funct3(funct3),
 		.funct7_5(funct7_5),
 		.alu_control(alu_control)

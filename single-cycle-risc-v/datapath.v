@@ -1,14 +1,15 @@
 `timescale 1ns / 1ns
 
 module datapath;
+	parameter PROGRAM = "test",
+		INSTRUCTION_MEMORY_ADDR_WIDTH = 4,
+		DATA_MEMORY_ADDR_WIDTH = 6;
+
 	localparam DATA_WIDTH = 32,
-		INSTRUCTIN_MEMORY_ADDR_WIDTH = 5,
 		REGISTER_ADDR_WIDTH = 5,
-		DATA_MEMORY_ADDR_WIDTH = 5,
 		CLOCK_PERIOD = 2000, // 2 us / 500 KHz
-		GATE_DELAY = 10; // 10 ns
-	
-	input rst;
+		GATE_DELAY = 10, // 10 ns
+		RESET_PULSE_WIDTH = CLOCK_PERIOD;
 	
 	// Internal Output Signals
 	// PC Next Mux
@@ -44,6 +45,8 @@ module datapath;
 	wire [DATA_WIDTH-1:0] result;
 	// Clock
 	wire clk;
+	// Reset
+	wire rst;
 
 	// Components
 
@@ -59,18 +62,65 @@ module datapath;
 	);
 
 	// Program Counter
-	register_edge #(
+	// Reset Counter
+
+	wire rst_bar, rst_delayed, clk_or_rst;
+	wire [DATA_WIDTH-1:0] pc_next_rst;
+	// Invert the reset signal
+	gates #(
+		.TYPE("NOT")
+	) not1 (
+		.a(rst),
+		.out(rst_bar)
+	);
+
+	// And the data with rst_bar
+	genvar i;
+	for (i = 0; i == 0; i = i + 1) begin : reset_program_counter
+		gates #(
+			.TYPE("AND")
+		) and1 [DATA_WIDTH-1:0] (
+			.a(pc_next),
+			.b(rst_bar),
+			.out(pc_next_rst)
+		);
+	end
+
+	// Delay the reset signal
+	gates #(
+		.TYPE("BUF"),
+		.DELAY(RESET_PULSE_WIDTH/4*3)
+	) rst_delay (
+		.a(rst),
+		.out(rst_delayed)
+	);
+
+	// OR the clock with the reset signal
+	gates #(
+		.TYPE("OR")
+	) or1 (
+		.a(clk),
+		.b(rst_delayed),
+		.out(clk_or_rst)
+	);
+
+	register #(
+		.TRIGGER("EDGE"),
 		.WORD_SIZE(DATA_WIDTH)
 	) program_counter (
-		.data_in(pc_next),
-		.clk(clk),
+		.data_in(pc_next_rst),
+		.clk(clk_or_rst),
+		.enable(1'b1),
 		.data_out(pc)
 	);
 
 	// Instruction Memory
 	// Instruction data need to be changed in instruction_memory.v
-	instruction_memory instruction_memory1 (
-		.addr(pc[INSTRUCTIN_MEMORY_ADDR_WIDTH-1:0]),
+	instruction_memory #(
+		.ADDR_WIDTH(INSTRUCTION_MEMORY_ADDR_WIDTH),
+		.PROGRAM(PROGRAM)
+	) instruction_memory1 (
+		.addr(pc[INSTRUCTION_MEMORY_ADDR_WIDTH+1:2]),
 		.data(instruction)
 	);
 
@@ -90,7 +140,7 @@ module datapath;
 		.op(instruction[6:0]),
 		.funct3(instruction[14:12]),
 		.funct7_5(instruction[30]),
-		.zero(),
+		.zero(zero),
 		.pc_src(pc_src),
 		.result_src(result_src),
 		.mem_write(mem_write),
@@ -105,18 +155,18 @@ module datapath;
 		.WORD_SIZE(DATA_WIDTH),
 		.ADDR_WIDTH(REGISTER_ADDR_WIDTH)
 	) register_file1 (
-		.read_addr1(instruction[19:15]),
-		.read_addr2(instruction[24:20]),
+		.read_addr_1(instruction[19:15]),
+		.read_addr_2(instruction[24:20]),
 		.write_addr(instruction[11:7]),
 		.data_in(result),
 		.clk(clk),
 		.write_enable(reg_write),
-		.read_data1(src_a),
-		.read_data2(write_data)
+		.read_data_1(src_a),
+		.read_data_2(write_data)
 	);
 
 	// Immediate Extender
-	imm_extend_32 imm_extend1_32 (
+	immediate_extender imm_extend (
 		.instr(instruction[31:7]),
 		.imm_src(imm_src),
 		.imm(imm_ext)
@@ -162,7 +212,7 @@ module datapath;
 		.ADDR_WIDTH(DATA_MEMORY_ADDR_WIDTH)
 	) data_memory (
 		.data_in(write_data),
-		.addr(alu_result),
+		.addr(alu_result[DATA_MEMORY_ADDR_WIDTH-1:0]),
 		.clk(clk),
 		.write_enable(mem_write),
 		.data_out(memory_read_data)
@@ -189,6 +239,13 @@ module datapath;
 	) clock1 (
 		.rst(rst),
 		.clk_out(clk)
+	);
+
+	// Reset
+	power_on_reset #(
+		.PULSE_WIDTH(RESET_PULSE_WIDTH)
+	) power_on_reset1 (
+		.reset(rst)
 	);
 
 endmodule

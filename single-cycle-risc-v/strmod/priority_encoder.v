@@ -5,6 +5,7 @@ module priority_encoder #(
 	output [OUTPUT_WIDTH-1:0] out,
 	output valid
 );
+	localparam MUX_DELAY = 20;
 
 	generate
 		if (OUTPUT_WIDTH == 1) begin: pri_encoder_2_to_1
@@ -13,7 +14,11 @@ module priority_encoder #(
 				.b(a[0]),
 				.out(valid)
 			);
-			assign out = a[1];
+
+			gates #(.TYPE("BUF")) buf1 (
+				.a(a[1]),
+				.out(out)
+			);
 		end 
 		else begin: pri_encoder_n_to_1
 			wire valid1, valid2;
@@ -44,9 +49,12 @@ module priority_encoder #(
 				.data_out(out[OUTPUT_WIDTH-2:0])
 			);
 
-			assign out[OUTPUT_WIDTH-1] = valid2;
+			gates #(.TYPE("BUF"), .DELAY(MUX_DELAY)) buf1 (
+				.a(valid2),
+				.out(out[OUTPUT_WIDTH-1])
+			);
 
-			gates #(.TYPE("OR")) or1 (
+			gates #(.TYPE("OR"), .DELAY(MUX_DELAY)) or1 (
 				.a(valid1),
 				.b(valid2),
 				.out(valid)

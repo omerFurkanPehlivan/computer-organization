@@ -9,7 +9,7 @@ module main_decoder (
 	output reg_write,
 	output [1:0] alu_op
 );
-	wire [6:0] op_inv;
+	wire [6:0] op_inv, op_delayed;
 	wire lw, sw, r_type, beq, i_type_alu, jal;
 
 	// Select the operation
@@ -23,6 +23,9 @@ module main_decoder (
 	// Invert the opcode
 	gates #(.TYPE("NOT")) not1 [6:0] (.a(op), .out(op_inv));
 
+	// Delay the opcode
+	gates #(.TYPE("BUF")) buf1 [6:0] (.a(op), .out(op_delayed));
+
 	// Enable lw if opcode is 0000011
 	n_input_gates #(
 		.TYPE("AND"),
@@ -34,8 +37,8 @@ module main_decoder (
 			op_inv[4],
 			op_inv[3],
 			op_inv[2],
-			op[1],
-			op[0]
+			op_delayed[1],
+			op_delayed[0]
 		}),
 		.out(lw)
 	);
@@ -47,12 +50,12 @@ module main_decoder (
 	) and_sw (
 		.a({
 			op_inv[6],
-			op[5],
+			op_delayed[5],
 			op_inv[4],
 			op_inv[3],
 			op_inv[2],
-			op[1],
-			op[0]
+			op_delayed[1],
+			op_delayed[0]
 		}),
 		.out(sw)
 	);
@@ -64,12 +67,12 @@ module main_decoder (
 	) and_r_type (
 		.a({
 			op_inv[6],
-			op[5],
-			op[4],
+			op_delayed[5],
+			op_delayed[4],
 			op_inv[3],
 			op_inv[2],
-			op[1],
-			op[0]
+			op_delayed[1],
+			op_delayed[0]
 		}),
 		.out(r_type)
 	);
@@ -80,13 +83,13 @@ module main_decoder (
 		.N(7)
 	) and_beq (
 		.a({
-			op[6],
-			op[5],
+			op_delayed[6],
+			op_delayed[5],
 			op_inv[4],
 			op_inv[3],
 			op_inv[2],
-			op[1],
-			op[0]
+			op_delayed[1],
+			op_delayed[0]
 		}),
 		.out(beq)
 	);
@@ -99,11 +102,11 @@ module main_decoder (
 		.a({
 			op_inv[6],
 			op_inv[5],
-			op[4],
+			op_delayed[4],
 			op_inv[3],
 			op_inv[2],
-			op[1],
-			op[0]
+			op_delayed[1],
+			op_delayed[0]
 		}),
 		.out(i_type_alu)
 	);
@@ -114,13 +117,13 @@ module main_decoder (
 		.N(7)
 	) and_jal (
 		.a({
-			op[6],
-			op[5],
+			op_delayed[6],
+			op_delayed[5],
 			op_inv[4],
-			op[3],
-			op[2],
-			op[1],
-			op[0]
+			op_delayed[3],
+			op_delayed[2],
+			op_delayed[1],
+			op_delayed[0]
 		}),
 		.out(jal)
 	);	

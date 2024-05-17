@@ -62,6 +62,8 @@ module mux #(
 	input [SELECT_BITS-1:0] select, 
 	output [DATA_WIDTH-1:0] data_out
 );
+	localparam MUX_DELAY_2_TO_1 = 20;
+	localparam MUX_DELAY_N_TO_1 = MUX_DELAY_2_TO_1 * (SELECT_BITS - 1);
 
 	wire [(1 << SELECT_BITS) - 1:0] splitted_data_list [DATA_WIDTH-1:0];
 	generate
@@ -76,7 +78,7 @@ module mux #(
 
 		if (SELECT_BITS > 1) begin: mux_n_to_1
 			for (i = 0; i < DATA_WIDTH; i = i + 1) begin: mux_n_bit
-				wire mux1_out, mux2_out;
+				wire mux1_out, mux2_out, select_delayed;
 				mux #(
 					.SELECT_BITS(SELECT_BITS - 1)
 				) mux1 (
@@ -92,20 +94,25 @@ module mux #(
 					.data_out(mux2_out)
 				);
 
+				gates #(.TYPE("BUF"), .DELAY(MUX_DELAY_N_TO_1)) buf1 (.a(select[SELECT_BITS - 1]), .out(select_delayed));
+
 				mux #(
 					.SELECT_BITS(1)
 				) mux3 (
 					.data_list({mux2_out, mux1_out}),
-					.select(select[SELECT_BITS - 1]),
+					.select(select_delayed),
 					.data_out(data_out[i])
 				);
 			end
 		end 
 		else if (SELECT_BITS == 1) begin: mux_2_to_1
 			wire [DATA_WIDTH-1:0] and1_out, and2_out;
-			wire select_not;
+			wire select_not, select_delayed;
 			for (i = 0; i < DATA_WIDTH; i = i + 1) begin: mux_2_bit
-				gates #(.TYPE("NOT")) not1 (.a(select), .out(select_not));
+				//gates #(.TYPE("BUF")) buf1 (.a(select), .out(select_delayed));
+				//gates #(.TYPE("NOT")) not1 (.a(select), .out(select_not));
+				// a little cheating :)
+				not (select_not, select);
 				gates #(.TYPE("AND")) and1 (.a(splitted_data_list[i][0]), .b(select_not), .out(and1_out[i]));
 				gates #(.TYPE("AND")) and2 (.a(splitted_data_list[i][1]), .b(select), .out(and2_out[i]));
 				gates #(.TYPE("OR")) or1 (.a(and1_out[i]), .b(and2_out[i]), .out(data_out[i]));

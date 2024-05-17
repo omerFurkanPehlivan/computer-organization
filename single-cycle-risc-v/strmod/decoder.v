@@ -10,11 +10,12 @@ module decoder #(
 );
 	generate
 		if (ADDR_WIDTH > 1) begin
-			wire b_bar, en_low, en_high;
-			//wire b = a[ADDR_WIDTH-1];
+			wire b_bar, en_low, en_high, a_n_1_delayed;
+			wire b = a[ADDR_WIDTH-1];
 			gates #(.TYPE("NOT")) not1 (.a(a[ADDR_WIDTH-1]), .out(b_bar));
+			gates #(.TYPE("BUF")) buf1 (.a(a[ADDR_WIDTH-1]), .out(a_n_1_delayed));
 			gates #(.TYPE("AND")) and1 (.a(b_bar), .b(en), .out(en_low));
-			gates #(.TYPE("AND")) and2 (.a(a[ADDR_WIDTH-1]), .b(en), .out(en_high));
+			gates #(.TYPE("AND")) and2 (.a(a_n_1_delayed), .b(en), .out(en_high));
 
 			decoder #(
 				.ADDR_WIDTH(ADDR_WIDTH - 1)
@@ -32,10 +33,11 @@ module decoder #(
 			);
 		end
 		else if (ADDR_WIDTH == 1) begin
-			wire a_bar;
+			wire a_bar, a_delayed;
 			gates #(.TYPE("NOT")) not1 (.a(a), .out(a_bar));
+			gates #(.TYPE("BUF")) buf1 (.a(a), .out(a_delayed));
 			gates #(.TYPE("AND")) and_low (.a(a_bar), .b(en), .out(out[0]));
-			gates #(.TYPE("AND")) and_high (.a(a), .b(en), .out(out[1]));
+			gates #(.TYPE("AND")) and_high (.a(a_delayed), .b(en), .out(out[1]));
 		end else begin
 			invalid_parameter_value error();
 		end

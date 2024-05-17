@@ -53,7 +53,6 @@ module mux_tb;
 			#DELAY;
 		end
 
-		$display("All test cases passed!");
 		$finish;
 	end
 	

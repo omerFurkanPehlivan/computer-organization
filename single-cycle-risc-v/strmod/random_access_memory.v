@@ -47,11 +47,11 @@ module random_access_memory #(
 		.clk(write_enable_clk),
 		.pulse(write_enable_clk_edge)
 	);
-
+	
 	generate
 		genvar i, j;
-		for (i = 0; i < BLOCK_SIZE; i = i + 1) begin: gen_memory
-			// Create a register for each memory word
+		for (i = 0; i < BLOCK_SIZE; i = i + 1) begin
+
 			register #(
 				.TRIGGER("LEVEL"),
 				.WORD_SIZE(DATA_WIDTH)
@@ -62,8 +62,9 @@ module random_access_memory #(
 				.data_out(reg_out[i])
 			);
 
+
 			// Enable the output of the register with select
-			for (j = 0; j < DATA_WIDTH; j = j + 1) begin: gen_memory_enable
+			for (j = 0; j < DATA_WIDTH; j = j + 1) begin
 				gates #(
 					.TYPE("AND")
 				) and1 (
@@ -74,7 +75,7 @@ module random_access_memory #(
 			end
 		end
 
-		for (i = 0; i < DATA_WIDTH; i = i + 1) begin: gen_or
+		for (i = 0; i < DATA_WIDTH; i = i + 1) begin
 			// Create an OR gate for each bit of the output
 			n_input_gates #(
 				.TYPE("OR"),
