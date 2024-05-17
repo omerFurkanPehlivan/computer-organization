@@ -13,7 +13,7 @@ module random_access_memory_tb;
 	reg clk, write_enable;
 	wire [DATA_WIDTH-1:0] data_out;
 	
-	// Instantiate the DUT
+	// Instantiate the ram
 	random_access_memory #(
 		.DATA_WIDTH(DATA_WIDTH),
 		.ADDR_WIDTH(ADDR_WIDTH)

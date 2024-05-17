@@ -1,0 +1,268 @@
+$date
+	Wed May 08 14:19:54 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module latch_tb $end
+$var wire 2 ! qbar [1:0] $end
+$var wire 2 " q [1:0] $end
+$var parameter 32 # WAIT_TIME $end
+$var reg 1 $ r $end
+$var reg 1 % s $end
+$scope module sr_high $end
+$var wire 1 $ r $end
+$var wire 1 % s $end
+$var wire 1 & qbar $end
+$var wire 1 ' q $end
+$var parameter 32 ( ACTIVE $end
+$var parameter 64 ) TYPE $end
+$scope begin genblk2 $end
+$scope module nor1 $end
+$var wire 1 $ a $end
+$var wire 1 ' out $end
+$var wire 1 & b $end
+$var parameter 32 * DELAY $end
+$var parameter 24 + TYPE $end
+$scope begin genblk1 $end
+$upscope $end
+$upscope $end
+$scope module nor2 $end
+$var wire 1 % a $end
+$var wire 1 ' b $end
+$var wire 1 & out $end
+$var parameter 32 , DELAY $end
+$var parameter 24 - TYPE $end
+$scope begin genblk1 $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module sr_low $end
+$var wire 1 $ r $end
+$var wire 1 % s $end
+$var wire 1 . qbar $end
+$var wire 1 / q $end
+$var parameter 24 0 ACTIVE $end
+$var parameter 64 1 TYPE $end
+$scope begin genblk2 $end
+$scope module nand1 $end
+$var wire 1 $ a $end
+$var wire 1 . out $end
+$var wire 1 / b $end
+$var parameter 32 2 DELAY $end
+$var parameter 32 3 TYPE $end
+$scope begin genblk1 $end
+$upscope $end
+$upscope $end
+$scope module nand2 $end
+$var wire 1 % a $end
+$var wire 1 . b $end
+$var wire 1 / out $end
+$var parameter 32 4 DELAY $end
+$var parameter 32 5 TYPE $end
+$scope begin genblk1 $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b1001110010000010100111001000100 5
+b1010 4
+b1001110010000010100111001000100 3
+b1010 2
+b101001101010010010111110100110001000001010101000100001101001000 1
+b10011000100111101010111 0
+b10011100100111101010010 -
+b1010 ,
+b10011100100111101010010 +
+b1010 *
+b101001101010010010111110100110001000001010101000100001101001000 )
+b1001000010010010100011101001000 (
+b1100100 #
+$end
+#0
+$dumpvars
+x/
+x.
+x'
+x&
+0%
+0$
+bx "
+bx !
+$end
+#10
+b1x "
+1/
+b1x !
+1.
+#100
+1%
+#110
+b10 !
+0&
+b0x "
+0/
+#120
+b1 "
+1'
+#200
+0%
+#210
+b11 "
+1/
+#300
+1$
+#310
+b10 "
+0'
+b0 !
+0.
+#320
+b1 !
+1&
+#400
+0$
+#410
+b11 !
+1.
+#500
+1$
+1%
+#510
+0.
+b0 !
+0&
+b0 "
+0/
+#520
+b10 "
+1/
+b10 !
+1.
+#530
+b0 !
+0.
+b0 "
+0/
+#540
+b10 "
+1/
+b10 !
+1.
+#550
+b0 !
+0.
+b0 "
+0/
+#560
+b10 "
+1/
+b10 !
+1.
+#570
+b0 !
+0.
+b0 "
+0/
+#580
+b10 "
+1/
+b10 !
+1.
+#590
+b0 !
+0.
+b0 "
+0/
+#600
+b10 "
+1/
+b10 !
+1.
+0%
+#610
+0.
+b1 !
+1&
+#700
+1%
+#710
+b0 !
+0&
+#800
+0$
+#810
+b11 "
+1'
+b10 !
+1.
+#820
+b1 "
+0/
+#900
+1$
+#910
+b0 "
+0'
+#1000
+0$
+0%
+#1010
+1'
+b11 !
+1&
+b11 "
+1/
+#1020
+b10 !
+0&
+b10 "
+0'
+#1030
+b11 "
+1'
+b11 !
+1&
+#1040
+b10 !
+0&
+b10 "
+0'
+#1050
+b11 "
+1'
+b11 !
+1&
+#1060
+b10 !
+0&
+b10 "
+0'
+#1070
+b11 "
+1'
+b11 !
+1&
+#1080
+b10 !
+0&
+b10 "
+0'
+#1090
+b11 "
+1'
+b11 !
+1&
+#1100
+b10 !
+0&
+b10 "
+0'
