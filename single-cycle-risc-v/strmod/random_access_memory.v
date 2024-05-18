@@ -14,7 +14,7 @@ module random_access_memory #(
 	end
 
 	wire [BLOCK_SIZE-1:0] select;
-	wire write_enable_clk,
+	wire clk_edge,
 		write_enable_clk_edge;
 	wire [DATA_WIDTH-1:0] reg_out [BLOCK_SIZE-1:0];
 	// It is reversed because of the way the memory 
@@ -30,22 +30,22 @@ module random_access_memory #(
 		.out(select)
 	);
 
+	// Detect the rising edge of the clock
+	edge_detector #(
+		.TYPE("RISING"),
+		.ACTIVE("HIGH")
+	) rising_edge_detector1 (
+		.clk(clk),
+		.pulse(clk_edge)
+	);
+
 	// AND Write enable and clock to get the write enable for the memory
 	gates #(
 		.TYPE("AND")
 	) and1 (
 		.a(write_enable),
-		.b(clk),
-		.out(write_enable_clk)
-	);
-
-	// Detect the rising edge of the write enable clock
-	edge_detector #(
-		.TYPE("RISING"),
-		.ACTIVE("HIGH")
-	) rising_edge_detector1 (
-		.clk(write_enable_clk),
-		.pulse(write_enable_clk_edge)
+		.b(clk_edge),
+		.out(write_enable_clk_edge)
 	);
 	
 	generate

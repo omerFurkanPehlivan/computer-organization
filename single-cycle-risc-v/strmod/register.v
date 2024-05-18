@@ -37,21 +37,24 @@ module register #(
 					);
 				end
 				"EDGE": begin
-					wire enable_clock;
-					gates #(
-						.TYPE("AND")
-					) and1 (
-						.a(enable),
-						.b(clk),
-						.out(enable_clock)
-					);
+					wire clock_edge;
 
+					// First take the rising edge of the clock signal
 					edge_detector #(
 						.TYPE("RISING"),
 						.ACTIVE("HIGH")
 					) rising_edge_detector1 (
-						.clk(enable_clock),
-						.pulse(enable_inner)
+						.clk(clk),
+						.pulse(clock_edge)
+					);
+
+					// Then mask the rising edge with the enable signal
+					gates #(
+						.TYPE("AND")
+					) and1 (
+						.a(enable),
+						.b(clock_edge),
+						.out(enable_inner)
 					);
 				end
 				default: begin
