@@ -1,2 +1,0 @@
-Q1/lib/primitive_gates.v
-Q1/lib/flip_flop.v
