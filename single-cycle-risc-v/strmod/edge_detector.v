@@ -25,12 +25,15 @@ module edge_detector #(
 	output pulse
 );
 	// Declare the internal wires
-	wire net1, net2, net3;
+	wire /*net1, net2,*/ net3;
 
 	// Add delay elements to generate the edge detection logic
-	gates #(.TYPE("NOT")) not1 (.a(clk), .out(net1));
+	/*gates #(.TYPE("NOT")) not1 (.a(clk), .out(net1));
 	gates #(.TYPE("NOT")) not2 (.a(net1), .out(net2));
-	gates #(.TYPE("NOT")) not3 (.a(net2), .out(net3));
+	gates #(.TYPE("NOT")) not3 (.a(net2), .out(net3));*/
+	
+	// Pulse width = 1 delay of not gate (10ns)
+	gates #(.TYPE("NOT")) not3 (.a(clk), .out(net3));
 
 	// Generate the edge detection logic based on the specified TYPE
 	generate
