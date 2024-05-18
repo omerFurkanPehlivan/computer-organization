@@ -1,19 +1,22 @@
 module instruction_memory #(
 	parameter ADDR_WIDTH = 4,
-	parameter PROGRAM = "test"
+	parameter PROGRAM = ""
 )(
 	input [ADDR_WIDTH-1:0] addr,
 	output [31:0] data
 );
 	localparam DATA_WIDTH = 32;
-	localparam INSTRUCTIONS = 89;
+	localparam INSTRUCTIONS = (PROGRAM == "test") ? 15 : (PROGRAM == "sorter") ? 89 : 0;
 	wire [INSTRUCTIONS*DATA_WIDTH-1:0] data_list;
+
+	if (INSTRUCTIONS == 0) begin
+		// Throw an error for invalid configuration
+		no_such_program_defined error();
+	end
 
 	generate
 		case (PROGRAM)
-			/*"test": begin
-				localparam INSTRUCTIONS = 15;
-				wire [INSTRUCTIONS*DATA_WIDTH-1:0] data_list;
+			"test": begin
 				assign data_list = {
 					32'h00007013,	// andi x0, x0, 0
 					32'h00002023,	// sw x0, 0(x0)
@@ -31,12 +34,13 @@ module instruction_memory #(
 					32'h00a3f493,	// andi x9, x7, 10
 					32'hfe410ae3	//target1: beq x2, x4, target2
 				};
-			end*/
+			end
 			"sorter" : begin
 				assign data_list = {
-					32'h00007013,
-					32'h00300093,
-					32'h00102023,
+					32'h00007013,	// andi x0, x0, 0
+					// Initialize the array
+					32'h00300093,	// addi x1, x0, 3
+					32'h00102023,	// sw x0, 0(x1)
 					32'h00700093,
 					32'h001020a3,
 					32'h00200093,
@@ -67,7 +71,8 @@ module instruction_memory #(
 					32'h00102723,
 					32'h0c800093,
 					32'h001027a3,
-					32'h3e900093,
+					32'h7d000093,
+					32'h51408093,
 					32'h00102823,
 					32'h0fa00093,
 					32'h001028a3,
@@ -115,14 +120,16 @@ module instruction_memory #(
 					32'h02102323,
 					32'h00700093,
 					32'h021023a3,
-					32'h0000f093,
-					32'h01408293,
-					32'h0000a103,
-					32'h0140a183,
-					32'h0221a423,
-					32'h00108093,
-					32'h00508463,
-					32'hfedff26f
+					// Sort the array
+					32'h0000f093,	// andi x1, x0, 0
+					32'h01408293,	// addi x5, x1, 20
+					32'h0000a103,	// loop: lw x2, 0(x1)
+					32'h0140a183,	// lw x3, 20(x1)
+					32'h0221a423,	// sw x2, 40(x3)
+					32'h00108093,	// addi x1, x1, 1
+					32'h00508463,	// beq x1, x5, break
+					32'hfedff26f	// jal x4, loop
+									// break:
 				};
 			end
 			default : no_program_selected error();

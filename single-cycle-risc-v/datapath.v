@@ -1,7 +1,7 @@
 `timescale 1ns / 1ns
 
 module datapath;
-	parameter PROGRAM = "test",
+	parameter PROGRAM = "",
 		INSTRUCTION_MEMORY_ADDR_WIDTH = 4,
 		DATA_MEMORY_ADDR_WIDTH = 6;
 
