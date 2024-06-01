@@ -1,5 +1,5 @@
 module mux #(
-	parameter WIDTH = 8
+	parameter WIDTH = 8,
 	parameter SEL_WIDTH = 1
 ) (
 	input [WIDTH*(1<<SEL_WIDTH)-1:0] data_list,

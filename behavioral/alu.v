@@ -1,15 +1,14 @@
 module alu (
 	input [31:0] a, b,
 	input [2:0] alu_control,
-	output [31:0] result
-	output cout, zero
-
+	output reg [31:0] result,
+	output reg cout, zero
 );
 	always @(*) begin
 		cout = 0;
-		case (alu_op)
-			3'b000: {cout, result} = a + b + cin;
-			3'b001: {cout, result} = a + (~b) + cin;
+		case (alu_control)
+			3'b000: {cout, result} = a + b + alu_control[0];
+			3'b001: {cout, result} = a + (~b) + alu_control[0];
 			3'b010: result = a & b;
 			3'b011: result = a | b;
 			3'b101: result = (a < b);
@@ -17,3 +16,4 @@ module alu (
 		endcase
 		zero = (result == 32'h0);
 	end
+endmodule

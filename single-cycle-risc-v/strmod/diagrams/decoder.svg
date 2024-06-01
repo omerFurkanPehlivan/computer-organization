@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:s="https://github.com/nturley/netlistsvg" width="524" height="165">
+  <style>svg {
+    stroke:#000;
+    fill:none;
+  }
+  text {
+    fill:#000;
+    stroke:none;
+    font-size:10px;
+    font-weight: bold;
+    font-family: "Courier New", monospace;
+  }
+  .nodelabel {
+    text-anchor: middle;
+  }
+  .inputPortLabel {
+    text-anchor: end;
+  }
+  .splitjoinBody {
+    fill:#000;
+  }</style>
+  <g s:type="not" transform="translate(124,35)" s:width="30" s:height="20" id="cell_$auto$simplemap.cc:38:simplemap_not$86">
+    <s:alias val="$_NOT_"/>
+    <s:alias val="$not"/>
+    <s:alias val="$logic_not"/>
+    <path d="M0,0 L0,20 L20,10 Z" class="cell_$auto$simplemap.cc:38:simplemap_not$86"/>
+    <circle cx="23" cy="10" r="3" class="cell_$auto$simplemap.cc:38:simplemap_not$86"/>
+    <g s:x="0" s:y="10" s:pid="A"/>
+    <g s:x="25" s:y="10" s:pid="Y"/>
+  </g>
+  <g s:type="and" transform="translate(189,40)" s:width="30" s:height="25" id="cell_$auto$simplemap.cc:75:simplemap_bitop$84">
+    <s:alias val="$and"/>
+    <s:alias val="$logic_and"/>
+    <s:alias val="$_AND_"/>
+    <path d="M0,0 L0,25 L15,25 A15 12.5 0 0 0 15,0 Z" class="cell_$auto$simplemap.cc:75:simplemap_bitop$84"/>
+    <g s:x="0" s:y="5" s:pid="A"/>
+    <g s:x="0" s:y="20" s:pid="B"/>
+    <g s:x="30" s:y="12.5" s:pid="Y"/>
+  </g>
+  <g s:type="and" transform="translate(189,128)" s:width="30" s:height="25" id="cell_$auto$simplemap.cc:75:simplemap_bitop$85">
+    <s:alias val="$and"/>
+    <s:alias val="$logic_and"/>
+    <s:alias val="$_AND_"/>
+    <path d="M0,0 L0,25 L15,25 A15 12.5 0 0 0 15,0 Z" class="cell_$auto$simplemap.cc:75:simplemap_bitop$85"/>
+    <g s:x="0" s:y="5" s:pid="A"/>
+    <g s:x="0" s:y="20" s:pid="B"/>
+    <g s:x="30" s:y="12.5" s:pid="Y"/>
+  </g>
+  <g s:type="generic" transform="translate(267,110)" s:width="30" s:height="40" id="cell_genblk1.decoder_high">
+    <text x="15" y="-4" class="nodelabel cell_genblk1.decoder_high" s:attribute="ref">decoder(N-1)</text>
+    <rect width="30" height="40" s:generic="body" class="cell_genblk1.decoder_high"/>
+    <g transform="translate(0,10)" s:x="0" s:y="10" s:pid="in0" id="port_genblk1.decoder_high~a">
+      <text x="-3" y="-4" class="inputPortLabel cell_genblk1.decoder_high">a</text>
+    </g>
+    <g transform="translate(0,30)" s:x="0" s:y="10" s:pid="in0" id="port_genblk1.decoder_high~en">
+      <text x="-3" y="-4" class="inputPortLabel cell_genblk1.decoder_high">en</text>
+    </g>
+    <g transform="translate(30,10)" s:x="30" s:y="10" s:pid="out0" id="port_genblk1.decoder_high~out">
+      <text x="5" y="-4" style="fill:#000; stroke:none" class="cell_genblk1.decoder_high">out</text>
+    </g>
+  </g>
+  <g s:type="generic" transform="translate(273,22)" s:width="30" s:height="40" id="cell_genblk1.decoder_low">
+    <text x="15" y="-4" class="nodelabel cell_genblk1.decoder_low" s:attribute="ref">decoder(N-1)</text>
+    <rect width="30" height="40" s:generic="body" class="cell_genblk1.decoder_low"/>
+    <g transform="translate(0,10)" s:x="0" s:y="10" s:pid="in0" id="port_genblk1.decoder_low~a">
+      <text x="-3" y="-4" class="inputPortLabel cell_genblk1.decoder_low">a</text>
+    </g>
+    <g transform="translate(0,30)" s:x="0" s:y="10" s:pid="in0" id="port_genblk1.decoder_low~en">
+      <text x="-3" y="-4" class="inputPortLabel cell_genblk1.decoder_low">en</text>
+    </g>
+    <g transform="translate(30,10)" s:x="30" s:y="10" s:pid="out0" id="port_genblk1.decoder_low~out">
+      <text x="5" y="-4" style="fill:#000; stroke:none" class="cell_genblk1.decoder_low">out</text>
+    </g>
+  </g>
+  <g s:type="inputExt" transform="translate(12,62)" s:width="30" s:height="20" id="cell_a">
+    <text x="15" y="-4" class="nodelabel cell_a" s:attribute="ref">a</text>
+    <s:alias val="$_inputExt_"/>
+    <path d="M0,0 L0,20 L15,20 L30,10 L15,0 Z" class="cell_a"/>
+    <g s:x="28" s:y="10" s:pid="Y"/>
+  </g>
+  <g s:type="inputExt" transform="translate(12,138)" s:width="30" s:height="20" id="cell_en">
+    <text x="15" y="-4" class="nodelabel cell_en" s:attribute="ref">en</text>
+    <s:alias val="$_inputExt_"/>
+    <path d="M0,0 L0,20 L15,20 L30,10 L15,0 Z" class="cell_en"/>
+    <g s:x="28" s:y="10" s:pid="Y"/>
+  </g>
+  <g s:type="outputExt" transform="translate(482,100.5)" s:width="30" s:height="20" id="cell_out">
+    <text x="15" y="-4" class="nodelabel cell_out" s:attribute="ref">out</text>
+    <s:alias val="$_outputExt_"/>
+    <path d="M30,0 L30,20 L15,20 L0,10 L15,0 Z" class="cell_out"/>
+    <g s:x="0" s:y="10" s:pid="A"/>
+  </g>
+  <g s:type="join" transform="translate(441,90)" s:width="4" s:height="40" id="cell_$join$,5,6,7,8,">
+    <rect width="5" height="40" class="splitjoinBody" s:generic="body"/>
+    <s:alias val="$_join_"/>
+    <g s:x="5" s:y="20" s:pid="out"/>
+    <g transform="translate(0,10)" s:x="0" s:y="10" s:pid="in0">
+      <text x="-3" y="-4" class="inputPortLabel">2<tspan style="baseline-shift: super; font-size: smaller;">N-1</tspan>-1:0</text>
+    </g>
+    <g transform="translate(0,30)" s:x="0" s:y="10" s:pid="in0">
+      <text x="-3" y="-4" class="inputPortLabel">2<tspan style="baseline-shift: super; font-size: smaller;">N</tspan>-1:2<tspan style="baseline-shift: super; font-size: smaller;">N-1</tspan></text>
+    </g>
+  </g>
+  <g s:type="split" transform="translate(77,51.5)" s:width="5" s:height="40" id="cell_$split$,2,3,">
+    <rect width="5" height="40" class="splitjoinBody" s:generic="body"/>
+    <s:alias val="$_split_"/>
+    <g s:x="0" s:y="20" s:pid="in"/>
+    <g transform="translate(4,10)" s:x="4" s:y="10" s:pid="out0">
+      <text x="5" y="-4">N-1</text>
+    </g>
+    <g transform="translate(4,30)" s:x="4" s:y="10" s:pid="out0">
+      <text x="5" y="-4">N-2:0</text>
+    </g>
+  </g>
+  <line x1="82" x2="109" y1="62" y2="62" class="net_3"/>
+  <line x1="109" x2="109" y1="62" y2="45" class="net_3"/>
+  <circle cx="109" cy="62" r="2" style="fill:#000" class="net_3"/>
+  <line x1="109" x2="124" y1="45" y2="45" class="net_3"/>
+  <line x1="82" x2="139" y1="62" y2="62" class="net_3"/>
+  <line x1="139" x2="139" y1="62" y2="133" class="net_3"/>
+  <line x1="139" x2="189" y1="133" y2="133" class="net_3"/>
+  <line x1="149" x2="189" y1="45" y2="45" class="net_9"/>
+  <line x1="164" x2="164" y1="113" y2="60" class="net_4"/>
+  <circle cx="164" cy="148" r="2" style="fill:#000" class="net_4"/>
+  <line x1="164" x2="189" y1="60" y2="60" class="net_4"/>
+  <line x1="40" x2="164" y1="148" y2="148" class="net_4"/>
+  <line x1="164" x2="164" y1="113" y2="148" class="net_4"/>
+  <line x1="164" x2="189" y1="148" y2="148" class="net_4"/>
+  <line x1="82" x2="229" y1="82" y2="82" class="net_2" stroke-width="2"/>
+  <line x1="229" x2="229" y1="82" y2="120.5" class="net_2" stroke-width="2"/>
+  <line x1="229" x2="267" y1="120.5" y2="120.5" class="net_2" stroke-width="2"/>
+  <line x1="82" x2="99" y1="82" y2="82" class="net_2"/>
+  <line x1="249" x2="249" y1="82" y2="32.5" class="net_2" stroke-width="2"/>
+  <line x1="229" x2="249" y1="82" y2="82" class="net_2" stroke-width="2"/>
+  <circle cx="229" cy="82" r="2" style="fill:#000" class="net_2"/>
+  <line x1="249" x2="273" y1="32.5" y2="32.5" class="net_2" stroke-width="2"/>
+  <line x1="219" x2="267" y1="140.5" y2="140.5" class="net_11"/>
+  <line x1="219" x2="273" y1="52.5" y2="52.5" class="net_10"/>
+  <line x1="447" x2="482" y1="110.5" y2="110.5" class="net_5,6,7,8" stroke-width="2"/>
+  <line x1="304" x2="377" y1="32.5" y2="32.5" class="net_5,6" stroke-width="2"/>
+  <line x1="377" x2="377" y1="32.5" y2="100.5" class="net_5,6" stroke-width="2"/>
+  <line x1="377" x2="441" y1="100.5" y2="100.5" class="net_5,6" stroke-width="2"/>
+  <line x1="298" x2="441" y1="120.5" y2="120.5" class="net_7,8" stroke-width="2"/>
+  <line x1="40" x2="77" y1="72" y2="72" class="net_2,3" stroke-width="2"/>
+</svg>

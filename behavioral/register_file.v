@@ -3,8 +3,8 @@ module register_file (
 	input [31:0] data_in,
 	input clk,
 	input write_enable,
-	output [31:0] data_out1, data_out2;
-)
+	output [31:0] data_out1, data_out2
+);
 	reg [31:0] registers [31:0];
 
 	always @(posedge clk) begin

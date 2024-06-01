@@ -1,0 +1,1388 @@
+$date
+	Sat Jun 01 17:52:16 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module datapath_tb $end
+$var parameter 32 ! CLOCK_PERIOD $end
+$scope module dut $end
+$var wire 32 " pc_next [31:0] $end
+$var wire 32 # result [31:0] $end
+$var wire 32 $ src_b [31:0] $end
+$var wire 1 % zero $end
+$var wire 32 & write_data [31:0] $end
+$var wire 32 ' src_a [31:0] $end
+$var wire 1 ( rst $end
+$var wire 2 ) result_src [1:0] $end
+$var wire 1 * reg_write $end
+$var wire 32 + read_data [31:0] $end
+$var wire 32 , pc_target [31:0] $end
+$var wire 1 - pc_src $end
+$var wire 32 . pc_plus_4 [31:0] $end
+$var wire 32 / pc [31:0] $end
+$var wire 1 0 mem_write $end
+$var wire 32 1 instruction [31:0] $end
+$var wire 2 2 imm_src [1:0] $end
+$var wire 32 3 imm_ext [31:0] $end
+$var wire 1 4 alu_src $end
+$var wire 32 5 alu_result [31:0] $end
+$var wire 3 6 alu_control [2:0] $end
+$var parameter 32 7 CLOCK_PERIOD $end
+$var reg 1 8 clk $end
+$var reg 32 9 pc_next_rst [31:0] $end
+$scope module adder_pc_plus_4 $end
+$var wire 32 : b [31:0] $end
+$var wire 1 ; cin $end
+$var wire 32 < sum [31:0] $end
+$var wire 1 = cout $end
+$var wire 32 > a [31:0] $end
+$var parameter 32 ? WIDTH $end
+$upscope $end
+$scope module adder_pc_target $end
+$var wire 1 @ cin $end
+$var wire 32 A sum [31:0] $end
+$var wire 1 B cout $end
+$var wire 32 C b [31:0] $end
+$var wire 32 D a [31:0] $end
+$var parameter 32 E WIDTH $end
+$upscope $end
+$scope module alu1 $end
+$var wire 32 F b [31:0] $end
+$var wire 3 G alu_control [2:0] $end
+$var wire 32 H a [31:0] $end
+$var reg 1 I cout $end
+$var reg 32 J result [31:0] $end
+$var reg 1 % zero $end
+$upscope $end
+$scope module control_unit1 $end
+$var wire 2 K alu_op [1:0] $end
+$var wire 3 L funct3 [2:0] $end
+$var wire 1 M funct7_5 $end
+$var wire 7 N op [6:0] $end
+$var wire 1 % zero $end
+$var wire 2 O result_src [1:0] $end
+$var wire 1 * reg_write $end
+$var wire 1 0 mem_write $end
+$var wire 1 P jump $end
+$var wire 2 Q imm_src [1:0] $end
+$var wire 1 R branch $end
+$var wire 1 4 alu_src $end
+$var wire 3 S alu_control [2:0] $end
+$var reg 1 - pc_src $end
+$scope module alu_decoder $end
+$var wire 3 T funct3 [2:0] $end
+$var wire 1 M funct7_5 $end
+$var wire 1 U op_5 $end
+$var reg 3 V alu_control [2:0] $end
+$var reg 2 W alu_op [1:0] $end
+$upscope $end
+$scope module main_decoder $end
+$var wire 7 X op [6:0] $end
+$var wire 1 % zero $end
+$var reg 2 Y alu_op [1:0] $end
+$var reg 1 4 alu_src $end
+$var reg 1 R branch $end
+$var reg 2 Z imm_src [1:0] $end
+$var reg 1 P jump $end
+$var reg 1 0 mem_write $end
+$var reg 1 * reg_write $end
+$var reg 2 [ result_src [1:0] $end
+$upscope $end
+$upscope $end
+$scope module data_memory1 $end
+$var wire 32 \ address [31:0] $end
+$var wire 1 8 clk $end
+$var wire 32 ] read_data [31:0] $end
+$var wire 1 0 write_enable $end
+$var wire 32 ^ write_data [31:0] $end
+$upscope $end
+$scope module immediate_extender1 $end
+$var wire 2 _ imm_src [1:0] $end
+$var wire 25 ` instr [31:7] $end
+$var reg 32 a imm [31:0] $end
+$upscope $end
+$scope module instruction_memory $end
+$var wire 16 b addr [15:0] $end
+$var wire 1 8 clk $end
+$var wire 1 ( rst $end
+$var parameter 32 c ADDR_WIDTH $end
+$var parameter 32 d WIDTH $end
+$var reg 32 e data_out [31:0] $end
+$upscope $end
+$scope module mux_pc_next $end
+$var wire 64 f data_list [63:0] $end
+$var wire 32 g data_out [31:0] $end
+$var wire 1 - sel $end
+$var parameter 32 h SEL_WIDTH $end
+$var parameter 32 i WIDTH $end
+$scope begin mux_gen[0] $end
+$var parameter 2 j i $end
+$upscope $end
+$scope begin mux_gen[1] $end
+$var parameter 2 k i $end
+$upscope $end
+$upscope $end
+$scope module mux_result $end
+$var wire 128 l data_list [127:0] $end
+$var wire 32 m data_out [31:0] $end
+$var wire 2 n sel [1:0] $end
+$var parameter 32 o SEL_WIDTH $end
+$var parameter 32 p WIDTH $end
+$scope begin mux_gen[0] $end
+$var parameter 2 q i $end
+$upscope $end
+$scope begin mux_gen[1] $end
+$var parameter 2 r i $end
+$upscope $end
+$scope begin mux_gen[2] $end
+$var parameter 3 s i $end
+$upscope $end
+$scope begin mux_gen[3] $end
+$var parameter 3 t i $end
+$upscope $end
+$upscope $end
+$scope module mux_src_b $end
+$var wire 64 u data_list [63:0] $end
+$var wire 32 v data_out [31:0] $end
+$var wire 1 4 sel $end
+$var parameter 32 w SEL_WIDTH $end
+$var parameter 32 x WIDTH $end
+$scope begin mux_gen[0] $end
+$var parameter 2 y i $end
+$upscope $end
+$scope begin mux_gen[1] $end
+$var parameter 2 z i $end
+$upscope $end
+$upscope $end
+$scope module power_on_reset1 $end
+$var parameter 32 { PULSE_WIDTH $end
+$var reg 1 ( reset $end
+$upscope $end
+$scope module reg_pc $end
+$var wire 1 8 clk $end
+$var wire 32 | data_in [31:0] $end
+$var wire 1 ( rst $end
+$var parameter 32 } WIDTH $end
+$var reg 32 ~ data_out [31:0] $end
+$upscope $end
+$scope module register_file1 $end
+$var wire 5 !" addr1 [4:0] $end
+$var wire 5 "" addr2 [4:0] $end
+$var wire 5 #" addr3 [4:0] $end
+$var wire 1 8 clk $end
+$var wire 32 $" data_in [31:0] $end
+$var wire 32 %" data_out1 [31:0] $end
+$var wire 32 &" data_out2 [31:0] $end
+$var wire 1 * write_enable $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b100000 }
+b10100 {
+b1 z
+b0 y
+b100000 x
+b1 w
+b11 t
+b10 s
+b1 r
+b0 q
+b100000 p
+b10 o
+b1 k
+b0 j
+b100000 i
+b1 h
+b100000 d
+b10000 c
+b100000 E
+b100000 ?
+b1010 7
+b1010 !
+$end
+#0
+$dumpvars
+bx &"
+bx %"
+bx $"
+bx #"
+bx ""
+bx !"
+bx ~
+bx |
+bx v
+bx u
+bx n
+bx m
+bx l
+bx g
+bx f
+bx e
+bx b
+bx a
+bx `
+bx _
+bx ^
+bx ]
+bx \
+bx [
+bx Z
+bx Y
+bx X
+bx W
+bx V
+xU
+bx T
+bx S
+xR
+bx Q
+xP
+bx O
+bx N
+xM
+bx L
+bx K
+bx J
+xI
+bx H
+bx G
+bx F
+bx D
+bx C
+xB
+bx A
+0@
+bx >
+x=
+bx <
+0;
+b100 :
+bx 9
+08
+bx 6
+bx 5
+x4
+bx 3
+bx 2
+bx 1
+x0
+bx /
+bx .
+x-
+bx ,
+bx +
+x*
+bx )
+0(
+bx '
+bx &
+x%
+bx $
+bx #
+bx "
+$end
+#5
+18
+#10
+08
+#15
+18
+#20
+0U
+bx00000000000000000000000000000100xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx l
+bx00000000000000000000000000000100 f
+b100 .
+b100 <
+0=
+b0 b
+b0 `
+b0 #"
+b0 ""
+b0 !"
+0M
+b0 L
+b0 T
+b0 N
+b0 X
+b0 /
+b0 >
+b0 D
+b0 ~
+b0 1
+b0 e
+08
+1(
+#25
+18
+#30
+b0 9
+b0 |
+08
+#35
+18
+#40
+08
+0(
+#45
+b100 f
+b0 ,
+b0 A
+0B
+0-
+b0xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx u
+b0 3
+b0 C
+b0 a
+0P
+b10 Y
+0R
+b0 )
+b0 O
+b0 [
+b0 n
+00
+14
+b0 2
+b0 Q
+b0 Z
+b0 _
+1*
+b11100000 `
+b111 L
+b111 T
+b10011 N
+b10011 X
+b111000000010011 1
+b111000000010011 e
+18
+#50
+bx 9
+bx |
+08
+#55
+bx ,
+bx A
+xB
+bx l
+bx f
+bx .
+bx <
+x=
+bx b
+bx /
+bx >
+bx D
+bx ~
+18
+#60
+08
+#65
+x-
+xU
+xP
+bx Y
+xR
+bx )
+bx O
+bx [
+bx n
+x0
+x4
+bx 2
+bx Q
+bx Z
+bx _
+x*
+bx `
+bx #"
+bx ""
+bx !"
+xM
+bx L
+bx T
+bx N
+bx X
+bx 1
+bx e
+18
+#70
+08
+#75
+18
+#80
+08
+#85
+18
+#90
+08
+#95
+18
+#100
+08
+#105
+18
+#110
+08
+#115
+18
+#120
+08
+#125
+18
+#130
+08
+#135
+18
+#140
+08
+#145
+18
+#150
+08
+#155
+18
+#160
+08
+#165
+18
+#170
+08
+#175
+18
+#180
+08
+#185
+18
+#190
+08
+#195
+18
+#200
+08
+#205
+18
+#210
+08
+#215
+18
+#220
+08
+#225
+18
+#230
+08
+#235
+18
+#240
+08
+#245
+18
+#250
+08
+#255
+18
+#260
+08
+#265
+18
+#270
+08
+#275
+18
+#280
+08
+#285
+18
+#290
+08
+#295
+18
+#300
+08
+#305
+18
+#310
+08
+#315
+18
+#320
+08
+#325
+18
+#330
+08
+#335
+18
+#340
+08
+#345
+18
+#350
+08
+#355
+18
+#360
+08
+#365
+18
+#370
+08
+#375
+18
+#380
+08
+#385
+18
+#390
+08
+#395
+18
+#400
+08
+#405
+18
+#410
+08
+#415
+18
+#420
+08
+#425
+18
+#430
+08
+#435
+18
+#440
+08
+#445
+18
+#450
+08
+#455
+18
+#460
+08
+#465
+18
+#470
+08
+#475
+18
+#480
+08
+#485
+18
+#490
+08
+#495
+18
+#500
+08
+#505
+18
+#510
+08
+#515
+18
+#520
+08
+#525
+18
+#530
+08
+#535
+18
+#540
+08
+#545
+18
+#550
+08
+#555
+18
+#560
+08
+#565
+18
+#570
+08
+#575
+18
+#580
+08
+#585
+18
+#590
+08
+#595
+18
+#600
+08
+#605
+18
+#610
+08
+#615
+18
+#620
+08
+#625
+18
+#630
+08
+#635
+18
+#640
+08
+#645
+18
+#650
+08
+#655
+18
+#660
+08
+#665
+18
+#670
+08
+#675
+18
+#680
+08
+#685
+18
+#690
+08
+#695
+18
+#700
+08
+#705
+18
+#710
+08
+#715
+18
+#720
+08
+#725
+18
+#730
+08
+#735
+18
+#740
+08
+#745
+18
+#750
+08
+#755
+18
+#760
+08
+#765
+18
+#770
+08
+#775
+18
+#780
+08
+#785
+18
+#790
+08
+#795
+18
+#800
+08
+#805
+18
+#810
+08
+#815
+18
+#820
+08
+#825
+18
+#830
+08
+#835
+18
+#840
+08
+#845
+18
+#850
+08
+#855
+18
+#860
+08
+#865
+18
+#870
+08
+#875
+18
+#880
+08
+#885
+18
+#890
+08
+#895
+18
+#900
+08
+#905
+18
+#910
+08
+#915
+18
+#920
+08
+#925
+18
+#930
+08
+#935
+18
+#940
+08
+#945
+18
+#950
+08
+#955
+18
+#960
+08
+#965
+18
+#970
+08
+#975
+18
+#980
+08
+#985
+18
+#990
+08
+#995
+18
+#1000
+08
+#1005
+18
+#1010
+08
+#1015
+18
+#1020
+08
+#1025
+18
+#1030
+08
+#1035
+18
+#1040
+08
+#1045
+18
+#1050
+08
+#1055
+18
+#1060
+08
+#1065
+18
+#1070
+08
+#1075
+18
+#1080
+08
+#1085
+18
+#1090
+08
+#1095
+18
+#1100
+08
+#1105
+18
+#1110
+08
+#1115
+18
+#1120
+08
+#1125
+18
+#1130
+08
+#1135
+18
+#1140
+08
+#1145
+18
+#1150
+08
+#1155
+18
+#1160
+08
+#1165
+18
+#1170
+08
+#1175
+18
+#1180
+08
+#1185
+18
+#1190
+08
+#1195
+18
+#1200
+08
+#1205
+18
+#1210
+08
+#1215
+18
+#1220
+08
+#1225
+18
+#1230
+08
+#1235
+18
+#1240
+08
+#1245
+18
+#1250
+08
+#1255
+18
+#1260
+08
+#1265
+18
+#1270
+08
+#1275
+18
+#1280
+08
+#1285
+18
+#1290
+08
+#1295
+18
+#1300
+08
+#1305
+18
+#1310
+08
+#1315
+18
+#1320
+08
+#1325
+18
+#1330
+08
+#1335
+18
+#1340
+08
+#1345
+18
+#1350
+08
+#1355
+18
+#1360
+08
+#1365
+18
+#1370
+08
+#1375
+18
+#1380
+08
+#1385
+18
+#1390
+08
+#1395
+18
+#1400
+08
+#1405
+18
+#1410
+08
+#1415
+18
+#1420
+08
+#1425
+18
+#1430
+08
+#1435
+18
+#1440
+08
+#1445
+18
+#1450
+08
+#1455
+18
+#1460
+08
+#1465
+18
+#1470
+08
+#1475
+18
+#1480
+08
+#1485
+18
+#1490
+08
+#1495
+18
+#1500
+08
+#1505
+18
+#1510
+08
+#1515
+18
+#1520
+08
+#1525
+18
+#1530
+08
+#1535
+18
+#1540
+08
+#1545
+18
+#1550
+08
+#1555
+18
+#1560
+08
+#1565
+18
+#1570
+08
+#1575
+18
+#1580
+08
+#1585
+18
+#1590
+08
+#1595
+18
+#1600
+08
+#1605
+18
+#1610
+08
+#1615
+18
+#1620
+08
+#1625
+18
+#1630
+08
+#1635
+18
+#1640
+08
+#1645
+18
+#1650
+08
+#1655
+18
+#1660
+08
+#1665
+18
+#1670
+08
+#1675
+18
+#1680
+08
+#1685
+18
+#1690
+08
+#1695
+18
+#1700
+08
+#1705
+18
+#1710
+08
+#1715
+18
+#1720
+08
+#1725
+18
+#1730
+08
+#1735
+18
+#1740
+08
+#1745
+18
+#1750
+08
+#1755
+18
+#1760
+08
+#1765
+18
+#1770
+08
+#1775
+18
+#1780
+08
+#1785
+18
+#1790
+08
+#1795
+18
+#1800
+08
+#1805
+18
+#1810
+08
+#1815
+18
+#1820
+08
+#1825
+18
+#1830
+08
+#1835
+18
+#1840
+08
+#1845
+18
+#1850
+08
+#1855
+18
+#1860
+08
+#1865
+18
+#1870
+08
+#1875
+18
+#1880
+08
+#1885
+18
+#1890
+08
+#1895
+18
+#1900
+08
+#1905
+18
+#1910
+08
+#1915
+18
+#1920
+08
+#1925
+18
+#1930
+08
+#1935
+18
+#1940
+08
+#1945
+18
+#1950
+08
+#1955
+18
+#1960
+08
+#1965
+18
+#1970
+08
+#1975
+18
+#1980
+08
+#1985
+18
+#1990
+08
+#1995
+18
+#2000
+08
+#2005
+18
+#2010
+08
+#2015
+18
+#2020
+08
+#2025
+18
+#2030
+08
+#2035
+18
+#2040
+08
+#2045
+18
+#2050
+08
+#2055
+18
+#2060
+08
+#2065
+18
+#2070
+08
+#2075
+18
+#2080
+08
+#2085
+18
+#2090
+08
+#2095
+18
+#2100
+08
+#2105
+18
+#2110
+08
+#2115
+18
+#2120
+08
+#2125
+18
+#2130
+08
+#2135
+18
+#2140
+08
+#2145
+18
+#2150
+08
+#2155
+18
+#2160
+08
+#2165
+18
+#2170
+08
+#2175
+18
+#2180
+08
+#2185
+18
+#2190
+08
+#2195
+18
+#2200
+08
+#2205
+18
+#2210
+08
+#2215
+18
+#2220
+08
+#2225
+18
+#2230
+08
+#2235
+18
+#2240
+08
+#2245
+18
+#2250
+08
+#2255
+18
+#2260
+08
+#2265
+18
+#2270
+08
+#2275
+18
+#2280
+08
+#2285
+18
+#2290
+08
+#2295
+18
+#2300
+08
+#2305
+18
+#2310
+08
+#2315
+18
+#2320
+08
+#2325
+18
+#2330
+08
+#2335
+18
+#2340
+08
+#2345
+18
+#2350
+08
+#2355
+18
+#2360
+08
+#2365
+18
+#2370
+08
+#2375
+18
+#2380
+08
+#2385
+18
+#2390
+08
+#2395
+18
+#2400
+08
+#2405
+18
+#2410
+08
+#2415
+18
+#2420
+08
+#2425
+18
+#2430
+08
+#2435
+18
+#2440
+08
+#2445
+18
+#2450
+08
+#2455
+18
+#2460
+08
+#2465
+18
+#2470
+08
+#2475
+18
+#2480
+08
+#2485
+18
+#2490
+08
+#2495
+18
+#2500
+08

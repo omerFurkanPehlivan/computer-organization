@@ -1,7 +1,7 @@
 module immediate_extender (
 	input [31:7] instr,
 	input [1:0] imm_src,
-	output [31:0] imm
+	output reg [31:0] imm
 );
 	always @(*) begin
 		case (imm_src)

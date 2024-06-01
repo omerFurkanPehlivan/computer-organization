@@ -3,7 +3,7 @@ module control_unit (
 	input [2:0] funct3,
 	input funct7_5,
 		zero,
-	output pc_src,
+	output reg pc_src,
 	output [1:0] result_src,
 	output mem_write,
 	output alu_src,
@@ -14,6 +14,7 @@ module control_unit (
 	wire [1:0] alu_op;
 	wire branch, jump;
 	main_decoder main_decoder (
+		.zero(zero),
 		.op(op),
 		.branch(branch),
 		.jump(jump),
@@ -33,6 +34,6 @@ module control_unit (
 		.alu_control(alu_control)
 	);
 
-	assign pc_src = (branch & zero) | jump;
+	always @* pc_src = (branch & zero) | jump;
 endmodule
 
