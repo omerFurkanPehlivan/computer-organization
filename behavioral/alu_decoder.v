@@ -2,8 +2,8 @@ module alu_decoder (
 	input op_5,
 	input [2:0] funct3,
 	input funct7_5,
-	output [1:0] alu_op,
-	output [2:0] alu_control
+	output reg [1:0] alu_op,
+	output reg [2:0] alu_control
 );
 	always @(*) begin
 		case (alu_op)

@@ -6,7 +6,7 @@ module instruction_memory #(
 	output [31:0] data
 );
 	localparam DATA_WIDTH = 32;
-	localparam INSTRUCTIONS = (PROGRAM == "test") ? 15 : (PROGRAM == "sorter") ? 89 : 0;
+	localparam INSTRUCTIONS = (PROGRAM == "test") ? 15 : (PROGRAM == "sorter") ? 90 : 0;
 	wire [INSTRUCTIONS*DATA_WIDTH-1:0] data_list;
 
 	if (INSTRUCTIONS == 0) begin
@@ -121,7 +121,7 @@ module instruction_memory #(
 					32'h00700093,
 					32'h021023a3,
 					// Sort the array
-					32'h0000f093,	// andi x1, x0, 0
+					32'h0000f093,	// andi x1, x1, 0
 					32'h01408293,	// addi x5, x1, 20
 					32'h0000a103,	// loop: lw x2, 0(x1)
 					32'h0140a183,	// lw x3, 20(x1)

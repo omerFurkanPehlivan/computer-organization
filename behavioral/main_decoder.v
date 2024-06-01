@@ -1,13 +1,13 @@
 module main_decoder (
 	input [6:0]	op,
 	input zero,
-	output branch,
+	output reg branch,
 		jump,
-	output [1:0] alu_op,
-		[1:0] result_src,
-	output mem_write,
-		alu_src,
+	output reg [1:0] alu_op,
+		result_src,
 		imm_src,
+	output reg mem_write,
+		alu_src,
 		reg_write
 );
 	always @(*) begin
